@@ -135,7 +135,7 @@
 </v>
 <v t="davy.20141202180209.28"><vh>@persistence</vh>
 <v t="davy.20141202180209.29"><vh>@data:@auto ../setup.cfg</vh>
-<v t="davy.20141202180209.30"><vh>@gnxs</vh></v>
+<v t="davy.20141202180209.33"><vh>@gnxs</vh></v>
 </v>
 <v t="davy.20141202180209.31"><vh>@data:@auto ../MANIFEST.in</vh>
 <v t="davy.20141202180209.32"><vh>@gnxs</vh></v>
@@ -380,10 +380,10 @@ manual is mind boggling.  -- David Nichols dnichols@amci.com</t>
 <t tx="davy.20141202180209.29">gnx: davy.20141202180209.26
 </t>
 <t tx="davy.20141202180209.3"></t>
-<t tx="davy.20141202180209.30"></t>
 <t tx="davy.20141202180209.31">gnx: davy.20141202180209.27
 </t>
 <t tx="davy.20141202180209.32"></t>
+<t tx="davy.20141202180209.33"></t>
 <t tx="davy.20141202180209.5">'''setup.py for leo'''
 import leo.core.leoVersion
 from setuptools import setup, find_packages
