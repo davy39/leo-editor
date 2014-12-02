@@ -45,7 +45,8 @@
 <v t="EKR.20040519091259.4"><vh>October 2003</vh></v>
 </v>
 </v>
-<v t="EKR.20040519090846" a="E"><vh>Distribution files</vh>
+<v t="ekr.20100202061222.1494"><vh>Distribution checklist</vh></v>
+<v t="EKR.20040519090846"><vh>Distribution files</vh>
 <v t="davy.20141202180209.3"><vh>General</vh>
 <v t="ekr.20141016105045.2119"><vh>@asis ../.gitattributes</vh></v>
 <v t="ekr.20130809141000.1990"><vh>@asis ../INSTALL.TXT</vh>
@@ -62,7 +63,7 @@
 <v t="EKR.20040519090846.8"><vh>@asis ../PKG-INFO.TXT</vh></v>
 <v t="EKR.20040519090846.9"><vh>@asis ../README.TXT</vh></v>
 </v>
-<v t="davy.20141202180209.2" a="E"><vh>Setuptools</vh>
+<v t="davy.20141202180209.2"><vh>Setuptools</vh>
 <v t="davy.20141202180209.5"><vh>@nosent ../setup.py</vh>
 <v t="davy.20141202180209.6" a="E"><vh>Parameters</vh>
 <v t="davy.20141202180209.7"><vh>Metadata</vh>
@@ -91,20 +92,89 @@
 <v t="davy.20141202180209.26"><vh>@auto ../setup.cfg</vh></v>
 <v t="davy.20141202180209.27"><vh>@auto ../MANIFEST.in</vh></v>
 </v>
+<v t="davy.20141202180209.44"><vh>Debian</vh>
+<v t="davy.20141202180209.45"><vh>@path debian</vh>
+<v t="davy.20141202180209.46"><vh>@nosent changelog</vh></v>
+<v t="davy.20141202180209.47" a="E"><vh>Statics</vh>
+<v t="davy.20141202180209.48"><vh>@nosent rules</vh></v>
+<v t="davy.20141202180209.49"><vh>@nosent control</vh>
+<v t="davy.20141202180209.50"><vh>&lt;&lt; description &gt;&gt;</vh></v>
+<v t="davy.20141202180209.51"><vh>&lt;&lt; links &gt;&gt;</vh></v>
 </v>
-<v t="ekr.20141118074110.4"><vh>Discussions</vh>
-<v t="ekr.20141118074110.2"><vh>Matt's workflow for updating pypi</vh></v>
-<v t="ekr.20141118074110.3"><vh>Installing Leo on Linux</vh></v>
+<v t="davy.20141202180209.52"><vh>@nosent copyright</vh></v>
+<v t="davy.20141202180209.53"><vh>@nosent launcher/leo</vh></v>
+<v t="davy.20141202180209.54"><vh>@nosent patches/01_remove_entry_points_and_script.patch</vh></v>
+<v t="davy.20141202180209.55"><vh>@nosent patches/series</vh></v>
+<v t="davy.20141202180209.56"><vh>@nosent source/options</vh></v>
+<v t="davy.20141202180209.57"><vh>@nosent source/format</vh></v>
+<v t="davy.20141202180209.58"><vh>@nosent source/include-binaries</vh></v>
+<v t="davy.20141202180209.59"><vh>@nosent leo.desktop</vh></v>
+<v t="davy.20141202180209.60"><vh>@nosent compat</vh></v>
+<v t="davy.20141202180209.61"><vh>@nosent watch</vh></v>
+<v t="davy.20141202180209.62"><vh>@nosent install</vh></v>
+<v t="davy.20141202180209.63"><vh>@nosent leo.mime</vh></v>
+<v t="davy.20141202180209.64"><vh>@nosent leo.sharedmimeinfo</vh></v>
 </v>
-<v t="ekr.20100202061222.1494"><vh>Distribution checklist</vh></v>
-<v t="ekr.20101027131034.1490"><vh>NSIS source files</vh>
+</v>
+</v>
+<v t="davy.20141202180209.90"><vh>Windows</vh>
+<v t="ekr.20101027054254.1590"><vh>@edit windows/leo.nsi</vh></v>
+<v t="ekr.20101027115225.1494"><vh>@file windows/nsi-boilerplate.txt</vh></v>
+</v>
+</v>
+<v t="davy.20141202180209.89" a="E"><vh>Distribution scripts</vh>
+<v t="davy.20141202180209.34"><vh>Debian/Ubuntu</vh>
+<v t="davy.20141202180209.35"><vh>Set up a PPA on launchpad (Ubuntu)</vh>
+<v t="davy.20141202180209.36"><vh>Create a launchpad account</vh></v>
+<v t="davy.20141202180209.37"><vh>Generate GPG key</vh></v>
+<v t="davy.20141202180209.38"><vh>Set you GPG uid as default one</vh></v>
+<v t="davy.20141202180209.39"><vh>Add your key to ubuntu server</vh></v>
+<v t="davy.20141202180209.40"><vh>Add your key to your launchpad account</vh></v>
+<v t="davy.20141202180209.41"><vh>Sign the code of conduct</vh></v>
+<v t="davy.20141202180209.42"><vh>Activate a Personal Pakage Archive</vh></v>
+</v>
+<v t="davy.20141202180209.43" a="E"><vh>Create debian sources &amp; packages</vh>
+<v t="davy.20141202180209.65"><vh>@button make src</vh>
+<v t="davy.20141202180209.87"><vh>&lt;&lt; version &gt;&gt;</vh></v>
+<v t="davy.20141202180209.85"><vh>&lt;&lt; includes &gt;&gt;</vh></v>
+<v t="davy.20141202180209.86"><vh>&lt;&lt; pathes &gt;&gt;</vh></v>
+<v t="davy.20141202180209.78"><vh>makeSdist</vh></v>
+<v t="davy.20141202180209.79"><vh>extractSdist</vh></v>
+<v t="davy.20141202180209.80"><vh>debianizeTarballName</vh></v>
+<v t="davy.20141202180209.81"><vh>copyDebianDir</vh></v>
+<v t="davy.20141202180209.73"><vh>makeDebianSrc</vh></v>
+</v>
+<v t="davy.20141202180209.74"><vh>@button make deb</vh>
+<v t="davy.20141202180209.87"></v>
+<v t="davy.20141202180209.85"></v>
+<v t="davy.20141202180209.86"></v>
+<v t="davy.20141202180209.78"></v>
+<v t="davy.20141202180209.79"></v>
+<v t="davy.20141202180209.80"></v>
+<v t="davy.20141202180209.81"></v>
+<v t="davy.20141202180209.82"><vh>makeDebianDeb</vh></v>
+</v>
+</v>
+<v t="davy.20141202180209.83" a="E"><vh>Upload debian sources to ppa</vh>
+<v t="davy.20141202180209.84"><vh>@script upload to ppa</vh>
+<v t="davy.20141202180209.85"></v>
+<v t="davy.20141202180209.86"></v>
+<v t="davy.20141202180209.87"></v>
+</v>
+<v t="davy.20141202180209.88"><vh>@script multi series</vh></v>
+</v>
+</v>
+<v t="ekr.20101027131034.1490"><vh>Windows</vh>
 <v t="ekr.20101027160251.1500"><vh>Notes</vh>
 <v t="ekr.20101027135430.1492"><vh>@url nsi new ui readme</vh></v>
 <v t="ekr.20101027135430.1493"><vh>@url about pages</vh></v>
 <v t="ekr.20101027160251.1497"><vh>@url nsDialogs</vh></v>
 </v>
-<v t="ekr.20101027054254.1590"><vh>@edit windows/leo.nsi</vh></v>
-<v t="ekr.20101027115225.1494"><vh>@file windows/nsi-boilerplate.txt</vh></v>
+</v>
+</v>
+<v t="ekr.20141118074110.4"><vh>Discussions</vh>
+<v t="ekr.20141118074110.2"><vh>Matt's workflow for updating pypi</vh></v>
+<v t="ekr.20141118074110.3"><vh>Installing Leo on Linux</vh></v>
 </v>
 <v t="ekr.20101027070126.1639"><vh>@button make leo</vh>
 <v t="ekr.20090905082405.1487"><vh>&lt;&lt; includes &gt;&gt;</vh></v>
@@ -384,6 +454,263 @@ manual is mind boggling.  -- David Nichols dnichols@amci.com</t>
 </t>
 <t tx="davy.20141202180209.32"></t>
 <t tx="davy.20141202180209.33"></t>
+<t tx="davy.20141202180209.34"></t>
+<t tx="davy.20141202180209.35"></t>
+<t tx="davy.20141202180209.36">Apparently you already have one ;)
+https://launchpad.net/leo-editor</t>
+<t tx="davy.20141202180209.37">Install GnuPG ::
+
+	sudo apt-get install gnupg
+	
+Generate your personal key ::
+
+	gpg --gen-key
+
+Accept all the default options. 
+Enter your **name** (eventually nickname or project name in comment) and **email**.  
+
+Enter a pass sentence (and never forget it !).
+
+Generate random by playing with your keyboard, mouse, openning windows... It take a while don't worry.
+
+Then your key is generated :
+
+    gpg: key (239F254) marked as ultimately trusted
+    public and secret key created and signed.
+    
+    gpg: checking the trustdb
+    gpg: 3 marginal(s) needed, 1 complete(s) needed, PGP trust model
+    gpg: depth: 0  valid:   1  signed:   0  trust: 0-, 0q, 0n, 0m, 0f, 1u
+    pub   2048R/239F254 2014-11-22
+	  Key fingerprint = A8D3 396D 83B3 F054 4165  638A A9EF C8AD 8538 F859
+    uid		  Your Name (leo-editor) &lt;your_email@leo.org&gt;
+    sub   2048R/239F254  2014-11-22
+
+..note ::
+
+    This are the information we'll need later : **key**, **fingerprint** and **uid**
+
+</t>
+<t tx="davy.20141202180209.38">To be able to sign automaticaly your builds (dpkg-buildpackage -S), you need to set your GPG key as the defaut one.
+
+
+* Edit your `~/.bashrc` file and add something like the following in there::
+
+	export DEBFULLNAME="&lt;your name&gt;"
+	export DEBEMAIL="&lt;your email&gt;"
+    
+* Then save the file and afterwards simply restart your terminal or run:
+
+	source ~/.bashrc</t>
+<t tx="davy.20141202180209.39">register your key to ubuntu server ::
+
+	gpg --keyserver keyserver.ubuntu.com --send-keys 239F254</t>
+<t tx="davy.20141202180209.40">* Log in to your personal page on launchpad : https://login.launchpad.net/
+
+* You'll see a link to add or edit your gpg keys : https://launchpad.net/~leo-editor/+editpgpkeys
+ 
+* You'll be ask for your **fingerprint** : A8D3 396D 83B3 F054 4165  638A A9EF C8AD 8538 F859 
+
+    A message has been sent to your_email@leo.org, encrypted with the key 2048R/239F254. To confirm the key is yours, decrypt the message and follow the link inside. 
+
+* An encypted email has been sent to you. If your email software does't deal with encrypted emails just paste the content inside this ::
+
+	    echo "&lt;content of email&gt;" | gpg -d
+
+    This way ::
+    
+	    echo "-----BEGIN PGP MESSAGE-----
+	    Version: GnuPG v1.4.11 (GNU/Linux)
+	    
+	    hQEMA/i5GP5my2SxAQf+Nco7tO6Idd2GRUlryGANbSwZRF0hqDCVzH29rfpnfpNl
+	    42BF4lwZiBCqjtPq9Xq/1LvXwzoxZ82a4FBMxRGzV4mAwzEOahDmY134UFm0nOXE
+	    [....]
+	    e4GCaWrumMypBxMjMqGlWwPUkTqekuG6Zq71
+	    =tk/S
+	    -----END PGP MESSAGE-----" | gpg -d
+    
+
+    That is the decrypted content :
+
+	You need a passphrase to unlock the secret key for
+	user: "&lt;your uid&gt;"
+	2048-bit RSA key, ID 239F254, created 2014-11-22 (main key ID 239F254)
+	
+	gpg: encrypted with 2048-bit RSA key, ID 239F254, created 2014-11-22
+	      "your uid"
+	
+	Here are the instructions for confirming the OpenPGP key registration that we
+	received for use in Launchpad.
+	
+	Requester details:
+	
+	    User name    : &lt;Your user name&gt;
+	    Email address: &lt;your email adress&gt;
+	
+	Key details:
+	
+	    Fingerprint : &lt;your fingerprint&gt;
+	    Key type/ID : 2048R/&lt;your key&gt;
+	
+	UIDs:
+	    &lt;your email&gt;
+	
+	Please go here to finish adding the key to your Launchpad account:
+	
+	    https://launchpad.net/token/HshjsjYSHSossix,s
+
+
+* Open the given link to finally add your key to your launchpad account.
+</t>
+<t tx="davy.20141202180209.41"> 
+* Download and sign the code of conduct ::
+
+	wget -pO- https://launchpad.net/codeofconduct/2.0/+download | gpg --clearsign
+
+* This will display the signed code of conduct. Copy it from **-----BEGIN PGP SIGNED MESSAGE-----** to **-----END PGP SIGNATURE-----**
+
+* Go to the page for signing the code of conduct : https://launchpad.net/codeofconduct/2.0/+sign
+
+* Paste the signed code of conduct and validate</t>
+<t tx="davy.20141202180209.42">* When your have accepted the code of conduct, you'll be able to activate a PPA :
+
+    https://launchpad.net/~leo-editor/+activate-ppa
+    
+* Give it an url (https://launchpad.net/~leo-editor/ppa is the most common), name, an description.
+    We could think of another https://launchpad.net/~leo-editor/unstable for daily builds
+
+* Activate it !</t>
+<t tx="davy.20141202180209.43">@language rest
+Fundamentals :
+--------------
+
+Debian sources, as required by launchpad are the following files :
+
+    * `leo_5.0-1.orig.tar.gz`
+    
+	Original sources as downloaded from pypi or github. 
+    
+    * `leo_5.0-1.debian.tar.xz`
+	Contain all the magic to build debian package. This is the debian folder I'm actually working on.
+    
+    * `leo_5.0-1.dsc` and `leo_5.0-1_source.changes`
+	Automaticly generated from the 2 other files by `dpkg-buildpackage -S`
+
+
+.. note::
+
+ * We **need to** name the sources this way : **leo_**&lt;version&gt;**.orig.tar.gz**
+
+ * Basically, the only thing we'll have to change after a new realease is the file debian/changelog
+ 
+	* There is a command line tool do do it : `dch -i`
+	
+	* every entry **have to** be constructed this way ::
+
+		leo (5.0-1) lucid; urgency=medium
+		
+		    * Upstream updated from 4.1 to 5.0
+		    
+		    * Modification of debian/rules to allow multiple installation
+		    
+		    * Another debian related change....
+		
+		 -- Your name (your comment) &lt;your email&gt;  Sat, 22 Nov 2014 18:35:35 +0000
+
+	* leo (5.0**-1**) is the way to index diferent releases build with the same source code
+	
+	* To be accepted by Launchpad, **lucid**" have to be a valid Ubuntu serie. 
+	    For debian mainline, we could use `stable` or `unstable`...
+
+	* For `dpkg-buildpackage -S` automaticaly sign the sources with gpg, `Your name (your comment) &lt;your email&gt;` **have to** be exacly identical (including comment, if you gave one)</t>
+<t tx="davy.20141202180209.44"></t>
+<t tx="davy.20141202180209.45">@tabwidth -4</t>
+<t tx="davy.20141202180209.46">leo (5.0-2) lucid; urgency=low
+
+  * Fix a stupid mime copy-paste error
+  
+  * Fix launchers
+
+ -- Cottet Davy (Davy39) &lt;cottet_davy@yahoo.fr&gt;  Fri, 25 Nov 2014 11:53:27 +0800
+
+
+
+leo (5.0) lucid; urgency=low
+
+  * First attempt to build a debian package
+
+ -- Cottet Davy (Davy39) &lt;cottet_davy@yahoo.fr&gt;  Fri, 25 Nov 2014 00:53:27 +0800
+</t>
+<t tx="davy.20141202180209.47"></t>
+<t tx="davy.20141202180209.48">@language makefile
+@tabwidth 8
+#!/usr/bin/make -f
+# -*- makefile -*-
+# Uncomment this to turn on verbose mode.
+#export DH_VERBOSE=1
+
+clean:
+	dh_testdir
+	dh_testroot
+	find . -name "*.pyc" -exec rm {} \;
+	find . -name "Ui_*" -exec rm {} \;
+	find . -name __pycache__ -prune | xargs rm -rf
+	rm -rf debian/leo
+	rm -rf .pc
+	rm -rf build
+	dh_clean
+
+build: build-arch build-indep
+build-arch:
+build-indep:
+
+install: 
+	dh_testdir -i
+	dh_testroot -i
+	dh_prep -i 
+	python setup.py install --root=debian/leo --install-layout=deb --install-lib=usr/share/pyshared --install-data=usr/share/pyshared
+	find debian/leo/ -name '*.py[co]' -delete
+	find . -name __pycache__ -prune | xargs rm -rf
+    
+binary: binary-indep binary-arch
+binary-arch:
+
+# Build architecture-independent files here.
+binary-indep: install
+	dh_testdir -i
+	dh_testroot -i
+	dh_installchangelogs
+	dh_installdocs -i
+	#dh_installmenu -i
+	#dh_installman -i
+	dh_installmime
+	dh_install -i -X__pycache__
+	#dh_link -i
+	#dh_lintian -i
+	dh_compress -i
+	dh_fixperms -i
+	dh_installdeb -i
+	dh_gencontrol -i
+	dh_md5sums -i
+	dh_builddeb -i
+
+.PHONY: clean binary-indep binary-arch binary install</t>
+<t tx="davy.20141202180209.49">Source: leo
+Maintainer: Edward K. Ream &lt;edreamleo@gmail.com&gt;
+Section: editors
+Priority: optional
+Build-Depends: python-setuptools (&gt;= 0.6b3), python, debhelper (&gt;= 7.4.3)
+Standards-Version: 3.9.1
+
+Package: leo
+Architecture: all
+Depends: python, python-pyqt5.qtsvg | python-qt4-phonon,
+ python-pyqt5.qtwebkit | python-qt4-gl, 
+ python-docutils, python-enchant, python-pygments
+Description:Leonine Editor with Outlines
+&lt;&lt;description&gt;&gt;
+ .    
+&lt;&lt;links&gt;&gt;</t>
 <t tx="davy.20141202180209.5">'''setup.py for leo'''
 import leo.core.leoVersion
 from setuptools import setup, find_packages
@@ -422,10 +749,344 @@ setup(
 @language python
 @tabwidth -4
 </t>
+<t tx="davy.20141202180209.50"> Leo is a PIM, IDE and outliner written in 100% pure Python.
+ Leo features a multi-window outlining editor, Python colorizing,
+ powerful outline commands and many other things, including 
+ unlimited Undo/Redo and an integrated Python shell(IDLE) window.
+ Leo requires Python 2.6 or above. Leo works with Python 3.x</t>
+<t tx="davy.20141202180209.51">	Docs:      http://leoeditor.com/leo_toc.html
+	Tutorials: http://leoeditor.com/tutorial.html
+	Videos:    http://leoeditor.com/screencasts.html
+	Forum:     http://groups.google.com/group/leo-editor
+	Download:  http://sourceforge.net/projects/leo/files/
+	Github:    https://github.com/leo-editor/leo-editor
+	Quotes:    http://leoeditor.com/testimonials.html</t>
+<t tx="davy.20141202180209.52">Copyright: Copyright 1997 - 2014 Edward K. Ream &lt;edreamleo@gmail.com&gt;
+Upstream Author: Detlev Offenbach &lt;detlev@die-offenbachs.de&gt;
+License: MIT
+    Leo is Open Software and is distributed under the terms of the MIT
+    License. The gist of the license is that Leo is absolutely free, even
+    for commercial use (including resale). There is no GNU-like "copyleft"
+    restriction. The Open Source Initiative board has voted to certify the
+    MIT license as Open Source. This license is compatible with the GPL.
+    .
+    Copyright (c) 1997-2014 by Edward K. Ream. All Rights Reserved.
+    .
+    Permission to use, copy, modify, and distribute this software and its
+    documentation for any purpose and without fee is hereby granted,
+    provided that the above copyright notice appear in all copies and that
+    both that copyright notice and this permission notice appear in
+    supporting documentation, and that the names of Leo or Edward K. Ream
+    not be used in advertising or publicity pertaining to distribution of
+    the software without specific, written prior permission.
+    .
+    DISCLAIMER OF WARRANTIES
+    .
+    EDWARD K. REAM (REAM) SPECIFICALLY DISCLAIMS ALL WARRANTIES, EXPRESSED
+    OR IMPLIED, WITH RESPECT TO THIS COMPUTER SOFTWARE, INCLUDING BUT NOT
+    LIMITED TO IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A
+    PARTICULAR PURPOSE. IN NO EVENT SHALL REAM BE LIABLE FOR ANY LOSS OF
+    PROFIT OR ANY COMMERCIAL DAMAGE, INCLUDING BUT NOT LIMITED TO SPECIAL,
+    INCIDENTAL, CONSEQUENTIAL OR OTHER DAMAGES.
+</t>
+<t tx="davy.20141202180209.53">#!/usr/bin/env python
+""" Leo launcher script
+A minimal script to launch leo.
+"""
+import sys
+sys.path.append('/usr/share/pyshared/')
+import leo.core.runLeo
+if len(sys.argv[1:])&gt;1:
+    leo.core.runLeo.run(sys.argv[1:])
+else:
+    leo.core.runLeo.run()
+</t>
+<t tx="davy.20141202180209.54">Fix launcher issue : distutils scripts do no support private modules
+--- a/setup.py
++++ b/setup.py
+@@ -99,8 +99,4 @@
+ ,
+     package_data = package_data,
+     #scripts = ['leo-install.py'],# Not needed anymore ?
+-    entry_points =     {
+-            'console_scripts': ['leoc = leo.core.runLeo:run'],
+-            'gui_scripts' : ['leo = leo.core.runLeo:run'],
+-        }
+ )
+</t>
+<t tx="davy.20141202180209.55">01_remove_entry_points_and_script.patch
+
+</t>
+<t tx="davy.20141202180209.56">extend-diff-ignore="\.egg-info$"
+extend-diff-ignore="leo/dist"</t>
+<t tx="davy.20141202180209.57">3.0 (quilt)
+</t>
+<t tx="davy.20141202180209.58">debian/leo.png
+</t>
+<t tx="davy.20141202180209.59">[Desktop Entry]
+Name=Leo
+Type=Application
+Exec=/usr/bin/leo %f
+Terminal=false
+Icon=/usr/share/icons/leo.png
+Comment=Leonine Editor with Outlines
+NoDisplay=false
+Categories=Development;IDE
+Name[en]=Leo</t>
 <t tx="davy.20141202180209.6"></t>
+<t tx="davy.20141202180209.60">7
+</t>
+<t tx="davy.20141202180209.61">version=3
+https://pypi.python.org/simple/leo/leo-(.+).zip</t>
+<t tx="davy.20141202180209.62">debian/leo.desktop usr/share/applications
+debian/leo.png usr/share/icons
+#debian/launcher/leo /usr/bin
+
+</t>
+<t tx="davy.20141202180209.63">text/xml; leo '%s' ; edit=leo '%s' ; test=test "$DISPLAY" != "" ; description="Leo Editor Outline" ; priority=2
+</t>
+<t tx="davy.20141202180209.64">&lt;?xml version="1.0" encoding="utf-8"?&gt;
+&lt;mime-info xmlns='http://www.freedesktop.org/standards/shared-mime-info'&gt;
+  &lt;mime-type type="text/xml"&gt;
+    &lt;comment&gt;Leo Editor Outline&lt;/comment&gt;
+    &lt;comment xml:lang="en"&gt;Leo Editor Outline&lt;/comment&gt;
+    &lt;icon name="leo"/&gt;
+    &lt;glob pattern="*.leo"/&gt;
+  &lt;/mime-type&gt;
+&lt;/mime-info&gt;</t>
+<t tx="davy.20141202180209.65">@language python
+'''
+* Generate a source tarball with a debianized name and extract it into dist folder
+
+* Copy dist/debian folder to archive/src folder 
+ 
+* Generate debian source packages &amp; files
+
+''' 
+&lt;&lt; version &gt;&gt;
+&lt;&lt; includes &gt;&gt;
+&lt;&lt; pathes &gt;&gt;
+
+@others
+
+g.es_print('Generate Tarball...')
+makeSdist()
+g.es_print('Extract Tarball...')
+extractSdist()
+g.es_print('Rename Tarball...')
+debianizeTarballName()
+g.es_print('Copy Debian directory...')
+copyDebianDir()
+g.es_print('Make Debian sources...')
+makeDebianSrc()
+g.es_print('Done')</t>
 <t tx="davy.20141202180209.7"></t>
+<t tx="davy.20141202180209.73">def makeDebianSrc():
+    """
+    * Generate Debian sources
+    """
+    os.chdir(srcDir)
+    g.execute_shell_commands('dpkg-buildpackage -S',trace=True)</t>
+<t tx="davy.20141202180209.74">'''
+* Generate a source tarball with a debianized name and extract it.
+ 
+* Copy dist/debian folder to archive/src folder 
+    
+* Generate debian deb package
+'''
+@language python
+&lt;&lt; version &gt;&gt;
+&lt;&lt; includes &gt;&gt;
+&lt;&lt; pathes &gt;&gt;
+@others
+
+g.es_print('Generate Tarball...')
+makeSdist()
+g.es_print('Extract Tarball...')
+extractSdist()
+g.es_print('Rename Tarball...')
+debianizeTarballName()
+g.es_print('Copy Debian directory...')
+copyDebianDir()
+g.es_print('Make Debian package...')
+makeDebianDeb()
+g.es_print('Done')
+
+</t>
+<t tx="davy.20141202180209.78">def makeSdist():
+    """
+    * Remove leo.egg-info folder from last build
+    
+    * Call setuptool to generate a source tarball
+    
+    """
+    # Go to root directory
+    os.chdir(rootDir)
+    # Remove leo.egg-info folder from last build
+    g.execute_shell_commands('rm -R leo.egg-info',trace=True)
+    # Make the sources tarball in archiveDir
+    g.execute_shell_commands('python setup.py sdist -d '+archiveDir,trace=True)
+    </t>
+<t tx="davy.20141202180209.79">def extractSdist():
+    "Extract the source tarball into archiveDir"
+    # Go to archiveDir
+    g.execute_shell_commands('rm -R '+srcDir)
+    g.execute_shell_commands('mkdir '+srcDir)
+    # Extract it
+    g.execute_shell_commands('tar xfz '+rawTarball+' -C '+srcDir+' --strip-components=1')</t>
 <t tx="davy.20141202180209.8">'leo'</t>
+<t tx="davy.20141202180209.80">def debianizeTarballName():
+    """
+    Rename archive tarball to be debian compliant ::
+        
+        leo-5.0b2.tar.gz -&gt; leo_5.0b2.orig.tar.gz
+    
+    """
+    g.execute_shell_commands('cp '+rawTarball+' '+origTarball)</t>
+<t tx="davy.20141202180209.81">def copyDebianDir():
+    """Copy debian folder to the extracted archive"""
+    g.execute_shell_commands('cp -R '+debianDir+' '+srcDir,trace=True)</t>
+<t tx="davy.20141202180209.82">def makeDebianDeb():
+    """Generate Debian sources"""
+    os.chdir(srcDir)
+    g.execute_shell_commands('dpkg-buildpackage',trace=True)</t>
+<t tx="davy.20141202180209.83">* To push the sources on launchpad, we use dput ::
+
+	sudo apt-get install packaging-dev
+
+* You can simply use this command in the distDir ::
+
+	dput ppa:leo-editor/ppa leo_5.0-1.source.changes
+
+* You can also configure a `leo` config in `~/.dput.cf`
+     You can configure different upload protocols (sftp, rsync, scp...) ::
+     
+	[ppa]
+	fqdn = ppa.launchpad.net
+	method = ftp
+	incoming = ~leo-editor/ppa/ubuntu/
+	login = anonymous
+	allow_unsigned_uploads = 0
+	
+	[unstable]
+	fqdn = ppa.launchpad.net
+	method = ftp
+	incoming = ~leo-editor/unstable/ubuntu/
+	login = anonymous
+	allow_unsigned_uploads = 0      
+	
+	
+* Then launch this command in distDir ::
+
+	dput ppa leo_5.0-1.source.changes
+    
+    or
+    
+	dput unstable leo_5.0-1.source.changes
+	
+..note ::
+
+   Important : no .deb files have to be present in the distDir. 
+   
+   So use a source `dpkg-buildpackage -S` and **not** a binary one `dpkg-buildpackage`
+   
+   Otherwise launchpad will give you the following error ::
+   
+	Source/binary (i.e. mixed) uploads are not allowed.
+    
+
+* If everything went OK, launchpad will automaticaly build the deb and publish it into the serie given in the debian/changelog header (here `lucid`).
+Instead of changing the header and upload the sources again, launchpad allow to copy the generated deb to other series.
+
+* We can copy manually the "binary" build (.deb) for each series :
+
+    https://launchpad.net/~leo-editor/+archive/ubuntu/ppa/+copy-packages 
+    
+* The multi series script aim to do it automatically with the launchpad API and python-launchpadlib ::
+
+    sudo pip install launchpadlib
+</t>
+<t tx="davy.20141202180209.84">@language python
+"""
+Upload debian sources to be build on lucid (defined on changelog).
+Please, wait for the built to be done before to transfert it to other series.
+"""
+&lt;&lt; includes &gt;&gt;
+&lt;&lt; version &gt;&gt;
+&lt;&lt; pathes &gt;&gt;
+os.chdir(distDir)
+g.execute_shell_commands('dput ppa '+sourceChanges,trace=True)
+g.es('Done')</t>
+<t tx="davy.20141202180209.85">import leo.core.leoVersion
+import os
+</t>
+<t tx="davy.20141202180209.86">abspath,exists,join = g.os_path_abspath,g.os_path_exists,g.os_path_join
+
+# Top directory : leo-editor folder
+rootDir	     = abspath(join(c.fileName,'..'))
+# Leo's dist folder
+# Contains necessary files for building distribution
+distDir	     = abspath(join(rootDir,'dist'))
+# Directory to build and store distibution packages and source tarball
+archiveDir       = abspath(join(rootDir,'..','archive'))
+# Path to the source tarball
+rawTarball	  = join(archiveDir,'leo-'+version+'.tar.gz')
+# Directory where source tarball is extracted in order to build various distrib
+srcDir	      = join(archiveDir,'src')
+# Debianized source tarball 
+origTarball	 = join(archiveDir,'leo_'+version+'.orig.tar.gz')
+# Debian leo_5.x.source.changes to upload on launchpad
+sourceChanges       = join(archiveDir,'leo_'+version+'-'+debRev+'.source.changes')
+# Path to Leo's debian folder
+debianDir	   = abspath(join(distDir,'debian'))
+# Path to leo.nsi 
+nsiFile = abspath(join(distDir,'windows','leo.nsi'))
+# Path to windowsArchiveDir
+windowsArchiveDir = join(archiveDir,'windows')
+# Path to fink files
+finkDir = abspath(join(distDir,'mac','fink'))
+# Path to Debian .deb package
+debPackage       = join(archiveDir,'leo_'+version+'-'+debRev+'_all.deb')
+# Path to Fink .deb package
+finkPackage       = join(archiveDir,'leo_'+version+'-'+finkRev+'_all.deb')</t>
+<t tx="davy.20141202180209.87"># Make sure that it is the same in setup.py, debian/changelog, fink/changelog, leo.nsis, website, doc...
+# TODO : implement a reliable global parameter or clone functionality
+version = '5.0'
+debRev = '2'
+finkRev = '1'</t>
+<t tx="davy.20141202180209.88">@language python
+#Name of the ppa and target source name
+ppaName='ppa'
+sourceName='leo'
+version = '5.0-3'
+
+try:
+  from launchpadlib.launchpad import Launchpad
+except :
+  g.es('Error : please install launchpadlib')
+  g.es('sudo pip install launchpadlib')
+
+launchpad = Launchpad.login_with('doNoMatter', 'production')
+
+try:
+    ppa=launchpad.me.getPPAByName(name=ppaName)
+except KeyError:
+    g.es("PPA "+ppaName+" not found")
+
+#What is we don't precise a series ?
+for to_series_name in ['precise', 'trusty','utopic', 'vivid']:
+    g.es('Copy .deb from lucid to '+to_series_name+' ...')
+    ppa.syncSource (
+	from_archive=ppa,
+	include_binaries=True,
+	source_name=sourceName,
+	to_pocket='Release',
+	to_series=to_series_name,
+	version=version)
+g.es('Done')</t>
+<t tx="davy.20141202180209.89"></t>
 <t tx="davy.20141202180209.9">leo.core.leoVersion.version</t>
+<t tx="davy.20141202180209.90"></t>
 <t tx="ekr.20040630210818">HTML Editing in Leo is soooo much easier then with NoNodeEditors. Ive
 had a blast working on a web page. Usually I had to look at a bunch of
 gunk all at once. Now I can look at little pieces of gunk! :) 

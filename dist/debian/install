@@ -1,0 +1,4 @@
+debian/leo.desktop usr/share/applications
+debian/leo.png usr/share/icons
+#debian/launcher/leo /usr/bin
+

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mime-info xmlns='http://www.freedesktop.org/standards/shared-mime-info'>
+  <mime-type type="text/xml">
+    <comment>Leo Editor Outline</comment>
+    <comment xml:lang="en">Leo Editor Outline</comment>
+    <icon name="leo"/>
+    <glob pattern="*.leo"/>
+  </mime-type>
+</mime-info>
