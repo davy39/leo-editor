@@ -193,8 +193,8 @@
 <v t="davy.20141202180209.88"><vh>@script multi series</vh></v>
 </v>
 </v>
-<v t="davy.20141202180209.113"><vh>MAC distribution</vh>
-<v t="davy.20141202180209.114"><vh>@button make-fink</vh>
+<v t="davy.20141202180209.113" a="E"><vh>MAC distribution</vh>
+<v t="davy.20141202180209.114" a="E"><vh>@button make-fink</vh>
 <v t="davy.20141202180209.87"></v>
 <v t="davy.20141202180209.85"></v>
 <v t="davy.20141202180209.86"></v>
@@ -203,6 +203,14 @@
 <v t="davy.20141202180209.80"></v>
 <v t="davy.20141202180209.121"><vh>copyFinkDir</vh></v>
 <v t="davy.20141202180209.122"><vh>makeFinkDeb</vh></v>
+</v>
+</v>
+<v t="davy.20141202180209.123" a="E"><vh>RPM distribution</vh>
+<v t="davy.20141202180209.124" a="E"><vh>@button make RPM</vh>
+<v t="davy.20141202180209.87"></v>
+<v t="davy.20141202180209.85"></v>
+<v t="davy.20141202180209.86"></v>
+<v t="davy.20141202180209.128"><vh>alienConvert</vh></v>
 </v>
 </v>
 </v>
@@ -460,6 +468,31 @@ g.es_print('Done')
     """Generate Debian sources"""
     os.chdir(srcDir)
     g.execute_shell_commands('dpkg-buildpackage -b',trace=True)</t>
+<t tx="davy.20141202180209.123">Instead of using `setup.py bdist_rpm` we use alien to convert .deb to rpm.
+That's a way to produce a better package, including mime type and ;desktop shorcut.</t>
+<t tx="davy.20141202180209.124">@language python
+'''
+* Use alien to convert .deb package to .rpm
+
+''' 
+&lt;&lt; version &gt;&gt;
+&lt;&lt; includes &gt;&gt;
+&lt;&lt; pathes &gt;&gt;
+
+@others
+
+alienConvert()</t>
+<t tx="davy.20141202180209.128">def alienConvert():
+    """Convert .deb to rpm"""
+    os.chdir(archiveDir)
+    if exists(debPackage):
+        g.es('Convert .deb to rpm...')
+        g.execute_shell_commands('fakeroot alien -k -r '+debPackage)
+        g.es('Done')
+    else:
+        g.es('Debian package does not exist.',color='red')
+        g.es('Please run make-deb and try again.',color='red')
+    </t>
 <t tx="davy.20141202180209.13">'http://sourceforge.net/projects/leo/files/Leo/'</t>
 <t tx="davy.20141202180209.14">'https://github.com/leo-editor/leo-editor/issues'</t>
 <t tx="davy.20141202180209.15">'MIT License'</t>
