@@ -46,7 +46,7 @@
 </v>
 </v>
 <v t="ekr.20100202061222.1494"><vh>Distribution checklist</vh></v>
-<v t="EKR.20040519090846"><vh>Distribution files</vh>
+<v t="EKR.20040519090846" a="E"><vh>Distribution files</vh>
 <v t="davy.20141202180209.3"><vh>General</vh>
 <v t="ekr.20141016105045.2119"><vh>@asis ../.gitattributes</vh></v>
 <v t="ekr.20130809141000.1990"><vh>@asis ../INSTALL.TXT</vh>
@@ -95,7 +95,7 @@
 <v t="davy.20141202180209.44"><vh>Debian</vh>
 <v t="davy.20141202180209.45"><vh>@path debian</vh>
 <v t="davy.20141202180209.46"><vh>@nosent changelog</vh></v>
-<v t="davy.20141202180209.47" a="E"><vh>Statics</vh>
+<v t="davy.20141202180209.47"><vh>Statics</vh>
 <v t="davy.20141202180209.48"><vh>@nosent rules</vh></v>
 <v t="davy.20141202180209.49"><vh>@nosent control</vh>
 <v t="davy.20141202180209.50"><vh>&lt;&lt; description &gt;&gt;</vh></v>
@@ -117,12 +117,33 @@
 </v>
 </v>
 </v>
+<v t="davy.20141202180209.91"><vh>Mac</vh>
+<v t="davy.20141202180209.92" a="E"><vh>Fink</vh>
+<v t="davy.20141202180209.93"><vh>@path mac/fink</vh>
+<v t="davy.20141202180209.110"><vh>@nosent patches/01_remove_entry_points_and_script.patch</vh></v>
+<v t="davy.20141202180209.111"><vh>@nosent patches/series</vh></v>
+<v t="davy.20141202180209.112"><vh>@nosent launcher/leo</vh></v>
+<v t="davy.20141202180209.103"><vh>@nosent source/include-binaries</vh></v>
+<v t="davy.20141202180209.108"><vh>@nosent source/format</vh></v>
+<v t="davy.20141202180209.109"><vh>@nosent source/options</vh></v>
+<v t="davy.20141202180209.94"><vh>@nosent changelog</vh></v>
+<v t="davy.20141202180209.102"><vh>@nosent install</vh></v>
+<v t="davy.20141202180209.95"><vh>@nosent rules</vh></v>
+<v t="davy.20141202180209.96"><vh>@nosent compat</vh></v>
+<v t="davy.20141202180209.97"><vh>@nosent control</vh></v>
+<v t="davy.20141202180209.98"><vh>@nosent copyright</vh></v>
+<v t="davy.20141202180209.99"><vh>@nosent package.info</vh></v>
+<v t="davy.20141202180209.100"><vh>@nosent watch</vh></v>
+<v t="davy.20141202180209.101"><vh>@image leo.png</vh></v>
+</v>
+</v>
+</v>
 <v t="davy.20141202180209.90"><vh>Windows</vh>
 <v t="ekr.20101027054254.1590"><vh>@edit windows/leo.nsi</vh></v>
 <v t="ekr.20101027115225.1494"><vh>@file windows/nsi-boilerplate.txt</vh></v>
 </v>
 </v>
-<v t="davy.20141202180209.89" a="E"><vh>Distribution scripts</vh>
+<v t="davy.20141202180209.89"><vh>Distribution scripts</vh>
 <v t="davy.20141202180209.34"><vh>Debian/Ubuntu</vh>
 <v t="davy.20141202180209.35"><vh>Set up a PPA on launchpad (Ubuntu)</vh>
 <v t="davy.20141202180209.36"><vh>Create a launchpad account</vh></v>
@@ -374,7 +395,48 @@ varying audience...Being a convert for less than a day I've still got a lot to
 learn, but just the possibility of keeping system maintenance scripts in the IT
 manual is mind boggling.  -- David Nichols dnichols@amci.com</t>
 <t tx="davy.20141202180209.10">"Edward K. Ream"</t>
+<t tx="davy.20141202180209.100">version=3
+https://pypi.python.org/simple/leo/leo-(.+).zip
+</t>
+<t tx="davy.20141202180209.101"></t>
+<t tx="davy.20141202180209.102">debian/leo.png sw/share/icons
+debian/launcher/leo sw/bin</t>
+<t tx="davy.20141202180209.103">debian/leo.png
+</t>
+<t tx="davy.20141202180209.108">3.0 (quilt)
+</t>
+<t tx="davy.20141202180209.109">extend-diff-ignore="\.egg-info$"
+extend-diff-ignore="leo/dist"
+</t>
 <t tx="davy.20141202180209.11">'edreamleo@gmail.com'</t>
+<t tx="davy.20141202180209.110">Fix launcher issue : distutils scripts do no support private modules
+--- a/setup.py
++++ b/setup.py
+@@ -99,8 +99,4 @@
+ ,
+     package_data = package_data,
+     #scripts = ['leo-install.py'],# Not needed anymore ?
+-    entry_points =     {
+-            'console_scripts': ['leoc = leo.core.runLeo:run'],
+-            'gui_scripts' : ['leo = leo.core.runLeo:run'],
+-        }
+ )
+</t>
+<t tx="davy.20141202180209.111">01_remove_entry_points_and_script.patch
+
+</t>
+<t tx="davy.20141202180209.112">#!/sw/bin/python2.7
+""" Leo launcher script
+A minimal script to launch leo.
+"""
+import sys
+sys.path.append('/sw/share/pyshared/')
+import leo.core.runLeo
+if len(sys.argv[1:])&gt;1:
+    leo.core.runLeo.run(sys.argv[1:])
+else:
+    leo.core.runLeo.run()
+</t>
 <t tx="davy.20141202180209.12">'http://leoeditor.com'</t>
 <t tx="davy.20141202180209.13">'http://sourceforge.net/projects/leo/files/Leo/'</t>
 <t tx="davy.20141202180209.14">'https://github.com/leo-editor/leo-editor/issues'</t>
@@ -1087,6 +1149,154 @@ g.es('Done')</t>
 <t tx="davy.20141202180209.89"></t>
 <t tx="davy.20141202180209.9">leo.core.leoVersion.version</t>
 <t tx="davy.20141202180209.90"></t>
+<t tx="davy.20141202180209.91"></t>
+<t tx="davy.20141202180209.92"></t>
+<t tx="davy.20141202180209.93"></t>
+<t tx="davy.20141202180209.94">leo (5.0-fink1) lucid; urgency=low
+
+  * Fix a stupid mime copy-paste error
+  
+  * Fix launchers
+
+ -- Cottet Davy (Davy39) &lt;cottet_davy@yahoo.fr&gt;  Fri, 25 Nov 2014 11:53:27 +0800
+
+
+
+leo (5.0) lucid; urgency=low
+
+  * First attempt to build a debian package
+
+ -- Cottet Davy (Davy39) &lt;cottet_davy@yahoo.fr&gt;  Fri, 25 Nov 2014 00:53:27 +0800
+</t>
+<t tx="davy.20141202180209.95">#!/usr/bin/make -f
+# -*- makefile -*-
+# Uncomment this to turn on verbose mode.
+#export DH_VERBOSE=1
+
+clean:
+	dh_testdir
+	dh_testroot
+	find . -name "*.pyc" -exec rm {} \;
+	find . -name "Ui_*" -exec rm {} \;
+	find . -name __pycache__ -prune | xargs rm -rf
+	rm -rf debian/leo
+	rm -rf .pc
+	rm -rf build
+	dh_clean
+
+build: build-arch build-indep
+build-arch:
+build-indep:
+
+install: 
+	dh_testdir -i
+	dh_testroot -i
+	dh_prep -i 
+	python setup.py install --root=debian/leo --prefix=sw--install-lib=share/pyshared --install-data=share/pyshared
+	find debian/leo/ -name '*.py[co]' -delete
+	find . -name __pycache__ -prune | xargs rm -rf
+    
+binary: binary-indep binary-arch
+binary-arch:
+
+# Build architecture-independent files here.
+binary-indep: install
+	dh_testdir -i
+	dh_testroot -i
+	#dh_installchangelogs
+	#dh_installdocs -i
+	#dh_installmenu -i
+	#dh_installman -i
+	#dh_installmime
+	dh_install -i -X__pycache__
+	#dh_link -i
+	#dh_lintian -i
+	dh_compress -i
+	dh_fixperms -i
+	dh_installdeb -i
+	dh_gencontrol -i
+	dh_md5sums -i
+	dh_builddeb -- -Zgzip
+
+.PHONY: clean binary-indep binary-arch binary install
+</t>
+<t tx="davy.20141202180209.96">7
+</t>
+<t tx="davy.20141202180209.97">Source: leo
+Maintainer: Edward K. Ream &lt;edreamleo@gmail.com&gt;
+Section: editors
+Priority: optional
+Build-Depends: python-setuptools (&gt;= 0.6b3), python, debhelper (&gt;= 7.4.3)
+Standards-Version: 3.9.1
+
+Package: leo
+Architecture: all
+Depends: python27, qt4-base-mac, pyqt4-mac-py27, qscintilla2-qt4-mac-py27,
+ docutils-py27, pygments-py27
+Description:Leonine Editor with Outlines
+ Leo is a PIM, IDE and outliner written in 100% pure Python.
+ Leo features a multi-window outlining editor, Python colorizing,
+ powerful outline commands and many other things, including 
+ unlimited Undo/Redo and an integrated Python shell(IDLE) window.
+ Leo requires Python 2.6 or above. Leo works with Python 3.x
+ .    
+	Docs:      http://leoeditor.com/leo_toc.html
+	Tutorials: http://leoeditor.com/tutorial.html
+	Videos:    http://leoeditor.com/screencasts.html
+	Forum:     http://groups.google.com/group/leo-editor
+	Download:  http://sourceforge.net/projects/leo/files/
+	Github:    https://github.com/leo-editor/leo-editor
+	Quotes:    http://leoeditor.com/testimonials.html
+</t>
+<t tx="davy.20141202180209.98">Copyright: Copyright 1997 - 2014 Edward K. Ream &lt;edreamleo@gmail.com&gt;
+Upstream Author: Detlev Offenbach &lt;detlev@die-offenbachs.de&gt;
+License: MIT
+    Leo is Open Software and is distributed under the terms of the MIT
+    License. The gist of the license is that Leo is absolutely free, even
+    for commercial use (including resale). There is no GNU-like "copyleft"
+    restriction. The Open Source Initiative board has voted to certify the
+    MIT license as Open Source. This license is compatible with the GPL.
+    .
+    Copyright (c) 1997-2014 by Edward K. Ream. All Rights Reserved.
+    .
+    Permission to use, copy, modify, and distribute this software and its
+    documentation for any purpose and without fee is hereby granted,
+    provided that the above copyright notice appear in all copies and that
+    both that copyright notice and this permission notice appear in
+    supporting documentation, and that the names of Leo or Edward K. Ream
+    not be used in advertising or publicity pertaining to distribution of
+    the software without specific, written prior permission.
+    .
+    DISCLAIMER OF WARRANTIES
+    .
+    EDWARD K. REAM (REAM) SPECIFICALLY DISCLAIMS ALL WARRANTIES, EXPRESSED
+    OR IMPLIED, WITH RESPECT TO THIS COMPUTER SOFTWARE, INCLUDING BUT NOT
+    LIMITED TO IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A
+    PARTICULAR PURPOSE. IN NO EVENT SHALL REAM BE LIABLE FOR ANY LOSS OF
+    PROFIT OR ANY COMMERCIAL DAMAGE, INCLUDING BUT NOT LIMITED TO SPECIAL,
+    INCIDENTAL, CONSEQUENTIAL OR OTHER DAMAGES.
+</t>
+<t tx="davy.20141202180209.99">Info2: &lt;&lt;
+Package: leo%type_pkg[python]
+Version: 5.0
+Revision: 1
+Type: python (2.7)
+Description: Leonine Editor with Outlines
+Maintainer: Edward K. Ream &lt;edreamleo@gmail.com&gt;
+License: MIT
+Homepage: http://leoeditor.com
+
+Source: https://pypi.python.org/packages/source/l/leo/leo-%v.zip
+#Source-MD5:3158ead3d4dae61d082b5014264068f8
+
+Depends: python%type_pkg[python], qt4-base-mac, pyqt4-mac%type_pkg[python], qscintilla2-qt4-mac%type_pkg[python], docutils%type_pkg[python], pygments%type_pkg[python]
+BuildDepends: fink (&gt;= 0.24.12), setuptools-tng-py%type_pkg[python]
+
+InstallScript: %p/bin/python%type_raw[python] setup.py install --root=%d
+
+DocFiles: PKG-INFO
+&lt;&lt;
+</t>
 <t tx="ekr.20040630210818">HTML Editing in Leo is soooo much easier then with NoNodeEditors. Ive
 had a blast working on a web page. Usually I had to look at a bunch of
 gunk all at once. Now I can look at little pieces of gunk! :) 
