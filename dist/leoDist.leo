@@ -92,10 +92,14 @@
 <v t="davy.20141202180209.26"><vh>@auto ../setup.cfg</vh></v>
 <v t="davy.20141202180209.27"><vh>@auto ../MANIFEST.in</vh></v>
 </v>
+<v t="davy.20141202180209.90"><vh>Windows</vh>
+<v t="ekr.20101027054254.1590"><vh>@edit windows/leo.nsi</vh></v>
+<v t="ekr.20101027115225.1494"><vh>@file windows/nsi-boilerplate.txt</vh></v>
+</v>
 <v t="davy.20141202180209.44"><vh>Debian</vh>
 <v t="davy.20141202180209.45"><vh>@path debian</vh>
 <v t="davy.20141202180209.46"><vh>@nosent changelog</vh></v>
-<v t="davy.20141202180209.47"><vh>Statics</vh>
+<v t="davy.20141202180209.47" a="E"><vh>Statics</vh>
 <v t="davy.20141202180209.48"><vh>@nosent rules</vh></v>
 <v t="davy.20141202180209.49"><vh>@nosent control</vh>
 <v t="davy.20141202180209.50"><vh>&lt;&lt; description &gt;&gt;</vh></v>
@@ -106,12 +110,13 @@
 <v t="davy.20141202180209.54"><vh>@nosent patches/01_remove_entry_points_and_script.patch</vh></v>
 <v t="davy.20141202180209.55"><vh>@nosent patches/series</vh></v>
 <v t="davy.20141202180209.56"><vh>@nosent source/options</vh></v>
-<v t="davy.20141202180209.57"><vh>@nosent source/format</vh></v>
+<v t="davy.20141202180209.108"><vh>@nosent source/format</vh></v>
 <v t="davy.20141202180209.58"><vh>@nosent source/include-binaries</vh></v>
 <v t="davy.20141202180209.59"><vh>@nosent leo.desktop</vh></v>
-<v t="davy.20141202180209.60"><vh>@nosent compat</vh></v>
+<v t="davy.20141202180209.96"><vh>@nosent compat</vh></v>
 <v t="davy.20141202180209.61"><vh>@nosent watch</vh></v>
 <v t="davy.20141202180209.62"><vh>@nosent install</vh></v>
+<v t="davy.20141202180209.101"><vh>@image leo.png</vh></v>
 <v t="davy.20141202180209.63"><vh>@nosent leo.mime</vh></v>
 <v t="davy.20141202180209.64"><vh>@nosent leo.sharedmimeinfo</vh></v>
 </v>
@@ -120,30 +125,33 @@
 <v t="davy.20141202180209.91"><vh>Mac</vh>
 <v t="davy.20141202180209.92" a="E"><vh>Fink</vh>
 <v t="davy.20141202180209.93"><vh>@path mac/fink</vh>
-<v t="davy.20141202180209.110"><vh>@nosent patches/01_remove_entry_points_and_script.patch</vh></v>
-<v t="davy.20141202180209.111"><vh>@nosent patches/series</vh></v>
+<v t="davy.20141202180209.54"></v>
+<v t="davy.20141202180209.55"></v>
 <v t="davy.20141202180209.112"><vh>@nosent launcher/leo</vh></v>
-<v t="davy.20141202180209.103"><vh>@nosent source/include-binaries</vh></v>
-<v t="davy.20141202180209.108"><vh>@nosent source/format</vh></v>
-<v t="davy.20141202180209.109"><vh>@nosent source/options</vh></v>
+<v t="davy.20141202180209.58"></v>
+<v t="davy.20141202180209.108"></v>
+<v t="davy.20141202180209.56"></v>
 <v t="davy.20141202180209.94"><vh>@nosent changelog</vh></v>
 <v t="davy.20141202180209.102"><vh>@nosent install</vh></v>
 <v t="davy.20141202180209.95"><vh>@nosent rules</vh></v>
-<v t="davy.20141202180209.96"><vh>@nosent compat</vh></v>
+<v t="davy.20141202180209.96"></v>
+<v t="davy.20141202180209.52"></v>
 <v t="davy.20141202180209.97"><vh>@nosent control</vh></v>
-<v t="davy.20141202180209.98"><vh>@nosent copyright</vh></v>
 <v t="davy.20141202180209.99"><vh>@nosent package.info</vh></v>
-<v t="davy.20141202180209.100"><vh>@nosent watch</vh></v>
-<v t="davy.20141202180209.101"><vh>@image leo.png</vh></v>
+<v t="davy.20141202180209.61"></v>
+<v t="davy.20141202180209.101"></v>
 </v>
 </v>
 </v>
-<v t="davy.20141202180209.90"><vh>Windows</vh>
-<v t="ekr.20101027054254.1590"><vh>@edit windows/leo.nsi</vh></v>
-<v t="ekr.20101027115225.1494"><vh>@file windows/nsi-boilerplate.txt</vh></v>
+</v>
+<v t="davy.20141202180209.89" a="E"><vh>Distribution scripts</vh>
+<v t="ekr.20101027131034.1490"><vh>Windows</vh>
+<v t="ekr.20101027160251.1500"><vh>Notes</vh>
+<v t="ekr.20101027135430.1492"><vh>@url nsi new ui readme</vh></v>
+<v t="ekr.20101027135430.1493"><vh>@url about pages</vh></v>
+<v t="ekr.20101027160251.1497"><vh>@url nsDialogs</vh></v>
 </v>
 </v>
-<v t="davy.20141202180209.89"><vh>Distribution scripts</vh>
 <v t="davy.20141202180209.34"><vh>Debian/Ubuntu</vh>
 <v t="davy.20141202180209.35"><vh>Set up a PPA on launchpad (Ubuntu)</vh>
 <v t="davy.20141202180209.36"><vh>Create a launchpad account</vh></v>
@@ -154,8 +162,8 @@
 <v t="davy.20141202180209.41"><vh>Sign the code of conduct</vh></v>
 <v t="davy.20141202180209.42"><vh>Activate a Personal Pakage Archive</vh></v>
 </v>
-<v t="davy.20141202180209.43" a="E"><vh>Create debian sources &amp; packages</vh>
-<v t="davy.20141202180209.65"><vh>@button make src</vh>
+<v t="davy.20141202180209.43"><vh>Create debian sources &amp; packages</vh>
+<v t="davy.20141202180209.65" a="E"><vh>@button make src</vh>
 <v t="davy.20141202180209.87"><vh>&lt;&lt; version &gt;&gt;</vh></v>
 <v t="davy.20141202180209.85"><vh>&lt;&lt; includes &gt;&gt;</vh></v>
 <v t="davy.20141202180209.86"><vh>&lt;&lt; pathes &gt;&gt;</vh></v>
@@ -185,11 +193,16 @@
 <v t="davy.20141202180209.88"><vh>@script multi series</vh></v>
 </v>
 </v>
-<v t="ekr.20101027131034.1490"><vh>Windows</vh>
-<v t="ekr.20101027160251.1500"><vh>Notes</vh>
-<v t="ekr.20101027135430.1492"><vh>@url nsi new ui readme</vh></v>
-<v t="ekr.20101027135430.1493"><vh>@url about pages</vh></v>
-<v t="ekr.20101027160251.1497"><vh>@url nsDialogs</vh></v>
+<v t="davy.20141202180209.113"><vh>MAC distribution</vh>
+<v t="davy.20141202180209.114"><vh>@button make-fink</vh>
+<v t="davy.20141202180209.87"></v>
+<v t="davy.20141202180209.85"></v>
+<v t="davy.20141202180209.86"></v>
+<v t="davy.20141202180209.78"></v>
+<v t="davy.20141202180209.79"></v>
+<v t="davy.20141202180209.80"></v>
+<v t="davy.20141202180209.121"><vh>copyFinkDir</vh></v>
+<v t="davy.20141202180209.122"><vh>makeFinkDeb</vh></v>
 </v>
 </v>
 </v>
@@ -395,36 +408,12 @@ varying audience...Being a convert for less than a day I've still got a lot to
 learn, but just the possibility of keeping system maintenance scripts in the IT
 manual is mind boggling.  -- David Nichols dnichols@amci.com</t>
 <t tx="davy.20141202180209.10">"Edward K. Ream"</t>
-<t tx="davy.20141202180209.100">version=3
-https://pypi.python.org/simple/leo/leo-(.+).zip
-</t>
 <t tx="davy.20141202180209.101"></t>
 <t tx="davy.20141202180209.102">debian/leo.png sw/share/icons
 debian/launcher/leo sw/bin</t>
-<t tx="davy.20141202180209.103">debian/leo.png
-</t>
 <t tx="davy.20141202180209.108">3.0 (quilt)
 </t>
-<t tx="davy.20141202180209.109">extend-diff-ignore="\.egg-info$"
-extend-diff-ignore="leo/dist"
-</t>
 <t tx="davy.20141202180209.11">'edreamleo@gmail.com'</t>
-<t tx="davy.20141202180209.110">Fix launcher issue : distutils scripts do no support private modules
---- a/setup.py
-+++ b/setup.py
-@@ -99,8 +99,4 @@
- ,
-     package_data = package_data,
-     #scripts = ['leo-install.py'],# Not needed anymore ?
--    entry_points =     {
--            'console_scripts': ['leoc = leo.core.runLeo:run'],
--            'gui_scripts' : ['leo = leo.core.runLeo:run'],
--        }
- )
-</t>
-<t tx="davy.20141202180209.111">01_remove_entry_points_and_script.patch
-
-</t>
 <t tx="davy.20141202180209.112">#!/sw/bin/python2.7
 """ Leo launcher script
 A minimal script to launch leo.
@@ -437,7 +426,40 @@ if len(sys.argv[1:])&gt;1:
 else:
     leo.core.runLeo.run()
 </t>
+<t tx="davy.20141202180209.113">There is a priliminary method to make .deb packages maching Fink standards.</t>
+<t tx="davy.20141202180209.114">'''
+* Generate a source tarball with a debianized name and extract it.
+ 
+* Copy dist/fink folder to the archive/src/debian folder 
+    
+* Generate fink .deb package
+'''
+@language python
+&lt;&lt; version &gt;&gt;
+&lt;&lt; includes &gt;&gt;
+&lt;&lt; pathes &gt;&gt;
+@others
+
+g.es_print('Generate Tarball...')
+makeSdist()
+g.es_print('Extract Tarball...')
+extractSdist()
+g.es_print('Rename Tarball...')
+debianizeTarballName()
+g.es_print('Copy Fink directory...')
+copyFinkDir()
+g.es_print('Make Fink .deb package...')
+makeFinkDeb()
+g.es_print('Done')
+</t>
 <t tx="davy.20141202180209.12">'http://leoeditor.com'</t>
+<t tx="davy.20141202180209.121">def copyFinkDir():
+    """Copy fink folder to the srcDir/debian"""
+    g.execute_shell_commands('cp -R '+finkDir+' '+srcDir+'/debian',trace=True)</t>
+<t tx="davy.20141202180209.122">def makeFinkDeb():
+    """Generate Debian sources"""
+    os.chdir(srcDir)
+    g.execute_shell_commands('dpkg-buildpackage -b',trace=True)</t>
 <t tx="davy.20141202180209.13">'http://sourceforge.net/projects/leo/files/Leo/'</t>
 <t tx="davy.20141202180209.14">'https://github.com/leo-editor/leo-editor/issues'</t>
 <t tx="davy.20141202180209.15">'MIT License'</t>
@@ -881,8 +903,6 @@ else:
 </t>
 <t tx="davy.20141202180209.56">extend-diff-ignore="\.egg-info$"
 extend-diff-ignore="leo/dist"</t>
-<t tx="davy.20141202180209.57">3.0 (quilt)
-</t>
 <t tx="davy.20141202180209.58">debian/leo.png
 </t>
 <t tx="davy.20141202180209.59">[Desktop Entry]
@@ -896,8 +916,6 @@ NoDisplay=false
 Categories=Development;IDE
 Name[en]=Leo</t>
 <t tx="davy.20141202180209.6"></t>
-<t tx="davy.20141202180209.60">7
-</t>
 <t tx="davy.20141202180209.61">version=3
 https://pypi.python.org/simple/leo/leo-(.+).zip</t>
 <t tx="davy.20141202180209.62">debian/leo.desktop usr/share/applications
@@ -1247,34 +1265,6 @@ Description:Leonine Editor with Outlines
 	Download:  http://sourceforge.net/projects/leo/files/
 	Github:    https://github.com/leo-editor/leo-editor
 	Quotes:    http://leoeditor.com/testimonials.html
-</t>
-<t tx="davy.20141202180209.98">Copyright: Copyright 1997 - 2014 Edward K. Ream &lt;edreamleo@gmail.com&gt;
-Upstream Author: Detlev Offenbach &lt;detlev@die-offenbachs.de&gt;
-License: MIT
-    Leo is Open Software and is distributed under the terms of the MIT
-    License. The gist of the license is that Leo is absolutely free, even
-    for commercial use (including resale). There is no GNU-like "copyleft"
-    restriction. The Open Source Initiative board has voted to certify the
-    MIT license as Open Source. This license is compatible with the GPL.
-    .
-    Copyright (c) 1997-2014 by Edward K. Ream. All Rights Reserved.
-    .
-    Permission to use, copy, modify, and distribute this software and its
-    documentation for any purpose and without fee is hereby granted,
-    provided that the above copyright notice appear in all copies and that
-    both that copyright notice and this permission notice appear in
-    supporting documentation, and that the names of Leo or Edward K. Ream
-    not be used in advertising or publicity pertaining to distribution of
-    the software without specific, written prior permission.
-    .
-    DISCLAIMER OF WARRANTIES
-    .
-    EDWARD K. REAM (REAM) SPECIFICALLY DISCLAIMS ALL WARRANTIES, EXPRESSED
-    OR IMPLIED, WITH RESPECT TO THIS COMPUTER SOFTWARE, INCLUDING BUT NOT
-    LIMITED TO IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A
-    PARTICULAR PURPOSE. IN NO EVENT SHALL REAM BE LIABLE FOR ANY LOSS OF
-    PROFIT OR ANY COMMERCIAL DAMAGE, INCLUDING BUT NOT LIMITED TO SPECIAL,
-    INCIDENTAL, CONSEQUENTIAL OR OTHER DAMAGES.
 </t>
 <t tx="davy.20141202180209.99">Info2: &lt;&lt;
 Package: leo%type_pkg[python]
