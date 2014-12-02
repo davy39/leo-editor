@@ -6,6 +6,7 @@ include *.TXT
 include launchLeo.py
 include profileLeo.py
 include pylint-leo.py
+recursive-include dist *.*
 #recursive-exclude leo *.pyc *.pyo
 
 # same as data_pat in setup.py
