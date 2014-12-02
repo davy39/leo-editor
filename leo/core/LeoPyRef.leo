@@ -120,7 +120,7 @@
 <v t="ekr.20110605121601.18709"><vh>@auto ../plugins/qt_quicksearch.ui</vh></v>
 </v>
 </v>
-<v t="ekr.20090802181029.5989" a="E"><vh>Startup &amp; external files</vh>
+<v t="ekr.20090802181029.5989"><vh>Startup &amp; external files</vh>
 <v t="ekr.20110310091639.14254"><vh>@file ../external/codewise.py</vh></v>
 <v t="ekr.20130805134749.12436"><vh>@file ../external/edb.py</vh></v>
 <v t="ekr.20120519121124.9919"><vh>@file ../external/leosax.py</vh></v>
@@ -134,8 +134,8 @@
 <v t="ekr.20080730161153.5"><vh>@file leoDynamicTest.py</vh></v>
 <v t="ekr.20051104075904" descendentVnodeUnknownAttributes="7d710055013071017d71025808000000616e6e6f746174657103285808000000616e6e6f7461746571047d710574710673732e"><vh>@file leoTest.py</vh></v>
 </v>
-<v t="ekr.20090802181029.5988"><vh>Version</vh>
-<v t="ekr.20090717092906.12765"><vh>@file leoVersion.py</vh></v>
+<v t="ekr.20090802181029.5988" a="E"><vh>Version</vh>
+<v t="ekr.20090717092906.12765" a="E"><vh>@file leoVersion.py</vh></v>
 </v>
 </v>
 </vnodes>

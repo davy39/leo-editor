@@ -1,4 +1,4 @@
-leo (5.0-fink1) lucid; urgency=low
+leo (5.0.1-fink1) lucid; urgency=low
 
   * Fix a stupid mime copy-paste error
   

@@ -63,12 +63,12 @@
 <v t="EKR.20040519090846.8"><vh>@asis ../PKG-INFO.TXT</vh></v>
 <v t="EKR.20040519090846.9"><vh>@asis ../README.TXT</vh></v>
 </v>
-<v t="davy.20141202180209.2"><vh>Setuptools</vh>
+<v t="davy.20141202180209.2" a="E"><vh>Setuptools</vh>
 <v t="davy.20141202180209.5"><vh>@nosent ../setup.py</vh>
 <v t="davy.20141202180209.6" a="E"><vh>Parameters</vh>
-<v t="davy.20141202180209.7"><vh>Metadata</vh>
+<v t="davy.20141202180209.7" a="E"><vh>Metadata</vh>
 <v t="davy.20141202180209.8"><vh>&lt;&lt; name &gt;&gt;</vh></v>
-<v t="davy.20141202180209.9"><vh>&lt;&lt; version &gt;&gt;</vh></v>
+<v t="davy.20141202180209.87"><vh>&lt;&lt; version &gt;&gt;</vh></v>
 <v t="davy.20141202180209.10"><vh>&lt;&lt; author &gt;&gt;</vh></v>
 <v t="davy.20141202180209.11"><vh>&lt;&lt; author_email &gt;&gt;</vh></v>
 <v t="davy.20141202180209.12"><vh>&lt;&lt; url &gt;&gt;</vh></v>
@@ -95,8 +95,8 @@
 <v t="davy.20141202180209.90"><vh>Windows</vh>
 <v t="davy.20141202180209.129" a="E"><vh>@file windows/leo.nsi</vh></v>
 </v>
-<v t="davy.20141202180209.44"><vh>Debian</vh>
-<v t="davy.20141202180209.45"><vh>@path debian</vh>
+<v t="davy.20141202180209.44" a="E"><vh>Debian</vh>
+<v t="davy.20141202180209.45" a="E"><vh>@path debian</vh>
 <v t="davy.20141202180209.46"><vh>@nosent changelog</vh></v>
 <v t="davy.20141202180209.47" a="E"><vh>Statics</vh>
 <v t="davy.20141202180209.48"><vh>@nosent rules</vh></v>
@@ -121,9 +121,9 @@
 </v>
 </v>
 </v>
-<v t="davy.20141202180209.91"><vh>Mac</vh>
+<v t="davy.20141202180209.91" a="E"><vh>Mac</vh>
 <v t="davy.20141202180209.92" a="E"><vh>Fink</vh>
-<v t="davy.20141202180209.93"><vh>@path mac/fink</vh>
+<v t="davy.20141202180209.93" a="E"><vh>@path mac/fink</vh>
 <v t="davy.20141202180209.54"></v>
 <v t="davy.20141202180209.55"></v>
 <v t="davy.20141202180209.112"><vh>@nosent launcher/leo</vh></v>
@@ -151,7 +151,7 @@
 <v t="ekr.20101027160251.1497"><vh>@url nsDialogs</vh></v>
 </v>
 <v t="davy.20141202180209.141"><vh>@button make nsis</vh>
-<v t="davy.20141202180209.87"><vh>&lt;&lt; version &gt;&gt;</vh></v>
+<v t="davy.20141202180209.87"></v>
 <v t="davy.20141202180209.85"><vh>&lt;&lt; includes &gt;&gt;</vh></v>
 <v t="davy.20141202180209.86"><vh>&lt;&lt; pathes &gt;&gt;</vh></v>
 <v t="davy.20141202180209.145"><vh>makeWindowsArchiveDir</vh></v>
@@ -160,7 +160,7 @@
 <v t="davy.20141202180209.148"><vh>makeExe</vh></v>
 </v>
 </v>
-<v t="davy.20141202180209.34"><vh>Debian/Ubuntu</vh>
+<v t="davy.20141202180209.34" a="E"><vh>Debian/Ubuntu</vh>
 <v t="davy.20141202180209.35"><vh>Set up a PPA on launchpad (Ubuntu)</vh>
 <v t="davy.20141202180209.36"><vh>Create a launchpad account</vh></v>
 <v t="davy.20141202180209.37"><vh>Generate GPG key</vh></v>
@@ -170,7 +170,7 @@
 <v t="davy.20141202180209.41"><vh>Sign the code of conduct</vh></v>
 <v t="davy.20141202180209.42"><vh>Activate a Personal Pakage Archive</vh></v>
 </v>
-<v t="davy.20141202180209.43"><vh>Create debian sources &amp; packages</vh>
+<v t="davy.20141202180209.43" a="E"><vh>Create debian sources &amp; packages</vh>
 <v t="davy.20141202180209.65" a="E"><vh>@button make src</vh>
 <v t="davy.20141202180209.87"></v>
 <v t="davy.20141202180209.85"></v>
@@ -749,7 +749,7 @@ Debian sources, as required by launchpad are the following files :
 	* For `dpkg-buildpackage -S` automaticaly sign the sources with gpg, `Your name (your comment) &lt;your email&gt;` **have to** be exacly identical (including comment, if you gave one)</t>
 <t tx="davy.20141202180209.44"></t>
 <t tx="davy.20141202180209.45">@tabwidth -4</t>
-<t tx="davy.20141202180209.46">leo (5.0-2) lucid; urgency=low
+<t tx="davy.20141202180209.46">leo (5.0.1-1) lucid; urgency=low
 
   * Fix a stupid mime copy-paste error
   
@@ -845,14 +845,15 @@ from setuptools import setup, find_packages
     # find_packages(exclude=('leo.extensions','leo.test','leo.plugins.test',))
 
     #We have to specify data, ie not .py files &amp; not __init__.py folders
-    
+
+&lt;&lt; version &gt;&gt;
 package_data = &lt;&lt; package_data &gt;&gt;
 
 exclude_package_data = &lt;&lt; exclude_package_data &gt;&gt;
 
 setup(
     name = &lt;&lt; name &gt;&gt;,
-    version = &lt;&lt; version &gt;&gt;,
+    version = version,
     author = &lt;&lt; author &gt;&gt;,
     author_email = &lt;&lt; author_email &gt;&gt;,
     license = &lt;&lt; license &gt;&gt;,
@@ -1205,12 +1206,11 @@ for to_series_name in ['precise', 'trusty','utopic', 'vivid']:
 	version=version)
 g.es('Done')</t>
 <t tx="davy.20141202180209.89"></t>
-<t tx="davy.20141202180209.9">leo.core.leoVersion.version</t>
 <t tx="davy.20141202180209.90"></t>
 <t tx="davy.20141202180209.91"></t>
 <t tx="davy.20141202180209.92"></t>
 <t tx="davy.20141202180209.93"></t>
-<t tx="davy.20141202180209.94">leo (5.0-fink1) lucid; urgency=low
+<t tx="davy.20141202180209.94">leo (5.0.1-fink1) lucid; urgency=low
 
   * Fix a stupid mime copy-paste error
   

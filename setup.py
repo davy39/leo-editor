@@ -8,7 +8,12 @@ from setuptools import setup, find_packages
     # find_packages(exclude=('leo.extensions','leo.test','leo.plugins.test',))
 
     #We have to specify data, ie not .py files & not __init__.py folders
-    
+
+# Make sure that it is the same in setup.py, debian/changelog, fink/changelog, leo.nsis, website, doc...
+# TODO : implement a reliable global parameter or clone functionality
+version = '5.0.1'
+debRev = '1'
+finkRev = '1'
 package_data = {
 # Files to include for every packages
 '':     [
@@ -53,8 +58,7 @@ exclude_package_data = {}
 setup(
     name =     'leo'
 ,
-    version =     leo.core.leoVersion.version
-,
+    version = version,
     author =     "Edward K. Ream"
 ,
     author_email =     'edreamleo@gmail.com'
