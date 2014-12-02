@@ -46,8 +46,8 @@
 </v>
 </v>
 <v t="EKR.20040519090846"><vh>Distribution files</vh>
-<v t="ekr.20141016105045.2119"><vh>@asis ../../.gitattributes</vh></v>
-<v t="ekr.20130809141000.1990"><vh>@asis ../../INSTALL.TXT</vh>
+<v t="ekr.20141016105045.2119"><vh>@asis ../.gitattributes</vh></v>
+<v t="ekr.20130809141000.1990"><vh>@asis ../INSTALL.TXT</vh>
 <v t="ekr.20130809141000.1991"><vh>System requirements</vh></v>
 <v t="ekr.20130809141000.1992"><vh>Leo's HOME directory</vh></v>
 <v t="ekr.20130809141000.1993"><vh>Linux installation</vh></v>
@@ -57,23 +57,23 @@
 <v t="ekr.20130809141000.1997"><vh>Adding Leo to your path</vh></v>
 <v t="ekr.20130809141000.1998"><vh>Running Leo for the first time</vh></v>
 </v>
-<v t="EKR.20040519090846.1"><vh>@asis ../../LICENSE.TXT</vh></v>
-<v t="EKR.20040519090846.8"><vh>@asis ../../PKG-INFO.TXT</vh></v>
-<v t="EKR.20040519090846.9"><vh>@asis ../../README.TXT</vh></v>
+<v t="EKR.20040519090846.1"><vh>@asis ../LICENSE.TXT</vh></v>
+<v t="EKR.20040519090846.8"><vh>@asis ../PKG-INFO.TXT</vh></v>
+<v t="EKR.20040519090846.9"><vh>@asis ../README.TXT</vh></v>
 </v>
 <v t="ekr.20141118074110.4"><vh>Discussions</vh>
 <v t="ekr.20141118074110.2"><vh>Matt's workflow for updating pypi</vh></v>
 <v t="ekr.20141118074110.3"><vh>Installing Leo on Linux</vh></v>
 </v>
 <v t="ekr.20100202061222.1494"><vh>Distribution checklist</vh></v>
-<v t="ekr.20101027131034.1490"><vh>NSIS source files</vh>
+<v t="ekr.20101027131034.1490" a="E"><vh>NSIS source files</vh>
 <v t="ekr.20101027160251.1500"><vh>Notes</vh>
 <v t="ekr.20101027135430.1492"><vh>@url nsi new ui readme</vh></v>
 <v t="ekr.20101027135430.1493"><vh>@url about pages</vh></v>
 <v t="ekr.20101027160251.1497"><vh>@url nsDialogs</vh></v>
 </v>
-<v t="ekr.20101027054254.1590"><vh>@edit ../../leo.nsi</vh></v>
-<v t="ekr.20101027115225.1494"><vh>@file nsi-boilerplate.txt</vh></v>
+<v t="ekr.20101027054254.1590"><vh>@edit windows/leo.nsi</vh></v>
+<v t="ekr.20101027115225.1494"><vh>@file windows/nsi-boilerplate.txt</vh></v>
 </v>
 <v t="ekr.20101027070126.1639"><vh>@button make leo</vh>
 <v t="ekr.20090905082405.1487"><vh>&lt;&lt; includes &gt;&gt;</vh></v>

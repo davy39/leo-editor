@@ -1,5 +1,5 @@
 ;@+leo-ver=5-thin
-;@+node:ekr.20101027115225.1494: * @file nsi-boilerplate.txt
+;@+node:ekr.20101027115225.1494: * @file windows/nsi-boilerplate.txt
 ;@@language nsi
 
 ; RequestExecutionLevel highest
