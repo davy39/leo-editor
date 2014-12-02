@@ -126,31 +126,6 @@
 <v t="ekr.20120519121124.9919"><vh>@file ../external/leosax.py</vh></v>
 <v t="ville.20091010232339.6117"><vh>@file ../external/lproto.py</vh></v>
 <v t="ekr.20141010141310.18627"><vh>@file ../external/PythonTidy.py</vh></v>
-<v t="ekr.20141027093638.6" a="E"><vh>@nosent ../../setup.py</vh>
-<v t="davy.20141128121701.2" a="E"><vh>Parameters</vh>
-<v t="davy.20141128121701.21"><vh>Metadata</vh>
-<v t="davy.20141128121701.15"><vh>&lt;&lt; name &gt;&gt;</vh></v>
-<v t="davy.20141128121701.3"><vh>&lt;&lt; version &gt;&gt;</vh></v>
-<v t="davy.20141128121701.4"><vh>&lt;&lt; author &gt;&gt;</vh></v>
-<v t="davy.20141128121701.5"><vh>&lt;&lt; author_email &gt;&gt;</vh></v>
-<v t="davy.20141128121701.16"><vh>&lt;&lt; url &gt;&gt;</vh></v>
-<v t="davy.20141128121701.10"><vh>&lt;&lt; download_url &gt;&gt;</vh></v>
-<v t="davy.20141128121701.23"><vh>&lt;&lt; bugtrack_url &gt;&gt;</vh></v>
-<v t="davy.20141128121701.6"><vh>&lt;&lt; license &gt;&gt;</vh></v>
-<v t="davy.20141128121701.7"><vh>&lt;&lt; description &gt;&gt;</vh></v>
-<v t="davy.20141128121701.8"><vh>&lt;&lt; long_description &gt;&gt;</vh></v>
-<v t="davy.20141128121701.9"><vh>&lt;&lt; platforms &gt;&gt;</vh></v>
-<v t="davy.20141128121701.12"><vh>&lt;&lt; classifiers &gt;&gt;</vh></v>
-</v>
-<v t="davy.20141128121701.22" a="E"><vh>Installation configuration</vh>
-<v t="davy.20141128121701.11"><vh>&lt;&lt; requires &gt;&gt;</vh></v>
-<v t="davy.20141128121701.14"><vh>&lt;&lt; entry_points &gt;&gt;</vh></v>
-<v t="davy.20141128121701.17"><vh>&lt;&lt; packages &gt;&gt;</vh></v>
-<v t="davy.20141128121701.18"><vh>&lt;&lt; package_data &gt;&gt;</vh></v>
-<v t="davy.20141128121701.20"><vh>&lt;&lt; exclude_package_data &gt;&gt;</vh></v>
-</v>
-</v>
-</v>
 <v t="ekr.20031218072017.2605"><vh>@file runLeo.py </vh></v>
 </v>
 <v t="ekr.20080730161153.8"><vh>Testing</vh>
@@ -167,82 +142,6 @@
 <tnodes>
 <t tx="EKR.20040430162943"></t>
 <t tx="EKR.20040519090151.2"></t>
-<t tx="davy.20141128121701.10">'http://sourceforge.net/projects/leo/files/Leo/'</t>
-<t tx="davy.20141128121701.11">['docutils']</t>
-<t tx="davy.20141128121701.12">[
-        'Development Status :: 5 - Production/Stable',
-        'Environment :: Win32 (MS Windows)',
-        'Environment :: X11 Applications :: Qt',
-        'Intended Audience :: End Users/Desktop',
-        'Intended Audience :: Developers',
-        'License :: OSI Approved :: MIT License',
-        'Natural Language :: English',
-        'Operating System :: MacOS',
-        'Operating System :: Microsoft :: Windows',
-        'Operating System :: POSIX :: Linux',
-        'Programming Language :: Python :: 2.6',
-        'Programming Language :: Python :: 3',
-        'Topic :: Software Development',
-        'Topic :: Text Editors',
-        'Topic :: Text Processing',
-    ]</t>
-<t tx="davy.20141128121701.14">{
-        'console_scripts': ['leoc = leo.core.runLeo:run'],
-        'gui_scripts' : ['leo = leo.core.runLeo:run'],
-    }</t>
-<t tx="davy.20141128121701.15">'leo'</t>
-<t tx="davy.20141128121701.16">'http://leoeditor.com'</t>
-<t tx="davy.20141128121701.17">find_packages(exclude=('leo.extensions','leo.test','leo.plugins.test',))</t>
-<t tx="davy.20141128121701.18">{
-# Files to include for every packages
-'':     [
-        '*.leo', '*.ini', '*.ui', '*.txt', '*.json', '*.css',
-        '*.html', '*.js', '*.svg', '*.bat', '*.sh', '*.rst', '*.md'
-        ],
-# Include www folder and its content. What is it for ?
-'leo':  [ 
-        'www/*',
-        # Include icons... 
-        'Icons/*.*',
-        #Why this entire theme folder ?
-        'Icons/Tango/*/*/*.png', 
-        'Icons/recorder/*.png',
-        # Duplicate (Themes)
-        'Icons/cleo/*.*',  
-        'Icons/cleo/small/*.png',
-        # Include themes icons... 
-        # It would be simpler to bring them on same level ex: 'themes/*/icons/*.png   
-       'themes/leo_dark_0/Icons/*.png',
-       # Duplicate : Icons
-       'themes/leo_dark_0/Icons/cleo/*.png',
-       'themes/leo_dark_0/Icons/cleo/*.html','themes/leo_dark_0/Icons/cleo/small/*.png',
-       'themes/leo_dark_0/Icons/Tango/16x16/apps/*.png',
-       # We could also specify extensions or declare it as package with an __init__.py
-       'scripts/*',
-       #Leo distribution files (do we really need to install them ?)
-       'dist/*.*'
-       ],    
-# For plugins we create __init__.py into sub-folders 
-#Do we want to include obsolete ones ?
-# Do we want this pyd file ?
-'leo.plugins':['*.pyd'],
-'leo.plugins.qmlnb':['qml/*'],
-'leo.plugins.modes':['catalog','*.xml'],
-# Wouldn't it be better to install ckedito separatly ?
-# Do we have to install external.obsolete ?
-}</t>
-<t tx="davy.20141128121701.2"></t>
-<t tx="davy.20141128121701.20">{}</t>
-<t tx="davy.20141128121701.21"></t>
-<t tx="davy.20141128121701.22"></t>
-<t tx="davy.20141128121701.23">'https://github.com/leo-editor/leo-editor/issues'</t>
-<t tx="davy.20141128121701.3">leo.core.leoVersion.version</t>
-<t tx="davy.20141128121701.4">"Edward K. Ream"</t>
-<t tx="davy.20141128121701.5">'edreamleo@gmail.com'</t>
-<t tx="davy.20141128121701.6">'MIT License'</t>
-<t tx="davy.20141128121701.7">"Leo: Leonine Editor with Outlines"</t>
-<t tx="davy.20141128121701.8">open('README.TXT', 'r').read()</t>
-<t tx="davy.20141128121701.9">['linux','windows']</t>
 <t tx="ekr.20031218072017.2406" _bklnk="7d71002858010000007971014b0058010000007871024b00580400000074797065710358080000006e6f646552656374710458050000006c696e6b7371055d7106752e">@tabwidth -4
 @pagewidth 70
 
@@ -558,43 +457,5 @@ gnx: ekr.20140225224703.8177
 unl: class Ui_LeoQuickSearchWidget--&gt;retranslateUi
 </t>
 <t tx="ekr.20141025071403.21"></t>
-<t tx="ekr.20141027093638.6">'''setup.py for leo'''
-import leo.core.leoVersion
-from setuptools import setup, find_packages
-# Note :
-    # Folder without __init__.py are not included by default
-    # Even if it unecessary (because no __init__.py), 
-    # We explicitely exclude unwanted packages with :
-    # find_packages(exclude=('leo.extensions','leo.test','leo.plugins.test',))
-
-    #We have to specify data, ie not .py files &amp; not __init__.py folders
-    
-package_data = &lt;&lt; package_data &gt;&gt;
-
-exclude_package_data = &lt;&lt; exclude_package_data &gt;&gt;
-
-setup(
-    name = &lt;&lt; name &gt;&gt;,
-    version = &lt;&lt; version &gt;&gt;,
-    author = &lt;&lt; author &gt;&gt;,
-    author_email = &lt;&lt; author_email &gt;&gt;,
-    license = &lt;&lt; license &gt;&gt;,
-    description = &lt;&lt; description &gt;&gt;, # becomes "Summary" in pkg-info
-    long_description = &lt;&lt; long_description &gt;&gt;,
-    url = &lt;&lt; url &gt;&gt;,
-    download_url = &lt;&lt; download_url &gt;&gt;,
-    bugtrack_url = &lt;&lt; bugtrack_url &gt;&gt;,# pypi still needs this added manually via web form
-    platforms = &lt;&lt; platforms &gt;&gt;,
-    requires = &lt;&lt; requires &gt;&gt;, # only include dependencies which can be installed by pip (so not PyQt or SIP)
-    classifiers = &lt;&lt; classifiers &gt;&gt;,
-    packages = &lt;&lt; packages &gt;&gt;,
-    package_data = package_data,
-    #scripts = ['leo-install.py'],# Not needed anymore ?
-    entry_points = &lt;&lt; entry_points &gt;&gt;
-)
-@others
-@language python
-@tabwidth -4
-</t>
 </tnodes>
 </leo_file>

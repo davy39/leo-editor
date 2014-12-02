@@ -45,7 +45,8 @@
 <v t="EKR.20040519091259.4"><vh>October 2003</vh></v>
 </v>
 </v>
-<v t="EKR.20040519090846"><vh>Distribution files</vh>
+<v t="EKR.20040519090846" a="E"><vh>Distribution files</vh>
+<v t="davy.20141202180209.3"><vh>General</vh>
 <v t="ekr.20141016105045.2119"><vh>@asis ../.gitattributes</vh></v>
 <v t="ekr.20130809141000.1990"><vh>@asis ../INSTALL.TXT</vh>
 <v t="ekr.20130809141000.1991"><vh>System requirements</vh></v>
@@ -61,12 +62,42 @@
 <v t="EKR.20040519090846.8"><vh>@asis ../PKG-INFO.TXT</vh></v>
 <v t="EKR.20040519090846.9"><vh>@asis ../README.TXT</vh></v>
 </v>
+<v t="davy.20141202180209.2" a="E"><vh>Setuptools</vh>
+<v t="davy.20141202180209.5"><vh>@nosent ../setup.py</vh>
+<v t="davy.20141202180209.6" a="E"><vh>Parameters</vh>
+<v t="davy.20141202180209.7"><vh>Metadata</vh>
+<v t="davy.20141202180209.8"><vh>&lt;&lt; name &gt;&gt;</vh></v>
+<v t="davy.20141202180209.9"><vh>&lt;&lt; version &gt;&gt;</vh></v>
+<v t="davy.20141202180209.10"><vh>&lt;&lt; author &gt;&gt;</vh></v>
+<v t="davy.20141202180209.11"><vh>&lt;&lt; author_email &gt;&gt;</vh></v>
+<v t="davy.20141202180209.12"><vh>&lt;&lt; url &gt;&gt;</vh></v>
+<v t="davy.20141202180209.13"><vh>&lt;&lt; download_url &gt;&gt;</vh></v>
+<v t="davy.20141202180209.14"><vh>&lt;&lt; bugtrack_url &gt;&gt;</vh></v>
+<v t="davy.20141202180209.15"><vh>&lt;&lt; license &gt;&gt;</vh></v>
+<v t="davy.20141202180209.16"><vh>&lt;&lt; description &gt;&gt;</vh></v>
+<v t="davy.20141202180209.17"><vh>&lt;&lt; long_description &gt;&gt;</vh></v>
+<v t="davy.20141202180209.18"><vh>&lt;&lt; platforms &gt;&gt;</vh></v>
+<v t="davy.20141202180209.19"><vh>&lt;&lt; classifiers &gt;&gt;</vh></v>
+</v>
+<v t="davy.20141202180209.20"><vh>Installation configuration</vh>
+<v t="davy.20141202180209.21"><vh>&lt;&lt; requires &gt;&gt;</vh></v>
+<v t="davy.20141202180209.22"><vh>&lt;&lt; entry_points &gt;&gt;</vh></v>
+<v t="davy.20141202180209.23"><vh>&lt;&lt; packages &gt;&gt;</vh></v>
+<v t="davy.20141202180209.24"><vh>&lt;&lt; package_data &gt;&gt;</vh></v>
+<v t="davy.20141202180209.25"><vh>&lt;&lt; exclude_package_data &gt;&gt;</vh></v>
+</v>
+</v>
+</v>
+<v t="davy.20141202180209.26"><vh>@auto ../setup.cfg</vh></v>
+<v t="davy.20141202180209.27"><vh>@auto ../MANIFEST.in</vh></v>
+</v>
+</v>
 <v t="ekr.20141118074110.4"><vh>Discussions</vh>
 <v t="ekr.20141118074110.2"><vh>Matt's workflow for updating pypi</vh></v>
 <v t="ekr.20141118074110.3"><vh>Installing Leo on Linux</vh></v>
 </v>
 <v t="ekr.20100202061222.1494"><vh>Distribution checklist</vh></v>
-<v t="ekr.20101027131034.1490" a="E"><vh>NSIS source files</vh>
+<v t="ekr.20101027131034.1490"><vh>NSIS source files</vh>
 <v t="ekr.20101027160251.1500"><vh>Notes</vh>
 <v t="ekr.20101027135430.1492"><vh>@url nsi new ui readme</vh></v>
 <v t="ekr.20101027135430.1493"><vh>@url about pages</vh></v>
@@ -100,6 +131,14 @@
 <v t="ekr.20101027070126.1678"><vh>put</vh></v>
 <v t="ekr.20090905082405.1490"><vh>unlink</vh></v>
 </v>
+</v>
+</v>
+<v t="davy.20141202180209.28"><vh>@persistence</vh>
+<v t="davy.20141202180209.29"><vh>@data:@auto ../setup.cfg</vh>
+<v t="davy.20141202180209.30"><vh>@gnxs</vh></v>
+</v>
+<v t="davy.20141202180209.31"><vh>@data:@auto ../MANIFEST.in</vh>
+<v t="davy.20141202180209.32"><vh>@gnxs</vh></v>
 </v>
 </v>
 </vnodes>
@@ -264,6 +303,129 @@ of discrete parts that can be re-organized on the fly to meet the needs of a
 varying audience...Being a convert for less than a day I've still got a lot to
 learn, but just the possibility of keeping system maintenance scripts in the IT
 manual is mind boggling.  -- David Nichols dnichols@amci.com</t>
+<t tx="davy.20141202180209.10">"Edward K. Ream"</t>
+<t tx="davy.20141202180209.11">'edreamleo@gmail.com'</t>
+<t tx="davy.20141202180209.12">'http://leoeditor.com'</t>
+<t tx="davy.20141202180209.13">'http://sourceforge.net/projects/leo/files/Leo/'</t>
+<t tx="davy.20141202180209.14">'https://github.com/leo-editor/leo-editor/issues'</t>
+<t tx="davy.20141202180209.15">'MIT License'</t>
+<t tx="davy.20141202180209.16">"Leo: Leonine Editor with Outlines"</t>
+<t tx="davy.20141202180209.17">open('README.TXT', 'r').read()</t>
+<t tx="davy.20141202180209.18">['linux','windows']</t>
+<t tx="davy.20141202180209.19">[
+        'Development Status :: 5 - Production/Stable',
+        'Environment :: Win32 (MS Windows)',
+        'Environment :: X11 Applications :: Qt',
+        'Intended Audience :: End Users/Desktop',
+        'Intended Audience :: Developers',
+        'License :: OSI Approved :: MIT License',
+        'Natural Language :: English',
+        'Operating System :: MacOS',
+        'Operating System :: Microsoft :: Windows',
+        'Operating System :: POSIX :: Linux',
+        'Programming Language :: Python :: 2.6',
+        'Programming Language :: Python :: 3',
+        'Topic :: Software Development',
+        'Topic :: Text Editors',
+        'Topic :: Text Processing',
+    ]</t>
+<t tx="davy.20141202180209.2"></t>
+<t tx="davy.20141202180209.20"></t>
+<t tx="davy.20141202180209.21">['docutils']</t>
+<t tx="davy.20141202180209.22">{
+        'console_scripts': ['leoc = leo.core.runLeo:run'],
+        'gui_scripts' : ['leo = leo.core.runLeo:run'],
+    }</t>
+<t tx="davy.20141202180209.23">find_packages(exclude=('leo.extensions','leo.test','leo.plugins.test',))</t>
+<t tx="davy.20141202180209.24">{
+# Files to include for every packages
+'':     [
+        '*.leo', '*.ini', '*.ui', '*.txt', '*.json', '*.css',
+        '*.html', '*.js', '*.svg', '*.bat', '*.sh', '*.rst', '*.md'
+        ],
+# Include www folder and its content. What is it for ?
+'leo':  [ 
+        'www/*',
+        # Include icons... 
+        'Icons/*.*',
+        #Why this entire theme folder ?
+        'Icons/Tango/*/*/*.png', 
+        'Icons/recorder/*.png',
+        # Duplicate (Themes)
+        'Icons/cleo/*.*',  
+        'Icons/cleo/small/*.png',
+        # Include themes icons... 
+        # It would be simpler to bring them on same level ex: 'themes/*/icons/*.png   
+       'themes/leo_dark_0/Icons/*.png',
+       # Duplicate : Icons
+       'themes/leo_dark_0/Icons/cleo/*.png',
+       'themes/leo_dark_0/Icons/cleo/*.html','themes/leo_dark_0/Icons/cleo/small/*.png',
+       'themes/leo_dark_0/Icons/Tango/16x16/apps/*.png',
+       # We could also specify extensions or declare it as package with an __init__.py
+       'scripts/*',
+       #Leo distribution files (do we really need to install them ?)
+       'dist/*.*'
+       ],    
+# For plugins we create __init__.py into sub-folders 
+#Do we want to include obsolete ones ?
+# Do we want this pyd file ?
+'leo.plugins':['*.pyd'],
+'leo.plugins.qmlnb':['qml/*'],
+'leo.plugins.modes':['catalog','*.xml'],
+# Wouldn't it be better to install ckedito separatly ?
+# Do we have to install external.obsolete ?
+}</t>
+<t tx="davy.20141202180209.25">{}</t>
+<t tx="davy.20141202180209.28"></t>
+<t tx="davy.20141202180209.29">gnx: davy.20141202180209.26
+</t>
+<t tx="davy.20141202180209.3"></t>
+<t tx="davy.20141202180209.30"></t>
+<t tx="davy.20141202180209.31">gnx: davy.20141202180209.27
+</t>
+<t tx="davy.20141202180209.32"></t>
+<t tx="davy.20141202180209.5">'''setup.py for leo'''
+import leo.core.leoVersion
+from setuptools import setup, find_packages
+# Note :
+    # Folder without __init__.py are not included by default
+    # Even if it unecessary (because no __init__.py), 
+    # We explicitely exclude unwanted packages with :
+    # find_packages(exclude=('leo.extensions','leo.test','leo.plugins.test',))
+
+    #We have to specify data, ie not .py files &amp; not __init__.py folders
+    
+package_data = &lt;&lt; package_data &gt;&gt;
+
+exclude_package_data = &lt;&lt; exclude_package_data &gt;&gt;
+
+setup(
+    name = &lt;&lt; name &gt;&gt;,
+    version = &lt;&lt; version &gt;&gt;,
+    author = &lt;&lt; author &gt;&gt;,
+    author_email = &lt;&lt; author_email &gt;&gt;,
+    license = &lt;&lt; license &gt;&gt;,
+    description = &lt;&lt; description &gt;&gt;, # becomes "Summary" in pkg-info
+    long_description = &lt;&lt; long_description &gt;&gt;,
+    url = &lt;&lt; url &gt;&gt;,
+    download_url = &lt;&lt; download_url &gt;&gt;,
+    bugtrack_url = &lt;&lt; bugtrack_url &gt;&gt;,# pypi still needs this added manually via web form
+    platforms = &lt;&lt; platforms &gt;&gt;,
+    requires = &lt;&lt; requires &gt;&gt;, # only include dependencies which can be installed by pip (so not PyQt or SIP)
+    classifiers = &lt;&lt; classifiers &gt;&gt;,
+    packages = &lt;&lt; packages &gt;&gt;,
+    package_data = package_data,
+    #scripts = ['leo-install.py'],# Not needed anymore ?
+    entry_points = &lt;&lt; entry_points &gt;&gt;
+)
+@others
+@language python
+@tabwidth -4
+</t>
+<t tx="davy.20141202180209.6"></t>
+<t tx="davy.20141202180209.7"></t>
+<t tx="davy.20141202180209.8">'leo'</t>
+<t tx="davy.20141202180209.9">leo.core.leoVersion.version</t>
 <t tx="ekr.20040630210818">HTML Editing in Leo is soooo much easier then with NoNodeEditors. Ive
 had a blast working on a web page. Usually I had to look at a bunch of
 gunk all at once. Now I can look at little pieces of gunk! :) 
