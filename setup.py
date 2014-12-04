@@ -1,5 +1,6 @@
 '''setup.py for leo'''
 import leo.core.leoVersion
+import os
 from setuptools import setup, find_packages
 # Note :
     # Folder without __init__.py are not included by default
@@ -14,6 +15,12 @@ from setuptools import setup, find_packages
 version = '5.0.1'
 debRev = '1'
 finkRev = '1'
+
+# To cach all the files of files of ckeditor :
+os.chdir(os.path.join('leo','external'))
+ckeditorFiles = [os.path.join(path, f) for path, _, files in os.walk('ckeditor') for f in files if '.git' not in path]
+os.chdir(os.path.join('..','..'))
+
 package_data = {
 # Files to include for every packages
 '':     [
@@ -50,6 +57,7 @@ package_data = {
 'leo.plugins.qmlnb':['qml/*'],
 'leo.plugins.modes':['catalog','*.xml'],
 # Wouldn't it be better to install ckedito separatly ?
+'leo.external':ckeditorFiles,
 # Do we have to install external.obsolete ?
 }
 

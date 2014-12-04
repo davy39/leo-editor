@@ -63,10 +63,10 @@
 <v t="EKR.20040519090846.8"><vh>@asis ../PKG-INFO.TXT</vh></v>
 <v t="EKR.20040519090846.9"><vh>@asis ../README.TXT</vh></v>
 </v>
-<v t="davy.20141202180209.2"><vh>Setuptools</vh>
-<v t="davy.20141202180209.5"><vh>@nosent ../setup.py</vh>
+<v t="davy.20141202180209.2" a="E"><vh>Setuptools</vh>
+<v t="davy.20141202180209.5" a="E"><vh>@nosent ../setup.py</vh>
 <v t="davy.20141202180209.6" a="E"><vh>Parameters</vh>
-<v t="davy.20141202180209.7" a="E"><vh>Metadata</vh>
+<v t="davy.20141202180209.7"><vh>Metadata</vh>
 <v t="davy.20141202180209.8"><vh>&lt;&lt; name &gt;&gt;</vh></v>
 <v t="davy.20141202180209.87"><vh>&lt;&lt; version &gt;&gt;</vh></v>
 <v t="davy.20141202180209.10"><vh>&lt;&lt; author &gt;&gt;</vh></v>
@@ -80,7 +80,7 @@
 <v t="davy.20141202180209.18"><vh>&lt;&lt; platforms &gt;&gt;</vh></v>
 <v t="davy.20141202180209.19"><vh>&lt;&lt; classifiers &gt;&gt;</vh></v>
 </v>
-<v t="davy.20141202180209.20"><vh>Installation configuration</vh>
+<v t="davy.20141202180209.20" a="E"><vh>Installation configuration</vh>
 <v t="davy.20141202180209.21"><vh>&lt;&lt; requires &gt;&gt;</vh></v>
 <v t="davy.20141202180209.22"><vh>&lt;&lt; entry_points &gt;&gt;</vh></v>
 <v t="davy.20141202180209.23"><vh>&lt;&lt; packages &gt;&gt;</vh></v>
@@ -95,7 +95,7 @@
 <v t="davy.20141202180209.90"><vh>Windows</vh>
 <v t="davy.20141202180209.129" a="E"><vh>@file windows/leo.nsi</vh></v>
 </v>
-<v t="davy.20141202180209.44" a="E"><vh>Debian</vh>
+<v t="davy.20141202180209.44"><vh>Debian</vh>
 <v t="davy.20141202180209.45" a="E"><vh>@path debian</vh>
 <v t="davy.20141202180209.46"><vh>@nosent changelog</vh></v>
 <v t="davy.20141202180209.47" a="E"><vh>Statics</vh>
@@ -496,6 +496,8 @@ g.es_print('Done')</t>
     os.chdir(rootDir)
     if exists(windowsArchiveDir):
         g.execute_shell_commands('rm -R '+windowsArchiveDir)
+    elif not exists(archiveDir):
+        g.execute_shell_commands('mkdir '+archiveDir)
     g.execute_shell_commands('python setup.py build --build-lib '+windowsArchiveDir)</t>
 <t tx="davy.20141202180209.146">def copyLeoNsi():
     """Copy leo.nsi from dist/windows folder to srcDir"""
@@ -574,6 +576,7 @@ g.es_print('Done')</t>
 'leo.plugins.qmlnb':['qml/*'],
 'leo.plugins.modes':['catalog','*.xml'],
 # Wouldn't it be better to install ckedito separatly ?
+'leo.external':ckeditorFiles,
 # Do we have to install external.obsolete ?
 }</t>
 <t tx="davy.20141202180209.25">{}</t>
@@ -837,6 +840,7 @@ Description:Leonine Editor with Outlines
 &lt;&lt;links&gt;&gt;</t>
 <t tx="davy.20141202180209.5">'''setup.py for leo'''
 import leo.core.leoVersion
+import os
 from setuptools import setup, find_packages
 # Note :
     # Folder without __init__.py are not included by default
@@ -847,6 +851,12 @@ from setuptools import setup, find_packages
     #We have to specify data, ie not .py files &amp; not __init__.py folders
 
 &lt;&lt; version &gt;&gt;
+
+# To cach all the files of files of ckeditor :
+os.chdir(os.path.join('leo','external'))
+ckeditorFiles = [os.path.join(path, f) for path, _, files in os.walk('ckeditor') for f in files if '.git' not in path]
+os.chdir(os.path.join('..','..'))
+
 package_data = &lt;&lt; package_data &gt;&gt;
 
 exclude_package_data = &lt;&lt; exclude_package_data &gt;&gt;
@@ -1144,7 +1154,8 @@ import os
 <t tx="davy.20141202180209.86">abspath,exists,join = g.os_path_abspath,g.os_path_exists,g.os_path_join
 
 # Top directory : leo-editor folder
-rootDir	     = abspath(join(c.mFileName,'..'))
+rootDir	     = abspath(join(c.fileName,'..'))
+g.es(rootDir)
 # Leo's dist folder
 # Contains necessary files for building distribution
 distDir	     = abspath(join(rootDir,'dist'))
