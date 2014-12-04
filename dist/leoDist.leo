@@ -95,7 +95,7 @@
 <v t="davy.20141202180209.90"><vh>Windows</vh>
 <v t="davy.20141202180209.129" a="E"><vh>@file windows/leo.nsi</vh></v>
 </v>
-<v t="davy.20141202180209.44"><vh>Debian</vh>
+<v t="davy.20141202180209.44" a="E"><vh>Debian</vh>
 <v t="davy.20141202180209.45" a="E"><vh>@path debian</vh>
 <v t="davy.20141202180209.46"><vh>@nosent changelog</vh></v>
 <v t="davy.20141202180209.47" a="E"><vh>Statics</vh>
@@ -1151,14 +1151,13 @@ g.es('Done')</t>
 <t tx="davy.20141202180209.85">import leo.core.leoVersion
 import os
 </t>
-<t tx="davy.20141202180209.86">abspath,exists,join = g.os_path_abspath,g.os_path_exists,g.os_path_join
+<t tx="davy.20141202180209.86">abspath,exists,join,dirname = g.os_path_abspath,g.os_path_exists,g.os_path_join,g.os_path_dirname
 
 # Top directory : leo-editor folder
-rootDir	     = abspath(join(c.fileName,'..'))
-g.es(rootDir)
+rootDir	     = abspath(join(dirname(c.fileName()),'..'))
 # Leo's dist folder
 # Contains necessary files for building distribution
-distDir	     = abspath(join(rootDir,'dist'))
+distDir	     = join(rootDir,'dist')
 # Directory to build and store distibution packages and source tarball
 archiveDir       = abspath(join(rootDir,'..','archive'))
 # Path to the source tarball
@@ -1170,13 +1169,13 @@ origTarball	 = join(archiveDir,'leo_'+version+'.orig.tar.gz')
 # Debian leo_5.x.source.changes to upload on launchpad
 sourceChanges       = join(archiveDir,'leo_'+version+'-'+debRev+'.source.changes')
 # Path to Leo's debian folder
-debianDir	   = abspath(join(distDir,'debian'))
+debianDir	   = join(distDir,'debian')
 # Path to leo.nsi 
-nsiFile = abspath(join(distDir,'windows','leo.nsi'))
+nsiFile = join(distDir,'windows','leo.nsi')
 # Path to windowsArchiveDir
 windowsArchiveDir = join(archiveDir,'windows')
 # Path to fink files
-finkDir = abspath(join(distDir,'mac','fink'))
+finkDir = join(distDir,'mac','fink')
 # Path to Debian .deb package
 debPackage       = join(archiveDir,'leo_'+version+'-'+debRev+'_all.deb')
 # Path to Fink .deb package
