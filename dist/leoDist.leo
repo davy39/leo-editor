@@ -63,7 +63,7 @@
 <v t="EKR.20040519090846.8"><vh>@asis ../PKG-INFO.TXT</vh></v>
 <v t="EKR.20040519090846.9"><vh>@asis ../README.TXT</vh></v>
 </v>
-<v t="davy.20141202180209.2" a="E"><vh>Setuptools</vh>
+<v t="davy.20141202180209.2"><vh>Setuptools</vh>
 <v t="davy.20141202180209.5"><vh>@nosent ../setup.py</vh>
 <v t="davy.20141202180209.6" a="E"><vh>Parameters</vh>
 <v t="davy.20141202180209.7" a="E"><vh>Metadata</vh>
@@ -121,9 +121,9 @@
 </v>
 </v>
 </v>
-<v t="davy.20141202180209.91" a="E"><vh>Mac</vh>
+<v t="davy.20141202180209.91"><vh>Mac</vh>
 <v t="davy.20141202180209.92" a="E"><vh>Fink</vh>
-<v t="davy.20141202180209.93" a="E"><vh>@path mac/fink</vh>
+<v t="davy.20141202180209.93"><vh>@path mac/fink</vh>
 <v t="davy.20141202180209.54"></v>
 <v t="davy.20141202180209.55"></v>
 <v t="davy.20141202180209.112"><vh>@nosent launcher/leo</vh></v>
@@ -150,7 +150,7 @@
 <v t="ekr.20101027135430.1493"><vh>@url about pages</vh></v>
 <v t="ekr.20101027160251.1497"><vh>@url nsDialogs</vh></v>
 </v>
-<v t="davy.20141202180209.141"><vh>@button make nsis</vh>
+<v t="davy.20141202180209.141" a="E"><vh>@button make nsis</vh>
 <v t="davy.20141202180209.87"></v>
 <v t="davy.20141202180209.85"><vh>&lt;&lt; includes &gt;&gt;</vh></v>
 <v t="davy.20141202180209.86"><vh>&lt;&lt; pathes &gt;&gt;</vh></v>
@@ -160,7 +160,7 @@
 <v t="davy.20141202180209.148"><vh>makeExe</vh></v>
 </v>
 </v>
-<v t="davy.20141202180209.34" a="E"><vh>Debian/Ubuntu</vh>
+<v t="davy.20141202180209.34"><vh>Debian/Ubuntu</vh>
 <v t="davy.20141202180209.35"><vh>Set up a PPA on launchpad (Ubuntu)</vh>
 <v t="davy.20141202180209.36"><vh>Create a launchpad account</vh></v>
 <v t="davy.20141202180209.37"><vh>Generate GPG key</vh></v>
@@ -170,8 +170,8 @@
 <v t="davy.20141202180209.41"><vh>Sign the code of conduct</vh></v>
 <v t="davy.20141202180209.42"><vh>Activate a Personal Pakage Archive</vh></v>
 </v>
-<v t="davy.20141202180209.43" a="E"><vh>Create debian sources &amp; packages</vh>
-<v t="davy.20141202180209.65" a="E"><vh>@button make src</vh>
+<v t="davy.20141202180209.43"><vh>Create debian sources &amp; packages</vh>
+<v t="davy.20141202180209.65"><vh>@button make src</vh>
 <v t="davy.20141202180209.87"></v>
 <v t="davy.20141202180209.85"></v>
 <v t="davy.20141202180209.86"></v>
@@ -192,7 +192,7 @@
 <v t="davy.20141202180209.82"><vh>makeDebianDeb</vh></v>
 </v>
 </v>
-<v t="davy.20141202180209.83" a="E"><vh>Upload debian sources to ppa</vh>
+<v t="davy.20141202180209.83"><vh>Upload debian sources to ppa</vh>
 <v t="davy.20141202180209.84"><vh>@script upload to ppa</vh>
 <v t="davy.20141202180209.85"></v>
 <v t="davy.20141202180209.86"></v>
@@ -1144,7 +1144,7 @@ import os
 <t tx="davy.20141202180209.86">abspath,exists,join = g.os_path_abspath,g.os_path_exists,g.os_path_join
 
 # Top directory : leo-editor folder
-rootDir	     = abspath(join(c.fileName,'..'))
+rootDir	     = abspath(join(c.mFileName,'..'))
 # Leo's dist folder
 # Contains necessary files for building distribution
 distDir	     = abspath(join(rootDir,'dist'))
