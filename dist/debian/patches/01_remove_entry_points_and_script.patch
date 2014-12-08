@@ -1,0 +1,12 @@
+Fix launcher issue : distutils scripts do no support private modules
+--- a/setup.py
++++ b/setup.py
+@@ -99,8 +99,4 @@
+ ,
+     package_data = package_data,
+     #scripts = ['leo-install.py'],# Not needed anymore ?
+-    entry_points =     {
+-            'console_scripts': ['leoc = leo.core.runLeo:run'],
+-            'gui_scripts' : ['leo = leo.core.runLeo:run'],
+-        }
+ )

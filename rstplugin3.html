@@ -1,0 +1,545 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>rst3 Command Reference &mdash; Leo Doc</title>
+    
+    <link rel="stylesheet" href="_static/leo.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '5.0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  false
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/sidebar.js"></script>
+    <link rel="top" title="Leo Doc" href="index.html" />
+    <link rel="up" title="Leo’s Users Guide" href="usersguide.html" />
+    <link rel="next" title="Plugins" href="plugins.html" />
+    <link rel="prev" title="Customizing Leo" href="customizing.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="plugins.html" title="Plugins"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="customizing.html" title="Customizing Leo"
+             accesskey="P">previous</a> |</li>
+        <li><a href="contents.html">Leo Doc</a> &raquo;</li>
+          <li><a href="usersguide.html" accesskey="U">Leo&#8217;s Users Guide</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="rst3-command-reference">
+<h1><a class="toc-backref" href="#id1">rst3 Command Reference</a><a class="headerlink" href="#rst3-command-reference" title="Permalink to this headline">¶</a></h1>
+<p>Please read the <a class="reference external" href="tutorial-rst3.html">rst3 tutorial</a> before reading this chapter.</p>
+<p>This chapter covers advanced settings and features of the rst3 command. It
+is for power users only.</p>
+<p>Are you sure you want to read this chapter? The tutorial covers everything
+most people need to know about the rst3 command. Leo&#8217;s own documentation
+uses none of the features discussed here.</p>
+<div class="contents topic" id="contents">
+<p class="topic-title first">Contents</p>
+<ul class="simple">
+<li><a class="reference internal" href="#rst3-command-reference" id="id1">rst3 Command Reference</a><ul>
+<li><a class="reference internal" href="#options" id="id2">Options</a><ul>
+<li><a class="reference internal" href="#general-options" id="id3">General options</a></li>
+<li><a class="reference internal" href="#headline-commands" id="id4">Headline commands</a></li>
+<li><a class="reference internal" href="#option-doc-parts" id="id5">Option doc parts</a></li>
+<li><a class="reference internal" href="#defaults-for-options" id="id6">Defaults for options</a></li>
+<li><a class="reference internal" href="#http-plugin-options" id="id7">Http plugin options</a></li>
+<li><a class="reference internal" href="#section-expansion-options" id="id8">Section expansion options</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#other-topics" id="id9">Other topics</a><ul>
+<li><a class="reference internal" href="#markup-doc-parts" id="id10">Markup doc parts</a></li>
+<li><a class="reference internal" href="#required-cascading-style-sheets" id="id11">Required cascading style sheets</a></li>
+<li><a class="reference internal" href="#controlling-the-rst3-command-from-scripts" id="id12">Controlling the rst3 command from scripts</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#further-study" id="id13">Further study</a></li>
+<li><a class="reference internal" href="#acknowledgements" id="id14">Acknowledgements</a></li>
+<li><a class="reference internal" href="#theory-of-operation" id="id15">Theory of operation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="options">
+<h2><a class="toc-backref" href="#id2">Options</a><a class="headerlink" href="#options" title="Permalink to this headline">¶</a></h2>
+<p>This section discusses options&#8211;what they are, how to set them and how to set their defaults.</p>
+<div class="section" id="general-options">
+<h3><a class="toc-backref" href="#id3">General options</a><a class="headerlink" href="#general-options" title="Permalink to this headline">¶</a></h3>
+<p>Here is a complete list of options for the rst3 and code-to-rst commands:</p>
+<dl class="glossary docutils">
+</dl>
+<p>call_docutils (default: True):</p>
+<blockquote>
+<div>Call docutils to process the intermediate file.</div></blockquote>
+<p>default_path (default: &#8216;&#8217;)</p>
+<blockquote>
+<div>The path to be prepended to filenames given in root nodes.</div></blockquote>
+<p>default_encoding (default: utf-8)</p>
+<blockquote>
+<div>The default encoding to be used for non-ascii (unicode characters).</div></blockquote>
+<p>encoding (default: the default_encoding setting)</p>
+<blockquote>
+<div>The encoding to be used for non-ascii (unicode) characters.
+<strong>Important</strong>: this option has effect only in &#64;rst-options doc parts
+in root &#64;rst nodes.</div></blockquote>
+<p>generate_rst (default: True)</p>
+<blockquote>
+<div>A master switch.
+True: generate rST markup for rST sections and rST code-blocks.
+False: generate plain text and ignore &#64; &#64;rst-markup doc parts.</div></blockquote>
+<p>generate_rst_header_comment (default: True)</p>
+<blockquote>
+<div><p>True: Leo writes a comment line of the form:</p>
+<div class="highlight-python"><div class="highlight"><pre>.. rst3: filename: &lt;filename&gt;
+</pre></div>
+</div>
+<p>at the start of intermediate files. This option has effect only if the
+generate_rst and write_intermediate_file options are both True.</p>
+</div></blockquote>
+<p>publish-argv-for-missing-stylesheets (Default: &#8216;&#8217;)</p>
+<blockquote>
+<div><p>The arguments to be passed to docutils.core.Publisher().publish() when no
+stylesheet is in effect. This is a string that represents a comma-separated
+list of strings: For example, the option:</p>
+<div class="highlight-python"><div class="highlight"><pre>publish-argv-for-missing-stylesheets=--language=de,--documentclass=report,--use-latex-toc
+</pre></div>
+</div>
+<p>results in the call:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">publish</span><span class="p">([</span><span class="s">&#39;--language=de&#39;</span><span class="p">,</span><span class="s">&#39;--documentclass=report&#39;</span><span class="p">,</span><span class="s">&#39;--use-latex-toc&#39;</span><span class="p">])</span>
+</pre></div>
+</div>
+</div></blockquote>
+<p>show_headlines (default: True)</p>
+<blockquote>
+<div><p>True: automatically generate rST sections from headlines.
+False: ignore headlines.</p>
+<p><strong>Note</strong>: The level of the node in the outline determines the level of the
+section underlining in the rST markup. Higher-level headlines in the outline
+correspond to higher-level section headings; lower-level headlines in the
+outline correspond to lower-level section headings.</p>
+</div></blockquote>
+<p>show_organizer_nodes (default: True)</p>
+<blockquote>
+<div><p>True: generate rST sections for nodes that do not contain body text.</p>
+<p><strong>Note</strong>: This option has no effect unless the rST section would otherwise be written.</p>
+</div></blockquote>
+<p>show_sections (default: True)</p>
+<blockquote>
+<div><p>True: generate rST sections corresponding to headlines.
+False: don&#8217;t generate sections.  Instead, generate lines of the form:</p>
+<div class="highlight-python"><div class="highlight"><pre>**headline**
+</pre></div>
+</div>
+</div></blockquote>
+<p>strip_at_file_prefixes (default: True)</p>
+<blockquote>
+<div>True: remove &#64;auto, &#64;file, &#64;nosent and &#64;thin from the start of headlines.</div></blockquote>
+<p>stylesheet_name (default: &#8216;default.css&#8217;)</p>
+<blockquote>
+<div>The name of the stylesheet passed to docutils.</div></blockquote>
+<p>stylesheet_path (default: &#8216;&#8217;)</p>
+<blockquote>
+<div><p>The directory containing the stylesheet passed to docutils.</p>
+<p><strong>Note</strong>: If the stylesheet_embed option is True, specify a path relative to
+the location of the Leo file. If the stylesheet_embed option is False,
+specify a path relative to the location of the HTML file.</p>
+</div></blockquote>
+<p>stylesheet_embed (default: True)</p>
+<blockquote>
+<div>True: The content of the stylesheet file will be embedded in the HTML file.
+False: The HTML file will link to an external stylesheet file.</div></blockquote>
+<p>underline_characters (default: #=+*^~&#8221;&#8217;`-:&gt;_)</p>
+<blockquote>
+<div>The underlining characters to be used to specify rST sections.
+The first character is reserved so you can specify the top-level section explicitly.</div></blockquote>
+<p>verbose (default: True)</p>
+<blockquote>
+<div>True: write informational messages.</div></blockquote>
+<p>write_intermediate_file (default: False)</p>
+<blockquote>
+<div><p><strong>Important</strong>: the rst3 command <em>always</em> creates an intermediate file.
+This option controls whether that file is an internal Python object
+or an actual file on the external file system.</p>
+<p>True: writes the intermediate file to the external file system. The name of
+the intermediate file has the name of the output file with .txt appended.
+This option has effect only if the generate_rst option is True.</p>
+<p>False: writes the intermediate file to an internal Python object.</p>
+</div></blockquote>
+</div>
+<div class="section" id="headline-commands">
+<h3><a class="toc-backref" href="#id4">Headline commands</a><a class="headerlink" href="#headline-commands" title="Permalink to this headline">¶</a></h3>
+<p>Any headline that starts with &#64;rst- controls the rst3 command.</p>
+<dl class="glossary docutils">
+</dl>
+<p>&#64;rst-ignore &lt;ignored-text&gt;</p>
+<blockquote>
+<div>Ignore the node and its descendants.</div></blockquote>
+<p>&#64;rst-ignore-node &lt;ignored-text&gt;</p>
+<blockquote>
+<div>Ignore the node, but <em>not</em> its descendants.</div></blockquote>
+<p>&#64;rst-ignore-tree &lt;ignored-text&gt;</p>
+<blockquote>
+<div>Same as &#64;rst-ignore.  Ignore the node and its descendants.</div></blockquote>
+<p>&#64;rst-no-head &lt;ignored-text&gt;</p>
+<blockquote>
+<div>Ignore the headline but not the body text of this node.
+This has no effect on descendant nodes.</div></blockquote>
+<p>&#64;rst-no-headlines &lt;ignored-text&gt;</p>
+<blockquote>
+<div>Ignore all headlines. (Set show_headlines=False)</div></blockquote>
+<p>&#64;rst-option &lt;option&gt; = &lt;value&gt;</p>
+<blockquote>
+<div>Set a single option to the given value. The default value is True.</div></blockquote>
+<p>&#64;rst-options &lt;ignored-text&gt;</p>
+<blockquote>
+<div><p>Set options from body text. The body text should contain nothing but
+lines of the form:</p>
+<div class="highlight-python"><div class="highlight"><pre>&lt;option&gt;=&lt;value&gt;
+</pre></div>
+</div>
+</div></blockquote>
+<p>&#64;rst-preformat &lt;ignored-text&gt;</p>
+<blockquote>
+<div><p>Format the body text of the node as computer source code. In effect, this
+option adds a line containing &#8216;::&#8217; at the start of the body text. The option
+then indents all following lines.</p>
+<p>This option has no effect on descendant nodes.</p>
+</div></blockquote>
+</div>
+<div class="section" id="option-doc-parts">
+<h3><a class="toc-backref" href="#id5">Option doc parts</a><a class="headerlink" href="#option-doc-parts" title="Permalink to this headline">¶</a></h3>
+<p><strong>Option doc parts</strong> set rst3 options. Option doc parts start with &#64;
+&#64;rst-options followed by lines of the form name=value. (Comment lines starting
+with &#8216;..&#8217; are allowed.) For example:</p>
+<div class="highlight-python"><div class="highlight"><pre>@ @rst-options
+.. This comment line is ignored.
+show_headlines=False
+show_leo_directives=False
+verbose=True
+@c
+</pre></div>
+</div>
+<p>This is a real Leo doc part. Like all other doc parts an option doc part starts
+with the &#64; directive and continues until the end of body text or until the next
+&#64;c directive.</p>
+</div>
+<div class="section" id="defaults-for-options">
+<h3><a class="toc-backref" href="#id6">Defaults for options</a><a class="headerlink" href="#defaults-for-options" title="Permalink to this headline">¶</a></h3>
+<p>Settings in leoSettings.leo or myLeoSettings.leo specify the defaults
+to be used for all rst3 options.  The form of these settings is:</p>
+<div class="highlight-python"><div class="highlight"><pre>@bool rst3_&lt;option name&gt; = True/False
+@string rst3_&lt;option name&gt; = aString
+</pre></div>
+</div>
+<p>That is, to create a default value for an rst3 setting, you must
+prefix the option name with &#8216;rst3_&#8217;.  For example:</p>
+<div class="highlight-python"><div class="highlight"><pre>@bool rst3_write_intermediate_file = True
+</pre></div>
+</div>
+</div>
+<div class="section" id="http-plugin-options">
+<h3><a class="toc-backref" href="#id7">Http plugin options</a><a class="headerlink" href="#http-plugin-options" title="Permalink to this headline">¶</a></h3>
+<p>The following options are for the use of Bernhard Mulder&#8217;s http plugin. The http
+plugin creates an http server running on a local port, typically 8080. When the
+http plugin is running you will see a purple message in the log window that
+looks something like this:</p>
+<div class="highlight-python"><div class="highlight"><pre>http serving enabled on port 8080, version 0.91
+</pre></div>
+</div>
+<p>To use the http plugin, start a web browser and enter this url:</p>
+<div class="highlight-python"><div class="highlight"><pre>http://localhost:8080/
+</pre></div>
+</div>
+<p>You will see a a top level page containing one link for every open .leo file.
+Clicking on a link will cause the http server to pass a new page to the browser.
+You can use the browser&#8217;s refresh button to update the top-level view in the
+browser after you have opened or closed files.</p>
+<p><strong>Important</strong>: See the docstring for the http plugin for information on
+configuring the plugin. Some of the following rst3 settings must match values of
+settings for the http plugin.</p>
+<p>Here are the rst3 options that support the http plugin:</p>
+<dl class="glossary docutils">
+</dl>
+<p>http_server_support (default: False)</p>
+<blockquote>
+<div><p>A master switch: none of the following options have any effect unless this
+option is True. If True, the rst3 command does the following:</p>
+<ol class="arabic">
+<li><p class="first">Writes <strong>node markers</strong> in the rst output for use by the http plugin.
+Node markers are rst named hyperlink targets. By default they look like:</p>
+<div class="highlight-python"><div class="highlight"><pre>.. _http-node-marker-N
+</pre></div>
+</div>
+<p>where N is a unique node number.</p>
+</li>
+<li><p class="first">Adds additional information to all nodes of the tree being formatted using
+Leo&#8217;s unknownAttributes mechanism.</p>
+</li>
+</ol>
+</div></blockquote>
+<p>http_attributename (default: &#8216;rst_http_attribute&#8217;)</p>
+<blockquote>
+<div><p>The name of the attribute name written to the unknownAttributes attribute of
+each outline node in the rst root tree. The default is
+&#8216;rst_http_attribute&#8217;; it should match the following setting of the http
+plugin:</p>
+<div class="highlight-python"><div class="highlight"><pre>@string rst_http_attributename = &#39;rst_http_attribute&#39;
+</pre></div>
+</div>
+</div></blockquote>
+<p>clear_http_attributes (default: False)</p>
+<blockquote>
+<div>If True the rst3 command initially clears the fields specified by <cite>http_attributename</cite>.</div></blockquote>
+<p>node_begin_marker (default: &#8216;http-node-marker-&#8216;)</p>
+<blockquote>
+<div>The string used for node markers.</div></blockquote>
+</div>
+<div class="section" id="section-expansion-options">
+<h3><a class="toc-backref" href="#id8">Section expansion options</a><a class="headerlink" href="#section-expansion-options" title="Permalink to this headline">¶</a></h3>
+<p><strong>New in Leo 4.9</strong>: The following three options allow you
+to expand noweb section references, much like Leo itself does.</p>
+<p><strong>expand_noweb_references</strong></p>
+<blockquote>
+<div>True: Replace references by definitions.
+Definitions must be descendants of the referencing node.</div></blockquote>
+<p><strong>ignore_noweb_definitions</strong></p>
+<blockquote>
+<div>True: ignore section definition nodes.</div></blockquote>
+<p><strong>expand_noweb_recursively</strong></p>
+<blockquote>
+<div>True: recursively expand definitions by expanding any
+references found in definitions.</div></blockquote>
+<p>Notes:</p>
+<ul class="simple">
+<li>This is an experimental feature: all aspects might changed. The defaults for
+all these options ensure that the rst3 command works as it has always.</li>
+<li>The rst3 command ensures that unbounded expansions can not happen. While
+expanding any section, the rst3 will not expand again any sections that have
+already occurred in the expansion.</li>
+</ul>
+</div>
+</div>
+<div class="section" id="other-topics">
+<h2><a class="toc-backref" href="#id9">Other topics</a><a class="headerlink" href="#other-topics" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="markup-doc-parts">
+<h3><a class="toc-backref" href="#id10">Markup doc parts</a><a class="headerlink" href="#markup-doc-parts" title="Permalink to this headline">¶</a></h3>
+<p><strong>Markup doc parts</strong> have the following form:</p>
+<div class="highlight-python"><div class="highlight"><pre>@ @rst-markup
+any rST markup
+@c
+</pre></div>
+</div>
+<p>Markup doc parts inserts the markup directly into the output. Markup doc parts
+are most useful when formatting an outline as code using the code-to-rst
+command.</p>
+</div>
+<div class="section" id="required-cascading-style-sheets">
+<h3><a class="toc-backref" href="#id11">Required cascading style sheets</a><a class="headerlink" href="#required-cascading-style-sheets" title="Permalink to this headline">¶</a></h3>
+<p>HTML files generated by the rst3 command assume that three .css (cascading style
+sheet) files exist in the same directory. For the HTML output to look good the
+following .css files should exist:</p>
+<ul class="simple">
+<li>default.css is the default style sheet that docutils expects to exist.</li>
+<li>leo_rst.css contains some style improvements based on Gunnar Schwant&#8217;s DocFactory.</li>
+</ul>
+<p>The latter two style sheets are imported at the end of the default.css.</p>
+<p><strong>Important:</strong> You can use cascading style sheets to do things that otherwise
+wouldn&#8217;t be possible with &#8220;plain&#8221; rST. For instance, the background color of
+this page was specified in a body style.</p>
+</div>
+<div class="section" id="controlling-the-rst3-command-from-scripts">
+<h3><a class="toc-backref" href="#id12">Controlling the rst3 command from scripts</a><a class="headerlink" href="#controlling-the-rst3-command-from-scripts" title="Permalink to this headline">¶</a></h3>
+<p>A new method has been added to make it more easily to write rST code from scripts:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">c</span><span class="o">.</span><span class="n">rstCommands</span><span class="o">.</span><span class="n">writeNodeToString</span><span class="p">(</span><span class="n">p</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>writeNodeToString scans p&#8217;s tree (p defaults to presently selected node) looking for &#64;rst nodes.
+When the first &#64;rst node is found, writeNodeToString processes the node as usual, with the following changes:</p>
+<ul class="simple">
+<li>&#64;rst need not be followed by a filename; any filename and its extension are <em>ignored</em>.</li>
+<li>Only the ext argument to writeNodeToString determines the type of output produced.
+The valid values for the ext argument are None (for rst output), &#8216;.html&#8217;, &#8216;.pdf&#8217;, and &#8216;.tex&#8217;.</li>
+<li>Instead of writing the result to a file, writeNodeToString returns the tuple (p,s),
+where p is the node whose tree produced the output, and s is the output itself.</li>
+<li>writeNodeToString returns after processing at most one &#64;rst node.</li>
+</ul>
+<p>Scripts can easily use writeNodeToString to convert &#64;rst trees into various kinds of output.
+For example:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">p</span><span class="p">,</span><span class="n">s</span> <span class="o">=</span> <span class="n">c</span><span class="o">.</span><span class="n">rstCommands</span><span class="o">.</span><span class="n">writeNodeToString</span><span class="p">(</span><span class="n">p</span><span class="p">,</span><span class="n">ext</span><span class="o">=</span><span class="s">&#39;html&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Notes:</p>
+<ul class="simple">
+<li>This script scans the presently selected tree for &#64;rst nodes.
+In particular, if the presently selected tree does not contain an &#64;rst node the search continues in parent trees.
+When an &#64;rst node is found, it converts the node (and descendants) to html and returns p,
+the found &#64;rst node and s, the html itself.</li>
+<li>Valid values for the ext argument are &#8221;.html&#8221;, &#8221;.tex&#8221; or None (specifies rst output)</li>
+<li>There is some support for ext=&#8221;.pdf&#8221;, but this is experimental code.  Expect crashes.</li>
+</ul>
+</div>
+</div>
+<div class="section" id="further-study">
+<h2><a class="toc-backref" href="#id13">Further study</a><a class="headerlink" href="#further-study" title="Permalink to this headline">¶</a></h2>
+<p>The file <a class="reference external" href="http://leoeditor.com/ListManagerDocs.html">ListManagerDocs.html</a> is an impressive example of the kind of output
+that can be generated relatively easily using the rst3 command.</p>
+<p>The source for ListManagerDocs.html is <a class="reference external" href="http://leoeditor.com/wxListManager.leo">wxListManager.leo</a>. <strong>Important</strong>:
+wxListManager.leo was written for the old rst2 plugin; it could be greatly
+simplified if adapted for the rst3 command.</p>
+<p>This documentation was created using the rst3 command. The source code for this
+documentation is in LeoDocs.leo. The source code for the rst3 command is in
+leoRst.py in leoPy.leo.</p>
+</div>
+<div class="section" id="acknowledgements">
+<h2><a class="toc-backref" href="#id14">Acknowledgements</a><a class="headerlink" href="#acknowledgements" title="Permalink to this headline">¶</a></h2>
+<p>Josef Dalcolmo wrote the initial rst plugin.
+Timo Honkasalo, Bernhard Mulder, Paul Paterson, Kent Tenney and
+Steve Zatz made contributions to the rst and rst2 plugins.</p>
+</div>
+<div class="section" id="theory-of-operation">
+<h2><a class="toc-backref" href="#id15">Theory of operation</a><a class="headerlink" href="#theory-of-operation" title="Permalink to this headline">¶</a></h2>
+<p>The code for the rst3 command is more complex than usual. Fortunately, the
+overall organization is straightforward.</p>
+<dl class="docutils">
+<dt>defaultOptionsDict</dt>
+<dd>This dictionary represents each rst3 option.
+To add another option, just add another entry to this dictionary.
+Keys are the option name, including the <cite>rst3_</cite> prefix.
+Values are the default value of the option.
+The hard-coded values in the dictionary may be changed as the result of &#64;settings entries.</dd>
+<dt>processTree</dt>
+<dd>processTree is the top-level code that handles one rst root node.
+It calls preprocessTree to create the <strong>vnodeOptionDict</strong> ivar.
+processTree then calls either writeNormalTree or writeSpecialTree
+depending on whether text will be sent to docutils for further processing.
+These two methods handle mundane details of opening and closing files.
+Both writeNormalTree and writeSpecialTree call <strong>writeTree</strong> to do the actual work.</dd>
+<dt>vnodeOptionDict</dt>
+<dd>The entries in this dictionary represent the options that are set in one particular node.
+The keys of vnodeOptionDict are vnodes, the values are anonymous dictionaries.
+These anonymous inner dictionaries contain the options that are explicitly set at each vnode
+(and thus each position).
+Preprocessing the tree this way ensures that each node (headline and body text) is parsed exactly once.</dd>
+<dt>writeTree</dt>
+<dd>writeTree first calls <strong>scanAllOptions</strong>, which has the effect of
+initializing all options. writeTree then calls <strong>writeNode</strong> for each node
+that will be processed by the rst3 command. Options may cause the rst3 command to
+skip a node or an entire subtree.</dd>
+<dt>writeNode</dt>
+<dd>writeNode first calls <strong>scanAllOptions</strong> to compute the options that are in
+effect for that <em>single</em> node. Once options have been computed, processing the
+node is straightforward. writeNode calls writeBody and writeHeadline
+to do the real work. These methods generate or skip text based on various
+options.</dd>
+<dt>scanAllOptions</dt>
+<dd><p class="first">scanAllOptions recreates the optionsDict ivar to represent <em>all</em> the options
+in effect for <em>for the particular node being processed by writeNode</em>. Client
+code gets these options by calling the getOption method.</p>
+<p class="last">scanAllOptions first inits all options from settings,
+then updates those options using the anonymous
+dictionaries contained in the vnodeOptionsDict.
+scanAllOptions works like g.scanAllDirectives, but the code is much simpler.</p>
+</dd>
+</dl>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="contents.html">
+              <img class="logo" src="_static/Leo4-80-border.jpg" alt="Logo"/>
+            </a></p>
+  <h3><a href="contents.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">rst3 Command Reference</a><ul>
+<li><a class="reference internal" href="#options">Options</a><ul>
+<li><a class="reference internal" href="#general-options">General options</a></li>
+<li><a class="reference internal" href="#headline-commands">Headline commands</a></li>
+<li><a class="reference internal" href="#option-doc-parts">Option doc parts</a></li>
+<li><a class="reference internal" href="#defaults-for-options">Defaults for options</a></li>
+<li><a class="reference internal" href="#http-plugin-options">Http plugin options</a></li>
+<li><a class="reference internal" href="#section-expansion-options">Section expansion options</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#other-topics">Other topics</a><ul>
+<li><a class="reference internal" href="#markup-doc-parts">Markup doc parts</a></li>
+<li><a class="reference internal" href="#required-cascading-style-sheets">Required cascading style sheets</a></li>
+<li><a class="reference internal" href="#controlling-the-rst3-command-from-scripts">Controlling the rst3 command from scripts</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#further-study">Further study</a></li>
+<li><a class="reference internal" href="#acknowledgements">Acknowledgements</a></li>
+<li><a class="reference internal" href="#theory-of-operation">Theory of operation</a></li>
+</ul>
+</li>
+</ul>
+
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="plugins.html" title="Plugins"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="customizing.html" title="Customizing Leo"
+             >previous</a> |</li>
+        <li><a href="contents.html">Leo Doc</a> &raquo;</li>
+          <li><a href="usersguide.html" >Leo&#8217;s Users Guide</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2014, Edward K. Ream.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.2.
+    </div>
+  </body>
+</html>

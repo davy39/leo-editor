@@ -1,0 +1,853 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Appendices &mdash; Leo Doc</title>
+    
+    <link rel="stylesheet" href="_static/leo.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '5.0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  false
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/sidebar.js"></script>
+    <link rel="top" title="Leo Doc" href="index.html" />
+    <link rel="next" title="API Documentation" href="apidoc/index.html" />
+    <link rel="prev" title="The Leonine World" href="leonine-world.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="apidoc/index.html" title="API Documentation"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="leonine-world.html" title="The Leonine World"
+             accesskey="P">previous</a> |</li>
+        <li><a href="contents.html">Leo Doc</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="appendices">
+<h1><a class="toc-backref" href="#id1">Appendices</a><a class="headerlink" href="#appendices" title="Permalink to this headline">¶</a></h1>
+<div class="contents topic" id="contents">
+<p class="topic-title first">Contents</p>
+<ul class="simple">
+<li><a class="reference internal" href="#appendices" id="id1">Appendices</a><ul>
+<li><a class="reference internal" href="#format-of-leo-files" id="id2">Format of .leo files</a></li>
+<li><a class="reference internal" href="#format-of-external-files" id="id3">Format of external files</a></li>
+<li><a class="reference internal" href="#unicode-reference" id="id4">Unicode reference</a></li>
+<li><a class="reference internal" href="#valid-url-s" id="id5">Valid URL&#8217;s</a></li>
+<li><a class="reference internal" href="#history-of-leo" id="id6">History of Leo</a><ul>
+<li><a class="reference internal" href="#beginnings" id="id7">Beginnings</a></li>
+<li><a class="reference internal" href="#breakthrough" id="id8">Breakthrough</a></li>
+<li><a class="reference internal" href="#apple-and-yellowbox" id="id9">Apple and YellowBox</a></li>
+<li><a class="reference internal" href="#borland-c" id="id10">Borland C++</a></li>
+<li><a class="reference internal" href="#discovering-python" id="id11">Discovering Python</a></li>
+<li><a class="reference internal" href="#sourceforge" id="id12">SourceForge</a></li>
+<li><a class="reference internal" href="#allowing-sentinel-lines-in-external-files" id="id13">Allowing sentinel lines in external files</a></li>
+<li><a class="reference internal" href="#untangling-file-is-easy" id="id14">Untangling &#64;file is easy!</a></li>
+<li><a class="reference internal" href="#leo-3-x-continuous-improvement" id="id15">Leo 3.x: Continuous improvement</a></li>
+<li><a class="reference internal" href="#leo-4-0-eliminating-error-recovery" id="id16">Leo 4.0: Eliminating error &#8216;recovery&#8217;</a></li>
+<li><a class="reference internal" href="#leo-4-1-the-debut-of-gnx-s" id="id17">Leo 4.1: The debut of gnx&#8217;s</a></li>
+<li><a class="reference internal" href="#leo-4-2-complete-at-last" id="id18">Leo 4.2: Complete at last</a></li>
+<li><a class="reference internal" href="#leo-4-3-settings" id="id19">Leo 4.3 Settings</a></li>
+<li><a class="reference internal" href="#leo-4-4-the-minibuffer-and-key-bindings" id="id20">Leo 4.4 The minibuffer and key bindings</a></li>
+<li><a class="reference internal" href="#leo-4-4-x-improvements" id="id21">Leo 4.4.x Improvements</a></li>
+<li><a class="reference internal" href="#leo-4-5-shadow-files" id="id22">Leo 4.5 &#64;shadow files</a></li>
+<li><a class="reference internal" href="#leo-4-6-caching-qt-and-more" id="id23">Leo 4.6 Caching, Qt and more</a></li>
+<li><a class="reference internal" href="#leo-4-7-the-one-node-world-and-python-3k" id="id24">Leo 4.7 The one node world and Python 3k</a></li>
+<li><a class="reference internal" href="#leo-4-8-simple-sentinels-better-data-recovery" id="id25">Leo 4.8 Simple sentinels &amp; better data recovery</a></li>
+<li><a class="reference internal" href="#leo-4-9-qt-autocompleter-vr-pane" id="id26">Leo 4.9 Qt, autocompleter, vr pane</a></li>
+<li><a class="reference internal" href="#leo-4-10-many-improvements" id="id27">Leo 4.10 Many improvements</a></li>
+<li><a class="reference internal" href="#leo-4-11-many-more-improvements" id="id28">Leo 4.11 Many more improvements</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#why-i-like-python" id="id29">Why I like Python</a><ul>
+<li><a class="reference internal" href="#clarity" id="id30">Clarity</a></li>
+<li><a class="reference internal" href="#power" id="id31">Power</a></li>
+<li><a class="reference internal" href="#safety" id="id32">Safety</a></li>
+<li><a class="reference internal" href="#speed" id="id33">Speed</a></li>
+<li><a class="reference internal" href="#conclusions" id="id34">Conclusions</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="format-of-leo-files">
+<h2><a class="toc-backref" href="#id2">Format of .leo files</a><a class="headerlink" href="#format-of-leo-files" title="Permalink to this headline">¶</a></h2>
+<p>Here are the XML elements that may appear in Leo files:</p>
+<dl class="docutils">
+<dt>&lt;?xml&gt;</dt>
+<dd><p class="first">Leo files start with the following line:</p>
+<div class="last highlight-python"><div class="highlight"><pre>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+</pre></div>
+</div>
+</dd>
+<dt>&lt;?xml-stylesheet&gt;</dt>
+<dd><p class="first">An xml-stylesheet line is option.  For example:</p>
+<div class="last highlight-python"><div class="highlight"><pre>&lt;?xml-stylesheet ekr_stylesheet?&gt;
+</pre></div>
+</div>
+</dd>
+<dt>&lt;leo_file&gt;</dt>
+<dd>The &lt;leo_file&gt; element opens an element that contains the entire file.
+&lt;/leo_file&gt; ends the file.</dd>
+<dt>&lt;leo_header&gt;</dt>
+<dd><p class="first">The &lt;leo_header&gt; element specifies version information and other information
+that affects how Leo parses the file.  For example:</p>
+<div class="highlight-python"><div class="highlight"><pre>&lt;leo_header file_format=&quot;2&quot; tnodes=&quot;0&quot; max_tnode_index=&quot;5725&quot; clone_windows=&quot;0&quot;/&gt;
+</pre></div>
+</div>
+<p class="last">The file_format attribute gives the &#8216;major&#8217; format number.
+It is &#8216;2&#8217; for all 4.x versions of Leo.
+The tnodes and clone_windows attributes are no longer used.
+The max_tnode_index attribute is the largest tnode index.</p>
+</dd>
+<dt>&lt;globals&gt;</dt>
+<dd><p class="first">The globals element specifies information relating to the entire file.
+For example:</p>
+<div class="highlight-python"><div class="highlight"><pre>&lt;globals body_outline_ratio=&quot;0.50&quot;&gt;
+    &lt;global_window_position top=&quot;27&quot; left=&quot;27&quot; height=&quot;472&quot; width=&quot;571&quot;/&gt;
+    &lt;global_log_window_position top=&quot;183&quot; left=&quot;446&quot; height=&quot;397&quot; width=&quot;534&quot;/&gt;
+&lt;/globals&gt;
+</pre></div>
+</div>
+<ul class="last simple">
+<li>The body_outline_ratio attribute specifies the ratio of the height of the body pane to
+the total height of the Leo window.
+It initializes the position of the splitter separating the outline pane from the body pane.</li>
+<li>The global_window_position and global_log_window_position elements
+specify the position of the Leo window and Log window in global coordinates:</li>
+</ul>
+</dd>
+<dt>&lt;preferences&gt;</dt>
+<dd>This element is vestigial.
+Leo ignores the &lt;preferences&gt; element when reading.
+Leo writes an empty &lt;preferences&gt; element.</dd>
+<dt>&lt;find_panel_settings&gt;</dt>
+<dd>This element is vestigial.
+Leo ignores the &lt;find_panel_settings&gt; element when reading.
+Leo writes an empty &lt;find_panel_settings&gt; element.</dd>
+<dt>&lt;clone_windows&gt;</dt>
+<dd>This element is vestigial.
+Leo ignores the &lt;clone_windows&gt; element when reading.
+Leo no longer writes &lt;clone_windows&gt; elements.</dd>
+<dt>&lt;vnodes&gt;</dt>
+<dd>A single &lt;vnodes&gt; element contains nested &lt;v&gt; elements.
+&lt;v&gt; elements correspond to vnodes.
+The nesting of &lt;v&gt; elements indicates outline structure in the obvious way.</dd>
+<dt>&lt;v&gt;</dt>
+<dd><p class="first">The &lt;v&gt; element represents a single vnode and has the following form:</p>
+<div class="highlight-python"><div class="highlight"><pre>&lt;v...&gt;&lt;vh&gt;sss&lt;/vh&gt; (zero or more nested v elements) &lt;/v&gt;
+</pre></div>
+</div>
+<p>The &lt;vh&gt; element specifies the headline text.
+sss is the headline text encoded with the usual XML escapes.
+As shown above, a &lt;v&gt; element may contain nested &lt;v&gt; elements.
+This nesting indicates outline structure in the obvious way.
+Zero or more of the following attributes may appear in &lt;v&gt; elements:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">t</span><span class="o">=</span><span class="n">name</span><span class="o">.</span><span class="n">timestamp</span><span class="o">.</span><span class="n">n</span>
+<span class="n">a</span><span class="o">=</span><span class="s">&quot;xxx&quot;</span>
+</pre></div>
+</div>
+<p>The t=&#8221;Tnnn&#8221; attribute specifies the &lt;t&gt; element associated with a &lt;v&gt; element.
+The a=&#8221;xxx&#8221; attribute specifies vnode attributes.
+The xxx denotes one or more upper-case letters whose meanings are as follows:</p>
+<div class="highlight-python"><div class="highlight"><pre>C       The vnode is a clone. (Not used in 4.x)
+E       The vnode is expanded so its children are visible.
+M       The vnode is marked.
+T       The vnode is the top visible node.
+V       The vnode is the current vnode.
+</pre></div>
+</div>
+<p>For example, a=&#8221;EM&#8221;  specifies that the vnode is expanded and is marked.</p>
+<p><strong>New in 4.0</strong>:</p>
+<ul class="last simple">
+<li>&lt;v&gt; elements corresponding to &#64;file nodes now contain tnodeList attributes.
+The tnodeList attribute allows Leo to recreate the order in which nodes should appear in the outline.
+The tnodeList attribute is a list of gnx&#8217;s: global node indices.
+See Format of external files (4.x) for the format of gnx&#8217;s.</li>
+<li>Plugins and scripts may add attributes to &lt;v&gt; and &lt;t&gt; elements.
+See <a class="reference external" href="writingPlugins.html">Writing plugins</a> for details.</li>
+</ul>
+</dd>
+<dt>&lt;tnodes&gt;</dt>
+<dd>A single &lt;tnodes&gt; element contains a non-nested list of &lt;t&gt; elements.</dd>
+<dt>&lt;t&gt;</dt>
+<dd><p class="first">The &lt;t&gt; element represents the body text of the corresponding &lt;v&gt; element.
+It has this form:</p>
+<div class="highlight-python"><div class="highlight"><pre>&lt;t tx=&quot;&lt;gnx&gt;&quot;&gt;sss&lt;/t&gt;
+</pre></div>
+</div>
+<p>The tx attribute is required.
+The t attribute of &lt;v&gt; elements refer to this tx attribute.
+sss is the body text encoded with the usual XML escapes.</p>
+<p class="last"><strong>New in 4.0</strong>: Plugins and scripts may add attributes to &lt;v&gt; and &lt;t&gt;
+elements. See <a class="reference external" href="writingPlugins.html">Writing plugins</a> for details.</p>
+</dd>
+</dl>
+</div>
+<div class="section" id="format-of-external-files">
+<h2><a class="toc-backref" href="#id3">Format of external files</a><a class="headerlink" href="#format-of-external-files" title="Permalink to this headline">¶</a></h2>
+<p>This section describe the format of external files. Leo&#8217;s <a class="reference external" href="glossary.html#sentinel-lines">sentinel lines</a> are
+comments, and this section describes those comments.</p>
+<p>Files derived from &#64;file use gnx&#8217;s in &#64;+node sentinels. Such gnx&#8217;s permanently
+and uniquely identify nodes. Gnx&#8217;s have the form:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="nb">id</span><span class="o">.</span><span class="n">yyyymmddhhmmss</span>
+<span class="nb">id</span><span class="o">.</span><span class="n">yyyymmddhhmmss</span><span class="o">.</span><span class="n">n</span>
+</pre></div>
+</div>
+<p>The second form is used if two gnx&#8217;s would otherwise be identical.</p>
+<ul class="simple">
+<li>id is a string unique to a developer, e.g., a cvs id.</li>
+<li>yyyymmddhhmmss is the node&#8217;s creation date.</li>
+<li>n is an integer.</li>
+</ul>
+<p>Here are the sentinels used by Leo, in alphabetical order.
+Unless otherwise noted, the documentation applies to all versions of Leo.
+In the following discussion, gnx denotes a gnx as described above.</p>
+<dl class="docutils">
+<dt>&#64;&lt;&lt;</dt>
+<dd><p class="first">A sentinel of the form &#64;&lt;&lt;section_name&gt;&gt; represents a section reference.</p>
+<p class="last">If the reference does not end the line,
+the sentinel line ending the expansion is followed by the remainder of the reference line.
+This allows the Read code to recreate the reference line exactly.</p>
+</dd>
+<dt>&#64;&#64;</dt>
+<dd><p class="first">The &#64;&#64; sentinel represents any line starting with &#64; in body text
+except &#64;*whitespace*, &#64;doc and &#64;others.
+Examples:</p>
+<div class="last highlight-python"><div class="highlight"><pre>@@nocolor
+@@pagewidth 80
+@@tabwidth 4
+@@code
+</pre></div>
+</div>
+</dd>
+<dt>&#64;afterref</dt>
+<dd>Marks non-whitespace text appearing after a section references.</dd>
+<dt>&#64;+all</dt>
+<dd>Marks the start of text generated by the &#64;all directive.</dd>
+<dt>&#64;-all</dt>
+<dd>Marks the end of text generated by the &#64;all directive.</dd>
+</dl>
+<p>&#64;at and &#64;doc</p>
+<blockquote>
+<div><p>The &#64;+doc &#64;+at sentinels indicate the start of a doc parts.</p>
+<p>We use the following <strong>trailing whitespace convention</strong> to
+determine where putDocPart has inserted line breaks:</p>
+<div class="highlight-python"><div class="highlight"><pre>A line in a doc part is followed by an inserted newline
+if and only if the newline if preceded by whitespace.
+</pre></div>
+</div>
+<p>To make this convention work, Leo&#8217;s write code deletes the trailing
+whitespace of all lines that are followed by a &#8220;real&#8221; newline.</p>
+</div></blockquote>
+<dl class="docutils">
+<dt>&#64;+body <strong>(Leo 3.x only)</strong></dt>
+<dd>Marks the start of body text.</dd>
+<dt>&#64;-body <strong>(Leo 3.x only)</strong></dt>
+<dd>Marks the end of body text.</dd>
+<dt>&#64;delims</dt>
+<dd>The &#64;delims directive inserts &#64;&#64;delims sentinels into the external file.
+The new delimiter strings continue in effect until the next &#64;&#64;delims sentinel
+<em>in the external file</em> or until the end of the external file.
+Adding, deleting or changing &#64;&#64;delim <em>sentinels</em> will destroy Leo&#8217;s ability to read the external file.
+Mistakes in using the &#64;delims <em>directives</em> have no effect on Leo,
+though such mistakes will thoroughly mess up a external file as far as compilers,
+HTML renderers, etc. are concerned.</dd>
+<dt>&#64;+leo</dt>
+<dd><p class="first">Marks the start of any external file. This sentinel has the form:</p>
+<div class="highlight-python"><div class="highlight"><pre>&lt;opening_delim&gt;@leo&lt;closing_delim&gt;
+</pre></div>
+</div>
+<p>The read code uses single-line comments if &lt;closing_delim&gt; is empty.
+The write code generates single-line comments if possible.</p>
+<p>The &#64;+leo sentinel contains other information. For example:</p>
+<div class="last highlight-python"><div class="highlight"><pre>&lt;opening_delim&gt;@leo-ver=4-thin&lt;closing_delim&gt;
+</pre></div>
+</div>
+</dd>
+<dt>&#64;-leo</dt>
+<dd>Marks the end of the Leo file.
+Nothing but whitespace should follow this directive.</dd>
+<dt>&#64;+middle <strong>(Leo 4.0 and later)</strong></dt>
+<dd>Marks the start of intermediate nodes between the node that
+references a section and the node that defines the section.
+Typically no such sentinels are needed:
+most sections are defined in a direct child of the referencing node.</dd>
+<dt>&#64;-middle <strong>(Leo 4.0 and later)</strong></dt>
+<dd>Marks the end of intermediate nodes between the node that
+references a section and the node that defines the section.</dd>
+<dt>&#64;+node</dt>
+<dd><p class="first">Mark the start and end of a node.</p>
+<blockquote class="last">
+<div>&#64;+node:gnx:&lt;headline&gt;</div></blockquote>
+</dd>
+<dt>&#64;others</dt>
+<dd>The &#64;+others sentinel indicates the start of the expansion of an &#64;+others directive,
+which continues until the matching &#64;-others sentinel.</dd>
+<dt>&#64;verbatim</dt>
+<dd>&#64;verbatim indicates that the next line of the external file is not a sentinel.
+This escape convention allows body text to contain lines that would otherwise
+be considered sentinel lines.</dd>
+<dt>&#64;&#64;verbatimAfterRef</dt>
+<dd><p class="first">&#64;verbatimAfterRef is generated when a comment following a section reference would
+otherwise be treated as a sentinel. In Python code, an example would be:</p>
+<div class="last highlight-python"><div class="highlight"><pre>&lt;&lt; ref &gt;&gt; #+others
+</pre></div>
+</div>
+</dd>
+</dl>
+</div>
+<div class="section" id="unicode-reference">
+<h2><a class="toc-backref" href="#id4">Unicode reference</a><a class="headerlink" href="#unicode-reference" title="Permalink to this headline">¶</a></h2>
+<p>Leo uses unicode internally for all strings.</p>
+<ol class="arabic">
+<li><p class="first">Leo converts headline and body text to unicode when reading .leo files and external files.
+Both .leo files and external files may specify their encoding.  The default is utf-8.
+If the encoding used in a external file is not &#8220;utf-8&#8221; it is represented in the &#64;+leo sentinel line.
+For example:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="c">#@+leo-encoding=iso-8859-1.</span>
+</pre></div>
+</div>
+<p>The utf-8 encoding is a &#8220;lossless&#8221; encoding (it can represent all unicode code points),
+so converting to and from utf-8 plain strings will never cause a problem.
+When reading or writing a character not in a &#8220;lossy&#8221; encoding,
+Leo converts such characters to &#8216;?&#8217; and issues a warning.</p>
+</li>
+<li><p class="first">When writing .leo files and external files Leo uses the same encoding used to read the file,
+again with utf-8 used as a default.</p>
+</li>
+<li><p class="first">leoSettings.leo contains the following Unicode settings, with the defaults as shown:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">default_derived_file_encoding</span> <span class="o">=</span> <span class="n">UTF</span><span class="o">-</span><span class="mi">8</span>
+<span class="n">new_leo_file_encoding</span> <span class="o">=</span> <span class="n">UTF</span><span class="o">-</span><span class="mi">8</span>
+</pre></div>
+</div>
+<p>These control the default encodings used when writing external files and .leo files.
+Changing the new_leo_file_encoding setting is not recommended.
+See the comments in leoSettings.leo.
+You may set default_derived_file_encoding to anything that makes sense for you.</p>
+</li>
+<li><p class="first">The &#64;encoding directive specifies the encoding used in a external file.
+You can&#8217;t mix encodings in a single external file.</p>
+</li>
+</ol>
+</div>
+<div class="section" id="valid-url-s">
+<h2><a class="toc-backref" href="#id5">Valid URL&#8217;s</a><a class="headerlink" href="#valid-url-s" title="Permalink to this headline">¶</a></h2>
+<p>Leo checks that the URL is valid before attempting to open it. A valid
+URL is:</p>
+<ul class="simple">
+<li>3 or more lowercase alphas</li>
+<li>followed by one :</li>
+<li>followed by one or more of:</li>
+<li><tt class="docutils literal"><span class="pre">$%&amp;'()*+,-./0-9:=?&#64;A-Z_a-z{}~</span></tt></li>
+<li>followed by one of: <tt class="docutils literal"><span class="pre">$%&amp;'()*+/0-9:=?&#64;A-Z_a-z}~</span></tt></li>
+</ul>
+<p>That is, a comma, hyphen and open curly brace may not be the last character.</p>
+<p>URL&#8217;s in Leo should contain no spaces: use %20 to indicate spaces.</p>
+<p>You may use any type of URL that your browser supports: http, mailto,
+ftp, file, etc.</p>
+</div>
+<div class="section" id="history-of-leo">
+<h2><a class="toc-backref" href="#id6">History of Leo</a><a class="headerlink" href="#history-of-leo" title="Permalink to this headline">¶</a></h2>
+<p>This section discusses the most important milestones in history of Leo.</p>
+<div class="section" id="beginnings">
+<h3><a class="toc-backref" href="#id7">Beginnings</a><a class="headerlink" href="#beginnings" title="Permalink to this headline">¶</a></h3>
+<p>Leo grew out of my efforts to use Donald Knuth&#8217;s &#8220;CWEB system of Structured
+documentation.&#8221; I had known of literate programming since the mid 1980&#8217;s, but I
+never understood how to make it work for me. In November 1995 I started thinking
+about programming in earnest. Over the holidays I mused about making programs
+more understandable. In January 1996 the fog of confusion suddenly cleared. I
+summarized my thinking with the phrase, <strong>web are outlines in disguise</strong>. I
+suspected that outline views were the key to programming, but many details
+remained obscure.</p>
+</div>
+<div class="section" id="breakthrough">
+<h3><a class="toc-backref" href="#id8">Breakthrough</a><a class="headerlink" href="#breakthrough" title="Permalink to this headline">¶</a></h3>
+<p>March 5, 1996, is the most important date in Leo&#8217;s history. While returning from
+a day of skiing, I discussed my thoughts with Rebecca. During that conversation
+I realized that I could use the MORE outliner as a prototype for a &#8220;programming
+outliner.&#8221; I immediately started work on my first outlined program. It quickly
+became apparent that outlines work: all my old problems with programming
+vanished. The &#64;others directive dates from this day. I realized that MORE&#8217;s
+outlines could form the basis for Leo&#8217;s screen design. Rather than opening body
+text within the outline, as MORE does, I decided to use a separate body pane.</p>
+<p>I hacked a translator called M2C which allowed me to use MORE to write
+real code. I would write code in MORE, copy the text to the clipboard in
+MORE format, then run M2C, which would convert the outline into C code.
+This process was useful, if clumsy. I called the language used in the outline
+SWEB, for simplified CWEB. Much later Leo started supporting the noweb
+language.</p>
+</div>
+<div class="section" id="apple-and-yellowbox">
+<h3><a class="toc-backref" href="#id9">Apple and YellowBox</a><a class="headerlink" href="#apple-and-yellowbox" title="Permalink to this headline">¶</a></h3>
+<p>Throughout 1996 I created a version of Leo on the Macintosh in plain C and the
+native Mac Toolbox. This was a poor choice; I wasted a huge amount of time
+programming with these primitive tools. However, this effort convinced me that
+Leo was a great way to program.</p>
+<p>Late in 1997 I wrote a Print command to typeset an outline. Printing (Weaving)
+is supposedly a key feature of literate programming. Imagine my surprise when I
+realized that such a &#8220;beautiful&#8221; program listing was almost unintelligible; all
+the structure inherent in the outline was lost! I saw clearly that typesetting,
+no matter how well done, is no substitute for explicit structure.</p>
+<p>In 1998 I created a version of Leo using Apple&#8217;s YellowBox environment. Alas,
+Apple broke its promises to Apple developers. I had to start again.</p>
+</div>
+<div class="section" id="borland-c">
+<h3><a class="toc-backref" href="#id10">Borland C++</a><a class="headerlink" href="#borland-c" title="Permalink to this headline">¶</a></h3>
+<p>I rewrote Leo for Borland C++ starting in May 1999. Borland C++ was much better
+than CodeWarrior C, but it was still C++. This version of Leo was the first
+version to use xml as the format of .leo files. The last version of Borland Leo,
+3.12 Final went out the door July 17, 2003.</p>
+</div>
+<div class="section" id="discovering-python">
+<h3><a class="toc-backref" href="#id11">Discovering Python</a><a class="headerlink" href="#discovering-python" title="Permalink to this headline">¶</a></h3>
+<p>I attended the Python conference in early 2001. In May of 2000 I began work on
+an wxWindows version of Leo. This did not work out, but something good did come
+from this effort. I spent a lot of time adding Python scripting to the wxWindows
+code and I became familiar with Python and its internals.</p>
+<p>I really started to &#8216;get&#8217; Python in September 2001. I wrote the white papers at
+about this time. Python solved <em>all</em> my programming problems. I rewrote Leo in
+Python in about two months! For the first time in my career I was no longer
+anxious while programming; it simply isn&#8217;t possible to create bad bugs in
+Python. The Python version of Leo was the first officially OpenSoftware version of
+Leo. The first functional version of Leo in Python was 0.05 alpha, December 17,
+2001.</p>
+</div>
+<div class="section" id="sourceforge">
+<h3><a class="toc-backref" href="#id12">SourceForge</a><a class="headerlink" href="#sourceforge" title="Permalink to this headline">¶</a></h3>
+<p>I registered the Leo project on SourceForge on March 10, 2003. It is certainly
+no accident that Leo started a new life shortly thereafter. Prior to SourceForge
+my interest in Leo had been waning.</p>
+</div>
+<div class="section" id="allowing-sentinel-lines-in-external-files">
+<h3><a class="toc-backref" href="#id13">Allowing sentinel lines in external files</a><a class="headerlink" href="#allowing-sentinel-lines-in-external-files" title="Permalink to this headline">¶</a></h3>
+<p>In the summer of 2001 I began to consider using sentinel lines in external files.
+Previously I had thought that outline structure must be &#8216;protected&#8217; by remaining
+inside .leo files. Accepting the possibility that sentinels might be corrupted
+opened vast new design possibilities. In retrospect, problems with sentinel
+almost never happen, but that wasn&#8217;t obvious at the time! The result of this
+design was known at first as Leo2. That terminology is extinct. I think of
+this version as the first version to support &#64;file and automatic tangling
+and untangling.</p>
+</div>
+<div class="section" id="untangling-file-is-easy">
+<h3><a class="toc-backref" href="#id14">Untangling &#64;file is easy!</a><a class="headerlink" href="#untangling-file-is-easy" title="Permalink to this headline">¶</a></h3>
+<p>The biggest surprise in Leo&#8217;s history was the realization it is <strong>much</strong> easier
+to untangle files derived from &#64;file. Indeed, the old tangle code created all
+sorts of problems that just disappear when using &#64;file. The new Python version
+of Leo became fully operational in early 2002. It was probably about this time
+that I chose noweb as Leo&#8217;s preferred markup language. My decision not to
+support noweb&#8217;s escape sequences made Leo&#8217;s read code much more robust.</p>
+</div>
+<div class="section" id="leo-3-x-continuous-improvement">
+<h3><a class="toc-backref" href="#id15">Leo 3.x: Continuous improvement</a><a class="headerlink" href="#leo-3-x-continuous-improvement" title="Permalink to this headline">¶</a></h3>
+<p>I spent 2002 taking advantages of Python&#8217;s tremendous power and safety.
+Many improvements were at last easy enough to do:</p>
+<ul class="simple">
+<li>Nested &#64;others directives appeared in 3.2.</li>
+<li>Unicode support started in 3.3.</li>
+<li>&#64;first and &#64;last appeared in 3.7</li>
+<li>&#64;asis and &#64;nosent appeared in 3.8.</li>
+<li>Incremental syntax coloring and incremental undo appeared in 3.9.</li>
+<li>Paul Paterson created Leo&#8217;s plugin architecture sometime during this period.
+Plugins have been a driving force in Leo&#8217;s development because people can
+change how Leo works without altering Leo&#8217;s core.</li>
+<li>3.12 fixed a huge memory leak.</li>
+<li>3.12 Final, the last 3.x version, appeared July 17, 2003.</li>
+</ul>
+</div>
+<div class="section" id="leo-4-0-eliminating-error-recovery">
+<h3><a class="toc-backref" href="#id16">Leo 4.0: Eliminating error &#8216;recovery&#8217;</a><a class="headerlink" href="#leo-4-0-eliminating-error-recovery" title="Permalink to this headline">¶</a></h3>
+<p>In late 2002 and throughout 2003 I worked on an entirely new file format.
+4.0 final went out the door October 17, 2003 after almost a year intense
+design work trying to improve error recovery scheme used while reading
+external files. In the summer of 2003 I realized that orphan and &#64;ignore&#8217;d
+nodes must be prohibited in &#64;file trees. With this restriction, Leo
+could finally recreate &#64;file trees in outlines using <strong>only</strong> the
+information in external files. This made the read code much more robust, and
+eliminated all the previous unworkable error recovery schemes. At last Leo
+was on a completely firm foundation.</p>
+</div>
+<div class="section" id="leo-4-1-the-debut-of-gnx-s">
+<h3><a class="toc-backref" href="#id17">Leo 4.1: The debut of gnx&#8217;s</a><a class="headerlink" href="#leo-4-1-the-debut-of-gnx-s" title="Permalink to this headline">¶</a></h3>
+<p>Leo first used gnx&#8217;s (global node indices) as a foolproof way of associating
+nodes in .leo files with nodes in external files. At the time, there was
+still intense discussions about protecting the logical consistency of
+outlines. &#64;thin was later to solve all those problems, but nobody knew
+that then.</p>
+</div>
+<div class="section" id="leo-4-2-complete-at-last">
+<h3><a class="toc-backref" href="#id18">Leo 4.2: Complete at last</a><a class="headerlink" href="#leo-4-2-complete-at-last" title="Permalink to this headline">¶</a></h3>
+<p>Leo 4.2 Final went out the door September 20, 2004.
+This surely is one of the most significant dates in Leo&#8217;s history:</p>
+<ul>
+<li><p class="first">This marked the end worries about consistency of outlines and external files:
+Leo recreates all essential information from thin external files,
+so <em>there is nothing left in the .leo file to get out of synch</em>.</p>
+</li>
+<li><dl class="first docutils">
+<dt>Thin external files use gnx&#8217;s extensively. This simplifies the file format and</dt>
+<dd><p class="first last">makes thin external files more cvs friendly.</p>
+</dd>
+</dl>
+</li>
+<li><p class="first">A sensational scripting plugin showed how to create script buttons.
+This has lead to improvements in the Execute Script command and
+other significant improvements in Unit testing.</p>
+</li>
+<li><p class="first">As if this were not enough, 4.2 marked the &#8216;great divide&#8217; in Leo&#8217;s internal
+data structures. Before 4.2, Leo every node in the outline had its own
+vnode. This was a big performance problem: clone operations had to
+traverse the entire outline! 4.2 represents clones by sharing subtrees.
+Changing Leo&#8217;s fundamental data structures while retaining compatibility
+with old scripts was engineering work of which the entire Leo community can
+be proud. <a class="reference external" href="tutorial-scripting.html">Scripting Leo with Python</a> tells how the position
+class makes this happen.
+This was a cooperative effort. Kent Tenney and Bernhard Mulder made
+absolutely crucial contributions. Kent pointed out that it is a tnode,
+not a vnode that must form the root of the shared data. Bernhard showed
+that iterators are the way to avoid creating huge numbers of positions.</p>
+</li>
+</ul>
+<p>Leo 4.2 marked so many significant changes. I often find it hard to remember
+what life with Leo was like before it.</p>
+</div>
+<div class="section" id="leo-4-3-settings">
+<h3><a class="toc-backref" href="#id19">Leo 4.3 Settings</a><a class="headerlink" href="#leo-4-3-settings" title="Permalink to this headline">¶</a></h3>
+<p>Leo 4.3 corrected many problems with leoConfig.txt. Instead, Leo gets
+settings from one or more leoSettings.leo files. This version also
+introduced a way to changed settings using a settings dialog.  However,
+the settings dialog proved not to be useful (worse, it inhibited design) and
+the settings dialog was retired in Leo 4.4.</p>
+</div>
+<div class="section" id="leo-4-4-the-minibuffer-and-key-bindings">
+<h3><a class="toc-backref" href="#id20">Leo 4.4 The minibuffer and key bindings</a><a class="headerlink" href="#leo-4-4-the-minibuffer-and-key-bindings" title="Permalink to this headline">¶</a></h3>
+<p>Leo 4.4 was a year-long effort to incorporate an Emacs-style minibuffer and
+related commands into Leo. Thinking in terms of minibuffer commands frees my
+thinking. Leo 4.4 also featured many improvements in how keys are bound to
+commands, including per-pane bindings and user-defined key-binding modes.</p>
+<p>Development on long-delayed projects accelerated after 4.4 final went out the door.
+Recent projects include:</p>
+<ul class="simple">
+<li>Controlling syntax coloring with jEdit&#8217;s xml language-description files.</li>
+<li>Support for debugging scripts using external debuggers.</li>
+<li>Modifying Leo&#8217;s vnodes and tnodes so that Leo&#8217;s data can be used with ZODB.</li>
+<li>Using pymacs to write Leo scripts within Emacs.</li>
+<li>Using the leoBridge module to embed Leo support in other programs.</li>
+<li>Using Leo to run unit tests.</li>
+</ul>
+</div>
+<div class="section" id="leo-4-4-x-improvements">
+<h3><a class="toc-backref" href="#id21">Leo 4.4.x Improvements</a><a class="headerlink" href="#leo-4-4-x-improvements" title="Permalink to this headline">¶</a></h3>
+<p>This series of releases featured <strong>hundreds</strong> of improvements.  The highlights were truly significant:</p>
+<ul class="simple">
+<li>Added the leoBridge module. See <a class="reference external" href="leoBridge.html">Embedding Leo with the leoBridge Module</a>.</li>
+<li>Added support for &#64;enabled-plugins and &#64;openwith (formerly &#64;open-with) nodes in settings files.</li>
+<li>Added support for ZODB. See <a class="reference external" href="zodb.html">Using ZODB with Leo</a>.</li>
+<li>Added leoPymacs module. See <a class="reference external" href="emacs.html">Leo and Emacs</a>.</li>
+<li>Added perfect import of external files with &#64;auto nodes.</li>
+<li>Used the sax parser to .leo files. This allows the format of .leo files to be
+expanded easily.</li>
+<li>Added support for myLeoSettings.leo.</li>
+<li>Supported multiple editors in body pane.</li>
+<li>Added the jEdit_colorizer plugin. See <a class="reference external" href="coloring.html">Controlling Syntax Coloring</a>.</li>
+<li>Many other new plugins.</li>
+</ul>
+<p>For a complete list, see the <a class="reference external" href="what-is-new.html">What&#8217;s New</a> chapter.</p>
+</div>
+<div class="section" id="leo-4-5-shadow-files">
+<h3><a class="toc-backref" href="#id22">Leo 4.5 &#64;shadow files</a><a class="headerlink" href="#leo-4-5-shadow-files" title="Permalink to this headline">¶</a></h3>
+<p>Added support for &#64;shadow files. This was a major breakthrough.
+See the <a class="reference external" href="atShadow.html">Using &#64;shadow</a> chapter for full details.</p>
+</div>
+<div class="section" id="leo-4-6-caching-qt-and-more">
+<h3><a class="toc-backref" href="#id23">Leo 4.6 Caching, Qt and more</a><a class="headerlink" href="#leo-4-6-caching-qt-and-more" title="Permalink to this headline">¶</a></h3>
+<p>This version of Leo featured more significant improvements:</p>
+<ul class="simple">
+<li>Added support for the Qt gui.  This was a major project that
+significantly improves the look and feel of Leo.</li>
+<li>A file-caching scheme produced spectacular improvements in the
+speed of loading Leo outlines.</li>
+<li>Added support for &#64;auto-rst nodes. These import reStructuredText (rST) files
+so that the files can be &#8220;round-tripped&#8221; without introducing extraneous
+changes. This makes Leo a superb environment for using rST.</li>
+<li>Added support for &#64;edit nodes.</li>
+</ul>
+</div>
+<div class="section" id="leo-4-7-the-one-node-world-and-python-3k">
+<h3><a class="toc-backref" href="#id24">Leo 4.7 The one node world and Python 3k</a><a class="headerlink" href="#leo-4-7-the-one-node-world-and-python-3k" title="Permalink to this headline">¶</a></h3>
+<p>Leo 4.7 accomplishes something I long thought to be impossible: the unification
+of vnodes and tnodes. tnodes no longer exist: vnodes contain all data. The Aha
+that made this possible is that iterators and positions allow a single node to
+appear in more than one place in a tree traversal.</p>
+<p>This is one of the most significant developments in Leo&#8217;s history. At last the
+endless confusion between vnodes and tnodes is gone. At the most fundamental
+level, Leo&#8217;s data structures are as simple as possible. This makes them as
+general and as powerful as possible!</p>
+<p>This version successfully produced a common code base that can run on both
+Python 2.x and Python 3.x.</p>
+</div>
+<div class="section" id="leo-4-8-simple-sentinels-better-data-recovery">
+<h3><a class="toc-backref" href="#id25">Leo 4.8 Simple sentinels &amp; better data recovery</a><a class="headerlink" href="#leo-4-8-simple-sentinels-better-data-recovery" title="Permalink to this headline">¶</a></h3>
+<p>Leo 4.8 simplified Leo&#8217;s sentinels as much as possible.
+Leo&#8217;s sentinel lines look very much like Emacs org-mode comment lines,
+except for the addition of gnx&#8217;s.</p>
+<p>This version also produced a fundamentally important addition to Leo&#8217;s error
+recovery. Leo now shows &#8220;Resurrected&#8221; and &#8220;Recovered&#8221; nodes when loading an
+outline. These nodes protect against data loss, and also implicitly warn when
+unusual data-changing events occur. Creating this scheme is likely the final
+chapter in the epic saga of error recovery in Leo.</p>
+</div>
+<div class="section" id="leo-4-9-qt-autocompleter-vr-pane">
+<h3><a class="toc-backref" href="#id26">Leo 4.9 Qt, autocompleter, vr pane</a><a class="headerlink" href="#leo-4-9-qt-autocompleter-vr-pane" title="Permalink to this headline">¶</a></h3>
+<p>Leo 4.9 featured the completed transition to the <a class="reference external" href="http://www.riverbankcomputing.com/software/pyqt/intro">PyQt</a> application
+framework, the introduction of the viewrendered pane, and
+autocompletion.</p>
+</div>
+<div class="section" id="leo-4-10-many-improvements">
+<h3><a class="toc-backref" href="#id27">Leo 4.10 Many improvements</a><a class="headerlink" href="#leo-4-10-many-improvements" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>Tab completion now shows all &#64;command &amp; &#64;button nodes.</li>
+<li>Leo tabs may be detached from the main window.</li>
+<li>The Open With menu now works.</li>
+<li>Leo can highlight the pane containing the focus.</li>
+<li>The bigdash plugin searches across multiple files.</li>
+<li>Improved abbreviation capabilities.</li>
+<li>Improved handling of URL&#8217;s.</li>
+<li>Improved editing of non-Leo files.</li>
+<li>Improvements create &#8220;weightless&#8221; unit testing.</li>
+</ul>
+</div>
+<div class="section" id="leo-4-11-many-more-improvements">
+<h3><a class="toc-backref" href="#id28">Leo 4.11 Many more improvements</a><a class="headerlink" href="#leo-4-11-many-more-improvements" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>Rewrote Leo&#8217;s tutorials.</li>
+<li>Greatly improved abbreviations, including templates.</li>
+<li>Clones are now valid anywhere in &#64;file nodes.</li>
+<li>Leo now warns if a .leo file is open elsewhere.</li>
+<li>Leo&#8217;s IPython bridge now works with IPython 1.x.</li>
+<li>Added support for &#64;testsetup and &#64;testclass.</li>
+<li>Added support for sessions.</li>
+<li>Added colorizing themes.</li>
+<li>A colored border highlights the pane with focus.</li>
+<li>Added support for the clojure, markdown and TypeScript languages.</li>
+<li>Added importers for .ipynb, .otl and vimoutliner files.</li>
+<li>Many new and improved commands, plugins and scripts.</li>
+<li>Dozens of bug fixes and code-level improvements.</li>
+</ul>
+</div>
+</div>
+<div class="section" id="why-i-like-python">
+<h2><a class="toc-backref" href="#id29">Why I like Python</a><a class="headerlink" href="#why-i-like-python" title="Permalink to this headline">¶</a></h2>
+<p>I wrote this soon after discovering Python in 2001. The conclusions are
+still valid today.</p>
+<p>I&#8217;ve known for a while that Python was interesting; I attended a Python
+conference last year and added Python support to Leo. But last week I got that
+Python is something truly remarkable. I wanted to convert Leo from wxWindows to
+wxPython, so I began work on c2py, a Python script that would help convert from
+C++ syntax to Python. While doing so, I had an Aha experience. Python is more
+than an incremental improvement over Smalltalk or C++ or objective-C; it is
+&#8220;something completely different&#8221;. The rest of this post tries to explain this
+difference.</p>
+<div class="section" id="clarity">
+<h3><a class="toc-backref" href="#id30">Clarity</a><a class="headerlink" href="#clarity" title="Permalink to this headline">¶</a></h3>
+<p>What struck me first as I converted C++ code to Python is how much less blah,
+blah, blah there is in Python. No braces, no stupid semicolons and most
+importantly, <em>no declarations</em>. No more pointless distinctions between
+const, char *, char const *, char * and wxString.
+No more wondering whether a variable should be signed, unsigned, short or long.</p>
+<p>Declarations add clutter, declarations are never obviously right and
+declarations don&#8217;t prevent memory allocation tragedies. Declarations also hinder
+prototyping. In C++, if I change the type of something I must change all related
+declarations; this can be a huge and dangerous task. With Python, I can change
+the type of an object without changing the code at all! It&#8217;s no accident that
+Leo&#8217;s new log pane was created first in Python.</p>
+<p>Functions returning tuples are a &#8220;minor&#8221; feature with a huge impact on code
+clarity. No more passing pointers to data, no more defining (and allocating and
+deallocating) temporary structs to hold multiple values.</p>
+<p>Python can&#8217;t check declarations because there aren&#8217;t any. However, there is a
+really nifty tool called <a class="reference external" href="http://www.logilab.org/857">pylint</a> that does many of the checks typically done
+by compilers.</p>
+</div>
+<div class="section" id="power">
+<h3><a class="toc-backref" href="#id31">Power</a><a class="headerlink" href="#power" title="Permalink to this headline">¶</a></h3>
+<p>Python is much more powerful than C++, not because Python has more features, but
+because Python needs <em>less</em> features. Some examples:</p>
+<ul class="simple">
+<li>Python does everything that the C++ Standard Template Library (STL) does,
+without any of the blah, blah, blah needed by STL.
+No fuss, no muss, no code bloat.</li>
+<li>Python&#8217;s slicing mechanism is very powerful and applies to any sequence (string, list or tuple).
+Python&#8217;s string library does more with far less functions because slices replace many functions
+typically found in other string libraries.</li>
+<li>Writing dict = {} creates a dictionary (hash table).
+Hash tables can contain anything, including lists and other hash tables.</li>
+<li>Python&#8217;s special functions,  __init__, __del__, __repr__, __cmp__, etc.
+are an elegant way to handle any special need that might arise.</li>
+</ul>
+</div>
+<div class="section" id="safety">
+<h3><a class="toc-backref" href="#id32">Safety</a><a class="headerlink" href="#safety" title="Permalink to this headline">¶</a></h3>
+<p>Before using Python I never fully realized how difficult and dangerous memory allocation is in C++.
+Try doing:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">aList</span><span class="p">[</span><span class="n">i</span><span class="p">:</span><span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">aString</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>in C.  You will write about 20 lines of C code.
+Any error in this code will create a memory allocation crash or leak.</p>
+<p>Python is fundamentally safe. C++ is fundamentally unsafe. When I am using
+Python I am free from worry and anxiety. When I am using C++ I must be
+constantly &#8220;on guard.&#8221; A momentary lapse can create a hard-to-find pointer bug.
+With Python, almost nothing serious can ever go wrong, so I can work late at
+night, or after a beer. The Python debugger is always available. If an exception
+occurs, the debugger/interpreter tells me just what went wrong. I don&#8217;t have to
+plan a debugging strategy! Finally, Python recovers from exceptions, so Leo can
+keep right on going even after a crash!</p>
+</div>
+<div class="section" id="speed">
+<h3><a class="toc-backref" href="#id33">Speed</a><a class="headerlink" href="#speed" title="Permalink to this headline">¶</a></h3>
+<p>Python has almost all the speed of C. Other interpretive environments such as
+icon and Smalltalk have clarity, power and safety similar to Python. What makes
+Python unique is its seamless way of making C code look like Python code.
+Python executes at essentially the speed of C code because most Python modules
+are written in C. The overhead in calling such modules is negligible. Moreover,
+if code is too slow, one can always create a C module to do the job.</p>
+<p>In fact, Python encourages optimization by moving to higher levels of
+expression. For example, Leo&#8217;s Open command reads an XML file. If this command
+is too slow I can use Python&#8217;s XML parser module. This will speed up Leo while
+at the same time raising the level of the code.</p>
+</div>
+<div class="section" id="conclusions">
+<h3><a class="toc-backref" href="#id34">Conclusions</a><a class="headerlink" href="#conclusions" title="Permalink to this headline">¶</a></h3>
+<p>Little of Python is completely new. What stands out is the superb engineering
+judgment evident in Python&#8217;s design. Python is extremely powerful, yet small,
+simple and elegant. Python allows me to express my intentions clearly and at the
+highest possible level.</p>
+<p>The only hope of making Leo all it can be is to use the best possible tools. I
+believe Python will allow me to add, at long last, the new features that Leo
+should have.</p>
+<p>Edward K. Ream, October 25, 2001.  P.S., September, 2005:</p>
+<p>Four years of experience have only added to my admiration for Python. Leo could
+not possibly be what it is today without Python.</p>
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="contents.html">
+              <img class="logo" src="_static/Leo4-80-border.jpg" alt="Logo"/>
+            </a></p>
+  <h3><a href="contents.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Appendices</a><ul>
+<li><a class="reference internal" href="#format-of-leo-files">Format of .leo files</a></li>
+<li><a class="reference internal" href="#format-of-external-files">Format of external files</a></li>
+<li><a class="reference internal" href="#unicode-reference">Unicode reference</a></li>
+<li><a class="reference internal" href="#valid-url-s">Valid URL&#8217;s</a></li>
+<li><a class="reference internal" href="#history-of-leo">History of Leo</a><ul>
+<li><a class="reference internal" href="#beginnings">Beginnings</a></li>
+<li><a class="reference internal" href="#breakthrough">Breakthrough</a></li>
+<li><a class="reference internal" href="#apple-and-yellowbox">Apple and YellowBox</a></li>
+<li><a class="reference internal" href="#borland-c">Borland C++</a></li>
+<li><a class="reference internal" href="#discovering-python">Discovering Python</a></li>
+<li><a class="reference internal" href="#sourceforge">SourceForge</a></li>
+<li><a class="reference internal" href="#allowing-sentinel-lines-in-external-files">Allowing sentinel lines in external files</a></li>
+<li><a class="reference internal" href="#untangling-file-is-easy">Untangling &#64;file is easy!</a></li>
+<li><a class="reference internal" href="#leo-3-x-continuous-improvement">Leo 3.x: Continuous improvement</a></li>
+<li><a class="reference internal" href="#leo-4-0-eliminating-error-recovery">Leo 4.0: Eliminating error &#8216;recovery&#8217;</a></li>
+<li><a class="reference internal" href="#leo-4-1-the-debut-of-gnx-s">Leo 4.1: The debut of gnx&#8217;s</a></li>
+<li><a class="reference internal" href="#leo-4-2-complete-at-last">Leo 4.2: Complete at last</a></li>
+<li><a class="reference internal" href="#leo-4-3-settings">Leo 4.3 Settings</a></li>
+<li><a class="reference internal" href="#leo-4-4-the-minibuffer-and-key-bindings">Leo 4.4 The minibuffer and key bindings</a></li>
+<li><a class="reference internal" href="#leo-4-4-x-improvements">Leo 4.4.x Improvements</a></li>
+<li><a class="reference internal" href="#leo-4-5-shadow-files">Leo 4.5 &#64;shadow files</a></li>
+<li><a class="reference internal" href="#leo-4-6-caching-qt-and-more">Leo 4.6 Caching, Qt and more</a></li>
+<li><a class="reference internal" href="#leo-4-7-the-one-node-world-and-python-3k">Leo 4.7 The one node world and Python 3k</a></li>
+<li><a class="reference internal" href="#leo-4-8-simple-sentinels-better-data-recovery">Leo 4.8 Simple sentinels &amp; better data recovery</a></li>
+<li><a class="reference internal" href="#leo-4-9-qt-autocompleter-vr-pane">Leo 4.9 Qt, autocompleter, vr pane</a></li>
+<li><a class="reference internal" href="#leo-4-10-many-improvements">Leo 4.10 Many improvements</a></li>
+<li><a class="reference internal" href="#leo-4-11-many-more-improvements">Leo 4.11 Many more improvements</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#why-i-like-python">Why I like Python</a><ul>
+<li><a class="reference internal" href="#clarity">Clarity</a></li>
+<li><a class="reference internal" href="#power">Power</a></li>
+<li><a class="reference internal" href="#safety">Safety</a></li>
+<li><a class="reference internal" href="#speed">Speed</a></li>
+<li><a class="reference internal" href="#conclusions">Conclusions</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="apidoc/index.html" title="API Documentation"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="leonine-world.html" title="The Leonine World"
+             >previous</a> |</li>
+        <li><a href="contents.html">Leo Doc</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2014, Edward K. Ream.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.2.
+    </div>
+  </body>
+</html>

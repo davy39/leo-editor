@@ -1,0 +1,26 @@
+Source: leo
+Maintainer: Edward K. Ream <edreamleo@gmail.com>
+Section: editors
+Priority: optional
+Build-Depends: python-setuptools (>= 0.6b3), python, debhelper (>= 7.4.3)
+Standards-Version: 3.9.1
+
+Package: leo
+Architecture: all
+Depends: python, python-pyqt5.qtsvg | python-qt4-phonon,
+ python-pyqt5.qtwebkit | python-qt4-gl, 
+ python-docutils, python-enchant, python-pygments
+Description:Leonine Editor with Outlines
+ Leo is a PIM, IDE and outliner written in 100% pure Python.
+ Leo features a multi-window outlining editor, Python colorizing,
+ powerful outline commands and many other things, including 
+ unlimited Undo/Redo and an integrated Python shell(IDLE) window.
+ Leo requires Python 2.6 or above. Leo works with Python 3.x
+ .    
+	Docs:      http://leoeditor.com/leo_toc.html
+	Tutorials: http://leoeditor.com/tutorial.html
+	Videos:    http://leoeditor.com/screencasts.html
+	Forum:     http://groups.google.com/group/leo-editor
+	Download:  http://sourceforge.net/projects/leo/files/
+	Github:    https://github.com/leo-editor/leo-editor
+	Quotes:    http://leoeditor.com/testimonials.html

@@ -1,0 +1,325 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Programming with Leo &mdash; Leo Doc</title>
+    
+    <link rel="stylesheet" href="_static/leo.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '5.0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  false
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/sidebar.js"></script>
+    <link rel="top" title="Leo Doc" href="index.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li><a href="contents.html">Leo Doc</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="programming-with-leo">
+<h1><a class="toc-backref" href="#id1">Programming with Leo</a><a class="headerlink" href="#programming-with-leo" title="Permalink to this headline">¶</a></h1>
+<blockquote>
+<div>&#8220;We who use Leo know that it is a breakthrough tool and a whole new way
+of writing code.&#8221;&#8212;Joe Orr</div></blockquote>
+<p>Now we come to the programming features that distinguish Leo from all other
+programming environments. This part tells how to create external files from
+Leo outlines.</p>
+<p>Please study this section carefully if you intend to use Leo for programming.</p>
+<p>If you get stuck, please <a class="reference external" href="https://groups.google.com/forum/#!forum/leo-editor">ask for help</a> immediately.</p>
+<div class="contents topic" id="contents">
+<p class="topic-title first">Contents</p>
+<ul class="simple">
+<li><a class="reference internal" href="#programming-with-leo" id="id1">Programming with Leo</a><ul>
+<li><a class="reference internal" href="#overview" id="id2">Overview</a></li>
+<li><a class="reference internal" href="#basic-markup" id="id3">Basic markup</a></li>
+<li><a class="reference internal" href="#using-first-and-last" id="id4">Using &#64;first and &#64;last</a></li>
+<li><a class="reference internal" href="#using-path" id="id5">Using &#64;path</a></li>
+<li><a class="reference internal" href="#using-edit-nodes" id="id6">Using &#64;edit nodes</a></li>
+<li><a class="reference internal" href="#using-auto-nodes" id="id7">Using &#64;auto nodes</a></li>
+<li><a class="reference internal" href="#summary" id="id8">Summary</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="overview">
+<span id="leo-s-scripting-chapter"></span><span id="event-handlers"></span><h2><a class="toc-backref" href="#id2">Overview</a><a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h2>
+<p>Leo creates <strong>external files</strong> (files on your file system) from
+<strong>&#64;file nodes</strong> and <em>all the descendants</em> of the &#64;file node.
+Examples:</p>
+<div class="highlight-python"><div class="highlight"><pre>@file spam.py
+@file ../foo.c
+@file ~/bar.py
+</pre></div>
+</div>
+<p>A single Leo outline may contain many &#64;file nodes. As a result, Leo
+outlines function much like project files in other IDE&#8217;s (Integrated
+Development Environments).</p>
+<p>Within an &#64;file tree, simple text markup (discussed next) tells Leo how
+to create the external file from the &#64;file node and its descendants.</p>
+<p><strong>Note</strong>: Other kinds of nodes (not discussed here) can also create
+external files:</p>
+<div class="highlight-python"><div class="highlight"><pre>@nosent x.py
+@shadow y.py
+@auto z.py
+</pre></div>
+</div>
+</div>
+<div class="section" id="basic-markup">
+<h2><a class="toc-backref" href="#id3">Basic markup</a><a class="headerlink" href="#basic-markup" title="Permalink to this headline">¶</a></h2>
+<p id="index-0">Simple markup,the &#64;others directive, and section references, tell Leo how
+to create external files.</p>
+<p>Before going into terminology and explanations, let&#8217;s look at a
+step-by-step example:</p>
+<ol class="arabic">
+<li><p class="first">Create a new outline node whose headline is:</p>
+<div class="highlight-python"><div class="highlight"><pre>@file myfile.py
+</pre></div>
+</div>
+</li>
+<li><p class="first">Type this in &#64;file node&#8217;s body:</p>
+<div class="highlight-python"><div class="highlight"><pre>@language python
+@tabwidth -4
+&lt;&lt; docstring &gt;&gt;
+@others
+if __name__ == &#39;__main__&#39;:
+    main()
+</pre></div>
+</div>
+</li>
+<li><p class="first">Create a child of the &#64;file node whose headline is:</p>
+<div class="highlight-python"><div class="highlight"><pre>&lt;&lt;docstring &gt;&gt;
+</pre></div>
+</div>
+</li>
+<li><p class="first">Type this in the child&#8217;s body text:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">This is the docstring for this python module.</span>
+<span class="sd">&#39;&#39;&#39;</span>
+</pre></div>
+</div>
+</li>
+<li><p class="first">Create another child of the &#64;file node, with the headline:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">main</span>
+</pre></div>
+</div>
+</li>
+<li><p class="first">Type this in the body:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">&#39;hello from main&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</li>
+<li><p class="first">Saving the outline will create myfile.py automatically.</p>
+</li>
+<li><p class="first">Open myfile.py in an external editor. <br />
+Comments in this file represent Leo directives and Leo&#8217;s outline structure.</p>
+</li>
+<li><p class="first">(Optional) Run myfile.py with a python interpreter.</p>
+</li>
+</ol>
+<p>Now let&#8217;s find out how all this works.</p>
+<p><strong>Essential Terms</strong>:</p>
+<ul class="simple">
+<li>A <strong>section name</strong> is any text of the form: &lt;&lt; any text &gt;&gt;.
+(&gt;&gt; must not appear in &#8220;any text&#8221;.)</li>
+<li>A <strong>section definition node</strong> is any node whose headline starts with a
+section name.</li>
+<li>A <strong>section reference</strong> is a section name that appears in body text.</li>
+</ul>
+<p>Leo creates external files containing &#64;others directives by writing the
+<em>expansion</em> of the &#64;file node. <br />
+The <strong>expansion</strong> of <em>any</em> node is
+the node&#8217;s body text after making these text <strong>substitutions</strong>:</p>
+<ol class="arabic simple">
+<li>Leo replaces &#64;others with the <em>expansion</em> of all descendant nodes
+<strong>except</strong> section definition nodes. That&#8217;s how &#64;others got its name.</li>
+<li>Leo replaces section references by the <em>expansion</em> of the body text of
+the corresponding section definition node.</li>
+</ol>
+<p>Whitespace is significant before &#64;others and section references. Leo adds
+the leading whitespace appearing before each &#64;others directive or section
+reference to every line of their expansion. As a result, Leo can generate
+external files even for Python.  The following cute trick works:</p>
+<div class="highlight-python"><div class="highlight"><pre>if 1:
+    &lt;&lt; a section &gt;&gt;
+if 0:
+    @others
+</pre></div>
+</div>
+<p><strong>Notes</strong>:</p>
+<ul class="simple">
+<li>Any node may contain a single &#64;others directive. No node may contain more
+than one &#64;others directive.</li>
+<li>Nodes that <em>aren&#8217;t</em> section definition nodes are included in the expansion
+of the <em>nearest</em> ancestor node containing an &#64;others directive.</li>
+</ul>
+<ul class="simple" id="index-1">
+<li>An <strong>orphan node</strong> is a descendant of an &#64;file node not included in any
+substitution. Leo refuses to write external files containing orphan
+nodes. Instead, Leo writes the &#64;file tree to the .leo file itself,
+thereby preserving all data.</li>
+</ul>
+<p><strong>Example 1</strong>: The body of the &#64;file node for a typical Python module will
+look something like:</p>
+<div class="highlight-python"><div class="highlight"><pre>&#39;&#39;&#39;A docstring.&#39;&#39;&#39;
+&lt;&lt; imports &gt;&gt;
+@others
+if __name__ == &#39;__main__&#39;:
+    main()
+</pre></div>
+</div>
+<p><strong>Example 2</strong>:  Here is a typical Python class definition in Leo:</p>
+<div class="highlight-python"><div class="highlight"><pre>class MyClass:
+    &#39;&#39;&#39;A docstring.&#39;&#39;&#39;
+    @others
+</pre></div>
+</div>
+</div>
+<div class="section" id="using-first-and-last">
+<h2><a class="toc-backref" href="#id4">Using &#64;first and &#64;last</a><a class="headerlink" href="#using-first-and-last" title="Permalink to this headline">¶</a></h2>
+<p id="index-2">The &#64;first directive forces lines to appear before the first sentinel of a
+external file. For example:</p>
+<div class="highlight-python"><div class="highlight"><pre>@first #! /usr/bin/env python
+@first # -*- coding: utf-8 -*-
+</pre></div>
+</div>
+<p>Similarly, &#64;last forces lines to appear after the last sentinel.</p>
+</div>
+<div class="section" id="using-path">
+<h2><a class="toc-backref" href="#id5">Using &#64;path</a><a class="headerlink" href="#using-path" title="Permalink to this headline">¶</a></h2>
+<p id="index-3">Rather than specifying long paths in &#64;file nodes, you can specify a path in
+an ancestor &#64;path node.</p>
+<p>For example, suppose three nodes have the following headlines:</p>
+<div class="highlight-python"><div class="highlight"><pre>@path a
+    @path b
+        @file c/d.py
+</pre></div>
+</div>
+<p>The &#64;file node creates the file a/b/c/d.py</p>
+<p>Within &#64;path and &#64;&lt;file&gt; paths, {{exp}} gets evaluated with the following
+predefined symbols: c, g, p, os and sys.  For example:</p>
+<div class="highlight-python"><div class="highlight"><pre>@file {{os.path.abspath(os.curdir)}}/abc.py
+</pre></div>
+</div>
+</div>
+<div class="section" id="using-edit-nodes">
+<h2><a class="toc-backref" href="#id6">Using &#64;edit nodes</a><a class="headerlink" href="#using-edit-nodes" title="Permalink to this headline">¶</a></h2>
+<p id="index-4">Use &#64;edit instead of &#64;file to place the entire contents of an external file
+into a single outline node. Leo writes no sentinel when writing &#64;edit
+files.</p>
+</div>
+<div class="section" id="using-auto-nodes">
+<h2><a class="toc-backref" href="#id7">Using &#64;auto nodes</a><a class="headerlink" href="#using-auto-nodes" title="Permalink to this headline">¶</a></h2>
+<p>Use &#64;auto instead of &#64;file when you don&#8217;t want to add sentinels in the file.</p>
+<p id="index-5">When reading &#64;auto files, Leo <strong>importers</strong> create an outline from the
+external file. Importers create nodes for each class, method and function
+in the external file.</p>
+<p>Notes:</p>
+<ul class="simple">
+<li>Leo determines the language using the file&#8217;s extension.</li>
+<li>Importers exist for C, C#, elisp, html, .ini files, Java, Javascript,
+Pascal, PHP, Python, TypeScript, vimoutliner files and xml.</li>
+<li>If no importer exists for a file, Leo reads the entire file into an &#64;edit
+node.</li>
+</ul>
+</div>
+<div class="section" id="summary">
+<h2><a class="toc-backref" href="#id8">Summary</a><a class="headerlink" href="#summary" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Leo creates external files by replacing &#64;others and section references
+with their expansions.</li>
+<li>A <strong>section name</strong> is any text of the form: &lt;&lt; any text &gt;&gt;.</li>
+<li>A <strong>section definition node</strong> is a node whose headline starts with a section name.</li>
+<li>A <strong>section reference</strong> is a section name in body text.</li>
+<li>&#64;first places lines before the first sentinel lines of a file.</li>
+<li>&#64;path specifies a common prefix for the file names of &#64;file and &#64;auto nodes.</li>
+<li>&#64;edit reads an entire external file into a single outline node.</li>
+<li>&#64;auto imports an external file into an outline, creating nodes for
+functions, methods and classes.</li>
+<li>Use &#64;edit or &#64;auto to avoid adding Leo sentinels to external files.</li>
+<li>leo/core/LeoPyRef.leo contains all of Leo&#8217;s core source code.</li>
+</ul>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="contents.html">
+              <img class="logo" src="_static/Leo4-80-border.jpg" alt="Logo"/>
+            </a></p>
+  <h3><a href="contents.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Programming with Leo</a><ul>
+<li><a class="reference internal" href="#overview">Overview</a></li>
+<li><a class="reference internal" href="#basic-markup">Basic markup</a></li>
+<li><a class="reference internal" href="#using-first-and-last">Using &#64;first and &#64;last</a></li>
+<li><a class="reference internal" href="#using-path">Using &#64;path</a></li>
+<li><a class="reference internal" href="#using-edit-nodes">Using &#64;edit nodes</a></li>
+<li><a class="reference internal" href="#using-auto-nodes">Using &#64;auto nodes</a></li>
+<li><a class="reference internal" href="#summary">Summary</a></li>
+</ul>
+</li>
+</ul>
+
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li><a href="contents.html">Leo Doc</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2014, Edward K. Ream.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.2.
+    </div>
+  </body>
+</html>
