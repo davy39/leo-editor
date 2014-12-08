@@ -25,6 +25,9 @@
     <script type="text/javascript" src="_static/doctools.js"></script>
     <script type="text/javascript" src="_static/sidebar.js"></script>
     <link rel="top" title="Leo Doc" href="index.html" />
+    <link rel="up" title="The Leo Tutorial" href="tutorial.html" />
+    <link rel="next" title="Using Leo as a Personal Information Manager" href="tutorial-pim.html" />
+    <link rel="prev" title="The Leo Tutorial" href="tutorial.html" />
     <script type="text/javascript">
         (function() {
             var s = document.createElement('script'), t = document.getElementsByTagName('script')[0];
@@ -44,7 +47,14 @@
         <li class="right" style="margin-right: 10px">
           <a href="genindex.html" title="General Index"
              accesskey="I">index</a></li>
-        <li><a href="contents.html">Leo Doc</a> &raquo;</li> 
+        <li class="right" >
+          <a href="tutorial-pim.html" title="Using Leo as a Personal Information Manager"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="tutorial.html" title="The Leo Tutorial"
+             accesskey="P">previous</a> |</li>
+        <li><a href="contents.html">Leo Doc</a> &raquo;</li>
+          <li><a href="tutorial.html" accesskey="U">The Leo Tutorial</a> &raquo;</li> 
       </ul>
     </div>  
 
@@ -55,11 +65,13 @@
             
   <div class="section" id="the-basics-of-leo">
 <h1><a class="toc-backref" href="#id1">The Basics of Leo</a><a class="headerlink" href="#the-basics-of-leo" title="Permalink to this headline">¶</a></h1>
-<blockquote>
-<div>&#8220;Edward... you&#8217;ve come up with perhaps the most powerful new concept in
-code manipulation since VI and Emacs.&#8221;&#8212;David McNab</div></blockquote>
-<p>This chapter introduces Leo&#8217;s basic operations for creating and
-changing outlines. Commands can be executed using keystrokes, or by
+<p>..epitaph:</p>
+<div class="highlight-python"><div class="highlight"><pre>Edward... you&#39;ve come up with perhaps the most powerful new concept in code manipulation since VI and Emacs.
+
+ --David McNab
+</pre></div>
+</div>
+<p>This chapter introduces Leo&#8217;s basic operations for creating and changing outlines. Commands can be executed using keystrokes, or by
 name.</p>
 <div class="contents topic" id="contents">
 <p class="topic-title first">Contents</p>
@@ -95,7 +107,7 @@ full name. For full details see <a class="reference internal" href="#the-minibuf
 <div class="section" id="leo-s-main-window">
 <h2><a class="toc-backref" href="#id3">Leo&#8217;s main window</a><a class="headerlink" href="#leo-s-main-window" title="Permalink to this headline">¶</a></h2>
 <p>Here is a slightly reduced screenshot of Leo&#8217;s main window:</p>
-<a class="reference internal image-reference" href="statics/screen-shots/render-svg-sources.png"><img alt="Screenshot" src="statics/screen-shots/render-svg-sources.png" /></a>
+<a class="reference internal image-reference" href="_images/render-svg-sources.png"><img alt="Screenshot" src="_images/render-svg-sources.png" style="width: 791.2px; height: 692.8px;" /></a>
 <p id="index-1">Leo&#8217;s main window consists of
 an <strong>icon area</strong> just below the menus,
 an <strong>outline pane</strong> at the top left,
@@ -447,26 +459,39 @@ the <a class="reference external" href="tutorial-programming.html#using-auto-nod
             <p class="logo"><a href="contents.html">
               <img class="logo" src="_static/Leo4-80-border.jpg" alt="Logo"/>
             </a></p>
-  <h3><a href="contents.html">Table Of Contents</a></h3>
-  <ul>
-<li><a class="reference internal" href="#">The Basics of Leo</a><ul>
-<li><a class="reference internal" href="#command-names">Command names</a></li>
-<li><a class="reference internal" href="#leo-s-main-window">Leo&#8217;s main window</a></li>
-<li><a class="reference internal" href="#operations-on-windows-panes-files">Operations on windows, panes &amp; files</a></li>
-<li><a class="reference internal" href="#operations-on-nodes">Operations on nodes</a></li>
-<li><a class="reference internal" href="#selecting-and-moving-outline-nodes">Selecting and moving outline nodes</a></li>
-<li><a class="reference internal" href="#moving-the-cursor-in-text-panes">Moving the cursor in text panes</a></li>
-<li><a class="reference internal" href="#the-minibuffer-completions">The minibuffer &amp; completions</a></li>
-<li><a class="reference internal" href="#finding-replacing-text">Finding &amp; replacing text</a></li>
-<li><a class="reference internal" href="#undoing-and-redoing-changes">Undoing and redoing changes</a></li>
-<li><a class="reference internal" href="#getting-help">Getting help</a></li>
-<li><a class="reference internal" href="#leo-directives">Leo directives</a></li>
-<li><a class="reference internal" href="#configuring-leo">Configuring Leo</a></li>
-<li><a class="reference internal" href="#plugins">Plugins</a></li>
-<li><a class="reference internal" href="#creating-external-files-with-file-and-all">Creating external files with &#64;file and &#64;all</a></li>
-<li><a class="reference internal" href="#summary">Summary</a></li>
+<h3><a href="contents.html">Table Of Contents</a></h3>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="index.html">Leo’s Home Page</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="preliminaries.html">Preliminaries</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="getting-started.html">Downloading, Installing &amp; Running Leo</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="cheatsheet.html">Cheat Sheet</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="screencasts.html">Videos about Leo</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="tutorial.html">Tutorial</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="">The Basics of Leo</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tutorial-pim.html">Using Leo as a Personal Information Manager</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tutorial-rst3.html">Creating Documents with the rst3 Command</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tutorial-programming.html">Programming with Leo</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tutorial-scripting.html">Scripting Leo with Python</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="usersguide.html">Users Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="leoandotherprograms.html">Leo and Other Programs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="intermediatetopics.html">Advanced Topics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="appendices.html">Appendices</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="apidoc/index.html">API Documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="FAQ.html">FAQ</a></li>
+<li class="toctree-l1"><a class="reference internal" href="glossary.html">Glossary</a></li>
+<li class="toctree-l1"><a class="reference internal" href="what-is-new.html">What&#8217;s New</a></li>
 </ul>
 
 <div id="searchbox" style="display: none">
@@ -500,7 +525,14 @@ the <a class="reference external" href="tutorial-programming.html#using-auto-nod
         <li class="right" style="margin-right: 10px">
           <a href="genindex.html" title="General Index"
              >index</a></li>
-        <li><a href="contents.html">Leo Doc</a> &raquo;</li> 
+        <li class="right" >
+          <a href="tutorial-pim.html" title="Using Leo as a Personal Information Manager"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="tutorial.html" title="The Leo Tutorial"
+             >previous</a> |</li>
+        <li><a href="contents.html">Leo Doc</a> &raquo;</li>
+          <li><a href="tutorial.html" >The Leo Tutorial</a> &raquo;</li> 
       </ul>
     </div>
     <div class="footer">

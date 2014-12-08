@@ -2951,153 +2951,39 @@ for images, svg, movies, etc. * Integrate better with rst3?</li>
             <p class="logo"><a href="contents.html">
               <img class="logo" src="_static/Leo4-80-border.jpg" alt="Logo"/>
             </a></p>
-  <h3><a href="contents.html">Table Of Contents</a></h3>
-  <ul>
-<li><a class="reference internal" href="#">Plugins</a><ul>
-<li><a class="reference internal" href="#enabling-plugins">Enabling plugins</a></li>
-<li><a class="reference internal" href="#summary">Summary</a></li>
-<li><a class="reference internal" href="#gui-independent-plugins">Gui-independent plugins</a><ul>
-<li><a class="reference internal" href="#commands-directives">Commands &amp; directives</a><ul>
-<li><a class="reference internal" href="#add-directives-py">add_directives.py</a></li>
-<li><a class="reference internal" href="#bzr-qcommands-py">bzr_qcommands.py</a></li>
-<li><a class="reference internal" href="#empty-leo-file-py">empty_leo_file.py</a></li>
-<li><a class="reference internal" href="#import-cisco-config-py">import_cisco_config.py</a></li>
-<li><a class="reference internal" href="#initinclass-py">initinclass.py</a></li>
-<li><a class="reference internal" href="#leo-interface-py">leo_interface.py</a></li>
-<li><a class="reference internal" href="#linenumbers-py">lineNumbers.py</a></li>
-<li><a class="reference internal" href="#macros-py">macros.py</a></li>
-<li><a class="reference internal" href="#mod-autosave-py">mod_autosave.py</a></li>
-<li><a class="reference internal" href="#mod-read-dir-outline-py">mod_read_dir_outline.py</a></li>
-<li><a class="reference internal" href="#mod-timestamp-py">mod_timestamp.py</a></li>
-<li><a class="reference internal" href="#nodeactions-py">nodeActions.py</a></li>
-<li><a class="reference internal" href="#outline-export-py">outline_export.py</a></li>
-<li><a class="reference internal" href="#paste-as-headlines-py">paste_as_headlines.py</a></li>
-<li><a class="reference internal" href="#pretty-print-py">pretty_print.py</a></li>
-<li><a class="reference internal" href="#quickmove-py">quickMove.py</a></li>
-<li><a class="reference internal" href="#sethomedirectory-py">setHomeDirectory.py</a></li>
-<li><a class="reference internal" href="#word-count-py">word_count.py</a></li>
+<h3><a href="contents.html">Table Of Contents</a></h3>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="index.html">Leo’s Home Page</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="preliminaries.html">Preliminaries</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="getting-started.html">Downloading, Installing &amp; Running Leo</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="cheatsheet.html">Cheat Sheet</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="screencasts.html">Videos about Leo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorial.html">Tutorial</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="usersguide.html">Users Guide</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="customizing.html">Customizing Leo</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rstplugin3.html">rst3 Command Reference</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="">Plugins</a></li>
+<li class="toctree-l2"><a class="reference internal" href="commands.html">Leo&#8217;s Commands Reference</a></li>
+<li class="toctree-l2"><a class="reference internal" href="directives.html">Directives Reference</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#debugging">Debugging</a><ul>
-<li><a class="reference internal" href="#debugger-pudb-py">debugger_pudb.py</a></li>
-<li><a class="reference internal" href="#dump-globals-py">dump_globals.py</a></li>
-<li><a class="reference internal" href="#enable-gc-py">enable_gc.py</a></li>
-<li><a class="reference internal" href="#quit-leo-py">quit_leo.py</a></li>
-<li><a class="reference internal" href="#trace-gc-plugin-py">trace_gc_plugin.py</a></li>
-<li><a class="reference internal" href="#trace-keys-py">trace_keys.py</a></li>
-<li><a class="reference internal" href="#trace-tags-py">trace_tags.py</a></li>
+<li class="toctree-l1"><a class="reference internal" href="leoandotherprograms.html">Leo and Other Programs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="intermediatetopics.html">Advanced Topics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="appendices.html">Appendices</a></li>
 </ul>
-</li>
-<li><a class="reference internal" href="#external-programs">External programs</a><ul>
-<li><a class="reference internal" href="#ipython-py">ipython.py</a></li>
-<li><a class="reference internal" href="#mod-tempfname-py">mod_tempfname.py</a></li>
-<li><a class="reference internal" href="#open-shell-py">open_shell.py</a></li>
-<li><a class="reference internal" href="#tomboy-import-py">tomboy_import.py</a></li>
-<li><a class="reference internal" href="#vim-py">vim.py</a></li>
-<li><a class="reference internal" href="#xemacs-py">xemacs.py</a></li>
-<li><a class="reference internal" href="#word-export-py">word_export.py</a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#files-and-nodes">Files and nodes</a><ul>
-<li><a class="reference internal" href="#active-path-py">active_path.py</a></li>
-<li><a class="reference internal" href="#at-folder-py">at_folder.py</a></li>
-<li><a class="reference internal" href="#at-produce-py">at_produce.py</a></li>
-<li><a class="reference internal" href="#at-view-py">at_view.py</a></li>
-<li><a class="reference internal" href="#backlink-py">backlink.py</a></li>
-<li><a class="reference internal" href="#datenodes-py">datenodes.py</a></li>
-<li><a class="reference internal" href="#expfolder-py">expfolder.py</a></li>
-<li><a class="reference internal" href="#fileactions-py">FileActions.py</a></li>
-<li><a class="reference internal" href="#geotag-py">geotag.py</a></li>
-<li><a class="reference internal" href="#leocursor-py">leocursor.py</a></li>
-<li><a class="reference internal" href="#mime-py">mime.py</a></li>
-<li><a class="reference internal" href="#multifile-py">multifile.py</a></li>
-<li><a class="reference internal" href="#nicenosent-py">niceNosent.py</a></li>
-<li><a class="reference internal" href="#read-only-nodes-py">read_only_nodes.py</a></li>
-<li><a class="reference internal" href="#run-nodes-py">run_nodes.py</a></li>
-<li><a class="reference internal" href="#startfile-py">startfile.py</a></li>
-<li><a class="reference internal" href="#timestamp-py">timestamp.py</a></li>
-<li><a class="reference internal" href="#xsltwithnodes-py">xsltWithNodes.py</a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#scripting">Scripting</a><ul>
-<li><a class="reference internal" href="#dyna-menu">dyna_menu</a></li>
-<li><a class="reference internal" href="#leoscreen-py">leoscreen.py</a></li>
-<li><a class="reference internal" href="#mod-scripting-py">mod_scripting.py</a></li>
-<li><a class="reference internal" href="#script-io-to-body-py">script_io_to_body.py</a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#servers">Servers</a><ul>
-<li><a class="reference internal" href="#leoremote-py">leoremote.py</a></li>
-<li><a class="reference internal" href="#mod-http-py">mod_http.py</a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#slideshows-and-screenshots">Slideshows and screenshots</a><ul>
-<li><a class="reference internal" href="#screenshots-py">screenshots.py</a></li>
-<li><a class="reference internal" href="#slideshow-py">slideshow.py</a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#text-formatting">Text formatting</a><ul>
-<li><a class="reference internal" href="#bibtex-py">bibtex.py</a></li>
-<li><a class="reference internal" href="#dtest-py">dtest.py</a></li>
-<li><a class="reference internal" href="#leo-to-html-py">leo_to_html.py</a></li>
-<li><a class="reference internal" href="#leo-to-rtf-py">leo_to_rtf.py</a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#user-interface">User interface</a><ul>
-<li><a class="reference internal" href="#unl-py">UNL.py</a></li>
-<li><a class="reference internal" href="#chapter-hoist-py">chapter_hoist.py</a></li>
-<li><a class="reference internal" href="#detect-urls-py">detect_urls.py</a></li>
-<li><a class="reference internal" href="#editattributes-py">EditAttributes.py</a></li>
-<li><a class="reference internal" href="#interact-py">interact.py</a></li>
-<li><a class="reference internal" href="#maximizenewwindows-py">maximizeNewWindows.py</a></li>
-<li><a class="reference internal" href="#mod-framesize-py">mod_framesize.py</a></li>
-<li><a class="reference internal" href="#plugins-menu-py">plugins_menu.py</a></li>
-<li><a class="reference internal" href="#redirect-to-log-py">redirect_to_log.py</a></li>
-<li><a class="reference internal" href="#scripts-menu-py">scripts_menu.py</a></li>
-<li><a class="reference internal" href="#zenity-file-dialogs-py">zenity_file_dialogs.py</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li><a class="reference internal" href="#qt-only-plugins">Qt only plugins</a><ul>
-<li><a class="reference internal" href="#attrib-edit-py">attrib_edit.py</a></li>
-<li><a class="reference internal" href="#bigdash-py">bigdash.py</a></li>
-<li><a class="reference internal" href="#bookmarks-py">bookmarks.py</a></li>
-<li><a class="reference internal" href="#colorize-headlines-py">colorize_headlines.py</a></li>
-<li><a class="reference internal" href="#contextmenu-py">contextmenu.py</a></li>
-<li><a class="reference internal" href="#graphcanvas-py">graphcanvas.py</a></li>
-<li><a class="reference internal" href="#leomylyn-py">leomylyn.py</a></li>
-<li><a class="reference internal" href="#livecode-py">livecode.py</a></li>
-<li><a class="reference internal" href="#nav-qt-py">nav_qt.py</a></li>
-<li><a class="reference internal" href="#nodetags-py">nodetags.py</a><ul>
-<li><a class="reference internal" href="#api">API</a></li>
-<li><a class="reference internal" href="#ui">UI</a></li>
-<li><a class="reference internal" href="#tag-limitation">Tag Limitation</a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#printing-py">printing.py</a></li>
-<li><a class="reference internal" href="#projectwizard-py">projectwizard.py</a></li>
-<li><a class="reference internal" href="#quicksearch-py">quicksearch.py</a></li>
-<li><a class="reference internal" href="#screen-capture-py">screen_capture.py</a></li>
-<li><a class="reference internal" href="#screencast-py">screencast.py</a></li>
-<li><a class="reference internal" href="#scrolledmessage-py">scrolledmessage.py</a></li>
-<li><a class="reference internal" href="#spydershell-py">spydershell.py</a></li>
-<li><a class="reference internal" href="#stickynotes-py">stickynotes.py</a></li>
-<li><a class="reference internal" href="#todo-py">todo.py</a></li>
-<li><a class="reference internal" href="#valuespace-py">valuespace.py</a></li>
-<li><a class="reference internal" href="#viewrendered-py">viewrendered.py</a></li>
-<li><a class="reference internal" href="#viewrendered2-py">viewrendered2.py</a><ul>
-<li><a class="reference internal" href="#why-a-better-viewrendered-plugin">Why a better viewrendered plugin?</a></li>
-<li><a class="reference internal" href="#objectives">Objectives</a></li>
-<li><a class="reference internal" href="#implementation">Implementation</a></li>
-<li><a class="reference internal" href="#issues-limitations">Issues / Limitations</a></li>
-<li><a class="reference internal" href="#future">Future</a></li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="apidoc/index.html">API Documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="FAQ.html">FAQ</a></li>
+<li class="toctree-l1"><a class="reference internal" href="glossary.html">Glossary</a></li>
+<li class="toctree-l1"><a class="reference internal" href="what-is-new.html">What&#8217;s New</a></li>
 </ul>
 
 <div id="searchbox" style="display: none">
