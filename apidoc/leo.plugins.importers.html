@@ -1,0 +1,1428 @@
+<!--@+leo-ver=5-thin-->
+<!--@+node:davy.20141209091210.28: * @file sources/templates/layout.html-->
+<!--@+at-->
+<!--
+This Jinja2 template introduce an extrahead block so we can add extra javascript for flattr.
+-->
+<!--@@c-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>leo.plugins.importers package &mdash; Leo 5.0 documentation</title>
+    
+    <link rel="stylesheet" href="../_static/leo.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '5.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  false
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/sidebar.js"></script>
+    <link rel="top" title="Leo 5.0 documentation" href="../index.html" />
+    <link rel="up" title="leo.plugins package" href="leo.plugins.html" />
+    <link rel="next" title="leo.plugins.pygeotag package" href="leo.plugins.pygeotag.html" />
+    <link rel="prev" title="leo.plugins.examples package" href="leo.plugins.examples.html" />
+    <script type="text/javascript">
+        (function() {
+            var s = document.createElement('script'), t = document.getElementsByTagName('script')[0];
+            s.type = 'text/javascript';
+            s.async = true;
+            s.src = 'http://api.flattr.com/js/0.6/load.js?mode=auto';
+            t.parentNode.insertBefore(s, t);
+        })();
+    </script>
+     
+
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="leo.plugins.pygeotag.html" title="leo.plugins.pygeotag package"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="leo.plugins.examples.html" title="leo.plugins.examples package"
+             accesskey="P">previous</a> |</li>
+        <li><a href="../contents.html">Leo 5.0 documentation</a> &raquo;</li>
+          <li><a href="modules.html" >leo</a> &raquo;</li>
+          <li><a href="leo.html" >leo package</a> &raquo;</li>
+          <li><a href="leo.plugins.html" accesskey="U">leo.plugins package</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="leo-plugins-importers-package">
+<h1>leo.plugins.importers package<a class="headerlink" href="#leo-plugins-importers-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-leo.plugins.importers.basescanner">
+<span id="leo-plugins-importers-basescanner-module"></span><h2>leo.plugins.importers.basescanner module<a class="headerlink" href="#module-leo.plugins.importers.basescanner" title="Permalink to this headline">¶</a></h2>
+<p>The BaseScanner class used by all importers in leo.plugins.importers.</p>
+<dl class="class">
+<dt id="leo.plugins.importers.basescanner.BaseScanner">
+<em class="property">class </em><tt class="descclassname">leo.plugins.importers.basescanner.</tt><tt class="descname">BaseScanner</tt><big>(</big><em>importCommands</em>, <em>atAuto</em>, <em>language='unnamed'</em>, <em>alternate_language=None</em><big>)</big><a class="headerlink" href="#leo.plugins.importers.basescanner.BaseScanner" title="Permalink to this definition">¶</a></dt>
+<dd><p>The base class for all import scanner classes.</p>
+<dl class="method">
+<dt id="leo.plugins.importers.basescanner.BaseScanner.addRef">
+<tt class="descname">addRef</tt><big>(</big><em>parent</em><big>)</big><a class="headerlink" href="#leo.plugins.importers.basescanner.BaseScanner.addRef" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create an unindented &#64;others or section reference in the parent node.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="leo.plugins.importers.basescanner.BaseScanner.adjustDefStart">
+<tt class="descname">adjustDefStart</tt><big>(</big><em>unused_s</em>, <em>i</em><big>)</big><a class="headerlink" href="#leo.plugins.importers.basescanner.BaseScanner.adjustDefStart" title="Permalink to this definition">¶</a></dt>
+<dd><p>A hook to allow the Python importer to adjust the 
+start of a class or function to include decorators.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="leo.plugins.importers.basescanner.BaseScanner.adjustParent">
+<tt class="descname">adjustParent</tt><big>(</big><em>parent</em>, <em>headline</em><big>)</big><a class="headerlink" href="#leo.plugins.importers.basescanner.BaseScanner.adjustParent" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the effective parent.</p>
+<p>This is overridden by the RstScanner class.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="leo.plugins.importers.basescanner.BaseScanner.adjustTestLines">
+<tt class="descname">adjustTestLines</tt><big>(</big><em>lines</em><big>)</big><a class="headerlink" href="#leo.plugins.importers.basescanner.BaseScanner.adjustTestLines" title="Permalink to this definition">¶</a></dt>
+<dd><p>Ignore blank lines and trailing whitespace.</p>
+<p>This fudge allows the rst code generators to insert needed newlines freely.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="leo.plugins.importers.basescanner.BaseScanner.adjust_class_ref">
+<tt class="descname">adjust_class_ref</tt><big>(</big><em>s</em><big>)</big><a class="headerlink" href="#leo.plugins.importers.basescanner.BaseScanner.adjust_class_ref" title="Permalink to this definition">¶</a></dt>
+<dd><p>Over-ridden by xml and html scanners.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="leo.plugins.importers.basescanner.BaseScanner.appendStringToBody">
+<tt class="descname">appendStringToBody</tt><big>(</big><em>p</em>, <em>s</em><big>)</big><a class="headerlink" href="#leo.plugins.importers.basescanner.BaseScanner.appendStringToBody" title="Permalink to this definition">¶</a></dt>
+<dd><p>Similar to c.appendStringToBody,
+but does not recolor the text or redraw the screen.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="leo.plugins.importers.basescanner.BaseScanner.appendTextToClassNode">
+<tt class="descname">appendTextToClassNode</tt><big>(</big><em>class_node</em>, <em>s</em><big>)</big><a class="headerlink" href="#leo.plugins.importers.basescanner.BaseScanner.appendTextToClassNode" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="leo.plugins.importers.basescanner.BaseScanner.check">
+<tt class="descname">check</tt><big>(</big><em>unused_s</em>, <em>unused_parent</em><big>)</big><a class="headerlink" href="#leo.plugins.importers.basescanner.BaseScanner.check" title="Permalink to this definition">¶</a></dt>
+<dd><p>Make sure the generated nodes are equivalent to the original file.</p>
+<ol class="arabic simple">
+<li>Regularize and check leading whitespace.</li>
+<li>Check that a trial write produces the original file.</li>
+</ol>
+<p>Return True if the nodes are equivalent to the original file.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="leo.plugins.importers.basescanner.BaseScanner.checkBlanksAndTabs">
+<tt class="descname">checkBlanksAndTabs</tt><big>(</big><em>s</em><big>)</big><a class="headerlink" href="#leo.plugins.importers.basescanner.BaseScanner.checkBlanksAndTabs" title="Permalink to this definition">¶</a></dt>
+<dd><p>Check for intermixed blank &amp; tabs.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="leo.plugins.importers.basescanner.BaseScanner.checkLeadingWhitespace">
+<tt class="descname">checkLeadingWhitespace</tt><big>(</big><em>line</em><big>)</big><a class="headerlink" href="#leo.plugins.importers.basescanner.BaseScanner.checkLeadingWhitespace" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="leo.plugins.importers.basescanner.BaseScanner.checkTrialWrite">
+<tt class="descname">checkTrialWrite</tt><big>(</big><em>s1=None</em>, <em>s2=None</em><big>)</big><a class="headerlink" href="#leo.plugins.importers.basescanner.BaseScanner.checkTrialWrite" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return True if a trial write produces the original file.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="leo.plugins.importers.basescanner.BaseScanner.compareHelper">
+<tt class="descname">compareHelper</tt><big>(</big><em>lines1</em>, <em>lines2</em>, <em>i</em>, <em>strict</em><big>)</big><a class="headerlink" href="#leo.plugins.importers.basescanner.BaseScanner.compareHelper" title="Permalink to this definition">¶</a></dt>
+<dd><p>Compare lines1[i] and lines2[i] on a line-by-line basis.
+strict is True if leading whitespace is very significant.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="leo.plugins.importers.basescanner.BaseScanner.compareRstUnderlines">
+<tt class="descname">compareRstUnderlines</tt><big>(</big><em>s1</em>, <em>s2</em><big>)</big><a class="headerlink" href="#leo.plugins.importers.basescanner.BaseScanner.compareRstUnderlines" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="leo.plugins.importers.basescanner.BaseScanner.compareTokens">
+<tt class="descname">compareTokens</tt><big>(</big><em>tokens1</em>, <em>tokens2</em><big>)</big><a class="headerlink" href="#leo.plugins.importers.basescanner.BaseScanner.compareTokens" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="leo.plugins.importers.basescanner.BaseScanner.computeBody">
+<tt class="descname">computeBody</tt><big>(</big><em>s</em>, <em>start</em>, <em>sigStart</em>, <em>codeEnd</em><big>)</big><a class="headerlink" href="#leo.plugins.importers.basescanner.BaseScanner.computeBody" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the head and tail of the body.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="leo.plugins.importers.basescanner.BaseScanner.createClassNodePrefix">
+<tt class="descname">createClassNodePrefix</tt><big>(</big><big>)</big><a class="headerlink" href="#leo.plugins.importers.basescanner.BaseScanner.createClassNodePrefix" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create the class node prefix.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="leo.plugins.importers.basescanner.BaseScanner.createDeclsNode">
+<tt class="descname">createDeclsNode</tt><big>(</big><em>parent</em>, <em>s</em><big>)</big><a class="headerlink" href="#leo.plugins.importers.basescanner.BaseScanner.createDeclsNode" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create a child node of parent containing s.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="leo.plugins.importers.basescanner.BaseScanner.createFunctionNode">
+<tt class="descname">createFunctionNode</tt><big>(</big><em>headline</em>, <em>body</em>, <em>parent</em><big>)</big><a class="headerlink" href="#leo.plugins.importers.basescanner.BaseScanner.createFunctionNode" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="leo.plugins.importers.basescanner.BaseScanner.createHeadline">
+<tt class="descname">createHeadline</tt><big>(</big><em>parent</em>, <em>body</em>, <em>headline</em><big>)</big><a class="headerlink" href="#leo.plugins.importers.basescanner.BaseScanner.createHeadline" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="leo.plugins.importers.basescanner.BaseScanner.endGen">
+<tt class="descname">endGen</tt><big>(</big><em>s</em><big>)</big><a class="headerlink" href="#leo.plugins.importers.basescanner.BaseScanner.endGen" title="Permalink to this definition">¶</a></dt>
+<dd><p>Do any language-specific post-processing.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="leo.plugins.importers.basescanner.BaseScanner.error">
+<tt class="descname">error</tt><big>(</big><em>s</em><big>)</big><a class="headerlink" href="#leo.plugins.importers.basescanner.BaseScanner.error" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="leo.plugins.importers.basescanner.BaseScanner.escapeFalseSectionReferences">
+<tt class="descname">escapeFalseSectionReferences</tt><big>(</big><em>s</em><big>)</big><a class="headerlink" href="#leo.plugins.importers.basescanner.BaseScanner.escapeFalseSectionReferences" title="Permalink to this definition">¶</a></dt>
+<dd><p>Probably a bad idea.  Keep the apparent section references.
+The perfect-import write code no longer attempts to expand references
+when the perfectImportFlag is set.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="leo.plugins.importers.basescanner.BaseScanner.extendSignature">
+<tt class="descname">extendSignature</tt><big>(</big><em>unused_s</em>, <em>i</em><big>)</big><a class="headerlink" href="#leo.plugins.importers.basescanner.BaseScanner.extendSignature" title="Permalink to this definition">¶</a></dt>
+<dd><p>Extend the signature line if appropriate.
+The text <em>must</em> end with a newline.</p>
+<p>For example, the Python scanner appends docstrings if they exist.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="leo.plugins.importers.basescanner.BaseScanner.filterTokens">
+<tt class="descname">filterTokens</tt><big>(</big><em>tokens</em><big>)</big><a class="headerlink" href="#leo.plugins.importers.basescanner.BaseScanner.filterTokens" title="Permalink to this definition">¶</a></dt>
+<dd><p>Filter tokens as needed for correct comparisons.</p>
+<p>May be overridden in subclasses.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="leo.plugins.importers.basescanner.BaseScanner.formatTokens">
+<tt class="descname">formatTokens</tt><big>(</big><em>tokens</em><big>)</big><a class="headerlink" href="#leo.plugins.importers.basescanner.BaseScanner.formatTokens" title="Permalink to this definition">¶</a></dt>
+<dd><p>Format tokens for printing or dumping.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="leo.plugins.importers.basescanner.BaseScanner.getClassNodeRef">
+<tt class="descname">getClassNodeRef</tt><big>(</big><em>class_name</em><big>)</big><a class="headerlink" href="#leo.plugins.importers.basescanner.BaseScanner.getClassNodeRef" title="Permalink to this definition">¶</a></dt>
+<dd><p>Insert the proper body text in the class_vnode.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="leo.plugins.importers.basescanner.BaseScanner.getIndent">
+<tt class="descname">getIndent</tt><big>(</big><em>s</em>, <em>i</em><big>)</big><a class="headerlink" href="#leo.plugins.importers.basescanner.BaseScanner.getIndent" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="leo.plugins.importers.basescanner.BaseScanner.getLeadingIndent">
+<tt class="descname">getLeadingIndent</tt><big>(</big><em>s</em>, <em>i</em>, <em>ignoreComments=True</em><big>)</big><a class="headerlink" href="#leo.plugins.importers.basescanner.BaseScanner.getLeadingIndent" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the leading whitespace of a line.
+Ignore blank and comment lines if ignoreComments is True</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="leo.plugins.importers.basescanner.BaseScanner.getSigId">
+<tt class="descname">getSigId</tt><big>(</big><em>ids</em><big>)</big><a class="headerlink" href="#leo.plugins.importers.basescanner.BaseScanner.getSigId" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the signature&#8217;s id.</p>
+<p>By default, this is the last id in the ids list.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="leo.plugins.importers.basescanner.BaseScanner.headlineForNode">
+<tt class="descname">headlineForNode</tt><big>(</big><em>fn</em>, <em>p</em><big>)</big><a class="headerlink" href="#leo.plugins.importers.basescanner.BaseScanner.headlineForNode" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the expected imported headline for p.b</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="leo.plugins.importers.basescanner.BaseScanner.indentBody">
+<tt class="descname">indentBody</tt><big>(</big><em>s</em>, <em>lws=None</em><big>)</big><a class="headerlink" href="#leo.plugins.importers.basescanner.BaseScanner.indentBody" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add whitespace equivalent to one tab for all non-blank lines of s.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="leo.plugins.importers.basescanner.BaseScanner.insertIgnoreDirective">
+<tt class="descname">insertIgnoreDirective</tt><big>(</big><em>parent</em><big>)</big><a class="headerlink" href="#leo.plugins.importers.basescanner.BaseScanner.insertIgnoreDirective" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="leo.plugins.importers.basescanner.BaseScanner.isSpace">
+<tt class="descname">isSpace</tt><big>(</big><em>s</em>, <em>i</em><big>)</big><a class="headerlink" href="#leo.plugins.importers.basescanner.BaseScanner.isSpace" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return true if s[i] is a tokenizer space.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="leo.plugins.importers.basescanner.BaseScanner.oops">
+<tt class="descname">oops</tt><big>(</big><big>)</big><a class="headerlink" href="#leo.plugins.importers.basescanner.BaseScanner.oops" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="leo.plugins.importers.basescanner.BaseScanner.prepass">
+<tt class="descname">prepass</tt><big>(</big><em>s</em>, <em>p</em><big>)</big><a class="headerlink" href="#leo.plugins.importers.basescanner.BaseScanner.prepass" title="Permalink to this definition">¶</a></dt>
+<dd><p>A prepass for the at-file-to-at-auto command.
+Return (ok,aList)
+ok: False if p.b should be split two or more sibling nodes.
+aList: a list of tuples (i,j,headline,p) indicating split nodes.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="leo.plugins.importers.basescanner.BaseScanner.putClass">
+<tt class="descname">putClass</tt><big>(</big><em>s</em>, <em>i</em>, <em>sigEnd</em>, <em>codeEnd</em>, <em>start</em>, <em>parent</em><big>)</big><a class="headerlink" href="#leo.plugins.importers.basescanner.BaseScanner.putClass" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates a child node c of parent for the class,
+and a child of c for each def in the class.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="leo.plugins.importers.basescanner.BaseScanner.putClassHelper">
+<tt class="descname">putClassHelper</tt><big>(</big><em>s</em>, <em>i</em>, <em>end</em>, <em>class_node</em><big>)</big><a class="headerlink" href="#leo.plugins.importers.basescanner.BaseScanner.putClassHelper" title="Permalink to this definition">¶</a></dt>
+<dd><p>s contains the body of a class, not including the signature.</p>
+<p>Parse s for inner methods and classes, and create nodes.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="leo.plugins.importers.basescanner.BaseScanner.putFunction">
+<tt class="descname">putFunction</tt><big>(</big><em>s</em>, <em>sigStart</em>, <em>codeEnd</em>, <em>start</em>, <em>parent</em><big>)</big><a class="headerlink" href="#leo.plugins.importers.basescanner.BaseScanner.putFunction" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create a node of parent for a function defintion.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="leo.plugins.importers.basescanner.BaseScanner.putRootText">
+<tt class="descname">putRootText</tt><big>(</big><em>p</em><big>)</big><a class="headerlink" href="#leo.plugins.importers.basescanner.BaseScanner.putRootText" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="leo.plugins.importers.basescanner.BaseScanner.regularizeWhitespace">
+<tt class="descname">regularizeWhitespace</tt><big>(</big><em>s</em><big>)</big><a class="headerlink" href="#leo.plugins.importers.basescanner.BaseScanner.regularizeWhitespace" title="Permalink to this definition">¶</a></dt>
+<dd><p>Regularize leading whitespace in s:
+Convert tabs to blanks or vice versa depending on the &#64;tabwidth in effect.
+This is only called for strict languages.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="leo.plugins.importers.basescanner.BaseScanner.removeBlankLinesTokens">
+<tt class="descname">removeBlankLinesTokens</tt><big>(</big><em>tokens</em><big>)</big><a class="headerlink" href="#leo.plugins.importers.basescanner.BaseScanner.removeBlankLinesTokens" title="Permalink to this definition">¶</a></dt>
+<dd><p>Remove all tokens representing blank lines.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="leo.plugins.importers.basescanner.BaseScanner.removeLeadingWsTokens">
+<tt class="descname">removeLeadingWsTokens</tt><big>(</big><em>tokens</em><big>)</big><a class="headerlink" href="#leo.plugins.importers.basescanner.BaseScanner.removeLeadingWsTokens" title="Permalink to this definition">¶</a></dt>
+<dd><p>Remove tokens representing leading whitespace.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="leo.plugins.importers.basescanner.BaseScanner.report">
+<tt class="descname">report</tt><big>(</big><em>message</em><big>)</big><a class="headerlink" href="#leo.plugins.importers.basescanner.BaseScanner.report" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="leo.plugins.importers.basescanner.BaseScanner.reportMismatch">
+<tt class="descname">reportMismatch</tt><big>(</big><em>lines1</em>, <em>lines2</em>, <em>bad_i1</em>, <em>bad_i2</em><big>)</big><a class="headerlink" href="#leo.plugins.importers.basescanner.BaseScanner.reportMismatch" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="leo.plugins.importers.basescanner.BaseScanner.run">
+<tt class="descname">run</tt><big>(</big><em>s</em>, <em>parent</em>, <em>parse_body=False</em>, <em>prepass=False</em><big>)</big><a class="headerlink" href="#leo.plugins.importers.basescanner.BaseScanner.run" title="Permalink to this definition">¶</a></dt>
+<dd><p>The common top-level code for all scanners.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="leo.plugins.importers.basescanner.BaseScanner.scan">
+<tt class="descname">scan</tt><big>(</big><em>s</em>, <em>parent</em>, <em>parse_body=False</em><big>)</big><a class="headerlink" href="#leo.plugins.importers.basescanner.BaseScanner.scan" title="Permalink to this definition">¶</a></dt>
+<dd><p>A language independent scanner: it uses language-specific helpers.</p>
+<p>Create a child of self.root for:
+- Leading outer-level declarations.
+- Outer-level classes.
+- Outer-level functions.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="leo.plugins.importers.basescanner.BaseScanner.scanAndCompare">
+<tt class="descname">scanAndCompare</tt><big>(</big><em>s1</em>, <em>s2</em><big>)</big><a class="headerlink" href="#leo.plugins.importers.basescanner.BaseScanner.scanAndCompare" title="Permalink to this definition">¶</a></dt>
+<dd><p>Tokenize both s1 and s2, then perform a token-based comparison.</p>
+<p>Blank lines and leading whitespace has already been stripped
+according to the ignoreBlankLines and ignoreLeadingWs ivars.</p>
+<p>Return (n,ok), where n is the first mismatched line in s1.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="leo.plugins.importers.basescanner.BaseScanner.scanHelper">
+<tt class="descname">scanHelper</tt><big>(</big><em>s</em>, <em>i</em>, <em>end</em>, <em>parent</em>, <em>kind</em><big>)</big><a class="headerlink" href="#leo.plugins.importers.basescanner.BaseScanner.scanHelper" title="Permalink to this definition">¶</a></dt>
+<dd><p>Common scanning code used by both scan and putClassHelper.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="leo.plugins.importers.basescanner.BaseScanner.setBodyString">
+<tt class="descname">setBodyString</tt><big>(</big><em>p</em>, <em>s</em><big>)</big><a class="headerlink" href="#leo.plugins.importers.basescanner.BaseScanner.setBodyString" title="Permalink to this definition">¶</a></dt>
+<dd><p>Similar to c.setBodyString,
+but does not recolor the text or redraw the screen.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="leo.plugins.importers.basescanner.BaseScanner.skipArgs">
+<tt class="descname">skipArgs</tt><big>(</big><em>s</em>, <em>i</em>, <em>kind</em><big>)</big><a class="headerlink" href="#leo.plugins.importers.basescanner.BaseScanner.skipArgs" title="Permalink to this definition">¶</a></dt>
+<dd><p>Skip the argument or class list.  Return i, ok</p>
+<p>kind is in (&#8216;class&#8217;,&#8217;function&#8217;)</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="leo.plugins.importers.basescanner.BaseScanner.skipBlock">
+<tt class="descname">skipBlock</tt><big>(</big><em>s</em>, <em>i</em>, <em>delim1=None</em>, <em>delim2=None</em><big>)</big><a class="headerlink" href="#leo.plugins.importers.basescanner.BaseScanner.skipBlock" title="Permalink to this definition">¶</a></dt>
+<dd><p>Skip from the opening delim to <em>past</em> the matching closing delim.</p>
+<p>If no matching is found i is set to len(s)</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="leo.plugins.importers.basescanner.BaseScanner.skipBlockComment">
+<tt class="descname">skipBlockComment</tt><big>(</big><em>s</em>, <em>i</em><big>)</big><a class="headerlink" href="#leo.plugins.importers.basescanner.BaseScanner.skipBlockComment" title="Permalink to this definition">¶</a></dt>
+<dd><p>Skip past a block comment.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="leo.plugins.importers.basescanner.BaseScanner.skipCodeBlock">
+<tt class="descname">skipCodeBlock</tt><big>(</big><em>s</em>, <em>i</em>, <em>kind</em><big>)</big><a class="headerlink" href="#leo.plugins.importers.basescanner.BaseScanner.skipCodeBlock" title="Permalink to this definition">¶</a></dt>
+<dd><p>Skip the code block in a function or class definition.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="leo.plugins.importers.basescanner.BaseScanner.skipComment">
+<tt class="descname">skipComment</tt><big>(</big><em>s</em>, <em>i</em><big>)</big><a class="headerlink" href="#leo.plugins.importers.basescanner.BaseScanner.skipComment" title="Permalink to this definition">¶</a></dt>
+<dd><p>Skip a comment and return the index of the following character.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="leo.plugins.importers.basescanner.BaseScanner.skipCommentToken">
+<tt class="descname">skipCommentToken</tt><big>(</big><em>s</em>, <em>i</em><big>)</big><a class="headerlink" href="#leo.plugins.importers.basescanner.BaseScanner.skipCommentToken" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="leo.plugins.importers.basescanner.BaseScanner.skipDecls">
+<tt class="descname">skipDecls</tt><big>(</big><em>s</em>, <em>i</em>, <em>end</em>, <em>inClass</em><big>)</big><a class="headerlink" href="#leo.plugins.importers.basescanner.BaseScanner.skipDecls" title="Permalink to this definition">¶</a></dt>
+<dd><p>Skip everything until the start of the next class or function.
+The decls <em>must</em> end in a newline.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="leo.plugins.importers.basescanner.BaseScanner.skipId">
+<tt class="descname">skipId</tt><big>(</big><em>s</em>, <em>i</em><big>)</big><a class="headerlink" href="#leo.plugins.importers.basescanner.BaseScanner.skipId" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="leo.plugins.importers.basescanner.BaseScanner.skipIdToken">
+<tt class="descname">skipIdToken</tt><big>(</big><em>s</em>, <em>i</em><big>)</big><a class="headerlink" href="#leo.plugins.importers.basescanner.BaseScanner.skipIdToken" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="leo.plugins.importers.basescanner.BaseScanner.skipNewline">
+<tt class="descname">skipNewline</tt><big>(</big><em>s</em>, <em>i</em>, <em>kind</em><big>)</big><a class="headerlink" href="#leo.plugins.importers.basescanner.BaseScanner.skipNewline" title="Permalink to this definition">¶</a></dt>
+<dd><p>Called by skipCodeBlock to terminate a function defintion.
+Skip whitespace and comments up to a newline, then skip the newline.
+Issue an error if no newline is found.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="leo.plugins.importers.basescanner.BaseScanner.skipNewlineToken">
+<tt class="descname">skipNewlineToken</tt><big>(</big><em>s</em>, <em>i</em><big>)</big><a class="headerlink" href="#leo.plugins.importers.basescanner.BaseScanner.skipNewlineToken" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="leo.plugins.importers.basescanner.BaseScanner.skipOtherToken">
+<tt class="descname">skipOtherToken</tt><big>(</big><em>s</em>, <em>i</em><big>)</big><a class="headerlink" href="#leo.plugins.importers.basescanner.BaseScanner.skipOtherToken" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="leo.plugins.importers.basescanner.BaseScanner.skipParens">
+<tt class="descname">skipParens</tt><big>(</big><em>s</em>, <em>i</em><big>)</big><a class="headerlink" href="#leo.plugins.importers.basescanner.BaseScanner.skipParens" title="Permalink to this definition">¶</a></dt>
+<dd><p>Skip a parenthisized list, that might contain strings or comments.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="leo.plugins.importers.basescanner.BaseScanner.skipSigStart">
+<tt class="descname">skipSigStart</tt><big>(</big><em>s</em>, <em>i</em>, <em>kind</em>, <em>tags</em><big>)</big><a class="headerlink" href="#leo.plugins.importers.basescanner.BaseScanner.skipSigStart" title="Permalink to this definition">¶</a></dt>
+<dd><p>Skip over the start of a function/class signature.</p>
+<p>tags is in (self.classTags,self.functionTags).</p>
+<p>Return (i,ids) where ids is list of all ids found, in order.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="leo.plugins.importers.basescanner.BaseScanner.skipSigTail">
+<tt class="descname">skipSigTail</tt><big>(</big><em>s</em>, <em>i</em>, <em>kind</em><big>)</big><a class="headerlink" href="#leo.plugins.importers.basescanner.BaseScanner.skipSigTail" title="Permalink to this definition">¶</a></dt>
+<dd><p>Skip from the end of the arg list to the start of the block.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="leo.plugins.importers.basescanner.BaseScanner.skipString">
+<tt class="descname">skipString</tt><big>(</big><em>s</em>, <em>i</em><big>)</big><a class="headerlink" href="#leo.plugins.importers.basescanner.BaseScanner.skipString" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="leo.plugins.importers.basescanner.BaseScanner.skipStringToken">
+<tt class="descname">skipStringToken</tt><big>(</big><em>s</em>, <em>i</em><big>)</big><a class="headerlink" href="#leo.plugins.importers.basescanner.BaseScanner.skipStringToken" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="leo.plugins.importers.basescanner.BaseScanner.skipWs">
+<tt class="descname">skipWs</tt><big>(</big><em>s</em>, <em>i</em><big>)</big><a class="headerlink" href="#leo.plugins.importers.basescanner.BaseScanner.skipWs" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="leo.plugins.importers.basescanner.BaseScanner.skipWsToken">
+<tt class="descname">skipWsToken</tt><big>(</big><em>s</em>, <em>i</em><big>)</big><a class="headerlink" href="#leo.plugins.importers.basescanner.BaseScanner.skipWsToken" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="leo.plugins.importers.basescanner.BaseScanner.startsClass">
+<tt class="descname">startsClass</tt><big>(</big><em>s</em>, <em>i</em><big>)</big><a class="headerlink" href="#leo.plugins.importers.basescanner.BaseScanner.startsClass" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return True if s[i:] starts a class definition.
+Sets sigStart, sigEnd, sigId and codeEnd ivars.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="leo.plugins.importers.basescanner.BaseScanner.startsComment">
+<tt class="descname">startsComment</tt><big>(</big><em>s</em>, <em>i</em><big>)</big><a class="headerlink" href="#leo.plugins.importers.basescanner.BaseScanner.startsComment" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="leo.plugins.importers.basescanner.BaseScanner.startsFunction">
+<tt class="descname">startsFunction</tt><big>(</big><em>s</em>, <em>i</em><big>)</big><a class="headerlink" href="#leo.plugins.importers.basescanner.BaseScanner.startsFunction" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return True if s[i:] starts a function.
+Sets sigStart, sigEnd, sigId and codeEnd ivars.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="leo.plugins.importers.basescanner.BaseScanner.startsHelper">
+<tt class="descname">startsHelper</tt><big>(</big><em>s</em>, <em>i</em>, <em>kind</em>, <em>tags</em>, <em>tag=None</em><big>)</big><a class="headerlink" href="#leo.plugins.importers.basescanner.BaseScanner.startsHelper" title="Permalink to this definition">¶</a></dt>
+<dd><p>tags is a list of id&#8217;s.  tag is a debugging tag.
+return True if s[i:] starts a class or function.
+Sets sigStart, sigEnd, sigId and codeEnd ivars.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="leo.plugins.importers.basescanner.BaseScanner.startsId">
+<tt class="descname">startsId</tt><big>(</big><em>s</em>, <em>i</em><big>)</big><a class="headerlink" href="#leo.plugins.importers.basescanner.BaseScanner.startsId" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="leo.plugins.importers.basescanner.BaseScanner.startsString">
+<tt class="descname">startsString</tt><big>(</big><em>s</em>, <em>i</em><big>)</big><a class="headerlink" href="#leo.plugins.importers.basescanner.BaseScanner.startsString" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="leo.plugins.importers.basescanner.BaseScanner.stripRstLines">
+<tt class="descname">stripRstLines</tt><big>(</big><em>s</em><big>)</big><a class="headerlink" href="#leo.plugins.importers.basescanner.BaseScanner.stripRstLines" title="Permalink to this definition">¶</a></dt>
+<dd><p>Replace rst under/overlines with a dummy line for comparison.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="leo.plugins.importers.basescanner.BaseScanner.stripTokens">
+<tt class="descname">stripTokens</tt><big>(</big><em>tokens</em><big>)</big><a class="headerlink" href="#leo.plugins.importers.basescanner.BaseScanner.stripTokens" title="Permalink to this definition">¶</a></dt>
+<dd><p>Remove the line_number from all tokens.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="leo.plugins.importers.basescanner.BaseScanner.tokenize">
+<tt class="descname">tokenize</tt><big>(</big><em>s</em><big>)</big><a class="headerlink" href="#leo.plugins.importers.basescanner.BaseScanner.tokenize" title="Permalink to this definition">¶</a></dt>
+<dd><p>Tokenize string s and return a list of tokens (kind,value,line_number)</p>
+<p>where kind is in (&#8216;comment,&#8217;id&#8217;,&#8217;nl&#8217;,&#8217;other&#8217;,&#8217;string&#8217;,&#8217;ws&#8217;).</p>
+<p>This is used only to verify the imported text.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="leo.plugins.importers.basescanner.BaseScanner.undentBody">
+<tt class="descname">undentBody</tt><big>(</big><em>s</em>, <em>ignoreComments=True</em><big>)</big><a class="headerlink" href="#leo.plugins.importers.basescanner.BaseScanner.undentBody" title="Permalink to this definition">¶</a></dt>
+<dd><p>Remove the first line&#8217;s leading indentation from all lines of s.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="leo.plugins.importers.basescanner.BaseScanner.undentBy">
+<tt class="descname">undentBy</tt><big>(</big><em>s</em>, <em>undentVal</em><big>)</big><a class="headerlink" href="#leo.plugins.importers.basescanner.BaseScanner.undentBy" title="Permalink to this definition">¶</a></dt>
+<dd><p>Remove leading whitespace equivalent to undentVal from each line.
+For strict languages, add an underindentEscapeString for underindented line.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="leo.plugins.importers.basescanner.BaseScanner.underindentedComment">
+<tt class="descname">underindentedComment</tt><big>(</big><em>line</em><big>)</big><a class="headerlink" href="#leo.plugins.importers.basescanner.BaseScanner.underindentedComment" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="leo.plugins.importers.basescanner.BaseScanner.underindentedLine">
+<tt class="descname">underindentedLine</tt><big>(</big><em>line</em><big>)</big><a class="headerlink" href="#leo.plugins.importers.basescanner.BaseScanner.underindentedLine" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="leo.plugins.importers.basescanner.BaseScanner.warning">
+<tt class="descname">warning</tt><big>(</big><em>s</em><big>)</big><a class="headerlink" href="#leo.plugins.importers.basescanner.BaseScanner.warning" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-leo.plugins.importers.c">
+<span id="leo-plugins-importers-c-module"></span><h2>leo.plugins.importers.c module<a class="headerlink" href="#module-leo.plugins.importers.c" title="Permalink to this headline">¶</a></h2>
+<p>The &#64;auto importer for the C language and other related languages.</p>
+<dl class="class">
+<dt id="leo.plugins.importers.c.CScanner">
+<em class="property">class </em><tt class="descclassname">leo.plugins.importers.c.</tt><tt class="descname">CScanner</tt><big>(</big><em>importCommands</em>, <em>atAuto</em><big>)</big><a class="headerlink" href="#leo.plugins.importers.c.CScanner" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#leo.plugins.importers.basescanner.BaseScanner" title="leo.plugins.importers.basescanner.BaseScanner"><tt class="xref py py-class docutils literal"><span class="pre">leo.plugins.importers.basescanner.BaseScanner</span></tt></a></p>
+</dd></dl>
+
+</div>
+<div class="section" id="module-leo.plugins.importers.csharp">
+<span id="leo-plugins-importers-csharp-module"></span><h2>leo.plugins.importers.csharp module<a class="headerlink" href="#module-leo.plugins.importers.csharp" title="Permalink to this headline">¶</a></h2>
+<p>The &#64;auto importer for C#.</p>
+<dl class="class">
+<dt id="leo.plugins.importers.csharp.CSharpScanner">
+<em class="property">class </em><tt class="descclassname">leo.plugins.importers.csharp.</tt><tt class="descname">CSharpScanner</tt><big>(</big><em>importCommands</em>, <em>atAuto</em><big>)</big><a class="headerlink" href="#leo.plugins.importers.csharp.CSharpScanner" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#leo.plugins.importers.basescanner.BaseScanner" title="leo.plugins.importers.basescanner.BaseScanner"><tt class="xref py py-class docutils literal"><span class="pre">leo.plugins.importers.basescanner.BaseScanner</span></tt></a></p>
+</dd></dl>
+
+</div>
+<div class="section" id="module-leo.plugins.importers.ctext">
+<span id="leo-plugins-importers-ctext-module"></span><h2>leo.plugins.importers.ctext module<a class="headerlink" href="#module-leo.plugins.importers.ctext" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="leo.plugins.importers.ctext.CTextScanner">
+<em class="property">class </em><tt class="descclassname">leo.plugins.importers.ctext.</tt><tt class="descname">CTextScanner</tt><big>(</big><em>importCommands</em>, <em>atAuto</em>, <em>language='unnamed'</em>, <em>alternate_language=None</em><big>)</big><a class="headerlink" href="#leo.plugins.importers.ctext.CTextScanner" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#leo.plugins.importers.basescanner.BaseScanner" title="leo.plugins.importers.basescanner.BaseScanner"><tt class="xref py py-class docutils literal"><span class="pre">leo.plugins.importers.basescanner.BaseScanner</span></tt></a></p>
+<p>Read/Write simple text files with hierarchy embedded in headlines:</p>
+<div class="highlight-python"><div class="highlight"><pre>Leading text in root node of subtree
+
+Etc. etc.
+
+### A level one node #####################################
+
+This would be the text in this level one node.
+
+And this.
+
+### Another level one node ###############################
+
+Another one
+
+#### A level 2 node ######################################
+
+See what we did there - one more &#39;#&#39; - this is a subnode.
+</pre></div>
+</div>
+<p>Leading / trailing whitespace may not be preserved.  &#8216;-&#8216; and &#8216;/&#8217;
+are used in place of &#8216;#&#8217; for SQL and JavaScript.</p>
+<dl class="method">
+<dt id="leo.plugins.importers.ctext.CTextScanner.run">
+<tt class="descname">run</tt><big>(</big><em>s</em>, <em>parent</em>, <em>parse_body=False</em>, <em>prepass=False</em><big>)</big><a class="headerlink" href="#leo.plugins.importers.ctext.CTextScanner.run" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="leo.plugins.importers.ctext.CTextScanner.write_lines">
+<tt class="descname">write_lines</tt><big>(</big><em>node</em>, <em>lines</em><big>)</big><a class="headerlink" href="#leo.plugins.importers.ctext.CTextScanner.write_lines" title="Permalink to this definition">¶</a></dt>
+<dd><p>write the body lines to body normalizing whitespace</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-leo.plugins.importers.dart">
+<span id="leo-plugins-importers-dart-module"></span><h2>leo.plugins.importers.dart module<a class="headerlink" href="#module-leo.plugins.importers.dart" title="Permalink to this headline">¶</a></h2>
+<p>The &#64;auto importer for dart.</p>
+<dl class="class">
+<dt id="leo.plugins.importers.dart.DartScanner">
+<em class="property">class </em><tt class="descclassname">leo.plugins.importers.dart.</tt><tt class="descname">DartScanner</tt><big>(</big><em>importCommands</em>, <em>atAuto</em><big>)</big><a class="headerlink" href="#leo.plugins.importers.dart.DartScanner" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#leo.plugins.importers.basescanner.BaseScanner" title="leo.plugins.importers.basescanner.BaseScanner"><tt class="xref py py-class docutils literal"><span class="pre">leo.plugins.importers.basescanner.BaseScanner</span></tt></a></p>
+<p>Scanner for .dart files.</p>
+<dl class="method">
+<dt id="leo.plugins.importers.dart.DartScanner.skipString">
+<tt class="descname">skipString</tt><big>(</big><em>s</em>, <em>i</em><big>)</big><a class="headerlink" href="#leo.plugins.importers.dart.DartScanner.skipString" title="Permalink to this definition">¶</a></dt>
+<dd><p>Skip a string, including a Python triple string.</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-leo.plugins.importers.elisp">
+<span id="leo-plugins-importers-elisp-module"></span><h2>leo.plugins.importers.elisp module<a class="headerlink" href="#module-leo.plugins.importers.elisp" title="Permalink to this headline">¶</a></h2>
+<p>The &#64;auto importer for elisp.</p>
+<dl class="class">
+<dt id="leo.plugins.importers.elisp.ElispScanner">
+<em class="property">class </em><tt class="descclassname">leo.plugins.importers.elisp.</tt><tt class="descname">ElispScanner</tt><big>(</big><em>importCommands</em>, <em>atAuto</em><big>)</big><a class="headerlink" href="#leo.plugins.importers.elisp.ElispScanner" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#leo.plugins.importers.basescanner.BaseScanner" title="leo.plugins.importers.basescanner.BaseScanner"><tt class="xref py py-class docutils literal"><span class="pre">leo.plugins.importers.basescanner.BaseScanner</span></tt></a></p>
+<dl class="method">
+<dt id="leo.plugins.importers.elisp.ElispScanner.skipBlock">
+<tt class="descname">skipBlock</tt><big>(</big><em>s</em>, <em>i</em>, <em>delim1=None</em>, <em>delim2=None</em><big>)</big><a class="headerlink" href="#leo.plugins.importers.elisp.ElispScanner.skipBlock" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="leo.plugins.importers.elisp.ElispScanner.skipString">
+<tt class="descname">skipString</tt><big>(</big><em>s</em>, <em>i</em><big>)</big><a class="headerlink" href="#leo.plugins.importers.elisp.ElispScanner.skipString" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="leo.plugins.importers.elisp.ElispScanner.startsClass">
+<tt class="descname">startsClass</tt><big>(</big><em>unused_s</em>, <em>unused_i</em><big>)</big><a class="headerlink" href="#leo.plugins.importers.elisp.ElispScanner.startsClass" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return True if s[i:] starts a class definition.
+Sets sigStart, sigEnd, sigId and codeEnd ivars.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="leo.plugins.importers.elisp.ElispScanner.startsFunction">
+<tt class="descname">startsFunction</tt><big>(</big><em>s</em>, <em>i</em><big>)</big><a class="headerlink" href="#leo.plugins.importers.elisp.ElispScanner.startsFunction" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return True if s[i:] starts a function.
+Sets sigStart, sigEnd, sigId and codeEnd ivars.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="leo.plugins.importers.elisp.ElispScanner.startsString">
+<tt class="descname">startsString</tt><big>(</big><em>s</em>, <em>i</em><big>)</big><a class="headerlink" href="#leo.plugins.importers.elisp.ElispScanner.startsString" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-leo.plugins.importers.html">
+<span id="leo-plugins-importers-html-module"></span><h2>leo.plugins.importers.html module<a class="headerlink" href="#module-leo.plugins.importers.html" title="Permalink to this headline">¶</a></h2>
+<p>The &#64;auto importer for HTML.</p>
+<dl class="class">
+<dt id="leo.plugins.importers.html.HtmlScanner">
+<em class="property">class </em><tt class="descclassname">leo.plugins.importers.html.</tt><tt class="descname">HtmlScanner</tt><big>(</big><em>importCommands</em>, <em>atAuto</em><big>)</big><a class="headerlink" href="#leo.plugins.importers.html.HtmlScanner" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#leo.plugins.importers.xml.XmlScanner" title="leo.plugins.importers.xml.XmlScanner"><tt class="xref py py-class docutils literal"><span class="pre">leo.plugins.importers.xml.XmlScanner</span></tt></a></p>
+</dd></dl>
+
+</div>
+<div class="section" id="module-leo.plugins.importers.ini">
+<span id="leo-plugins-importers-ini-module"></span><h2>leo.plugins.importers.ini module<a class="headerlink" href="#module-leo.plugins.importers.ini" title="Permalink to this headline">¶</a></h2>
+<p>The &#64;auto importer for .ini files.</p>
+<dl class="class">
+<dt id="leo.plugins.importers.ini.IniScanner">
+<em class="property">class </em><tt class="descclassname">leo.plugins.importers.ini.</tt><tt class="descname">IniScanner</tt><big>(</big><em>importCommands</em>, <em>atAuto</em><big>)</big><a class="headerlink" href="#leo.plugins.importers.ini.IniScanner" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#leo.plugins.importers.basescanner.BaseScanner" title="leo.plugins.importers.basescanner.BaseScanner"><tt class="xref py py-class docutils literal"><span class="pre">leo.plugins.importers.basescanner.BaseScanner</span></tt></a></p>
+<dl class="method">
+<dt id="leo.plugins.importers.ini.IniScanner.isSectionLine">
+<tt class="descname">isSectionLine</tt><big>(</big><em>s</em>, <em>i</em><big>)</big><a class="headerlink" href="#leo.plugins.importers.ini.IniScanner.isSectionLine" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="leo.plugins.importers.ini.IniScanner.startsHelper">
+<tt class="descname">startsHelper</tt><big>(</big><em>s</em>, <em>i</em>, <em>kind</em>, <em>tags</em>, <em>tag=None</em><big>)</big><a class="headerlink" href="#leo.plugins.importers.ini.IniScanner.startsHelper" title="Permalink to this definition">¶</a></dt>
+<dd><p>return True if s[i:] starts section.
+Sets sigStart, sigEnd, sigId and codeEnd ivars.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="leo.plugins.importers.ini.IniScanner.startsString">
+<tt class="descname">startsString</tt><big>(</big><em>s</em>, <em>i</em><big>)</big><a class="headerlink" href="#leo.plugins.importers.ini.IniScanner.startsString" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-leo.plugins.importers.java">
+<span id="leo-plugins-importers-java-module"></span><h2>leo.plugins.importers.java module<a class="headerlink" href="#module-leo.plugins.importers.java" title="Permalink to this headline">¶</a></h2>
+<p>The &#64;auto importer for Java.</p>
+<dl class="class">
+<dt id="leo.plugins.importers.java.JavaScanner">
+<em class="property">class </em><tt class="descclassname">leo.plugins.importers.java.</tt><tt class="descname">JavaScanner</tt><big>(</big><em>importCommands</em>, <em>atAuto</em><big>)</big><a class="headerlink" href="#leo.plugins.importers.java.JavaScanner" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#leo.plugins.importers.basescanner.BaseScanner" title="leo.plugins.importers.basescanner.BaseScanner"><tt class="xref py py-class docutils literal"><span class="pre">leo.plugins.importers.basescanner.BaseScanner</span></tt></a></p>
+<dl class="method">
+<dt id="leo.plugins.importers.java.JavaScanner.getSigId">
+<tt class="descname">getSigId</tt><big>(</big><em>ids</em><big>)</big><a class="headerlink" href="#leo.plugins.importers.java.JavaScanner.getSigId" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the signature&#8217;s id.</p>
+<p>By default, this is the last id in the ids list.</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-leo.plugins.importers.javascript">
+<span id="leo-plugins-importers-javascript-module"></span><h2>leo.plugins.importers.javascript module<a class="headerlink" href="#module-leo.plugins.importers.javascript" title="Permalink to this headline">¶</a></h2>
+<p>The &#64;auto importer for JavaScript.</p>
+<dl class="class">
+<dt id="leo.plugins.importers.javascript.JavaScriptScanner">
+<em class="property">class </em><tt class="descclassname">leo.plugins.importers.javascript.</tt><tt class="descname">JavaScriptScanner</tt><big>(</big><em>importCommands</em>, <em>atAuto</em>, <em>language='javascript'</em>, <em>alternate_language=None</em><big>)</big><a class="headerlink" href="#leo.plugins.importers.javascript.JavaScriptScanner" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#leo.plugins.importers.basescanner.BaseScanner" title="leo.plugins.importers.basescanner.BaseScanner"><tt class="xref py py-class docutils literal"><span class="pre">leo.plugins.importers.basescanner.BaseScanner</span></tt></a></p>
+<dl class="method">
+<dt id="leo.plugins.importers.javascript.JavaScriptScanner.filterTokens">
+<tt class="descname">filterTokens</tt><big>(</big><em>tokens</em><big>)</big><a class="headerlink" href="#leo.plugins.importers.javascript.JavaScriptScanner.filterTokens" title="Permalink to this definition">¶</a></dt>
+<dd><p>Filter tokens as needed for correct comparisons.</p>
+<p>For JavaScript this means ignoring newlines.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="leo.plugins.importers.javascript.JavaScriptScanner.skipNewline">
+<tt class="descname">skipNewline</tt><big>(</big><em>s</em>, <em>i</em>, <em>kind</em><big>)</big><a class="headerlink" href="#leo.plugins.importers.javascript.JavaScriptScanner.skipNewline" title="Permalink to this definition">¶</a></dt>
+<dd><p>Skip whitespace and comments up to a newline, then skip the newline.
+Unlike the base class:
+- we always skip to a newline, if any.
+- we do <em>not</em> issue an error if no newline is found.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="leo.plugins.importers.javascript.JavaScriptScanner.skipString">
+<tt class="descname">skipString</tt><big>(</big><em>s</em>, <em>i</em><big>)</big><a class="headerlink" href="#leo.plugins.importers.javascript.JavaScriptScanner.skipString" title="Permalink to this definition">¶</a></dt>
+<dd><p>Skip a JavaScript string.
+Return len(s) on unterminated string.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="leo.plugins.importers.javascript.JavaScriptScanner.startsString">
+<tt class="descname">startsString</tt><big>(</big><em>s</em>, <em>i</em><big>)</big><a class="headerlink" href="#leo.plugins.importers.javascript.JavaScriptScanner.startsString" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return True if s[i:] starts a JavaScript string.</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-leo.plugins.importers.leo_rst">
+<span id="leo-plugins-importers-leo-rst-module"></span><h2>leo.plugins.importers.leo_rst module<a class="headerlink" href="#module-leo.plugins.importers.leo_rst" title="Permalink to this headline">¶</a></h2>
+<p>The &#64;auto importer for restructured text.</p>
+<p>This module must <strong>not</strong> be named rst, so as not to conflict with docutils.</p>
+<dl class="class">
+<dt id="leo.plugins.importers.leo_rst.RstScanner">
+<em class="property">class </em><tt class="descclassname">leo.plugins.importers.leo_rst.</tt><tt class="descname">RstScanner</tt><big>(</big><em>importCommands</em>, <em>atAuto</em><big>)</big><a class="headerlink" href="#leo.plugins.importers.leo_rst.RstScanner" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#leo.plugins.importers.basescanner.BaseScanner" title="leo.plugins.importers.basescanner.BaseScanner"><tt class="xref py py-class docutils literal"><span class="pre">leo.plugins.importers.basescanner.BaseScanner</span></tt></a></p>
+<dl class="method">
+<dt id="leo.plugins.importers.leo_rst.RstScanner.adjustParent">
+<tt class="descname">adjustParent</tt><big>(</big><em>parent</em>, <em>headline</em><big>)</big><a class="headerlink" href="#leo.plugins.importers.leo_rst.RstScanner.adjustParent" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the proper parent of the new node.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="leo.plugins.importers.leo_rst.RstScanner.computeBody">
+<tt class="descname">computeBody</tt><big>(</big><em>s</em>, <em>start</em>, <em>sigStart</em>, <em>codeEnd</em><big>)</big><a class="headerlink" href="#leo.plugins.importers.leo_rst.RstScanner.computeBody" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="leo.plugins.importers.leo_rst.RstScanner.computeSectionLevel">
+<tt class="descname">computeSectionLevel</tt><big>(</big><em>ch</em>, <em>kind</em><big>)</big><a class="headerlink" href="#leo.plugins.importers.leo_rst.RstScanner.computeSectionLevel" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the section level of the underlining character ch.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="leo.plugins.importers.leo_rst.RstScanner.createDeclsNode">
+<tt class="descname">createDeclsNode</tt><big>(</big><em>parent</em>, <em>s</em><big>)</big><a class="headerlink" href="#leo.plugins.importers.leo_rst.RstScanner.createDeclsNode" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create a child node of parent containing s.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="leo.plugins.importers.leo_rst.RstScanner.endGen">
+<tt class="descname">endGen</tt><big>(</big><em>s</em><big>)</big><a class="headerlink" href="#leo.plugins.importers.leo_rst.RstScanner.endGen" title="Permalink to this definition">¶</a></dt>
+<dd><p>Remember the underlining characters in the root&#8217;s uA.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="leo.plugins.importers.leo_rst.RstScanner.getLine">
+<tt class="descname">getLine</tt><big>(</big><em>s</em>, <em>i</em><big>)</big><a class="headerlink" href="#leo.plugins.importers.leo_rst.RstScanner.getLine" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="leo.plugins.importers.leo_rst.RstScanner.isUnderLine">
+<tt class="descname">isUnderLine</tt><big>(</big><em>s</em><big>)</big><a class="headerlink" href="#leo.plugins.importers.leo_rst.RstScanner.isUnderLine" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return True if s consists of only the same rST underline character.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="leo.plugins.importers.leo_rst.RstScanner.startsComment">
+<tt class="descname">startsComment</tt><big>(</big><em>s</em>, <em>i</em><big>)</big><a class="headerlink" href="#leo.plugins.importers.leo_rst.RstScanner.startsComment" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="leo.plugins.importers.leo_rst.RstScanner.startsHelper">
+<tt class="descname">startsHelper</tt><big>(</big><em>s</em>, <em>i</em>, <em>kind</em>, <em>tags</em>, <em>tag=None</em><big>)</big><a class="headerlink" href="#leo.plugins.importers.leo_rst.RstScanner.startsHelper" title="Permalink to this definition">¶</a></dt>
+<dd><p>return True if s[i:] starts an rST section.
+Sets sigStart, sigEnd, sigId and codeEnd ivars.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="leo.plugins.importers.leo_rst.RstScanner.startsID">
+<tt class="descname">startsID</tt><big>(</big><em>s</em>, <em>i</em><big>)</big><a class="headerlink" href="#leo.plugins.importers.leo_rst.RstScanner.startsID" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="leo.plugins.importers.leo_rst.RstScanner.startsSection">
+<tt class="descname">startsSection</tt><big>(</big><em>s</em>, <em>i</em><big>)</big><a class="headerlink" href="#leo.plugins.importers.leo_rst.RstScanner.startsSection" title="Permalink to this definition">¶</a></dt>
+<dd><p>Scan a line and possible one or two other lines,
+looking for an underlined or overlined/underlined name.</p>
+<dl class="docutils">
+<dt>Return (kind,name,i):</dt>
+<dd>kind: in (&#8216;under&#8217;,&#8217;over&#8217;,&#8217;plain&#8217;)
+name: the name of the underlined or overlined line.
+i: the following character if kind is not &#8216;plain&#8217;
+ch: the underlining and possibly overlining character.</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="leo.plugins.importers.leo_rst.RstScanner.startsString">
+<tt class="descname">startsString</tt><big>(</big><em>s</em>, <em>i</em><big>)</big><a class="headerlink" href="#leo.plugins.importers.leo_rst.RstScanner.startsString" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-leo.plugins.importers.markdown">
+<span id="leo-plugins-importers-markdown-module"></span><h2>leo.plugins.importers.markdown module<a class="headerlink" href="#module-leo.plugins.importers.markdown" title="Permalink to this headline">¶</a></h2>
+<p>The &#64;auto importer for markdown.</p>
+<dl class="class">
+<dt id="leo.plugins.importers.markdown.MarkdownScanner">
+<em class="property">class </em><tt class="descclassname">leo.plugins.importers.markdown.</tt><tt class="descname">MarkdownScanner</tt><big>(</big><em>importCommands</em>, <em>atAuto</em><big>)</big><a class="headerlink" href="#leo.plugins.importers.markdown.MarkdownScanner" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#leo.plugins.importers.basescanner.BaseScanner" title="leo.plugins.importers.basescanner.BaseScanner"><tt class="xref py py-class docutils literal"><span class="pre">leo.plugins.importers.basescanner.BaseScanner</span></tt></a></p>
+<dl class="method">
+<dt id="leo.plugins.importers.markdown.MarkdownScanner.adjustParent">
+<tt class="descname">adjustParent</tt><big>(</big><em>parent</em>, <em>headline</em><big>)</big><a class="headerlink" href="#leo.plugins.importers.markdown.MarkdownScanner.adjustParent" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the proper parent of the new node.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="leo.plugins.importers.markdown.MarkdownScanner.computeBody">
+<tt class="descname">computeBody</tt><big>(</big><em>s</em>, <em>start</em>, <em>sigStart</em>, <em>codeEnd</em><big>)</big><a class="headerlink" href="#leo.plugins.importers.markdown.MarkdownScanner.computeBody" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the body of a section.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="leo.plugins.importers.markdown.MarkdownScanner.createDeclsNode">
+<tt class="descname">createDeclsNode</tt><big>(</big><em>parent</em>, <em>s</em><big>)</big><a class="headerlink" href="#leo.plugins.importers.markdown.MarkdownScanner.createDeclsNode" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create a child node of parent containing s.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="leo.plugins.importers.markdown.MarkdownScanner.endGen">
+<tt class="descname">endGen</tt><big>(</big><em>s</em><big>)</big><a class="headerlink" href="#leo.plugins.importers.markdown.MarkdownScanner.endGen" title="Permalink to this definition">¶</a></dt>
+<dd><p>Finish code generation.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="leo.plugins.importers.markdown.MarkdownScanner.isUnderline">
+<tt class="descname">isUnderline</tt><big>(</big><em>s</em><big>)</big><a class="headerlink" href="#leo.plugins.importers.markdown.MarkdownScanner.isUnderline" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return 1 if s is all &#8216;=&#8217; characters.
+Return 2 if s is all &#8216;-&#8216; characters.
+Return 0 otherwise.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="leo.plugins.importers.markdown.MarkdownScanner.startsComment">
+<tt class="descname">startsComment</tt><big>(</big><em>s</em>, <em>i</em><big>)</big><a class="headerlink" href="#leo.plugins.importers.markdown.MarkdownScanner.startsComment" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="leo.plugins.importers.markdown.MarkdownScanner.startsHelper">
+<tt class="descname">startsHelper</tt><big>(</big><em>s</em>, <em>i</em>, <em>kind</em>, <em>tags</em>, <em>tag=None</em><big>)</big><a class="headerlink" href="#leo.plugins.importers.markdown.MarkdownScanner.startsHelper" title="Permalink to this definition">¶</a></dt>
+<dd><p>return True if s[i:] starts an markdown section.
+Sets sigStart, sigEnd, sigId and codeEnd ivars.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="leo.plugins.importers.markdown.MarkdownScanner.startsID">
+<tt class="descname">startsID</tt><big>(</big><em>s</em>, <em>i</em><big>)</big><a class="headerlink" href="#leo.plugins.importers.markdown.MarkdownScanner.startsID" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="leo.plugins.importers.markdown.MarkdownScanner.startsSection">
+<tt class="descname">startsSection</tt><big>(</big><em>s</em>, <em>i</em><big>)</big><a class="headerlink" href="#leo.plugins.importers.markdown.MarkdownScanner.startsSection" title="Permalink to this definition">¶</a></dt>
+<dd><p>Scan one or two lines looking for the start of a section.
+Sections are an underlined name or a line starting with &#8216;#&#8217;s.
+Return (level,name,i):</p>
+<blockquote>
+<div>level: 0 for plain lines, n &gt; 0 for section lines.
+name: the section name or None.
+i: the new i.</div></blockquote>
+</dd></dl>
+
+<dl class="method">
+<dt id="leo.plugins.importers.markdown.MarkdownScanner.startsString">
+<tt class="descname">startsString</tt><big>(</big><em>s</em>, <em>i</em><big>)</big><a class="headerlink" href="#leo.plugins.importers.markdown.MarkdownScanner.startsString" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-leo.plugins.importers.org">
+<span id="leo-plugins-importers-org-module"></span><h2>leo.plugins.importers.org module<a class="headerlink" href="#module-leo.plugins.importers.org" title="Permalink to this headline">¶</a></h2>
+<p>The &#64;auto importer for Emacs org-mode.</p>
+<dl class="class">
+<dt id="leo.plugins.importers.org.OrgModeScanner">
+<em class="property">class </em><tt class="descclassname">leo.plugins.importers.org.</tt><tt class="descname">OrgModeScanner</tt><big>(</big><em>importCommands</em>, <em>atAuto</em><big>)</big><a class="headerlink" href="#leo.plugins.importers.org.OrgModeScanner" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#leo.plugins.importers.basescanner.BaseScanner" title="leo.plugins.importers.basescanner.BaseScanner"><tt class="xref py py-class docutils literal"><span class="pre">leo.plugins.importers.basescanner.BaseScanner</span></tt></a></p>
+<p>A class to scan Emacs org-mode files.</p>
+<dl class="method">
+<dt id="leo.plugins.importers.org.OrgModeScanner.createNode">
+<tt class="descname">createNode</tt><big>(</big><em>b</em>, <em>h</em>, <em>level</em><big>)</big><a class="headerlink" href="#leo.plugins.importers.org.OrgModeScanner.createNode" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="leo.plugins.importers.org.OrgModeScanner.endGen">
+<tt class="descname">endGen</tt><big>(</big><em>s</em><big>)</big><a class="headerlink" href="#leo.plugins.importers.org.OrgModeScanner.endGen" title="Permalink to this definition">¶</a></dt>
+<dd><p>End code generation.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="leo.plugins.importers.org.OrgModeScanner.findParent">
+<tt class="descname">findParent</tt><big>(</big><em>level</em><big>)</big><a class="headerlink" href="#leo.plugins.importers.org.OrgModeScanner.findParent" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the parent at the indicated level, allocating
+place-holder nodes as necessary.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="leo.plugins.importers.org.OrgModeScanner.scanHelper">
+<tt class="descname">scanHelper</tt><big>(</big><em>s</em>, <em>i</em>, <em>end</em>, <em>parent</em>, <em>kind</em><big>)</big><a class="headerlink" href="#leo.plugins.importers.org.OrgModeScanner.scanHelper" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create Leo nodes for all org-mode lines.
+Overrides BaseScanner.scanHelper.</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-leo.plugins.importers.otl">
+<span id="leo-plugins-importers-otl-module"></span><h2>leo.plugins.importers.otl module<a class="headerlink" href="#module-leo.plugins.importers.otl" title="Permalink to this headline">¶</a></h2>
+<p>The &#64;auto importer for vim-outline files.</p>
+<dl class="class">
+<dt id="leo.plugins.importers.otl.VimoutlinerScanner">
+<em class="property">class </em><tt class="descclassname">leo.plugins.importers.otl.</tt><tt class="descname">VimoutlinerScanner</tt><big>(</big><em>importCommands</em>, <em>atAuto</em><big>)</big><a class="headerlink" href="#leo.plugins.importers.otl.VimoutlinerScanner" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#leo.plugins.importers.basescanner.BaseScanner" title="leo.plugins.importers.basescanner.BaseScanner"><tt class="xref py py-class docutils literal"><span class="pre">leo.plugins.importers.basescanner.BaseScanner</span></tt></a></p>
+<dl class="method">
+<dt id="leo.plugins.importers.otl.VimoutlinerScanner.createNode">
+<tt class="descname">createNode</tt><big>(</big><em>b</em>, <em>h</em>, <em>level</em><big>)</big><a class="headerlink" href="#leo.plugins.importers.otl.VimoutlinerScanner.createNode" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="leo.plugins.importers.otl.VimoutlinerScanner.endGen">
+<tt class="descname">endGen</tt><big>(</big><em>s</em><big>)</big><a class="headerlink" href="#leo.plugins.importers.otl.VimoutlinerScanner.endGen" title="Permalink to this definition">¶</a></dt>
+<dd><p>End code generation.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="leo.plugins.importers.otl.VimoutlinerScanner.findParent">
+<tt class="descname">findParent</tt><big>(</big><em>level</em><big>)</big><a class="headerlink" href="#leo.plugins.importers.otl.VimoutlinerScanner.findParent" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the parent at the indicated level, allocating
+place-holder nodes as necessary.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="leo.plugins.importers.otl.VimoutlinerScanner.scanHelper">
+<tt class="descname">scanHelper</tt><big>(</big><em>s</em>, <em>i</em>, <em>end</em>, <em>parent</em>, <em>kind</em><big>)</big><a class="headerlink" href="#leo.plugins.importers.otl.VimoutlinerScanner.scanHelper" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create Leo nodes for all vimoutliner lines.</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-leo.plugins.importers.pascal">
+<span id="leo-plugins-importers-pascal-module"></span><h2>leo.plugins.importers.pascal module<a class="headerlink" href="#module-leo.plugins.importers.pascal" title="Permalink to this headline">¶</a></h2>
+<p>The &#64;auto importer for Pascal.</p>
+<dl class="class">
+<dt id="leo.plugins.importers.pascal.PascalScanner">
+<em class="property">class </em><tt class="descclassname">leo.plugins.importers.pascal.</tt><tt class="descname">PascalScanner</tt><big>(</big><em>importCommands</em>, <em>atAuto</em><big>)</big><a class="headerlink" href="#leo.plugins.importers.pascal.PascalScanner" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#leo.plugins.importers.basescanner.BaseScanner" title="leo.plugins.importers.basescanner.BaseScanner"><tt class="xref py py-class docutils literal"><span class="pre">leo.plugins.importers.basescanner.BaseScanner</span></tt></a></p>
+<dl class="method">
+<dt id="leo.plugins.importers.pascal.PascalScanner.putClass">
+<tt class="descname">putClass</tt><big>(</big><em>s</em>, <em>i</em>, <em>sigEnd</em>, <em>codeEnd</em>, <em>start</em>, <em>parent</em><big>)</big><a class="headerlink" href="#leo.plugins.importers.pascal.PascalScanner.putClass" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create a node containing the entire interface.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="leo.plugins.importers.pascal.PascalScanner.skipArgs">
+<tt class="descname">skipArgs</tt><big>(</big><em>s</em>, <em>i</em>, <em>kind</em><big>)</big><a class="headerlink" href="#leo.plugins.importers.pascal.PascalScanner.skipArgs" title="Permalink to this definition">¶</a></dt>
+<dd><p>Skip the argument or class list.  Return i, ok</p>
+<p>kind is in (&#8216;class&#8217;,&#8217;function&#8217;)</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="leo.plugins.importers.pascal.PascalScanner.skipCodeBlock">
+<tt class="descname">skipCodeBlock</tt><big>(</big><em>s</em>, <em>i</em>, <em>kind</em><big>)</big><a class="headerlink" href="#leo.plugins.importers.pascal.PascalScanner.skipCodeBlock" title="Permalink to this definition">¶</a></dt>
+<dd><p>Skip the code block in a function or class definition.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="leo.plugins.importers.pascal.PascalScanner.skipInterface">
+<tt class="descname">skipInterface</tt><big>(</big><em>s</em>, <em>i</em><big>)</big><a class="headerlink" href="#leo.plugins.importers.pascal.PascalScanner.skipInterface" title="Permalink to this definition">¶</a></dt>
+<dd><p>Skip from the opening delim to <em>past</em> the matching closing delim.</p>
+<p>If no matching is found i is set to len(s)</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="leo.plugins.importers.pascal.PascalScanner.skipSigTail">
+<tt class="descname">skipSigTail</tt><big>(</big><em>s</em>, <em>i</em>, <em>kind</em><big>)</big><a class="headerlink" href="#leo.plugins.importers.pascal.PascalScanner.skipSigTail" title="Permalink to this definition">¶</a></dt>
+<dd><p>Skip from the end of the arg list to the start of the block.</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-leo.plugins.importers.php">
+<span id="leo-plugins-importers-php-module"></span><h2>leo.plugins.importers.php module<a class="headerlink" href="#module-leo.plugins.importers.php" title="Permalink to this headline">¶</a></h2>
+<p>The &#64;auto importer for PHP.</p>
+<dl class="class">
+<dt id="leo.plugins.importers.php.PhpScanner">
+<em class="property">class </em><tt class="descclassname">leo.plugins.importers.php.</tt><tt class="descname">PhpScanner</tt><big>(</big><em>importCommands</em>, <em>atAuto</em><big>)</big><a class="headerlink" href="#leo.plugins.importers.php.PhpScanner" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#leo.plugins.importers.basescanner.BaseScanner" title="leo.plugins.importers.basescanner.BaseScanner"><tt class="xref py py-class docutils literal"><span class="pre">leo.plugins.importers.basescanner.BaseScanner</span></tt></a></p>
+<dl class="method">
+<dt id="leo.plugins.importers.php.PhpScanner.getSigId">
+<tt class="descname">getSigId</tt><big>(</big><em>ids</em><big>)</big><a class="headerlink" href="#leo.plugins.importers.php.PhpScanner.getSigId" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the signature&#8217;s id.</p>
+<p>By default, this is the last id in the ids list.</p>
+<p>For Php, the first id is better.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="leo.plugins.importers.php.PhpScanner.isPurePHP">
+<tt class="descname">isPurePHP</tt><big>(</big><em>s</em><big>)</big><a class="headerlink" href="#leo.plugins.importers.php.PhpScanner.isPurePHP" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return True if the file begins with &lt;?php and ends with ?&gt;</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="leo.plugins.importers.php.PhpScanner.skipString">
+<tt class="descname">skipString</tt><big>(</big><em>s</em>, <em>i</em><big>)</big><a class="headerlink" href="#leo.plugins.importers.php.PhpScanner.skipString" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="leo.plugins.importers.php.PhpScanner.startsString">
+<tt class="descname">startsString</tt><big>(</big><em>s</em>, <em>i</em><big>)</big><a class="headerlink" href="#leo.plugins.importers.php.PhpScanner.startsString" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-leo.plugins.importers.python">
+<span id="leo-plugins-importers-python-module"></span><h2>leo.plugins.importers.python module<a class="headerlink" href="#module-leo.plugins.importers.python" title="Permalink to this headline">¶</a></h2>
+<p>The &#64;auto importer for Python.</p>
+<dl class="class">
+<dt id="leo.plugins.importers.python.PythonScanner">
+<em class="property">class </em><tt class="descclassname">leo.plugins.importers.python.</tt><tt class="descname">PythonScanner</tt><big>(</big><em>importCommands</em>, <em>atAuto</em><big>)</big><a class="headerlink" href="#leo.plugins.importers.python.PythonScanner" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#leo.plugins.importers.basescanner.BaseScanner" title="leo.plugins.importers.basescanner.BaseScanner"><tt class="xref py py-class docutils literal"><span class="pre">leo.plugins.importers.basescanner.BaseScanner</span></tt></a></p>
+<dl class="method">
+<dt id="leo.plugins.importers.python.PythonScanner.adjustDefStart">
+<tt class="descname">adjustDefStart</tt><big>(</big><em>s</em>, <em>i</em><big>)</big><a class="headerlink" href="#leo.plugins.importers.python.PythonScanner.adjustDefStart" title="Permalink to this definition">¶</a></dt>
+<dd><p>A hook to allow the Python importer to adjust the 
+start of a class or function to include decorators.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="leo.plugins.importers.python.PythonScanner.extendSignature">
+<tt class="descname">extendSignature</tt><big>(</big><em>s</em>, <em>i</em><big>)</big><a class="headerlink" href="#leo.plugins.importers.python.PythonScanner.extendSignature" title="Permalink to this definition">¶</a></dt>
+<dd><p>Extend the text to be added to the class node following the signature.</p>
+<p>The text <em>must</em> end with a newline.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="leo.plugins.importers.python.PythonScanner.findClass">
+<tt class="descname">findClass</tt><big>(</big><em>p</em><big>)</big><a class="headerlink" href="#leo.plugins.importers.python.PythonScanner.findClass" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the index end of the class or def in a node, or -1.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="leo.plugins.importers.python.PythonScanner.pythonNewlineHelper">
+<tt class="descname">pythonNewlineHelper</tt><big>(</big><em>s</em>, <em>i</em>, <em>parenCount</em>, <em>startIndent</em>, <em>underIndentedStart</em><big>)</big><a class="headerlink" href="#leo.plugins.importers.python.PythonScanner.pythonNewlineHelper" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="leo.plugins.importers.python.PythonScanner.skipCodeBlock">
+<tt class="descname">skipCodeBlock</tt><big>(</big><em>s</em>, <em>i</em>, <em>kind</em><big>)</big><a class="headerlink" href="#leo.plugins.importers.python.PythonScanner.skipCodeBlock" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="leo.plugins.importers.python.PythonScanner.skipSigTail">
+<tt class="descname">skipSigTail</tt><big>(</big><em>s</em>, <em>i</em>, <em>kind</em><big>)</big><a class="headerlink" href="#leo.plugins.importers.python.PythonScanner.skipSigTail" title="Permalink to this definition">¶</a></dt>
+<dd><p>Skip from the end of the arg list to the start of the block.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="leo.plugins.importers.python.PythonScanner.skipString">
+<tt class="descname">skipString</tt><big>(</big><em>s</em>, <em>i</em><big>)</big><a class="headerlink" href="#leo.plugins.importers.python.PythonScanner.skipString" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="leo.plugins.importers.python.PythonScanner.skipToTheNextClassOrFunction">
+<tt class="descname">skipToTheNextClassOrFunction</tt><big>(</big><em>s</em>, <em>i</em>, <em>lastIndent</em><big>)</big><a class="headerlink" href="#leo.plugins.importers.python.PythonScanner.skipToTheNextClassOrFunction" title="Permalink to this definition">¶</a></dt>
+<dd><p>Skip to the next python def or class.
+Return the original i if nothing more is found.
+This allows the &#8220;if __name__ == &#8216;__main__&#8217; hack
+to appear at the top level.</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-leo.plugins.importers.test">
+<span id="leo-plugins-importers-test-module"></span><h2>leo.plugins.importers.test module<a class="headerlink" href="#module-leo.plugins.importers.test" title="Permalink to this headline">¶</a></h2>
+<p>The &#64;auto importer for .xyzzy files and &#64;auto-test nodes.</p>
+<dl class="class">
+<dt id="leo.plugins.importers.test.TestScanner">
+<em class="property">class </em><tt class="descclassname">leo.plugins.importers.test.</tt><tt class="descname">TestScanner</tt><big>(</big><em>importCommands</em>, <em>atAuto</em><big>)</big><a class="headerlink" href="#leo.plugins.importers.test.TestScanner" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#leo.plugins.importers.basescanner.BaseScanner" title="leo.plugins.importers.basescanner.BaseScanner"><tt class="xref py py-class docutils literal"><span class="pre">leo.plugins.importers.basescanner.BaseScanner</span></tt></a></p>
+<dl class="method">
+<dt id="leo.plugins.importers.test.TestScanner.run">
+<tt class="descname">run</tt><big>(</big><em>s</em>, <em>parent</em>, <em>parse_body=False</em>, <em>prepass=False</em><big>)</big><a class="headerlink" href="#leo.plugins.importers.test.TestScanner.run" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="leo.plugins.importers.test.TestScanner.scan">
+<tt class="descname">scan</tt><big>(</big><em>s</em>, <em>parent</em>, <em>parse_body=False</em><big>)</big><a class="headerlink" href="#leo.plugins.importers.test.TestScanner.scan" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-leo.plugins.importers.typescript">
+<span id="leo-plugins-importers-typescript-module"></span><h2>leo.plugins.importers.typescript module<a class="headerlink" href="#module-leo.plugins.importers.typescript" title="Permalink to this headline">¶</a></h2>
+<p>The &#64;auto importer for TypeScript.</p>
+<dl class="class">
+<dt id="leo.plugins.importers.typescript.TypeScriptScanner">
+<em class="property">class </em><tt class="descclassname">leo.plugins.importers.typescript.</tt><tt class="descname">TypeScriptScanner</tt><big>(</big><em>importCommands</em>, <em>atAuto</em><big>)</big><a class="headerlink" href="#leo.plugins.importers.typescript.TypeScriptScanner" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#leo.plugins.importers.javascript.JavaScriptScanner" title="leo.plugins.importers.javascript.JavaScriptScanner"><tt class="xref py py-class docutils literal"><span class="pre">leo.plugins.importers.javascript.JavaScriptScanner</span></tt></a></p>
+<dl class="method">
+<dt id="leo.plugins.importers.typescript.TypeScriptScanner.getSigId">
+<tt class="descname">getSigId</tt><big>(</big><em>ids</em><big>)</big><a class="headerlink" href="#leo.plugins.importers.typescript.TypeScriptScanner.getSigId" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the signature&#8217;s id.</p>
+<p>This is the last id of the ids list, or the id before extends anotherId.</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-leo.plugins.importers.xml">
+<span id="leo-plugins-importers-xml-module"></span><h2>leo.plugins.importers.xml module<a class="headerlink" href="#module-leo.plugins.importers.xml" title="Permalink to this headline">¶</a></h2>
+<p>The &#64;auto importer for XML.</p>
+<dl class="class">
+<dt id="leo.plugins.importers.xml.XmlScanner">
+<em class="property">class </em><tt class="descclassname">leo.plugins.importers.xml.</tt><tt class="descname">XmlScanner</tt><big>(</big><em>importCommands</em>, <em>atAuto</em>, <em>tags_setting='import_xml_tags'</em><big>)</big><a class="headerlink" href="#leo.plugins.importers.xml.XmlScanner" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#leo.plugins.importers.basescanner.BaseScanner" title="leo.plugins.importers.basescanner.BaseScanner"><tt class="xref py py-class docutils literal"><span class="pre">leo.plugins.importers.basescanner.BaseScanner</span></tt></a></p>
+<dl class="method">
+<dt id="leo.plugins.importers.xml.XmlScanner.addTags">
+<tt class="descname">addTags</tt><big>(</big><big>)</big><a class="headerlink" href="#leo.plugins.importers.xml.XmlScanner.addTags" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add items to self.class/functionTags and from settings.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="leo.plugins.importers.xml.XmlScanner.adjustTestLines">
+<tt class="descname">adjustTestLines</tt><big>(</big><em>lines</em><big>)</big><a class="headerlink" href="#leo.plugins.importers.xml.XmlScanner.adjustTestLines" title="Permalink to this definition">¶</a></dt>
+<dd><p>A desparation measure to attempt reasonable comparisons.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="leo.plugins.importers.xml.XmlScanner.adjust_class_ref">
+<tt class="descname">adjust_class_ref</tt><big>(</big><em>s</em><big>)</big><a class="headerlink" href="#leo.plugins.importers.xml.XmlScanner.adjust_class_ref" title="Permalink to this definition">¶</a></dt>
+<dd><p>Ensure that &#64;others appears at the start of a line.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="leo.plugins.importers.xml.XmlScanner.filterTokens">
+<tt class="descname">filterTokens</tt><big>(</big><em>tokens</em><big>)</big><a class="headerlink" href="#leo.plugins.importers.xml.XmlScanner.filterTokens" title="Permalink to this definition">¶</a></dt>
+<dd><p>Filter tokens as needed for correct comparisons.</p>
+<p>For xml, this means:</p>
+<ol class="arabic simple">
+<li>Removing newlines after opening elements.</li>
+<li>Removing newlines before closing elements.</li>
+<li>Converting sequences of whitespace to a single blank.</li>
+</ol>
+</dd></dl>
+
+<dl class="method">
+<dt id="leo.plugins.importers.xml.XmlScanner.isWordChar">
+<tt class="descname">isWordChar</tt><big>(</big><em>ch</em><big>)</big><a class="headerlink" href="#leo.plugins.importers.xml.XmlScanner.isWordChar" title="Permalink to this definition">¶</a></dt>
+<dd><p>This allows only ascii tags.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="leo.plugins.importers.xml.XmlScanner.isWordChar1">
+<tt class="descname">isWordChar1</tt><big>(</big><em>ch</em><big>)</big><a class="headerlink" href="#leo.plugins.importers.xml.XmlScanner.isWordChar1" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="leo.plugins.importers.xml.XmlScanner.isWordChar2">
+<tt class="descname">isWordChar2</tt><big>(</big><em>ch</em><big>)</big><a class="headerlink" href="#leo.plugins.importers.xml.XmlScanner.isWordChar2" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="leo.plugins.importers.xml.XmlScanner.skipCommentToken">
+<tt class="descname">skipCommentToken</tt><big>(</big><em>s</em>, <em>i</em><big>)</big><a class="headerlink" href="#leo.plugins.importers.xml.XmlScanner.skipCommentToken" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return comment lines with all leading/trailing whitespace removed.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="leo.plugins.importers.xml.XmlScanner.skipId">
+<tt class="descname">skipId</tt><big>(</big><em>s</em>, <em>i</em><big>)</big><a class="headerlink" href="#leo.plugins.importers.xml.XmlScanner.skipId" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="leo.plugins.importers.xml.XmlScanner.skipToEndOfTag">
+<tt class="descname">skipToEndOfTag</tt><big>(</big><em>s</em>, <em>i</em>, <em>start</em><big>)</big><a class="headerlink" href="#leo.plugins.importers.xml.XmlScanner.skipToEndOfTag" title="Permalink to this definition">¶</a></dt>
+<dd><p>Skip to the end of an open tag.</p>
+<p>return i,ok,complete</p>
+<p>where complete is True if the tag of the form &lt;name/&gt;</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="leo.plugins.importers.xml.XmlScanner.skipToMatchingTag">
+<tt class="descname">skipToMatchingTag</tt><big>(</big><em>s</em>, <em>i</em>, <em>tag</em>, <em>tags</em>, <em>start</em><big>)</big><a class="headerlink" href="#leo.plugins.importers.xml.XmlScanner.skipToMatchingTag" title="Permalink to this definition">¶</a></dt>
+<dd><p>Skip the entire class definition. Return i,ok.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="leo.plugins.importers.xml.XmlScanner.startsHelper">
+<tt class="descname">startsHelper</tt><big>(</big><em>s</em>, <em>i</em>, <em>kind</em>, <em>tags</em>, <em>tag=None</em><big>)</big><a class="headerlink" href="#leo.plugins.importers.xml.XmlScanner.startsHelper" title="Permalink to this definition">¶</a></dt>
+<dd><p>return True if s[i:] starts a class or function.
+Sets sigStart, sigEnd, sigId and codeEnd ivars.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="leo.plugins.importers.xml.XmlScanner.startsId">
+<tt class="descname">startsId</tt><big>(</big><em>s</em>, <em>i</em><big>)</big><a class="headerlink" href="#leo.plugins.importers.xml.XmlScanner.startsId" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="leo.plugins.importers.xml.XmlScanner.startsString">
+<tt class="descname">startsString</tt><big>(</big><em>s</em>, <em>i</em><big>)</big><a class="headerlink" href="#leo.plugins.importers.xml.XmlScanner.startsString" title="Permalink to this definition">¶</a></dt>
+<dd><p>Single quotes do <em>not</em> start strings in xml or html.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="leo.plugins.importers.xml.XmlScanner.word_char_table1">
+<tt class="descname">word_char_table1</tt><em class="property"> = ((192, 214), (216, 246), (248, 767), (880, 893), (895, 8191), (8204, 8205), (8304, 8591), (11264, 12271), (12289, 55295), (63744, 64975), (65008, 65533), (65536, 983039))</em><a class="headerlink" href="#leo.plugins.importers.xml.XmlScanner.word_char_table1" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="leo.plugins.importers.xml.XmlScanner.word_char_table2">
+<tt class="descname">word_char_table2</tt><em class="property"> = ((183, 183), (768, 879), (8255, 8256))</em><a class="headerlink" href="#leo.plugins.importers.xml.XmlScanner.word_char_table2" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-leo.plugins.importers">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-leo.plugins.importers" title="Permalink to this headline">¶</a></h2>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="../contents.html">
+              <img class="logo" src="../_static/Leo4-80-border.jpg" alt="Logo"/>
+            </a></p>
+<h3><a href="../contents.html">Table Of Contents</a></h3>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../index.html">Leo’s Home Page</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../preliminaries.html">Preliminaries</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../getting-started.html">Downloading, Installing &amp; Running Leo</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../cheatsheet.html">Cheat Sheet</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../screencasts.html">Videos about Leo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorial.html">Tutorial</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../usersguide.html">Users Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../leoandotherprograms.html">Leo and Other Programs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../intermediatetopics.html">Advanced Topics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../appendices.html">Appendices</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="leo.html">leo package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../FAQ.html">FAQ</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../glossary.html">Glossary</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../what-is-new.html">What&#8217;s New</a></li>
+</ul>
+
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script><!--@+leo-ver=5-thin-->
+<!--@+node:davy.20141209091210.2: * @file sources/templates/flattrSidebar.html-->
+<!--@@language html-->
+<!--@@tabwidth -4-->
+<p>Leo: Leonine Editor with Outlines</p>
+<p>
+Written by <a HREF="ekr.html">Edward K. Ream</a>
+<a class="FlattrButton" style="display:none;" rev="flattr;button:compact;" href="http://leoeditor.com"></a>
+<noscript>
+<a href="http://flattr.com/thing/410073/Leo" target="_blank">
+<img src="http://api.flattr.com/button/flattr-badge-large.png" alt="Flattr this" title="Flattr this" border="0" />
+</a>
+</noscript>
+</p>
+<!--@-leo-->
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="leo.plugins.pygeotag.html" title="leo.plugins.pygeotag package"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="leo.plugins.examples.html" title="leo.plugins.examples package"
+             >previous</a> |</li>
+        <li><a href="../contents.html">Leo 5.0 documentation</a> &raquo;</li>
+          <li><a href="modules.html" >leo</a> &raquo;</li>
+          <li><a href="leo.html" >leo package</a> &raquo;</li>
+          <li><a href="leo.plugins.html" >leo.plugins package</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2014, Edward K. Ream.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.2.
+    </div>
+  </body>
+</html>

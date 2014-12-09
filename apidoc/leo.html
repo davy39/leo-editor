@@ -1,0 +1,837 @@
+<!--@+leo-ver=5-thin-->
+<!--@+node:davy.20141209091210.28: * @file sources/templates/layout.html-->
+<!--@+at-->
+<!--
+This Jinja2 template introduce an extrahead block so we can add extra javascript for flattr.
+-->
+<!--@@c-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>leo package &mdash; Leo 5.0 documentation</title>
+    
+    <link rel="stylesheet" href="../_static/leo.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '5.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  false
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/sidebar.js"></script>
+    <link rel="top" title="Leo 5.0 documentation" href="../index.html" />
+    <link rel="up" title="leo" href="modules.html" />
+    <link rel="next" title="leo.config package" href="leo.config.html" />
+    <link rel="prev" title="leo" href="modules.html" />
+    <script type="text/javascript">
+        (function() {
+            var s = document.createElement('script'), t = document.getElementsByTagName('script')[0];
+            s.type = 'text/javascript';
+            s.async = true;
+            s.src = 'http://api.flattr.com/js/0.6/load.js?mode=auto';
+            t.parentNode.insertBefore(s, t);
+        })();
+    </script>
+     
+
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="leo.config.html" title="leo.config package"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="modules.html" title="leo"
+             accesskey="P">previous</a> |</li>
+        <li><a href="../contents.html">Leo 5.0 documentation</a> &raquo;</li>
+          <li><a href="modules.html" accesskey="U">leo</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="leo-package">
+<h1>leo package<a class="headerlink" href="#leo-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="subpackages">
+<h2>Subpackages<a class="headerlink" href="#subpackages" title="Permalink to this headline">¶</a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="leo.config.html">leo.config package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="leo.config.html#module-contents">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="leo.core.html">leo.core package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="leo.core.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="leo.core.html#leo-core-format-code-module">leo.core.format-code module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="leo.core.html#module-leo.core.leoApp">leo.core.leoApp module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="leo.core.html#module-leo.core.leoAst">leo.core.leoAst module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="leo.core.html#module-leo.core.leoAtFile">leo.core.leoAtFile module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="leo.core.html#module-leo.core.leoBridge">leo.core.leoBridge module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="leo.core.html#module-leo.core.leoBridgeTest">leo.core.leoBridgeTest module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="leo.core.html#module-leo.core.leoCache">leo.core.leoCache module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="leo.core.html#module-leo.core.leoChapters">leo.core.leoChapters module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="leo.core.html#module-leo.core.leoColor">leo.core.leoColor module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="leo.core.html#module-leo.core.leoColorizer">leo.core.leoColorizer module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="leo.core.html#module-leo.core.leoCommands">leo.core.leoCommands module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="leo.core.html#module-leo.core.leoCompare">leo.core.leoCompare module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="leo.core.html#module-leo.core.leoConfig">leo.core.leoConfig module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="leo.core.html#module-leo.core.leoDebugger">leo.core.leoDebugger module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="leo.core.html#module-leo.core.leoDynamicTest">leo.core.leoDynamicTest module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="leo.core.html#module-leo.core.leoEditCommands">leo.core.leoEditCommands module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="leo.core.html#module-leo.core.leoFileCommands">leo.core.leoFileCommands module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="leo.core.html#module-leo.core.leoFind">leo.core.leoFind module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="leo.core.html#module-leo.core.leoFrame">leo.core.leoFrame module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="leo.core.html#module-leo.core.leoGlobals">leo.core.leoGlobals module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="leo.core.html#module-leo.core.leoGui">leo.core.leoGui module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="leo.core.html#module-leo.core.leoIPython">leo.core.leoIPython module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="leo.core.html#module-leo.core.leoImport">leo.core.leoImport module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="leo.core.html#module-leo.core.leoKeys">leo.core.leoKeys module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="leo.core.html#module-leo.core.leoMenu">leo.core.leoMenu module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="leo.core.html#module-leo.core.leoNodes">leo.core.leoNodes module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="leo.core.html#module-leo.core.leoPersistence">leo.core.leoPersistence module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="leo.core.html#module-leo.core.leoPlugins">leo.core.leoPlugins module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="leo.core.html#module-leo.core.leoPymacs">leo.core.leoPymacs module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="leo.core.html#module-leo.core.leoQt">leo.core.leoQt module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="leo.core.html#leo-core-leorope-module">leo.core.leoRope module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="leo.core.html#module-leo.core.leoRst">leo.core.leoRst module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="leo.core.html#module-leo.core.leoSessions">leo.core.leoSessions module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="leo.core.html#module-leo.core.leoShadow">leo.core.leoShadow module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="leo.core.html#module-leo.core.leoTangle">leo.core.leoTangle module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="leo.core.html#module-leo.core.leoTest">leo.core.leoTest module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="leo.core.html#module-leo.core.leoUndo">leo.core.leoUndo module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="leo.core.html#module-leo.core.leoVersion">leo.core.leoVersion module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="leo.core.html#module-leo.core.leoVim">leo.core.leoVim module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="leo.core.html#module-leo.core.runLeo">leo.core.runLeo module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="leo.core.html#module-leo.core">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="leo.extensions.html">leo.extensions package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="leo.extensions.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="leo.extensions.html#leo-extensions-asciidoc-module">leo.extensions.asciidoc module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="leo.extensions.html#leo-extensions-colors-module">leo.extensions.colors module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="leo.extensions.html#leo-extensions-patch-11-01-module">leo.extensions.patch_11_01 module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="leo.extensions.html#leo-extensions-sh-module">leo.extensions.sh module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="leo.extensions.html#leo-extensions-testextension-module">leo.extensions.testExtension module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="leo.extensions.html#module-contents">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="leo.external.html">leo.external package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="leo.external.html#subpackages">Subpackages</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="leo.external.concurrent.html">leo.external.concurrent package</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="leo.external.concurrent.html#subpackages">Subpackages</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="leo.external.concurrent.futures.html">leo.external.concurrent.futures package</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="leo.external.concurrent.futures.html#submodules">Submodules</a></li>
+<li class="toctree-l6"><a class="reference internal" href="leo.external.concurrent.futures.html#leo-external-concurrent-futures-process-module">leo.external.concurrent.futures.process module</a></li>
+<li class="toctree-l6"><a class="reference internal" href="leo.external.concurrent.futures.html#leo-external-concurrent-futures-thread-module">leo.external.concurrent.futures.thread module</a></li>
+<li class="toctree-l6"><a class="reference internal" href="leo.external.concurrent.futures.html#module-contents">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="leo.external.concurrent.html#module-leo.external.concurrent">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="leo.external.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="leo.external.html#module-leo.external.PythonTidy">leo.external.PythonTidy module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="leo.external.html#copyright-2006-charles-curtis-rhode">Copyright © 2006 Charles Curtis Rhode</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="leo.external.html#mailto-crhode-lacusveris-com-subject-pythontidy">mailto:CRhode&#64;LacusVeris.com?subject=PythonTidy</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="leo.external.html#module-leo.external.codewise">leo.external.codewise module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="leo.external.html#why-this-module">Why this module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="leo.external.html#creating-ctags-data">Creating ctags data</a></li>
+<li class="toctree-l3"><a class="reference internal" href="leo.external.html#using-the-autocompleter">Using the autocompleter</a></li>
+<li class="toctree-l3"><a class="reference internal" href="leo.external.html#theory-of-operation">Theory of operation</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="leo.external.html#module-leo.external.edb">leo.external.edb module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="leo.external.html#edb-the-python-debugger-pdb-modified-for-blender-by-ekr">edb: The Python Debugger Pdb, modified for blender by EKR</a></li>
+<li class="toctree-l3"><a class="reference internal" href="leo.external.html#debugger-commands">Debugger commands</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="leo.external.html#module-leo.external.leoSAGlobals">leo.external.leoSAGlobals module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="leo.external.html#leo-external-leoftsindex-module">leo.external.leoftsindex module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="leo.external.html#module-leo.external.leosax">leo.external.leosax module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="leo.external.html#module-leo.external.lproto">leo.external.lproto module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="leo.external.html#module-leo.external.stringlist">leo.external.stringlist module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="leo.external.html#module-leo.external">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="leo.modes.html">leo.modes package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="leo.modes.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="leo.modes.html#module-leo.modes.actionscript">leo.modes.actionscript module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="leo.modes.html#module-leo.modes.ada95">leo.modes.ada95 module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="leo.modes.html#module-leo.modes.ahk">leo.modes.ahk module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="leo.modes.html#module-leo.modes.antlr">leo.modes.antlr module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="leo.modes.html#module-leo.modes.apacheconf">leo.modes.apacheconf module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="leo.modes.html#module-leo.modes.apdl">leo.modes.apdl module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="leo.modes.html#module-leo.modes.applescript">leo.modes.applescript module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="leo.modes.html#module-leo.modes.asp">leo.modes.asp module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="leo.modes.html#module-leo.modes.aspect_j">leo.modes.aspect_j module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="leo.modes.html#module-leo.modes.assembly_macro32">leo.modes.assembly_macro32 module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="leo.modes.html#module-leo.modes.assembly_mcs51">leo.modes.assembly_mcs51 module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="leo.modes.html#module-leo.modes.assembly_parrot">leo.modes.assembly_parrot module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="leo.modes.html#module-leo.modes.assembly_r2000">leo.modes.assembly_r2000 module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="leo.modes.html#module-leo.modes.assembly_x86">leo.modes.assembly_x86 module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="leo.modes.html#module-leo.modes.awk">leo.modes.awk module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="leo.modes.html#module-leo.modes.b">leo.modes.b module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="leo.modes.html#module-leo.modes.batch">leo.modes.batch module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="leo.modes.html#module-leo.modes.bbj">leo.modes.bbj module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="leo.modes.html#module-leo.modes.bcel">leo.modes.bcel module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="leo.modes.html#module-leo.modes.bibtex">leo.modes.bibtex module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="leo.modes.html#module-leo.modes.c">leo.modes.c module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="leo.modes.html#module-leo.modes.chill">leo.modes.chill module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="leo.modes.html#module-leo.modes.clojure">leo.modes.clojure module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="leo.modes.html#module-leo.modes.cobol">leo.modes.cobol module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="leo.modes.html#module-leo.modes.coldfusion">leo.modes.coldfusion module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="leo.modes.html#module-leo.modes.cplusplus">leo.modes.cplusplus module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="leo.modes.html#module-leo.modes.csharp">leo.modes.csharp module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="leo.modes.html#module-leo.modes.css">leo.modes.css module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="leo.modes.html#module-leo.modes.cython">leo.modes.cython module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="leo.modes.html#module-leo.modes.d">leo.modes.d module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="leo.modes.html#module-leo.modes.dart">leo.modes.dart module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="leo.modes.html#module-leo.modes.doxygen">leo.modes.doxygen module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="leo.modes.html#module-leo.modes.eiffel">leo.modes.eiffel module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="leo.modes.html#module-leo.modes.embperl">leo.modes.embperl module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="leo.modes.html#module-leo.modes.erlang">leo.modes.erlang module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="leo.modes.html#module-leo.modes.factor">leo.modes.factor module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="leo.modes.html#module-leo.modes.forth">leo.modes.forth module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="leo.modes.html#module-leo.modes.fortran">leo.modes.fortran module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="leo.modes.html#module-leo.modes.fortran90">leo.modes.fortran90 module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="leo.modes.html#module-leo.modes.foxpro">leo.modes.foxpro module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="leo.modes.html#module-leo.modes.gettext">leo.modes.gettext module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="leo.modes.html#module-leo.modes.groovy">leo.modes.groovy module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="leo.modes.html#module-leo.modes.haskell">leo.modes.haskell module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="leo.modes.html#module-leo.modes.haxe">leo.modes.haxe module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="leo.modes.html#module-leo.modes.html">leo.modes.html module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="leo.modes.html#module-leo.modes.i4gl">leo.modes.i4gl module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="leo.modes.html#module-leo.modes.icon">leo.modes.icon module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="leo.modes.html#module-leo.modes.idl">leo.modes.idl module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="leo.modes.html#module-leo.modes.inform">leo.modes.inform module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="leo.modes.html#module-leo.modes.ini">leo.modes.ini module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="leo.modes.html#module-leo.modes.inno_setup">leo.modes.inno_setup module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="leo.modes.html#module-leo.modes.interlis">leo.modes.interlis module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="leo.modes.html#module-leo.modes.io">leo.modes.io module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="leo.modes.html#module-leo.modes.java">leo.modes.java module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="leo.modes.html#module-leo.modes.javascript">leo.modes.javascript module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="leo.modes.html#module-leo.modes.jhtml">leo.modes.jhtml module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="leo.modes.html#module-leo.modes.jmk">leo.modes.jmk module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="leo.modes.html#module-leo.modes.jsp">leo.modes.jsp module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="leo.modes.html#module-leo.modes.kivy">leo.modes.kivy module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="leo.modes.html#module-leo.modes.latex">leo.modes.latex module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="leo.modes.html#module-leo.modes.lilypond">leo.modes.lilypond module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="leo.modes.html#module-leo.modes.lisp">leo.modes.lisp module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="leo.modes.html#module-leo.modes.lotos">leo.modes.lotos module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="leo.modes.html#module-leo.modes.lua">leo.modes.lua module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="leo.modes.html#module-leo.modes.mail">leo.modes.mail module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="leo.modes.html#module-leo.modes.makefile">leo.modes.makefile module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="leo.modes.html#module-leo.modes.maple">leo.modes.maple module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="leo.modes.html#module-leo.modes.matlab">leo.modes.matlab module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="leo.modes.html#module-leo.modes.md">leo.modes.md module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="leo.modes.html#module-leo.modes.ml">leo.modes.ml module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="leo.modes.html#module-leo.modes.modula3">leo.modes.modula3 module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="leo.modes.html#module-leo.modes.moin">leo.modes.moin module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="leo.modes.html#module-leo.modes.mqsc">leo.modes.mqsc module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="leo.modes.html#module-leo.modes.netrexx">leo.modes.netrexx module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="leo.modes.html#module-leo.modes.nqc">leo.modes.nqc module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="leo.modes.html#module-leo.modes.nsi">leo.modes.nsi module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="leo.modes.html#module-leo.modes.nsis2">leo.modes.nsis2 module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="leo.modes.html#module-leo.modes.objective_c">leo.modes.objective_c module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="leo.modes.html#module-leo.modes.objectrexx">leo.modes.objectrexx module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="leo.modes.html#module-leo.modes.occam">leo.modes.occam module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="leo.modes.html#module-leo.modes.omnimark">leo.modes.omnimark module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="leo.modes.html#module-leo.modes.pascal">leo.modes.pascal module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="leo.modes.html#module-leo.modes.patch">leo.modes.patch module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="leo.modes.html#module-leo.modes.perl">leo.modes.perl module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="leo.modes.html#module-leo.modes.php">leo.modes.php module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="leo.modes.html#module-leo.modes.phpsection">leo.modes.phpsection module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="leo.modes.html#module-leo.modes.pike">leo.modes.pike module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="leo.modes.html#module-leo.modes.pl1">leo.modes.pl1 module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="leo.modes.html#module-leo.modes.plain">leo.modes.plain module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="leo.modes.html#module-leo.modes.plsql">leo.modes.plsql module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="leo.modes.html#module-leo.modes.pop11">leo.modes.pop11 module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="leo.modes.html#module-leo.modes.postscript">leo.modes.postscript module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="leo.modes.html#module-leo.modes.povray">leo.modes.povray module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="leo.modes.html#module-leo.modes.powerdynamo">leo.modes.powerdynamo module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="leo.modes.html#module-leo.modes.prolog">leo.modes.prolog module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="leo.modes.html#module-leo.modes.pseudoplain">leo.modes.pseudoplain module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="leo.modes.html#module-leo.modes.psp">leo.modes.psp module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="leo.modes.html#module-leo.modes.ptl">leo.modes.ptl module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="leo.modes.html#module-leo.modes.pvwave">leo.modes.pvwave module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="leo.modes.html#module-leo.modes.pyrex">leo.modes.pyrex module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="leo.modes.html#module-leo.modes.python">leo.modes.python module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="leo.modes.html#module-leo.modes.r">leo.modes.r module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="leo.modes.html#module-leo.modes.rebol">leo.modes.rebol module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="leo.modes.html#module-leo.modes.redcode">leo.modes.redcode module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="leo.modes.html#module-leo.modes.rest">leo.modes.rest module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="leo.modes.html#module-leo.modes.rhtml">leo.modes.rhtml module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="leo.modes.html#module-leo.modes.rib">leo.modes.rib module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="leo.modes.html#module-leo.modes.rpmspec">leo.modes.rpmspec module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="leo.modes.html#module-leo.modes.rtf">leo.modes.rtf module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="leo.modes.html#module-leo.modes.ruby">leo.modes.ruby module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="leo.modes.html#module-leo.modes.rview">leo.modes.rview module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="leo.modes.html#module-leo.modes.sas">leo.modes.sas module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="leo.modes.html#module-leo.modes.scala">leo.modes.scala module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="leo.modes.html#module-leo.modes.scheme">leo.modes.scheme module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="leo.modes.html#module-leo.modes.sdl_pr">leo.modes.sdl_pr module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="leo.modes.html#module-leo.modes.sgml">leo.modes.sgml module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="leo.modes.html#module-leo.modes.shell">leo.modes.shell module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="leo.modes.html#module-leo.modes.shellscript">leo.modes.shellscript module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="leo.modes.html#module-leo.modes.shtml">leo.modes.shtml module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="leo.modes.html#module-leo.modes.smalltalk">leo.modes.smalltalk module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="leo.modes.html#module-leo.modes.smi_mib">leo.modes.smi_mib module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="leo.modes.html#module-leo.modes.splus">leo.modes.splus module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="leo.modes.html#module-leo.modes.sqr">leo.modes.sqr module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="leo.modes.html#module-leo.modes.squidconf">leo.modes.squidconf module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="leo.modes.html#module-leo.modes.ssharp">leo.modes.ssharp module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="leo.modes.html#module-leo.modes.swig">leo.modes.swig module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="leo.modes.html#module-leo.modes.tcl">leo.modes.tcl module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="leo.modes.html#module-leo.modes.tex">leo.modes.tex module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="leo.modes.html#module-leo.modes.texinfo">leo.modes.texinfo module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="leo.modes.html#module-leo.modes.text">leo.modes.text module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="leo.modes.html#module-leo.modes.tpl">leo.modes.tpl module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="leo.modes.html#module-leo.modes.tsql">leo.modes.tsql module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="leo.modes.html#module-leo.modes.uscript">leo.modes.uscript module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="leo.modes.html#module-leo.modes.vbscript">leo.modes.vbscript module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="leo.modes.html#module-leo.modes.velocity">leo.modes.velocity module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="leo.modes.html#module-leo.modes.verilog">leo.modes.verilog module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="leo.modes.html#module-leo.modes.vhdl">leo.modes.vhdl module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="leo.modes.html#module-leo.modes.xml">leo.modes.xml module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="leo.modes.html#module-leo.modes.xsl">leo.modes.xsl module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="leo.modes.html#module-leo.modes.yaml">leo.modes.yaml module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="leo.modes.html#module-leo.modes.zpt">leo.modes.zpt module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="leo.modes.html#module-leo.modes">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="leo.plugins.html">leo.plugins package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="leo.plugins.html#subpackages">Subpackages</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="leo.plugins.examples.html">leo.plugins.examples package</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="leo.plugins.examples.html#submodules">Submodules</a></li>
+<li class="toctree-l4"><a class="reference internal" href="leo.plugins.examples.html#leo-plugins-examples-chinese-menu-module">leo.plugins.examples.chinese_menu module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="leo.plugins.examples.html#leo-plugins-examples-french-fm-module">leo.plugins.examples.french_fm module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="leo.plugins.examples.html#leo-plugins-examples-override-classes-module">leo.plugins.examples.override_classes module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="leo.plugins.examples.html#leo-plugins-examples-override-commands-module">leo.plugins.examples.override_commands module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="leo.plugins.examples.html#leo-plugins-examples-print-cp-module">leo.plugins.examples.print_cp module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="leo.plugins.examples.html#leo-plugins-examples-redefine-put-module">leo.plugins.examples.redefine_put module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="leo.plugins.examples.html#module-contents">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="leo.plugins.importers.html">leo.plugins.importers package</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="leo.plugins.importers.html#submodules">Submodules</a></li>
+<li class="toctree-l4"><a class="reference internal" href="leo.plugins.importers.html#module-leo.plugins.importers.basescanner">leo.plugins.importers.basescanner module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="leo.plugins.importers.html#module-leo.plugins.importers.c">leo.plugins.importers.c module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="leo.plugins.importers.html#module-leo.plugins.importers.csharp">leo.plugins.importers.csharp module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="leo.plugins.importers.html#module-leo.plugins.importers.ctext">leo.plugins.importers.ctext module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="leo.plugins.importers.html#module-leo.plugins.importers.dart">leo.plugins.importers.dart module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="leo.plugins.importers.html#module-leo.plugins.importers.elisp">leo.plugins.importers.elisp module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="leo.plugins.importers.html#module-leo.plugins.importers.html">leo.plugins.importers.html module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="leo.plugins.importers.html#module-leo.plugins.importers.ini">leo.plugins.importers.ini module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="leo.plugins.importers.html#module-leo.plugins.importers.java">leo.plugins.importers.java module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="leo.plugins.importers.html#module-leo.plugins.importers.javascript">leo.plugins.importers.javascript module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="leo.plugins.importers.html#module-leo.plugins.importers.leo_rst">leo.plugins.importers.leo_rst module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="leo.plugins.importers.html#module-leo.plugins.importers.markdown">leo.plugins.importers.markdown module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="leo.plugins.importers.html#module-leo.plugins.importers.org">leo.plugins.importers.org module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="leo.plugins.importers.html#module-leo.plugins.importers.otl">leo.plugins.importers.otl module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="leo.plugins.importers.html#module-leo.plugins.importers.pascal">leo.plugins.importers.pascal module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="leo.plugins.importers.html#module-leo.plugins.importers.php">leo.plugins.importers.php module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="leo.plugins.importers.html#module-leo.plugins.importers.python">leo.plugins.importers.python module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="leo.plugins.importers.html#module-leo.plugins.importers.test">leo.plugins.importers.test module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="leo.plugins.importers.html#module-leo.plugins.importers.typescript">leo.plugins.importers.typescript module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="leo.plugins.importers.html#module-leo.plugins.importers.xml">leo.plugins.importers.xml module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="leo.plugins.importers.html#module-leo.plugins.importers">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="leo.plugins.pygeotag.html">leo.plugins.pygeotag package</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="leo.plugins.pygeotag.html#submodules">Submodules</a></li>
+<li class="toctree-l4"><a class="reference internal" href="leo.plugins.pygeotag.html#module-leo.plugins.pygeotag.pygeotag">leo.plugins.pygeotag.pygeotag module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="leo.plugins.pygeotag.html#module-leo.plugins.pygeotag">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="leo.plugins.qmlnb.html">leo.plugins.qmlnb package</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="leo.plugins.qmlnb.html#submodules">Submodules</a></li>
+<li class="toctree-l4"><a class="reference internal" href="leo.plugins.qmlnb.html#leo-plugins-qmlnb-launchqmlnb-module">leo.plugins.qmlnb.launchqmlnb module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="leo.plugins.qmlnb.html#module-contents">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="leo.plugins.writers.html">leo.plugins.writers package</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="leo.plugins.writers.html#submodules">Submodules</a></li>
+<li class="toctree-l4"><a class="reference internal" href="leo.plugins.writers.html#module-leo.plugins.writers.basewriter">leo.plugins.writers.basewriter module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="leo.plugins.writers.html#module-leo.plugins.writers.ctext">leo.plugins.writers.ctext module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="leo.plugins.writers.html#module-leo.plugins.writers.dart">leo.plugins.writers.dart module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="leo.plugins.writers.html#module-leo.plugins.writers.leo_rst">leo.plugins.writers.leo_rst module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="leo.plugins.writers.html#module-leo.plugins.writers.markdown">leo.plugins.writers.markdown module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="leo.plugins.writers.html#module-leo.plugins.writers.org">leo.plugins.writers.org module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="leo.plugins.writers.html#module-leo.plugins.writers.otl">leo.plugins.writers.otl module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="leo.plugins.writers.html#module-leo.plugins.writers.test">leo.plugins.writers.test module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="leo.plugins.writers.html#module-leo.plugins.writers">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="leo.plugins.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="leo.plugins.html#module-leo.plugins.FileActions">leo.plugins.FileActions module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="leo.plugins.html#module-leo.plugins.QNCalendarWidget">leo.plugins.QNCalendarWidget module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="leo.plugins.html#module-leo.plugins.active_path">leo.plugins.active_path module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="leo.plugins.html#module-leo.plugins.add_directives">leo.plugins.add_directives module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="leo.plugins.html#module-leo.plugins.at_folder">leo.plugins.at_folder module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="leo.plugins.html#module-leo.plugins.at_produce">leo.plugins.at_produce module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="leo.plugins.html#module-leo.plugins.at_view">leo.plugins.at_view module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="leo.plugins.html#module-leo.plugins.attrib_edit">leo.plugins.attrib_edit module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="leo.plugins.html#module-leo.plugins.backlink">leo.plugins.backlink module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="leo.plugins.html#settings">&#64;Settings</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="leo.plugins.html#int-backlink-name-levels-0">&#64;int backlink_name_levels = 0</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="leo.plugins.html#module-leo.plugins.baseNativeTree">leo.plugins.baseNativeTree module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="leo.plugins.html#module-leo.plugins.bibtex">leo.plugins.bibtex module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="leo.plugins.html#module-leo.plugins.bigdash">leo.plugins.bigdash module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="leo.plugins.html#module-leo.plugins.bookmarks">leo.plugins.bookmarks module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="leo.plugins.html#general-bookmark-commands">General bookmark commands</a></li>
+<li class="toctree-l3"><a class="reference internal" href="leo.plugins.html#cross-file-bookmark-commands">Cross file bookmark commands</a></li>
+<li class="toctree-l3"><a class="reference internal" href="leo.plugins.html#bookmarks-pane-commands">Bookmarks pane commands</a></li>
+<li class="toctree-l3"><a class="reference internal" href="leo.plugins.html#other-notes">Other notes</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="leo.plugins.html#bookmarks-for-tabbed-body-editors">Bookmarks for tabbed body editors</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="leo.plugins.html#module-leo.plugins.bzr_qcommands">leo.plugins.bzr_qcommands module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="leo.plugins.html#module-leo.plugins.chapter_hoist">leo.plugins.chapter_hoist module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="leo.plugins.html#leo-plugins-codewisecompleter-module">leo.plugins.codewisecompleter module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="leo.plugins.html#module-leo.plugins.colorize_headlines">leo.plugins.colorize_headlines module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="leo.plugins.html#module-leo.plugins.contextmenu">leo.plugins.contextmenu module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="leo.plugins.html#leo-plugins-ctagscompleter-module">leo.plugins.ctagscompleter module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="leo.plugins.html#module-leo.plugins.cursesGui">leo.plugins.cursesGui module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="leo.plugins.html#module-leo.plugins.datenodes">leo.plugins.datenodes module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="leo.plugins.html#module-leo.plugins.debugger_pudb">leo.plugins.debugger_pudb module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="leo.plugins.html#module-leo.plugins.dragdropgoodies">leo.plugins.dragdropgoodies module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="leo.plugins.html#module-leo.plugins.dtest">leo.plugins.dtest module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="leo.plugins.html#module-leo.plugins.dump_globals">leo.plugins.dump_globals module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="leo.plugins.html#module-leo.plugins.empty_leo_file">leo.plugins.empty_leo_file module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="leo.plugins.html#module-leo.plugins.enable_gc">leo.plugins.enable_gc module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="leo.plugins.html#module-leo.plugins.expfolder">leo.plugins.expfolder module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="leo.plugins.html#module-leo.plugins.free_layout">leo.plugins.free_layout module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="leo.plugins.html#free-layout">Free layout</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="leo.plugins.html#module-leo.plugins.ftp">leo.plugins.ftp module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="leo.plugins.html#module-leo.plugins.geotag">leo.plugins.geotag module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="leo.plugins.html#module-leo.plugins.gitarchive">leo.plugins.gitarchive module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="leo.plugins.html#leo-plugins-graphcanvas-module">leo.plugins.graphcanvas module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="leo.plugins.html#leo-plugins-gtkdialogs-module">leo.plugins.gtkDialogs module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="leo.plugins.html#leo-plugins-gtkgui-module">leo.plugins.gtkGui module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="leo.plugins.html#module-leo.plugins.import_cisco_config">leo.plugins.import_cisco_config module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="leo.plugins.html#module-leo.plugins.initinclass">leo.plugins.initinclass module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="leo.plugins.html#module-leo.plugins.interact">leo.plugins.interact module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="leo.plugins.html#module-leo.plugins.jinjarender">leo.plugins.jinjarender module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="leo.plugins.html#module-leo.plugins.leoOPML">leo.plugins.leoOPML module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="leo.plugins.html#module-leo.plugins.leo_interface">leo.plugins.leo_interface module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="leo.plugins.html#module-leo.plugins.leo_pdf">leo.plugins.leo_pdf module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="leo.plugins.html#module-leo.plugins.leo_to_html">leo.plugins.leo_to_html module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="leo.plugins.html#module-leo.plugins.leo_to_rtf">leo.plugins.leo_to_rtf module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="leo.plugins.html#module-leo.plugins.leocursor">leo.plugins.leocursor module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="leo.plugins.html#module-leo.plugins.leofeeds">leo.plugins.leofeeds module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="leo.plugins.html#leo-plugins-leofts-module">leo.plugins.leofts module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="leo.plugins.html#module-leo.plugins.leomail">leo.plugins.leomail module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="leo.plugins.html#module-leo.plugins.leomylyn">leo.plugins.leomylyn module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="leo.plugins.html#module-leo.plugins.leoremote">leo.plugins.leoremote module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="leo.plugins.html#module-leo.plugins.leoscreen">leo.plugins.leoscreen module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="leo.plugins.html#module-leo.plugins.lineNumbers">leo.plugins.lineNumbers module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="leo.plugins.html#leo-plugins-livecode-module">leo.plugins.livecode module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="leo.plugins.html#module-leo.plugins.macros">leo.plugins.macros module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="leo.plugins.html#module-leo.plugins.markup_inline">leo.plugins.markup_inline module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="leo.plugins.html#module-leo.plugins.maximizeNewWindows">leo.plugins.maximizeNewWindows module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="leo.plugins.html#module-leo.plugins.mime">leo.plugins.mime module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="leo.plugins.html#module-leo.plugins.mnplugins">leo.plugins.mnplugins module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="leo.plugins.html#module-leo.plugins.mod_autosave">leo.plugins.mod_autosave module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="leo.plugins.html#module-leo.plugins.mod_framesize">leo.plugins.mod_framesize module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="leo.plugins.html#module-leo.plugins.mod_http">leo.plugins.mod_http module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="leo.plugins.html#module-leo.plugins.mod_leo2ascd">leo.plugins.mod_leo2ascd module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="leo.plugins.html#module-leo.plugins.mod_read_dir_outline">leo.plugins.mod_read_dir_outline module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="leo.plugins.html#module-leo.plugins.mod_scripting">leo.plugins.mod_scripting module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="leo.plugins.html#module-leo.plugins.mod_speedups">leo.plugins.mod_speedups module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="leo.plugins.html#module-leo.plugins.mod_tempfname">leo.plugins.mod_tempfname module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="leo.plugins.html#module-leo.plugins.mod_timestamp">leo.plugins.mod_timestamp module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="leo.plugins.html#module-leo.plugins.multifile">leo.plugins.multifile module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="leo.plugins.html#module-leo.plugins.nav_qt">leo.plugins.nav_qt module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="leo.plugins.html#module-leo.plugins.nested_splitter">leo.plugins.nested_splitter module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="leo.plugins.html#module-leo.plugins.niceNosent">leo.plugins.niceNosent module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="leo.plugins.html#module-leo.plugins.nodeActions">leo.plugins.nodeActions module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="leo.plugins.html#module-leo.plugins.nodediff">leo.plugins.nodediff module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="leo.plugins.html#configuration-settings">Configuration Settings</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="leo.plugins.html#string-node-diff-style">&#64;string node-diff-style</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="leo.plugins.html#commands">Commands</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="leo.plugins.html#diff-marked">diff-marked</a></li>
+<li class="toctree-l4"><a class="reference internal" href="leo.plugins.html#diff-selected">diff-selected</a></li>
+<li class="toctree-l4"><a class="reference internal" href="leo.plugins.html#diff-subtree">diff-subtree</a></li>
+<li class="toctree-l4"><a class="reference internal" href="leo.plugins.html#diff-saved">diff-saved</a></li>
+<li class="toctree-l4"><a class="reference internal" href="leo.plugins.html#diff-vcs">diff-vcs</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="leo.plugins.html#common-usage">Common Usage</a></li>
+<li class="toctree-l3"><a class="reference internal" href="leo.plugins.html#scripting">Scripting</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="leo.plugins.html#module-leo.plugins.nodetags">leo.plugins.nodetags module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="leo.plugins.html#api">API</a></li>
+<li class="toctree-l3"><a class="reference internal" href="leo.plugins.html#ui">UI</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="leo.plugins.html#searching">Searching</a></li>
+<li class="toctree-l4"><a class="reference internal" href="leo.plugins.html#tag-limitations">Tag Limitations</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="leo.plugins.html#module-leo.plugins.nodewatch">leo.plugins.nodewatch module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="leo.plugins.html#nodewatch-nodes">&#64;nodewatch Nodes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="leo.plugins.html#gui-operation">GUI Operation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="leo.plugins.html#important-note">Important Note</a></li>
+<li class="toctree-l3"><a class="reference internal" href="leo.plugins.html#id1">Configuration Settings</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="leo.plugins.html#bool-nodewatch-autoexecute-scripts">&#64;bool nodewatch_autoexecute_scripts</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="leo.plugins.html#id2">Commands</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="leo.plugins.html#nodewatch-refresh">nodewatch-refresh</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="leo.plugins.html#module-leo.plugins.notebook">leo.plugins.notebook module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="leo.plugins.html#module-leo.plugins.open_shell">leo.plugins.open_shell module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="leo.plugins.html#module-leo.plugins.outline_export">leo.plugins.outline_export module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="leo.plugins.html#module-leo.plugins.paste_as_headlines">leo.plugins.paste_as_headlines module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="leo.plugins.html#module-leo.plugins.pluginsTest">leo.plugins.pluginsTest module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="leo.plugins.html#module-leo.plugins.plugins_menu">leo.plugins.plugins_menu module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="leo.plugins.html#module-leo.plugins.pretty_print">leo.plugins.pretty_print module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="leo.plugins.html#module-leo.plugins.printing">leo.plugins.printing module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="leo.plugins.html#id3">Commands</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="leo.plugins.html#print-selected-node">print-selected-node</a></li>
+<li class="toctree-l4"><a class="reference internal" href="leo.plugins.html#print-preview-selected-node">print-preview-selected-node</a></li>
+<li class="toctree-l4"><a class="reference internal" href="leo.plugins.html#print-selected-node-body">print-selected-node-body</a></li>
+<li class="toctree-l4"><a class="reference internal" href="leo.plugins.html#print-preview-selected-node-body">print-preview-selected-node-body</a></li>
+<li class="toctree-l4"><a class="reference internal" href="leo.plugins.html#print-expanded-node">print-expanded-node</a></li>
+<li class="toctree-l4"><a class="reference internal" href="leo.plugins.html#print-preview-expanded-node">print-preview-expanded-node</a></li>
+<li class="toctree-l4"><a class="reference internal" href="leo.plugins.html#print-expanded-node-body">print-expanded-node-body</a></li>
+<li class="toctree-l4"><a class="reference internal" href="leo.plugins.html#print-preview-expanded-node-body">print-preview-expanded-node-body</a></li>
+<li class="toctree-l4"><a class="reference internal" href="leo.plugins.html#print-marked-nodes">print-marked-nodes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="leo.plugins.html#print-preview-marked-nodes">print-preview-marked-nodes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="leo.plugins.html#print-marked-node-bodies">print-marked-node-bodies</a></li>
+<li class="toctree-l4"><a class="reference internal" href="leo.plugins.html#print-preview-marked-node-bodies">print-preview-marked-node-bodies</a></li>
+<li class="toctree-l4"><a class="reference internal" href="leo.plugins.html#print-selected-node-body-html">print-selected-node-body-html</a></li>
+<li class="toctree-l4"><a class="reference internal" href="leo.plugins.html#print-preview-selected-node-body-html">print-preview-selected-node-body-html</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="leo.plugins.html#id4">Settings</a></li>
+<li class="toctree-l3"><a class="reference internal" href="leo.plugins.html#custom-printing">Custom Printing</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="leo.plugins.html#module-leo.plugins.projectwizard">leo.plugins.projectwizard module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="leo.plugins.html#module-leo.plugins.qtGui">leo.plugins.qtGui module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="leo.plugins.html#module-leo.plugins.qt_big_text">leo.plugins.qt_big_text module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="leo.plugins.html#module-leo.plugins.qt_commands">leo.plugins.qt_commands module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="leo.plugins.html#module-leo.plugins.qt_events">leo.plugins.qt_events module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="leo.plugins.html#module-leo.plugins.qt_frame">leo.plugins.qt_frame module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="leo.plugins.html#module-leo.plugins.qt_gui">leo.plugins.qt_gui module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="leo.plugins.html#module-leo.plugins.qt_idle_time">leo.plugins.qt_idle_time module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="leo.plugins.html#module-leo.plugins.qt_main">leo.plugins.qt_main module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="leo.plugins.html#module-leo.plugins.qt_quickheadlines">leo.plugins.qt_quickheadlines module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="leo.plugins.html#module-leo.plugins.qt_quicksearch">leo.plugins.qt_quicksearch module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="leo.plugins.html#module-leo.plugins.qt_text">leo.plugins.qt_text module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="leo.plugins.html#module-leo.plugins.qt_tree">leo.plugins.qt_tree module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="leo.plugins.html#module-leo.plugins.quickMove">leo.plugins.quickMove module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="leo.plugins.html#module-leo.plugins.quicksearch">leo.plugins.quicksearch module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="leo.plugins.html#usage">Usage</a></li>
+<li class="toctree-l3"><a class="reference internal" href="leo.plugins.html#id5">Commands</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="leo.plugins.html#module-leo.plugins.quit_leo">leo.plugins.quit_leo module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="leo.plugins.html#module-leo.plugins.read_only_nodes">leo.plugins.read_only_nodes module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="leo.plugins.html#module-leo.plugins.redirect_to_log">leo.plugins.redirect_to_log module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="leo.plugins.html#module-leo.plugins.richtext">leo.plugins.richtext module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="leo.plugins.html#richtext-py-rich-text-editing">richtext.py - Rich text editing</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="leo.plugins.html#module-leo.plugins.rss">leo.plugins.rss module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="leo.plugins.html#rss-feeds">RSS feeds</a></li>
+<li class="toctree-l3"><a class="reference internal" href="leo.plugins.html#id7">Important Note</a></li>
+<li class="toctree-l3"><a class="reference internal" href="leo.plugins.html#id8">Configuration Settings</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="leo.plugins.html#string-rss-date-format">&#64;string rss-date-format</a></li>
+<li class="toctree-l4"><a class="reference internal" href="leo.plugins.html#bool-rss-sort-newest-first">&#64;bool rss-sort-newest-first</a></li>
+<li class="toctree-l4"><a class="reference internal" href="leo.plugins.html#string-rss-headline-format">&#64;string rss-headline-format</a></li>
+<li class="toctree-l4"><a class="reference internal" href="leo.plugins.html#data-rss-body-format">&#64;data rss-body-format</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="leo.plugins.html#id9">Commands</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="leo.plugins.html#rss-parse-selected-feed">rss-parse-selected-feed</a></li>
+<li class="toctree-l4"><a class="reference internal" href="leo.plugins.html#rss-parse-all-feeds">rss-parse-all-feeds</a></li>
+<li class="toctree-l4"><a class="reference internal" href="leo.plugins.html#rss-delete-selected-feed-stories">rss-delete-selected-feed-stories</a></li>
+<li class="toctree-l4"><a class="reference internal" href="leo.plugins.html#rss-delete-all-feed-stories">rss-delete-all-feed-stories</a></li>
+<li class="toctree-l4"><a class="reference internal" href="leo.plugins.html#rss-clear-selected-feed-history">rss-clear-selected-feed-history</a></li>
+<li class="toctree-l4"><a class="reference internal" href="leo.plugins.html#rss-clear-all-feed-histories">rss-clear-all-feed-histories</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="leo.plugins.html#module-leo.plugins.rst3">leo.plugins.rst3 module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="leo.plugins.html#module-leo.plugins.run_nodes">leo.plugins.run_nodes module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="leo.plugins.html#module-leo.plugins.screen_capture">leo.plugins.screen_capture module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="leo.plugins.html#screen-capture-py">screen_capture.py</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="leo.plugins.html#id10">Commands</a></li>
+<li class="toctree-l4"><a class="reference internal" href="leo.plugins.html#id11">Settings</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="leo.plugins.html#module-leo.plugins.screencast">leo.plugins.screencast module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="leo.plugins.html#overview">Overview</a></li>
+<li class="toctree-l3"><a class="reference internal" href="leo.plugins.html#reference">Reference</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="leo.plugins.html#the-screencast-start-command">The screencast-start command</a></li>
+<li class="toctree-l4"><a class="reference internal" href="leo.plugins.html#screencast-scripts">Screencast scripts</a></li>
+<li class="toctree-l4"><a class="reference internal" href="leo.plugins.html#the-screencastcontroller">The ScreenCastController</a></li>
+<li class="toctree-l4"><a class="reference internal" href="leo.plugins.html#scc-methods">SCC methods</a></li>
+<li class="toctree-l4"><a class="reference internal" href="leo.plugins.html#the-program-counter-m-p">The program counter, m.p</a></li>
+<li class="toctree-l4"><a class="reference internal" href="leo.plugins.html#stylesheets">Stylesheets</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="leo.plugins.html#module-leo.plugins.screenshots">leo.plugins.screenshots module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="leo.plugins.html#module-leo.plugins.script_io_to_body">leo.plugins.script_io_to_body module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="leo.plugins.html#module-leo.plugins.scripts_menu">leo.plugins.scripts_menu module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="leo.plugins.html#module-leo.plugins.setHomeDirectory">leo.plugins.setHomeDirectory module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="leo.plugins.html#module-leo.plugins.sftp">leo.plugins.sftp module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="leo.plugins.html#sftp-nodes">&#64;sftp nodes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="leo.plugins.html#general-usage">General usage</a></li>
+<li class="toctree-l3"><a class="reference internal" href="leo.plugins.html#on-passwords-and-host-keys">On passwords and host keys</a></li>
+<li class="toctree-l3"><a class="reference internal" href="leo.plugins.html#id12">Configuration Settings</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="leo.plugins.html#bool-sftp-cache-credentials-true">&#64;bool sftp-cache-credentials = True</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="leo.plugins.html#id13">Commands</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="leo.plugins.html#sftp-push">sftp-push</a></li>
+<li class="toctree-l4"><a class="reference internal" href="leo.plugins.html#sftp-push-all">sftp-push-all</a></li>
+<li class="toctree-l4"><a class="reference internal" href="leo.plugins.html#sftp-pull">sftp-pull</a></li>
+<li class="toctree-l4"><a class="reference internal" href="leo.plugins.html#sftp-pull-all">sftp-pull-all</a></li>
+<li class="toctree-l4"><a class="reference internal" href="leo.plugins.html#sftp-forget-credentials">sftp-forget-credentials</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="leo.plugins.html#module-leo.plugins.slideshow">leo.plugins.slideshow module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="leo.plugins.html#module-leo.plugins.spydershell">leo.plugins.spydershell module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="leo.plugins.html#module-leo.plugins.startfile">leo.plugins.startfile module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="leo.plugins.html#module-leo.plugins.stickynotes">leo.plugins.stickynotes module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="leo.plugins.html#module-leo.plugins.stickynotes_plus">leo.plugins.stickynotes_plus module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="leo.plugins.html#module-leo.plugins.systray">leo.plugins.systray module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="leo.plugins.html#module-leo.plugins.testRegisterCommand">leo.plugins.testRegisterCommand module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="leo.plugins.html#module-leo.plugins.textnode">leo.plugins.textnode module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="leo.plugins.html#module-leo.plugins.threadutil">leo.plugins.threadutil module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="leo.plugins.html#module-leo.plugins.timestamp">leo.plugins.timestamp module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="leo.plugins.html#module-leo.plugins.todo">leo.plugins.todo module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="leo.plugins.html#the-task-tab">The Task Tab</a></li>
+<li class="toctree-l3"><a class="reference internal" href="leo.plugins.html#icons">Icons</a></li>
+<li class="toctree-l3"><a class="reference internal" href="leo.plugins.html#id14">&#64;Settings</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="leo.plugins.html#module-leo.plugins.tomboy_import">leo.plugins.tomboy_import module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="leo.plugins.html#module-leo.plugins.trace_gc_plugin">leo.plugins.trace_gc_plugin module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="leo.plugins.html#module-leo.plugins.trace_keys">leo.plugins.trace_keys module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="leo.plugins.html#module-leo.plugins.trace_tags">leo.plugins.trace_tags module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="leo.plugins.html#module-leo.plugins.valuespace">leo.plugins.valuespace module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="leo.plugins.html#id15">Commands</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="leo.plugins.html#vs-create-tree">vs-create-tree</a></li>
+<li class="toctree-l4"><a class="reference internal" href="leo.plugins.html#vs-dump">vs-dump</a></li>
+<li class="toctree-l4"><a class="reference internal" href="leo.plugins.html#vs-reset">vs-reset</a></li>
+<li class="toctree-l4"><a class="reference internal" href="leo.plugins.html#vs-update">vs-update</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="leo.plugins.html#pass-1">Pass 1</a></li>
+<li class="toctree-l5"><a class="reference internal" href="leo.plugins.html#pass-2">Pass 2</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="leo.plugins.html#vs-eval">vs-eval</a></li>
+<li class="toctree-l4"><a class="reference internal" href="leo.plugins.html#vs-last">vs-last</a></li>
+<li class="toctree-l4"><a class="reference internal" href="leo.plugins.html#vs-last-pretty">vs-last-pretty</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="leo.plugins.html#evaluating-expressions">Evaluating expressions</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="leo.plugins.html#module-leo.plugins.viewrendered">leo.plugins.viewrendered module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="leo.plugins.html#dependencies">Dependencies</a></li>
+<li class="toctree-l3"><a class="reference internal" href="leo.plugins.html#id22">Commands</a></li>
+<li class="toctree-l3"><a class="reference internal" href="leo.plugins.html#rendering-restructuredtext">Rendering reStructuredText</a></li>
+<li class="toctree-l3"><a class="reference internal" href="leo.plugins.html#rendering-markdown">Rendering markdown</a></li>
+<li class="toctree-l3"><a class="reference internal" href="leo.plugins.html#special-renderings">Special Renderings</a></li>
+<li class="toctree-l3"><a class="reference internal" href="leo.plugins.html#id23">Settings</a></li>
+<li class="toctree-l3"><a class="reference internal" href="leo.plugins.html#acknowledgments">Acknowledgments</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="leo.plugins.html#module-leo.plugins.viewrendered2">leo.plugins.viewrendered2 module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="leo.plugins.html#id24">Dependencies</a></li>
+<li class="toctree-l3"><a class="reference internal" href="leo.plugins.html#id25">Commands</a></li>
+<li class="toctree-l3"><a class="reference internal" href="leo.plugins.html#id26">Rendering reStructuredText</a></li>
+<li class="toctree-l3"><a class="reference internal" href="leo.plugins.html#id27">Rendering markdown</a></li>
+<li class="toctree-l3"><a class="reference internal" href="leo.plugins.html#id28">Special Renderings</a></li>
+<li class="toctree-l3"><a class="reference internal" href="leo.plugins.html#id29">Settings</a></li>
+<li class="toctree-l3"><a class="reference internal" href="leo.plugins.html#id30">Acknowledgments</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="leo.plugins.html#module-leo.plugins.vim">leo.plugins.vim module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="leo.plugins.html#id35">Commands</a></li>
+<li class="toctree-l3"><a class="reference internal" href="leo.plugins.html#installation">Installation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="leo.plugins.html#id36">Settings</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="leo.plugins.html#module-leo.plugins.watchfiles">leo.plugins.watchfiles module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="leo.plugins.html#module-leo.plugins.wikiview">leo.plugins.wikiview module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="leo.plugins.html#id37">Commands</a></li>
+<li class="toctree-l3"><a class="reference internal" href="leo.plugins.html#id38">Settings</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="leo.plugins.html#module-leo.plugins.word_count">leo.plugins.word_count module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="leo.plugins.html#module-leo.plugins.word_export">leo.plugins.word_export module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="leo.plugins.html#module-leo.plugins.xemacs">leo.plugins.xemacs module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="leo.plugins.html#module-leo.plugins.xml_edit">leo.plugins.xml_edit module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="leo.plugins.html#conventions">Conventions</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="leo.plugins.html#module-leo.plugins.xsltWithNodes">leo.plugins.xsltWithNodes module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="leo.plugins.html#module-leo.plugins.zenity_file_dialogs">leo.plugins.zenity_file_dialogs module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="leo.plugins.html#module-leo.plugins">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div class="section" id="module-leo">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-leo" title="Permalink to this headline">¶</a></h2>
+<dl class="function">
+<dt id="leo.run">
+<tt class="descclassname">leo.</tt><tt class="descname">run</tt><big>(</big><em>*args</em>, <em>**keys</em><big>)</big><a class="headerlink" href="#leo.run" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="../contents.html">
+              <img class="logo" src="../_static/Leo4-80-border.jpg" alt="Logo"/>
+            </a></p>
+<h3><a href="../contents.html">Table Of Contents</a></h3>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../index.html">Leo’s Home Page</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../preliminaries.html">Preliminaries</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../getting-started.html">Downloading, Installing &amp; Running Leo</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../cheatsheet.html">Cheat Sheet</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../screencasts.html">Videos about Leo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorial.html">Tutorial</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../usersguide.html">Users Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../leoandotherprograms.html">Leo and Other Programs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../intermediatetopics.html">Advanced Topics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../appendices.html">Appendices</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="">leo package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../FAQ.html">FAQ</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../glossary.html">Glossary</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../what-is-new.html">What&#8217;s New</a></li>
+</ul>
+
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script><!--@+leo-ver=5-thin-->
+<!--@+node:davy.20141209091210.2: * @file sources/templates/flattrSidebar.html-->
+<!--@@language html-->
+<!--@@tabwidth -4-->
+<p>Leo: Leonine Editor with Outlines</p>
+<p>
+Written by <a HREF="ekr.html">Edward K. Ream</a>
+<a class="FlattrButton" style="display:none;" rev="flattr;button:compact;" href="http://leoeditor.com"></a>
+<noscript>
+<a href="http://flattr.com/thing/410073/Leo" target="_blank">
+<img src="http://api.flattr.com/button/flattr-badge-large.png" alt="Flattr this" title="Flattr this" border="0" />
+</a>
+</noscript>
+</p>
+<!--@-leo-->
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="leo.config.html" title="leo.config package"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="modules.html" title="leo"
+             >previous</a> |</li>
+        <li><a href="../contents.html">Leo 5.0 documentation</a> &raquo;</li>
+          <li><a href="modules.html" >leo</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2014, Edward K. Ream.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.2.
+    </div>
+  </body>
+</html>

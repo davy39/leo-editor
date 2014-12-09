@@ -1,0 +1,332 @@
+<!--@+leo-ver=5-thin-->
+<!--@+node:davy.20141209091210.28: * @file sources/templates/layout.html-->
+<!--@+at-->
+<!--
+This Jinja2 template introduce an extrahead block so we can add extra javascript for flattr.
+-->
+<!--@@c-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>leo.plugins.writers package &mdash; Leo 5.0 documentation</title>
+    
+    <link rel="stylesheet" href="../_static/leo.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '5.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  false
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/sidebar.js"></script>
+    <link rel="top" title="Leo 5.0 documentation" href="../index.html" />
+    <link rel="up" title="leo.plugins package" href="leo.plugins.html" />
+    <link rel="next" title="Slides" href="../slides.html" />
+    <link rel="prev" title="leo.plugins.qmlnb package" href="leo.plugins.qmlnb.html" />
+    <script type="text/javascript">
+        (function() {
+            var s = document.createElement('script'), t = document.getElementsByTagName('script')[0];
+            s.type = 'text/javascript';
+            s.async = true;
+            s.src = 'http://api.flattr.com/js/0.6/load.js?mode=auto';
+            t.parentNode.insertBefore(s, t);
+        })();
+    </script>
+     
+
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="../slides.html" title="Slides"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="leo.plugins.qmlnb.html" title="leo.plugins.qmlnb package"
+             accesskey="P">previous</a> |</li>
+        <li><a href="../contents.html">Leo 5.0 documentation</a> &raquo;</li>
+          <li><a href="modules.html" >leo</a> &raquo;</li>
+          <li><a href="leo.html" >leo package</a> &raquo;</li>
+          <li><a href="leo.plugins.html" accesskey="U">leo.plugins package</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="leo-plugins-writers-package">
+<h1>leo.plugins.writers package<a class="headerlink" href="#leo-plugins-writers-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-leo.plugins.writers.basewriter">
+<span id="leo-plugins-writers-basewriter-module"></span><h2>leo.plugins.writers.basewriter module<a class="headerlink" href="#module-leo.plugins.writers.basewriter" title="Permalink to this headline">¶</a></h2>
+<p>A module defining the base class for all writers in leo.plugins.writers.</p>
+<dl class="class">
+<dt id="leo.plugins.writers.basewriter.BaseWriter">
+<em class="property">class </em><tt class="descclassname">leo.plugins.writers.basewriter.</tt><tt class="descname">BaseWriter</tt><big>(</big><em>c</em><big>)</big><a class="headerlink" href="#leo.plugins.writers.basewriter.BaseWriter" title="Permalink to this definition">¶</a></dt>
+<dd><p>The base writer class for all writers in leo.plugins.writers.</p>
+<dl class="method">
+<dt id="leo.plugins.writers.basewriter.BaseWriter.put">
+<tt class="descname">put</tt><big>(</big><em>s</em><big>)</big><a class="headerlink" href="#leo.plugins.writers.basewriter.BaseWriter.put" title="Permalink to this definition">¶</a></dt>
+<dd><p>Write line s using at.os, taking special care of newlines.</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-leo.plugins.writers.ctext">
+<span id="leo-plugins-writers-ctext-module"></span><h2>leo.plugins.writers.ctext module<a class="headerlink" href="#module-leo.plugins.writers.ctext" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="leo.plugins.writers.ctext.CTextWriter">
+<em class="property">class </em><tt class="descclassname">leo.plugins.writers.ctext.</tt><tt class="descname">CTextWriter</tt><big>(</big><em>c</em><big>)</big><a class="headerlink" href="#leo.plugins.writers.ctext.CTextWriter" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#leo.plugins.writers.basewriter.BaseWriter" title="leo.plugins.writers.basewriter.BaseWriter"><tt class="xref py py-class docutils literal"><span class="pre">leo.plugins.writers.basewriter.BaseWriter</span></tt></a></p>
+<dl class="method">
+<dt id="leo.plugins.writers.ctext.CTextWriter.recurse">
+<tt class="descname">recurse</tt><big>(</big><em>nd</em>, <em>level=0</em><big>)</big><a class="headerlink" href="#leo.plugins.writers.ctext.CTextWriter.recurse" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="leo.plugins.writers.ctext.CTextWriter.write">
+<tt class="descname">write</tt><big>(</big><em>root</em><big>)</big><a class="headerlink" href="#leo.plugins.writers.ctext.CTextWriter.write" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-leo.plugins.writers.dart">
+<span id="leo-plugins-writers-dart-module"></span><h2>leo.plugins.writers.dart module<a class="headerlink" href="#module-leo.plugins.writers.dart" title="Permalink to this headline">¶</a></h2>
+<p>The &#64;auto write code for Emacs org-mode (.org) files.</p>
+<dl class="class">
+<dt id="leo.plugins.writers.dart.DartWriter">
+<em class="property">class </em><tt class="descclassname">leo.plugins.writers.dart.</tt><tt class="descname">DartWriter</tt><big>(</big><em>c</em><big>)</big><a class="headerlink" href="#leo.plugins.writers.dart.DartWriter" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#leo.plugins.writers.basewriter.BaseWriter" title="leo.plugins.writers.basewriter.BaseWriter"><tt class="xref py py-class docutils literal"><span class="pre">leo.plugins.writers.basewriter.BaseWriter</span></tt></a></p>
+<p>The writer class for .dart files.</p>
+<dl class="method">
+<dt id="leo.plugins.writers.dart.DartWriter.write">
+<tt class="descname">write</tt><big>(</big><em>root</em><big>)</big><a class="headerlink" href="#leo.plugins.writers.dart.DartWriter.write" title="Permalink to this definition">¶</a></dt>
+<dd><p>Write all the <em>descendants</em> of an .dart node.</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-leo.plugins.writers.leo_rst">
+<span id="leo-plugins-writers-leo-rst-module"></span><h2>leo.plugins.writers.leo_rst module<a class="headerlink" href="#module-leo.plugins.writers.leo_rst" title="Permalink to this headline">¶</a></h2>
+<p>The write code for &#64;auto-rst and other reStructuredText nodes.
+This is very different from rst3&#8217;s write code.</p>
+<p>This module must <strong>not</strong> be named rst, so as not to conflict with docutils.</p>
+<dl class="class">
+<dt id="leo.plugins.writers.leo_rst.RstWriter">
+<em class="property">class </em><tt class="descclassname">leo.plugins.writers.leo_rst.</tt><tt class="descname">RstWriter</tt><big>(</big><em>c</em><big>)</big><a class="headerlink" href="#leo.plugins.writers.leo_rst.RstWriter" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#leo.plugins.writers.basewriter.BaseWriter" title="leo.plugins.writers.basewriter.BaseWriter"><tt class="xref py py-class docutils literal"><span class="pre">leo.plugins.writers.basewriter.BaseWriter</span></tt></a></p>
+<p>The writer class for &#64;auto-rst and other reStructuredText nodes.
+This is <em>very</em> different from rst3 command&#8217;s write code.</p>
+<dl class="method">
+<dt id="leo.plugins.writers.leo_rst.RstWriter.underline_char">
+<tt class="descname">underline_char</tt><big>(</big><em>p</em>, <em>root_level</em><big>)</big><a class="headerlink" href="#leo.plugins.writers.leo_rst.RstWriter.underline_char" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the underlining character for position p.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="leo.plugins.writers.leo_rst.RstWriter.write">
+<tt class="descname">write</tt><big>(</big><em>root</em><big>)</big><a class="headerlink" href="#leo.plugins.writers.leo_rst.RstWriter.write" title="Permalink to this definition">¶</a></dt>
+<dd><p>Write an &#64;auto tree containing imported rST code.</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-leo.plugins.writers.markdown">
+<span id="leo-plugins-writers-markdown-module"></span><h2>leo.plugins.writers.markdown module<a class="headerlink" href="#module-leo.plugins.writers.markdown" title="Permalink to this headline">¶</a></h2>
+<p>The &#64;auto write code for markdown.</p>
+<dl class="class">
+<dt id="leo.plugins.writers.markdown.MarkdownWriter">
+<em class="property">class </em><tt class="descclassname">leo.plugins.writers.markdown.</tt><tt class="descname">MarkdownWriter</tt><big>(</big><em>c</em><big>)</big><a class="headerlink" href="#leo.plugins.writers.markdown.MarkdownWriter" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#leo.plugins.writers.basewriter.BaseWriter" title="leo.plugins.writers.basewriter.BaseWriter"><tt class="xref py py-class docutils literal"><span class="pre">leo.plugins.writers.basewriter.BaseWriter</span></tt></a></p>
+<p>The writer class for markdown files.</p>
+<dl class="method">
+<dt id="leo.plugins.writers.markdown.MarkdownWriter.write">
+<tt class="descname">write</tt><big>(</big><em>root</em><big>)</big><a class="headerlink" href="#leo.plugins.writers.markdown.MarkdownWriter.write" title="Permalink to this definition">¶</a></dt>
+<dd><p>Write all the <em>descendants</em> of an &#64;auto-markdown node.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="leo.plugins.writers.markdown.MarkdownWriter.write_headline">
+<tt class="descname">write_headline</tt><big>(</big><em>p</em><big>)</big><a class="headerlink" href="#leo.plugins.writers.markdown.MarkdownWriter.write_headline" title="Permalink to this definition">¶</a></dt>
+<dd><p>Write or skip the headline depending on the saved kind for this node.</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-leo.plugins.writers.org">
+<span id="leo-plugins-writers-org-module"></span><h2>leo.plugins.writers.org module<a class="headerlink" href="#module-leo.plugins.writers.org" title="Permalink to this headline">¶</a></h2>
+<p>The &#64;auto write code for Emacs org-mode (.org) files.</p>
+<dl class="class">
+<dt id="leo.plugins.writers.org.OrgModeWriter">
+<em class="property">class </em><tt class="descclassname">leo.plugins.writers.org.</tt><tt class="descname">OrgModeWriter</tt><big>(</big><em>c</em><big>)</big><a class="headerlink" href="#leo.plugins.writers.org.OrgModeWriter" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#leo.plugins.writers.basewriter.BaseWriter" title="leo.plugins.writers.basewriter.BaseWriter"><tt class="xref py py-class docutils literal"><span class="pre">leo.plugins.writers.basewriter.BaseWriter</span></tt></a></p>
+<p>The writer class for .org files.</p>
+<dl class="method">
+<dt id="leo.plugins.writers.org.OrgModeWriter.write">
+<tt class="descname">write</tt><big>(</big><em>root</em><big>)</big><a class="headerlink" href="#leo.plugins.writers.org.OrgModeWriter.write" title="Permalink to this definition">¶</a></dt>
+<dd><p>Write all the <em>descendants</em> of an &#64;auto-org-mode node.</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-leo.plugins.writers.otl">
+<span id="leo-plugins-writers-otl-module"></span><h2>leo.plugins.writers.otl module<a class="headerlink" href="#module-leo.plugins.writers.otl" title="Permalink to this headline">¶</a></h2>
+<p>The &#64;auto write code for vimoutline (.otl) files.</p>
+<dl class="class">
+<dt id="leo.plugins.writers.otl.OtlWriter">
+<em class="property">class </em><tt class="descclassname">leo.plugins.writers.otl.</tt><tt class="descname">OtlWriter</tt><big>(</big><em>c</em><big>)</big><a class="headerlink" href="#leo.plugins.writers.otl.OtlWriter" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#leo.plugins.writers.basewriter.BaseWriter" title="leo.plugins.writers.basewriter.BaseWriter"><tt class="xref py py-class docutils literal"><span class="pre">leo.plugins.writers.basewriter.BaseWriter</span></tt></a></p>
+<p>The writer class for .otl files.</p>
+<dl class="method">
+<dt id="leo.plugins.writers.otl.OtlWriter.write">
+<tt class="descname">write</tt><big>(</big><em>root</em><big>)</big><a class="headerlink" href="#leo.plugins.writers.otl.OtlWriter.write" title="Permalink to this definition">¶</a></dt>
+<dd><p>Write all the <em>descendants</em> of an &#64;auto-otl node.</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-leo.plugins.writers.test">
+<span id="leo-plugins-writers-test-module"></span><h2>leo.plugins.writers.test module<a class="headerlink" href="#module-leo.plugins.writers.test" title="Permalink to this headline">¶</a></h2>
+<p>The &#64;auto writer for .xyzzy files and &#64;auto-test nodes.</p>
+<dl class="class">
+<dt id="leo.plugins.writers.test.TestWriter">
+<em class="property">class </em><tt class="descclassname">leo.plugins.writers.test.</tt><tt class="descname">TestWriter</tt><big>(</big><em>c</em><big>)</big><a class="headerlink" href="#leo.plugins.writers.test.TestWriter" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#leo.plugins.writers.basewriter.BaseWriter" title="leo.plugins.writers.basewriter.BaseWriter"><tt class="xref py py-class docutils literal"><span class="pre">leo.plugins.writers.basewriter.BaseWriter</span></tt></a></p>
+<dl class="method">
+<dt id="leo.plugins.writers.test.TestWriter.write">
+<tt class="descname">write</tt><big>(</big><em>root</em><big>)</big><a class="headerlink" href="#leo.plugins.writers.test.TestWriter.write" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-leo.plugins.writers">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-leo.plugins.writers" title="Permalink to this headline">¶</a></h2>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="../contents.html">
+              <img class="logo" src="../_static/Leo4-80-border.jpg" alt="Logo"/>
+            </a></p>
+<h3><a href="../contents.html">Table Of Contents</a></h3>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../index.html">Leo’s Home Page</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../preliminaries.html">Preliminaries</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../getting-started.html">Downloading, Installing &amp; Running Leo</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../cheatsheet.html">Cheat Sheet</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../screencasts.html">Videos about Leo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorial.html">Tutorial</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../usersguide.html">Users Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../leoandotherprograms.html">Leo and Other Programs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../intermediatetopics.html">Advanced Topics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../appendices.html">Appendices</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="leo.html">leo package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../FAQ.html">FAQ</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../glossary.html">Glossary</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../what-is-new.html">What&#8217;s New</a></li>
+</ul>
+
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script><!--@+leo-ver=5-thin-->
+<!--@+node:davy.20141209091210.2: * @file sources/templates/flattrSidebar.html-->
+<!--@@language html-->
+<!--@@tabwidth -4-->
+<p>Leo: Leonine Editor with Outlines</p>
+<p>
+Written by <a HREF="ekr.html">Edward K. Ream</a>
+<a class="FlattrButton" style="display:none;" rev="flattr;button:compact;" href="http://leoeditor.com"></a>
+<noscript>
+<a href="http://flattr.com/thing/410073/Leo" target="_blank">
+<img src="http://api.flattr.com/button/flattr-badge-large.png" alt="Flattr this" title="Flattr this" border="0" />
+</a>
+</noscript>
+</p>
+<!--@-leo-->
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="../slides.html" title="Slides"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="leo.plugins.qmlnb.html" title="leo.plugins.qmlnb package"
+             >previous</a> |</li>
+        <li><a href="../contents.html">Leo 5.0 documentation</a> &raquo;</li>
+          <li><a href="modules.html" >leo</a> &raquo;</li>
+          <li><a href="leo.html" >leo package</a> &raquo;</li>
+          <li><a href="leo.plugins.html" >leo.plugins package</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2014, Edward K. Ream.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.2.
+    </div>
+  </body>
+</html>

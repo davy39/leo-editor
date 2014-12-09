@@ -54,6 +54,9 @@ This Jinja2 template introduce an extrahead block so we can add extra javascript
           <a href="genindex.html" title="General Index"
              accesskey="I">index</a></li>
         <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
           <a href="apidoc/index.html" title="API Documentation"
              accesskey="N">next</a> |</li>
         <li class="right" >
@@ -69,43 +72,375 @@ This Jinja2 template introduce an extrahead block so we can add extra javascript
           <div class="body">
             
   <div class="section" id="what-s-new-in-leo">
-<h1><a class="toc-backref" href="#id30">What&#8217;s New in Leo</a><a class="headerlink" href="#what-s-new-in-leo" title="Permalink to this headline">¶</a></h1>
+<h1><a class="toc-backref" href="#id34">What&#8217;s New in Leo</a><a class="headerlink" href="#what-s-new-in-leo" title="Permalink to this headline">¶</a></h1>
 <div class="contents topic" id="contents">
 <p class="topic-title first">Contents</p>
 <ul class="simple">
-<li><a class="reference internal" href="#what-s-new-in-leo" id="id30">What&#8217;s New in Leo</a><ul>
-<li><a class="reference internal" href="#leo-4-10" id="id31">Leo 4.10</a><ul>
-<li><a class="reference internal" href="#new-features-commands" id="id32">New features &amp; commands</a></li>
-<li><a class="reference internal" href="#plugins" id="id33">Plugins</a></li>
-<li><a class="reference internal" href="#scripts" id="id34">Scripts</a></li>
-<li><a class="reference internal" href="#settings" id="id35">Settings</a></li>
-<li><a class="reference internal" href="#bugs-fixed" id="id36">Bugs fixed</a></li>
+<li><a class="reference internal" href="#what-s-new-in-leo" id="id34">What&#8217;s New in Leo</a><ul>
+<li><a class="reference internal" href="#what-s-new-in-leo-5-0" id="id35">What&#8217;s new in Leo 5.0</a><ul>
+<li><a class="reference internal" href="#code" id="id36">Code</a></li>
+<li><a class="reference internal" href="#new-commands" id="id37">New commands</a></li>
+<li><a class="reference internal" href="#new-improved-features" id="id38">New &amp; improved features</a></li>
+<li><a class="reference internal" href="#plugins-leo-external" id="id39">Plugins &amp; leo/external</a></li>
+<li><a class="reference internal" href="#settings-options" id="id40">Settings &amp; options</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#previous-versions" id="id37">Previous versions</a><ul>
-<li><a class="reference internal" href="#leo-4-9" id="id38">Leo 4.9</a></li>
-<li><a class="reference internal" href="#leo-4-8" id="id39">Leo 4.8</a></li>
-<li><a class="reference internal" href="#leo-4-7" id="id40">Leo 4.7</a></li>
-<li><a class="reference internal" href="#leo-4-6" id="id41">Leo 4.6</a></li>
-<li><a class="reference internal" href="#leo-4-5" id="id42">Leo 4.5</a></li>
-<li><a class="reference internal" href="#leo-4-4-8" id="id43">Leo 4.4.8</a></li>
-<li><a class="reference internal" href="#leo-4-4-6" id="id44">Leo 4.4.6</a></li>
-<li><a class="reference internal" href="#leo-4-4-5" id="id45">Leo 4.4.5</a></li>
-<li><a class="reference internal" href="#leo-4-4-4" id="id46">Leo 4.4.4</a></li>
-<li><a class="reference internal" href="#leo-4-4-3" id="id47">Leo 4.4.3</a></li>
-<li><a class="reference internal" href="#leo-4-4-2" id="id48">Leo 4.4.2</a></li>
-<li><a class="reference internal" href="#leo-4-4-1" id="id49">Leo 4.4.1</a></li>
-<li><a class="reference internal" href="#leo-4-4" id="id50">Leo 4.4</a></li>
+<li><a class="reference internal" href="#previous-versions" id="id41">Previous versions</a><ul>
+<li><a class="reference internal" href="#leo-4-11" id="id42">Leo 4.11</a></li>
+<li><a class="reference internal" href="#leo-4-10" id="id43">Leo 4.10</a></li>
+<li><a class="reference internal" href="#leo-4-9" id="id44">Leo 4.9</a></li>
+<li><a class="reference internal" href="#leo-4-8" id="id45">Leo 4.8</a></li>
+<li><a class="reference internal" href="#leo-4-7" id="id46">Leo 4.7</a></li>
+<li><a class="reference internal" href="#leo-4-6" id="id47">Leo 4.6</a></li>
+<li><a class="reference internal" href="#leo-4-5" id="id48">Leo 4.5</a></li>
+<li><a class="reference internal" href="#leo-4-4-8" id="id49">Leo 4.4.8</a></li>
+<li><a class="reference internal" href="#leo-4-4-6" id="id50">Leo 4.4.6</a></li>
+<li><a class="reference internal" href="#leo-4-4-5" id="id51">Leo 4.4.5</a></li>
+<li><a class="reference internal" href="#leo-4-4-4" id="id52">Leo 4.4.4</a></li>
+<li><a class="reference internal" href="#leo-4-4-3" id="id53">Leo 4.4.3</a></li>
+<li><a class="reference internal" href="#leo-4-4-2" id="id54">Leo 4.4.2</a></li>
+<li><a class="reference internal" href="#leo-4-4-1" id="id55">Leo 4.4.1</a></li>
+<li><a class="reference internal" href="#leo-4-4" id="id56">Leo 4.4</a></li>
 </ul>
 </li>
 </ul>
 </li>
 </ul>
 </div>
+<div class="section" id="what-s-new-in-leo-5-0">
+<h2><a class="toc-backref" href="#id35">What&#8217;s new in Leo 5.0</a><a class="headerlink" href="#what-s-new-in-leo-5-0" title="Permalink to this headline">¶</a></h2>
+<p>Summary:</p>
+<ul>
+<li><dl class="first docutils">
+<dt>Better compatibility with vim, Emacs, pylint and PyQt:</dt>
+<dd><ul class="first last simple">
+<li>Optional native emulation of vim commands.</li>
+<li>Full support for Emacs org-mode outlines.</li>
+<li>Better support for pylint.</li>
+<li>Support for both PyQt4 and PyQt5.</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>Better handling of nodes containing large text:</dt>
+<dd><ul class="first last simple">
+<li>Idle time syntax coloring eliminates delay.</li>
+<li>Optional delayed loading of large text.</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>Power features:</dt>
+<dd><ul class="first last simple">
+<li>File name completion.</li>
+<li>Cloned nodes expand and contract independently.</li>
+<li>&#64;data nodes can be composed from descendant nodes.</li>
+<li>No need to change Leo&#8217;s main style sheet:
+it can be customized with &#64;color and &#64;font settings.</li>
+<li>&#64;persistence nodes save data in &#64;auto trees.</li>
+<li>A pluggable architecture for &#64;auto nodes.</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><p class="first">Important new plugins for tagging, display and node evaluation.</p>
+</li>
+<li><dl class="first docutils">
+<dt>For beginners:</dt>
+<dd><ul class="first last simple">
+<li>Leo&#8217;s default workbook files contains Leo&#8217;s quickstart guide.</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><p class="first">Hundreds of new/improved features and bug fixes.</p>
+</li>
+</ul>
+<div class="section" id="code">
+<h3><a class="toc-backref" href="#id36">Code</a><a class="headerlink" href="#code" title="Permalink to this headline">¶</a></h3>
+<ul>
+<li><p class="first">Regularized .wrapper and .widget ivars.</p>
+</li>
+<li><p class="first">Added the IdleTime class.</p>
+</li>
+<li><p class="first">Added p.nosentinels</p>
+</li>
+<li><p class="first">Converted all class names to pep8 styleCapitalized, no underscores.</p>
+</li>
+<li><p class="first">Removed g.choose from Leo&#8217;s core &amp; plugins.</p>
+</li>
+<li><p class="first">Improved handling of gnx&#8217;s.</p>
+</li>
+<li><p class="first">Improved p.isAncestorOf and c.positionExists</p>
+</li>
+<li><p class="first">Improved speed of selection logic.</p>
+</li>
+<li><p class="first">Rewrote &amp; simplified k.getArg.</p>
+</li>
+<li><p class="first">Simplified gnx scan logic</p>
+</li>
+<li><p class="first">Split qtGui.py into separate files.</p>
+</li>
+<li><p class="first">Generalized importers.</p>
+</li>
+<li><p class="first">The &#64;auto write code now uses writer plugins.</p>
+</li>
+<li><p class="first">Leo imports importers &amp; writers from home/.leo.</p>
+</li>
+<li><p class="first">Leo now uses the following namespace in .leo files:</p>
+<div class="highlight-python"><div class="highlight"><pre>&lt;leo_file xmlns:leo=&quot;http://leoeditor.com/namespaces/leo-python-editor/1.1&quot; &gt;
+</pre></div>
+</div>
+</li>
+<li><p class="first">c.executeScript adds &#8216;.&#8217; to sys.path.</p>
+</li>
+</ul>
+</div>
+<div class="section" id="new-commands">
+<h3><a class="toc-backref" href="#id37">New commands</a><a class="headerlink" href="#new-commands" title="Permalink to this headline">¶</a></h3>
+<ul>
+<li><p class="first">clone-find-parents</p>
+</li>
+<li><p class="first">clone-to-last-node</p>
+</li>
+<li><p class="first">flatten-outline-to-node</p>
+</li>
+<li><p class="first">focus-to-find</p>
+</li>
+<li><p class="first">focus-to-spell</p>
+</li>
+<li><p class="first">help-for-drag-and-drop</p>
+</li>
+<li><p class="first">insert-file-name</p>
+</li>
+<li><p class="first">pylint command</p>
+</li>
+<li><p class="first">style-reload</p>
+</li>
+<li><p class="first">spell as you type commands:</p>
+<div class="highlight-python"><div class="highlight"><pre>spell-as-you-type-toggle
+spell-as-you-type-next
+spell-as-you-type-undo
+</pre></div>
+</div>
+</li>
+<li><p class="first">idle-time commands:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">disable</span><span class="o">-</span><span class="n">idle</span><span class="o">-</span><span class="n">time</span><span class="o">-</span><span class="n">events</span>
+<span class="n">disable</span><span class="o">-</span><span class="n">idle</span><span class="o">-</span><span class="n">time</span><span class="o">-</span><span class="n">tracing</span>
+<span class="n">enable</span><span class="o">-</span><span class="n">idle</span><span class="o">-</span><span class="n">time</span><span class="o">-</span><span class="n">events</span>
+<span class="n">enable</span><span class="o">-</span><span class="n">idle</span><span class="o">-</span><span class="n">time</span><span class="o">-</span><span class="n">tracing</span>
+<span class="n">toggle</span><span class="o">-</span><span class="n">idle</span><span class="o">-</span><span class="n">time</span><span class="o">-</span><span class="n">events</span>
+<span class="n">toggle</span><span class="o">-</span><span class="n">idle</span><span class="o">-</span><span class="n">time</span><span class="o">-</span><span class="n">tracing</span>
+</pre></div>
+</div>
+</li>
+</ul>
+</div>
+<div class="section" id="new-improved-features">
+<h3><a class="toc-backref" href="#id38">New &amp; improved features</a><a class="headerlink" href="#new-improved-features" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>Improved find/replace-all commands.</li>
+<li>The beautify command now optionally uses PythonTidy.</li>
+<li>check outline now tests that all gnx&#8217;s exist and are unique.</li>
+<li>Added Yes To All and No To All buttons to dialogs.</li>
+<li>Added warning buttons when selecting large text.</li>
+<li>Added some support for scintilla.</li>
+<li>Added support for delegate languages.</li>
+<li>Added support for the dart language.</li>
+<li>The clean-all-lines command now strips trailing whitespace.</li>
+</ul>
+</div>
+<div class="section" id="plugins-leo-external">
+<h3><a class="toc-backref" href="#id39">Plugins &amp; leo/external</a><a class="headerlink" href="#plugins-leo-external" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>Added livecode.py plugin.</li>
+<li>Added nodetags.py plugin.</li>
+<li>Added viewrendered2.py plugin.</li>
+<li>Added wikiview.py plugin.</li>
+<li>Most plugins now work with PyQt5.</li>
+<li>Added leo/external/leoftsindex.py.</li>
+<li>Rewrote at_produce.py plugin.</li>
+</ul>
+</div>
+<div class="section" id="settings-options">
+<h3><a class="toc-backref" href="#id40">Settings &amp; options</a><a class="headerlink" href="#settings-options" title="Permalink to this headline">¶</a></h3>
+<ul>
+<li><p class="first">Added &#8211;no-persist command-line option.</p>
+</li>
+<li><p class="first">Added &#8211;trace-plugins command-line option.</p>
+</li>
+<li><p class="first">Added settings that control PythonTidy-based beautify command:</p>
+<div class="highlight-python"><div class="highlight"><pre>@bool tidy_add_blank_lines_around_comments =True
+@bool tidy_double_quoted_strings = False
+@bool tidy_keep_blank_lines = True
+@bool tidy_left_adjust_docstrings = False
+@int  tidy_lines_before_split_lit = 2
+@int  tidy_seps_before_split_line = 8
+</pre></div>
+</div>
+</li>
+<li><p class="first">Added &#64;bool auto-scroll-find-tab</p>
+</li>
+<li><p class="first">Added support for html handlebar syntax coloring.</p>
+</li>
+<li><p class="first">Leo&#8217;s main style sheet is fully parameterized.</p>
+</li>
+<li><p class="first">The style-reload command reloads visual settings.</p>
+</li>
+<li><p class="first">Leo stylesheets now support all color names in leoColor.py.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="section" id="previous-versions">
+<h2><a class="toc-backref" href="#id41">Previous versions</a><a class="headerlink" href="#previous-versions" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="leo-4-11">
+<h3><a class="toc-backref" href="#id42">Leo 4.11</a><a class="headerlink" href="#leo-4-11" title="Permalink to this headline">¶</a></h3>
+<p>Summary:</p>
+<ul class="simple">
+<li>Leo&#8217;s tutorials have been rewritten and simplified.</li>
+<li>Greatly improved abbreviations, including templates.</li>
+<li>Clones are now valid anywhere in &#64;file nodes.</li>
+<li>Leo now warns if a .leo file is open elsewhere.</li>
+<li>Leo&#8217;s IPython bridge now works with IPython 1.x.</li>
+<li>Added support for &#64;testsetup and &#64;testclass.</li>
+<li>Added support for sessions.</li>
+<li>Added colorizing themes.</li>
+<li>A colored border highlights the pane with focus.</li>
+<li>Added support for the clojure, markdown and TypeScript languages.</li>
+<li>Added importers for .ipynb, .otl and vimoutliner files.</li>
+<li>Many new and improved commands, plugins and scripts.</li>
+<li>Dozens of bug fixes and code-level improvements.</li>
+</ul>
+<div class="section" id="commands">
+<h4>Commands<a class="headerlink" href="#commands" title="Permalink to this headline">¶</a></h4>
+<p>New commands:</p>
+<ul class="simple">
+<li>go-anywhere (quicksearch plugin).</li>
+<li>help-for-abbreviations</li>
+<li>help-for-dynamic-abbreviations</li>
+<li>help-for-find-commands</li>
+<li>help-for-regular-expressions</li>
+<li>insert-node-before</li>
+<li>normalize-whitespace</li>
+<li>parse-body</li>
+<li>print-buttons</li>
+<li>vr-expand &amp; vr-contract</li>
+<li>zoom-in/out commands</li>
+</ul>
+<p>Improved commands:</p>
+<ul class="simple">
+<li>All viewrendered commands now start with vr.</li>
+<li>Alt-Home &amp; Alt-End collapse all possible nodes.</li>
+<li>Ensure selected &#64;test node is run.</li>
+<li>Fixed dabbrev commands.</li>
+<li>Help commands now use &lt;pre&gt; formatting if docutils is not available</li>
+<li>Improved incremental search commands</li>
+<li>Refresh from disk menu command now refreshes all selected nodes</li>
+<li>Show all commands after &lt;alt-x&gt;&lt;tab&gt;</li>
+<li>help-for-command executes helpFor commands</li>
+<li>help-for-python now uses vr window</li>
+<li>leoscreen-jump-to-error command</li>
+</ul>
+</div>
+<div class="section" id="features">
+<h4>Features<a class="headerlink" href="#features" title="Permalink to this headline">¶</a></h4>
+<p>New features:</p>
+<ul class="simple">
+<li>Added importers for .otl, .ipnyb, TypeScript and vimoutliner.</li>
+<li>Added support for &#64;testsetup and &#64;testclass.</li>
+<li>Added syntax coloring for clojure language.</li>
+<li>Added yes-to-all button when prompting for dangerous writes.</li>
+<li>Allow periods before section names in headlines.</li>
+<li>Border color changes depending on input state.</li>
+<li>Clones are now valid anywhere in &#64;file nodes.</li>
+<li>Leo issues a warning if the same .leo file is open in another Leo instance.</li>
+</ul>
+<p>Improved features:</p>
+<ul class="simple">
+<li>Leo&#8217;s IPython bridge now works with IPython 1.x.</li>
+<li>&#64;wrap now suppresses horizontal scrolling.</li>
+<li>Added docstrings for all commands.</li>
+<li>Added help text to the find panel.</li>
+<li>Added sublime Text 2, a dark colorizing theme.</li>
+<li>All &#64;button nodes now show call tips.</li>
+<li>Major additions to abbreviations, including templates.</li>
+</ul>
+</div>
+<div class="section" id="plugins-contributions">
+<h4>Plugins &amp; Contributions<a class="headerlink" href="#plugins-contributions" title="Permalink to this headline">¶</a></h4>
+<p>New plugins:</p>
+<ul class="simple">
+<li>leomylyn.py</li>
+<li>markup_inline.py</li>
+<li>printing.py</li>
+<li>richtext.py</li>
+<li>rss.py</li>
+<li>screen_capture.py</li>
+<li>screencast.py</li>
+<li>timestamp.py</li>
+</ul>
+<p>Improved plugins:</p>
+<ul class="simple">
+<li>bookmarks.py</li>
+<li>ipython.py</li>
+<li>valuespace.py</li>
+<li>viewrendered.py</li>
+</ul>
+<p>Recent additions to the <a class="reference external" href="https://code.launchpad.net/~leo-editor-team/leo-editor/contrib">contrib branch</a>:</p>
+<ul class="simple">
+<li>Dumping leo docs to excel.</li>
+<li>Full text searches.</li>
+<li>LeoReader: a prototype of Leo as web app.</li>
+<li>QML notebook.</li>
+<li>Templates with macro expansions.</li>
+</ul>
+</div>
+<div class="section" id="scripts">
+<h4>Scripts<a class="headerlink" href="#scripts" title="Permalink to this headline">¶</a></h4>
+<p>The following scripts have been added to scripts.leo:</p>
+<p>By Terry Brown:</p>
+<div class="highlight-python"><div class="highlight"><pre>Add @script node
+Cross-outline node editing
+Export full contents
+Full tree view (See the discussion in the child)
+Indexing files for full text search
+Persistent state with json as a leo abbreviation
+Tool for diffing Leo files
+</pre></div>
+</div>
+<p>By Edward K. Ream:</p>
+<div class="highlight-python"><div class="highlight"><pre>Cleanup imported nodes
+Create global data structures from in modes/*.py files
+Get all comments from modes (slow)
+Import org mode
+jinja2 templating
+Recursive import script (with cleanups)
+</pre></div>
+</div>
+<p>By Brian Theado:</p>
+<div class="highlight-python"><div class="highlight"><pre>Display function call hierarchy in Leo
+</pre></div>
+</div>
+</div>
+<div class="section" id="id1">
+<h4>Settings &amp; options<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li>Added &#64;color minibuffer-foreground-color setting.</li>
+<li>Added &#64;color log_warning_color setting.</li>
+<li>Fully supported <cite>:</cite>: convention in &#64;mode nodes.</li>
+<li>Added &#8211;no-plugins command-line option.</li>
+<li>Bound Alt-Ctrl-M for macro-call-last.</li>
+<li>Added &#64;bool enable-tree-dragging setting.</li>
+</ul>
+</div>
+</div>
 <div class="section" id="leo-4-10">
-<h2><a class="toc-backref" href="#id31">Leo 4.10</a><a class="headerlink" href="#leo-4-10" title="Permalink to this headline">¶</a></h2>
+<h3><a class="toc-backref" href="#id43">Leo 4.10</a><a class="headerlink" href="#leo-4-10" title="Permalink to this headline">¶</a></h3>
 <div class="section" id="new-features-commands">
-<h3><a class="toc-backref" href="#id32">New features &amp; commands</a><a class="headerlink" href="#new-features-commands" title="Permalink to this headline">¶</a></h3>
+<h4>New features &amp; commands<a class="headerlink" href="#new-features-commands" title="Permalink to this headline">¶</a></h4>
 <ul>
 <li><p class="first">Weightless unit testing.</p>
 </li>
@@ -181,7 +516,7 @@ For full details, see <a class="reference external" href="http://leoeditor.com/l
 </ul>
 <p>For details, see the release notes.</p>
 <div class="section" id="weightless-unit-testing">
-<h4>Weightless unit testing<a class="headerlink" href="#weightless-unit-testing" title="Permalink to this headline">¶</a></h4>
+<h5>Weightless unit testing<a class="headerlink" href="#weightless-unit-testing" title="Permalink to this headline">¶</a></h5>
 <p>Small improvements the unit testing framework created big results. They
 completely eliminate the overhead in running unit tests:</p>
 <blockquote>
@@ -229,7 +564,7 @@ the tree are considered to be marked.</p>
 </div>
 </div>
 <div class="section" id="plugins">
-<h3><a class="toc-backref" href="#id33">Plugins</a><a class="headerlink" href="#plugins" title="Permalink to this headline">¶</a></h3>
+<h4>Plugins<a class="headerlink" href="#plugins" title="Permalink to this headline">¶</a></h4>
 <ul class="simple">
 <li>Improved the <a class="reference external" href="http://groups.google.com/group/leo-editor/browse_thread/thread/e0ad60ae319359df/e932052a1ef6e9f5">quicksearch plugin</a>.</li>
 <li>A new <a class="reference external" href="http://groups.google.com/group/leo-editor/browse_thread/thread/f7eaf4dd4e84a535">bigdash plugin</a>.</li>
@@ -238,8 +573,8 @@ the tree are considered to be marked.</p>
 <li>Supported auto-hide in viewrendered plugin.</li>
 </ul>
 </div>
-<div class="section" id="scripts">
-<h3><a class="toc-backref" href="#id34">Scripts</a><a class="headerlink" href="#scripts" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id2">
+<h4>Scripts<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h4>
 <ul class="simple">
 <li>Improved the create &#64;auto nodes script.</li>
 <li>Added import-org-mode script.</li>
@@ -254,7 +589,7 @@ the tree are considered to be marked.</p>
 <p>For full details, see the release notes.</p>
 </div>
 <div class="section" id="settings">
-<h3><a class="toc-backref" href="#id35">Settings</a><a class="headerlink" href="#settings" title="Permalink to this headline">¶</a></h3>
+<h4>Settings<a class="headerlink" href="#settings" title="Permalink to this headline">¶</a></h4>
 <ul>
 <li><p class="first">New settings:</p>
 <blockquote>
@@ -302,7 +637,7 @@ the entire headline row to be shown when selected.</li>
 </ul>
 </div>
 <div class="section" id="bugs-fixed">
-<h3><a class="toc-backref" href="#id36">Bugs fixed</a><a class="headerlink" href="#bugs-fixed" title="Permalink to this headline">¶</a></h3>
+<h4>Bugs fixed<a class="headerlink" href="#bugs-fixed" title="Permalink to this headline">¶</a></h4>
 <ul>
 <li><p class="first">Fixed several bugs related to selection following hoists &amp; chapters:</p>
 <blockquote>
@@ -346,12 +681,10 @@ gopher,mailto,news,nntp,prospero,telnet,wais.</li>
 </ul>
 </div>
 </div>
-<div class="section" id="previous-versions">
-<h2><a class="toc-backref" href="#id37">Previous versions</a><a class="headerlink" href="#previous-versions" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="leo-4-9">
-<h3><a class="toc-backref" href="#id38">Leo 4.9</a><a class="headerlink" href="#leo-4-9" title="Permalink to this headline">¶</a></h3>
-<div class="section" id="id1">
-<h4>Bugs fixed<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h4>
+<h3><a class="toc-backref" href="#id44">Leo 4.9</a><a class="headerlink" href="#leo-4-9" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id3">
+<h4>Bugs fixed<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h4>
 <ul class="simple">
 <li>Fixed an important bug involving orphan nodes. Leo now never saves an external
 file containing orphan nodes. This ensures that all the information in the
@@ -506,8 +839,8 @@ probably is close to optimal in most situations.</p>
 <h5>Greatly improved the viewrendered plugin<a class="headerlink" href="#greatly-improved-the-viewrendered-plugin" title="Permalink to this headline">¶</a></h5>
 <p>The viewrendered plugin creates a window for <em>live</em> rendering of images, movies,
 sounds, rst, html, etc.</p>
-<div class="section" id="commands">
-<h6>Commands<a class="headerlink" href="#commands" title="Permalink to this headline">¶</a></h6>
+<div class="section" id="id4">
+<h6>Commands<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h6>
 <p>viewrendered.py creates the following (<tt class="docutils literal"><span class="pre">Alt-X</span></tt>) commands:</p>
 <dl class="docutils">
 <dt><tt class="docutils literal"><span class="pre">viewrendered</span> <span class="pre">(abbreviated</span> <span class="pre">vr)</span></tt></dt>
@@ -601,8 +934,8 @@ the contents of body pane is taken to be an svg image.</p>
 </li>
 </ul>
 </div>
-<div class="section" id="id2">
-<h6>Settings<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h6>
+<div class="section" id="id5">
+<h6>Settings<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h6>
 <ul class="simple">
 <li><tt class="docutils literal"><span class="pre">&#64;color</span> <span class="pre">rendering-pane-background-color</span> <span class="pre">=</span> <span class="pre">white</span></tt>
 The background color the rendering pane when rendering text.</li>
@@ -726,8 +1059,8 @@ url&#8217;s, notes, even .. graphics:: directives for the viewrendered plugin.</
 feedback.</li>
 </ul>
 </div>
-<div class="section" id="new-commands">
-<h5>New commands<a class="headerlink" href="#new-commands" title="Permalink to this headline">¶</a></h5>
+<div class="section" id="id6">
+<h5>New commands<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h5>
 <ul>
 <li><p class="first">Added the replace-current-character command. It replaces the character to the
 left of the cursor, or replaces the selection range if there is one.</p>
@@ -968,7 +1301,7 @@ instead of crashing if idlelib does not exist.</li>
 </div>
 </div>
 <div class="section" id="leo-4-8">
-<h3><a class="toc-backref" href="#id39">Leo 4.8</a><a class="headerlink" href="#leo-4-8" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id45">Leo 4.8</a><a class="headerlink" href="#leo-4-8" title="Permalink to this headline">¶</a></h3>
 <div class="section" id="new-sentinels">
 <h4>New sentinels<a class="headerlink" href="#new-sentinels" title="Permalink to this headline">¶</a></h4>
 <p>Leo now writes &#64;file files with the <a class="reference external" href="http://groups.google.com/group/leo-editor/browse_thread/thread/8b659c96720afd53/628a09779ca9e8c6">simplest possible</a> sentinel lines.</p>
@@ -1169,7 +1502,7 @@ The default (legacy mode) is False.</p>
 </div>
 </div>
 <div class="section" id="leo-4-7">
-<h3><a class="toc-backref" href="#id40">Leo 4.7</a><a class="headerlink" href="#leo-4-7" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id46">Leo 4.7</a><a class="headerlink" href="#leo-4-7" title="Permalink to this headline">¶</a></h3>
 <div class="section" id="the-one-node-world">
 <h4>The one-node world<a class="headerlink" href="#the-one-node-world" title="Permalink to this headline">¶</a></h4>
 <p>Leo 4.7 accomplishes something I long thought to be impossible: the unification
@@ -1219,8 +1552,8 @@ This prevents Leo from over-writing user-generated .bak files.</p>
 to print it&#8217;s version and exit.</li>
 </ul>
 </div>
-<div class="section" id="id3">
-<h4>New commands<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h4>
+<div class="section" id="id7">
+<h4>New commands<a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h4>
 <ul class="simple">
 <li>The clear-cache and clear-all-caches commands.</li>
 </ul>
@@ -1246,7 +1579,7 @@ The latter opens vim whenever a new node is selected in Leo.</p>
 </div>
 </div>
 <div class="section" id="leo-4-6">
-<h3><a class="toc-backref" href="#id41">Leo 4.6</a><a class="headerlink" href="#leo-4-6" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id47">Leo 4.6</a><a class="headerlink" href="#leo-4-6" title="Permalink to this headline">¶</a></h3>
 <div class="section" id="improved-unit-testing">
 <h4>Improved unit testing<a class="headerlink" href="#improved-unit-testing" title="Permalink to this headline">¶</a></h4>
 <ul class="simple">
@@ -1264,8 +1597,8 @@ This fixes sometimes-misleading error messages.</li>
 <li>leoPy.leo contains a &#8216;run-all-core-tests&#8217; button.</li>
 </ul>
 </div>
-<div class="section" id="id4">
-<h4>Improved file handling<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h4>
+<div class="section" id="id8">
+<h4>Improved file handling<a class="headerlink" href="#id8" title="Permalink to this headline">¶</a></h4>
 <ul>
 <li><p class="first">Leo opens a default .leo file if no other is specified, using the &#64;string
 default_leo_file setting. The default for this setting is:</p>
@@ -1339,8 +1672,8 @@ returns the name of the file which Leo used to determine the setting:</p>
 </li>
 </ul>
 </div>
-<div class="section" id="id5">
-<h4>New command-line options<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h4>
+<div class="section" id="id9">
+<h4>New command-line options<a class="headerlink" href="#id9" title="Permalink to this headline">¶</a></h4>
 <ul class="simple">
 <li>The <tt class="docutils literal"><span class="pre">--config</span></tt> command-line option specifies a single config (.leo) file
 to use for configuration.
@@ -1351,8 +1684,8 @@ Only .zip and .leo extensions are allowed at present.</li>
 The valid values are <tt class="docutils literal"><span class="pre">--gui=qt</span></tt> and <tt class="docutils literal"><span class="pre">--gui=tk</span></tt>.</li>
 </ul>
 </div>
-<div class="section" id="id6">
-<h4>New commands<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h4>
+<div class="section" id="id10">
+<h4>New commands<a class="headerlink" href="#id10" title="Permalink to this headline">¶</a></h4>
 <ul class="simple">
 <li>Added smart home (back-to-home) command.</li>
 <li>Added support for standard behavior of Tab and Shift-Tab keys.
@@ -1382,8 +1715,8 @@ possible.</li>
 <li>Improved &#64;path handling.</li>
 </ul>
 </div>
-<div class="section" id="id7">
-<h4>New settings<a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h4>
+<div class="section" id="id11">
+<h4>New settings<a class="headerlink" href="#id11" title="Permalink to this headline">¶</a></h4>
 <ul>
 <li><p class="first">&#64;string default_leo_file = ~/.leo/workbook.leo</p>
 </li>
@@ -1415,8 +1748,8 @@ The default is False, needed for AltGr functionality on Windows.</p>
 </li>
 </ul>
 </div>
-<div class="section" id="id8">
-<h4>Plugins<a class="headerlink" href="#id8" title="Permalink to this headline">¶</a></h4>
+<div class="section" id="id12">
+<h4>Plugins<a class="headerlink" href="#id12" title="Permalink to this headline">¶</a></h4>
 <ul class="simple">
 <li>Improved nav_buttons plugin and corresponding nodeHistory class.</li>
 <li>Created qtGui and tkGui plugins.</li>
@@ -1428,7 +1761,7 @@ in an &#64;enabled-plugin node.</li>
 </div>
 </div>
 <div class="section" id="leo-4-5">
-<h3><a class="toc-backref" href="#id42">Leo 4.5</a><a class="headerlink" href="#leo-4-5" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id48">Leo 4.5</a><a class="headerlink" href="#leo-4-5" title="Permalink to this headline">¶</a></h3>
 <div class="section" id="major-new-features">
 <h4>Major new features<a class="headerlink" href="#major-new-features" title="Permalink to this headline">¶</a></h4>
 <ul class="simple">
@@ -1479,8 +1812,8 @@ Leo uses os.path.expanduser(&#8220;~&#8221;) if there is no home setting.</p>
 </li>
 </ul>
 </div>
-<div class="section" id="id9">
-<h4>New settings<a class="headerlink" href="#id9" title="Permalink to this headline">¶</a></h4>
+<div class="section" id="id13">
+<h4>New settings<a class="headerlink" href="#id13" title="Permalink to this headline">¶</a></h4>
 <ul>
 <li><p class="first">The default settings for &#64;shadow files are now located in leoSettings.leo in the node:</p>
 <div class="highlight-python"><div class="highlight"><pre>    @settings--&gt;File options--&gt;Shadow files
@@ -1524,7 +1857,7 @@ something like this:</p>
 </div>
 </div>
 <div class="section" id="leo-4-4-8">
-<h3><a class="toc-backref" href="#id43">Leo 4.4.8</a><a class="headerlink" href="#leo-4-4-8" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id49">Leo 4.4.8</a><a class="headerlink" href="#leo-4-4-8" title="Permalink to this headline">¶</a></h3>
 <div class="section" id="new-features">
 <h4>New features<a class="headerlink" href="#new-features" title="Permalink to this headline">¶</a></h4>
 <ul class="simple">
@@ -1548,8 +1881,8 @@ See <a class="reference external" href="http://leoeditor.com/IPythonBridge.html"
 <li>Improved marks/recent buttons plugin.</li>
 </ul>
 </div>
-<div class="section" id="id10">
-<h4>New settings<a class="headerlink" href="#id10" title="Permalink to this headline">¶</a></h4>
+<div class="section" id="id14">
+<h4>New settings<a class="headerlink" href="#id14" title="Permalink to this headline">¶</a></h4>
 <ul class="simple">
 <li>Added support for &#64;commands trees in leoSettings files.</li>
 <li>Added support for &#64;bool open_with_save_on_update setting. If True, Leo will
@@ -1559,25 +1892,25 @@ outline.</li>
 </div>
 </div>
 <div class="section" id="leo-4-4-6">
-<h3><a class="toc-backref" href="#id44">Leo 4.4.6</a><a class="headerlink" href="#leo-4-4-6" title="Permalink to this headline">¶</a></h3>
-<div class="section" id="id11">
-<h4>New commands<a class="headerlink" href="#id11" title="Permalink to this headline">¶</a></h4>
+<h3><a class="toc-backref" href="#id50">Leo 4.4.6</a><a class="headerlink" href="#leo-4-4-6" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id15">
+<h4>New commands<a class="headerlink" href="#id15" title="Permalink to this headline">¶</a></h4>
 <div class="highlight-python"><div class="highlight"><pre><span class="n">find</span><span class="o">-</span><span class="nb">next</span><span class="o">-</span><span class="n">clone</span>
 <span class="n">toggle</span><span class="o">-</span><span class="n">sparse</span><span class="o">-</span><span class="n">move</span>
 </pre></div>
 </div>
 <p>Replaced the delete-all-icons command with a script in scripts.leo.  This command was too dangerous.</p>
 </div>
-<div class="section" id="id12">
-<h4>New features<a class="headerlink" href="#id12" title="Permalink to this headline">¶</a></h4>
+<div class="section" id="id16">
+<h4>New features<a class="headerlink" href="#id16" title="Permalink to this headline">¶</a></h4>
 <ul class="simple">
 <li>Added support for &#64;auto xml and &#64;auto javascript.
 Use &#64;data import_xml_tags setting to specify the xml tags that act as organizers.
 Javascript regexps that look like section references cause problems, but that can not be helped.</li>
 </ul>
 </div>
-<div class="section" id="id13">
-<h4>New settings<a class="headerlink" href="#id13" title="Permalink to this headline">¶</a></h4>
+<div class="section" id="id17">
+<h4>New settings<a class="headerlink" href="#id17" title="Permalink to this headline">¶</a></h4>
 <ul class="simple">
 <li>Added support for &#64;data nodes in settings files.</li>
 <li>The &#64;data import_xml_tags setting specifies the xml tags that act as organizers.
@@ -1586,7 +1919,7 @@ This settings is used by &#64;auto when importing xml files.</li>
 </div>
 </div>
 <div class="section" id="leo-4-4-5">
-<h3><a class="toc-backref" href="#id45">Leo 4.4.5</a><a class="headerlink" href="#leo-4-4-5" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id51">Leo 4.4.5</a><a class="headerlink" href="#leo-4-4-5" title="Permalink to this headline">¶</a></h3>
 <div class="section" id="bug-fixed">
 <h4>Bug fixed<a class="headerlink" href="#bug-fixed" title="Permalink to this headline">¶</a></h4>
 <ul class="simple">
@@ -1594,8 +1927,8 @@ This settings is used by &#64;auto when importing xml files.</li>
 <li>Fixed resurrected (<a class="reference external" href="http://sourceforge.net/forum/message.php?msg_id=3525277">vampire</a>) nodes.</li>
 </ul>
 </div>
-<div class="section" id="id14">
-<h4>New features<a class="headerlink" href="#id14" title="Permalink to this headline">¶</a></h4>
+<div class="section" id="id18">
+<h4>New features<a class="headerlink" href="#id18" title="Permalink to this headline">¶</a></h4>
 <ul class="simple">
 <li>Leo now supports all directives in headlines.</li>
 <li>Moved all unit tests to unitTest.leo and reorganized the unit tests by Leo source file.</li>
@@ -1603,8 +1936,8 @@ This settings is used by &#64;auto when importing xml files.</li>
 <li>The rst3 plugin now supports &#64;rst-preformat nodes.</li>
 </ul>
 </div>
-<div class="section" id="id15">
-<h4>New commands<a class="headerlink" href="#id15" title="Permalink to this headline">¶</a></h4>
+<div class="section" id="id19">
+<h4>New commands<a class="headerlink" href="#id19" title="Permalink to this headline">¶</a></h4>
 <div class="highlight-python"><div class="highlight"><pre>delete-all-icons
 delete-first-icon
 delete-last-icon
@@ -1617,8 +1950,8 @@ toggle-collapse_nodes_during_finds
 </pre></div>
 </div>
 </div>
-<div class="section" id="id16">
-<h4>New settings<a class="headerlink" href="#id16" title="Permalink to this headline">¶</a></h4>
+<div class="section" id="id20">
+<h4>New settings<a class="headerlink" href="#id20" title="Permalink to this headline">¶</a></h4>
 <ul>
 <li><p class="first">&#64;bool at_auto_warns_about_leading_whitespace</p>
 <p>This option has effect only when importing so-called non-strict languages, for
@@ -1634,7 +1967,7 @@ which leading whitespace is not terribly significant.</p>
 </div>
 </div>
 <div class="section" id="leo-4-4-4">
-<h3><a class="toc-backref" href="#id46">Leo 4.4.4</a><a class="headerlink" href="#leo-4-4-4" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id52">Leo 4.4.4</a><a class="headerlink" href="#leo-4-4-4" title="Permalink to this headline">¶</a></h3>
 <p>Leo 4.4.4 contains many important features originally planned for later releases.
 The highlights of Leo 4.4.4:</p>
 <ul>
@@ -1832,8 +2165,8 @@ present, the following character is underlined in the name. If the command name
 in an &#64;item node is just a hyphen (-), the item represents a menu separator.</p>
 </div>
 </div>
-<div class="section" id="id17">
-<h4>New plugins<a class="headerlink" href="#id17" title="Permalink to this headline">¶</a></h4>
+<div class="section" id="id21">
+<h4>New plugins<a class="headerlink" href="#id21" title="Permalink to this headline">¶</a></h4>
 <ul class="simple">
 <li>The graphed plugin allows users to manipulate parts of Leo outlines as if they
 were general graphs. It is still early days for this exciting plugin.</li>
@@ -1918,7 +2251,7 @@ write-file-from-node
 </div>
 </div>
 <div class="section" id="leo-4-4-3">
-<h3><a class="toc-backref" href="#id47">Leo 4.4.3</a><a class="headerlink" href="#leo-4-4-3" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id53">Leo 4.4.3</a><a class="headerlink" href="#leo-4-4-3" title="Permalink to this headline">¶</a></h3>
 <p>The highlights of Leo 4.4.3:</p>
 <ul class="simple">
 <li>&#64;test and &#64;suite nodes may now be embedded directly in external files.</li>
@@ -1933,14 +2266,14 @@ from programs running outside of Leo.</li>
 </ul>
 </div>
 <div class="section" id="leo-4-4-2">
-<h3><a class="toc-backref" href="#id48">Leo 4.4.2</a><a class="headerlink" href="#leo-4-4-2" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id54">Leo 4.4.2</a><a class="headerlink" href="#leo-4-4-2" title="Permalink to this headline">¶</a></h3>
 <div class="section" id="a-major-code-reorg">
 <h4>A major code reorg<a class="headerlink" href="#a-major-code-reorg" title="Permalink to this headline">¶</a></h4>
 <p>Leo&#8217;s vnode and tnode classes are now completely independent of the rest of Leo.
 Some api&#8217;s have been changed.  This &#8216;big reorg&#8217; and may affect scripts and plugins.</p>
 </div>
-<div class="section" id="id18">
-<h4>New commands<a class="headerlink" href="#id18" title="Permalink to this headline">¶</a></h4>
+<div class="section" id="id22">
+<h4>New commands<a class="headerlink" href="#id22" title="Permalink to this headline">¶</a></h4>
 <div class="highlight-python"><div class="highlight"><pre><span class="n">extend</span><span class="o">-</span><span class="n">to</span><span class="o">-</span><span class="n">line</span>
 <span class="n">extend</span><span class="o">-</span><span class="n">to</span><span class="o">-</span><span class="n">paragraph</span>
 <span class="n">extend</span><span class="o">-</span><span class="n">to</span><span class="o">-</span><span class="n">sentence</span>
@@ -1949,8 +2282,8 @@ Some api&#8217;s have been changed.  This &#8216;big reorg&#8217; and may affect
 </pre></div>
 </div>
 </div>
-<div class="section" id="id19">
-<h4>New features<a class="headerlink" href="#id19" title="Permalink to this headline">¶</a></h4>
+<div class="section" id="id23">
+<h4>New features<a class="headerlink" href="#id23" title="Permalink to this headline">¶</a></h4>
 <ul class="simple">
 <li>Added support for controlling Leo from <a class="reference external" href="http://www.xemacs.org/">Emacs</a> with <a class="reference external" href="http://pymacs.progiciels-bpi.ca/index.html">pymacs</a>.
 See the <a class="reference external" href="emacs.html">Leo and Emacs</a> chapter for full details.</li>
@@ -2000,8 +2333,8 @@ fails, so in fact the delay is not too significant. In practice everything works
 well without me thinking at all about what is happening.</li>
 </ul>
 </div>
-<div class="section" id="id20">
-<h4>New and improved plugins<a class="headerlink" href="#id20" title="Permalink to this headline">¶</a></h4>
+<div class="section" id="id24">
+<h4>New and improved plugins<a class="headerlink" href="#id24" title="Permalink to this headline">¶</a></h4>
 <ul class="simple">
 <li>Improved the mod_scripting plugin. Every button created by the plugin creates
 a corresponding command. The command name is the &#8216;cleaned&#8217; version of the
@@ -2024,8 +2357,8 @@ buttons without right-clicking.</li>
 <li>A new utility method does a much better job of massaging button and command names.</li>
 </ul>
 </div>
-<div class="section" id="id21">
-<h4>Settings<a class="headerlink" href="#id21" title="Permalink to this headline">¶</a></h4>
+<div class="section" id="id25">
+<h4>Settings<a class="headerlink" href="#id25" title="Permalink to this headline">¶</a></h4>
 <ul class="simple">
 <li>Removed .leoRecentFiles.txt from the distribution and cvs and added &#64;bool
 write_recent_files_as_needed. The presence or absence of .leoRecentFiles.txt
@@ -2060,7 +2393,7 @@ See Chapter 17: Using ZODB with Leo for details.</p>
 </div>
 </div>
 <div class="section" id="leo-4-4-1">
-<h3><a class="toc-backref" href="#id49">Leo 4.4.1</a><a class="headerlink" href="#leo-4-4-1" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id55">Leo 4.4.1</a><a class="headerlink" href="#leo-4-4-1" title="Permalink to this headline">¶</a></h3>
 <p>The main features of Leo 4.4.1 are:</p>
 <ul class="simple">
 <li>Multiple editors in Leo&#8217;s body pane and</li>
@@ -2072,8 +2405,8 @@ See Chapter 17: Using ZODB with Leo for details.</p>
 <li>The help-for-command commands now contains information for almost all commands.</li>
 <li>A new shortcut_button plugin.</li>
 </ul>
-<div class="section" id="id22">
-<h4>New commands<a class="headerlink" href="#id22" title="Permalink to this headline">¶</a></h4>
+<div class="section" id="id26">
+<h4>New commands<a class="headerlink" href="#id26" title="Permalink to this headline">¶</a></h4>
 <div class="highlight-python"><div class="highlight"><pre>cycle-focus
 debug
 find-character
@@ -2089,8 +2422,8 @@ toggle-invisibles
 </pre></div>
 </div>
 </div>
-<div class="section" id="id23">
-<h4>New features<a class="headerlink" href="#id23" title="Permalink to this headline">¶</a></h4>
+<div class="section" id="id27">
+<h4>New features<a class="headerlink" href="#id27" title="Permalink to this headline">¶</a></h4>
 <ul class="simple">
 <li>Removed warning about changed node.</li>
 <li>Added scroll-outline-left/right commands.</li>
@@ -2114,8 +2447,8 @@ and the cycle-editor-focus command cycles focus between editors in the body text
 to the replace command.</li>
 </ul>
 </div>
-<div class="section" id="id24">
-<h4>New and improved plugins<a class="headerlink" href="#id24" title="Permalink to this headline">¶</a></h4>
+<div class="section" id="id28">
+<h4>New and improved plugins<a class="headerlink" href="#id28" title="Permalink to this headline">¶</a></h4>
 <ul class="simple">
 <li>The slideshow plugin</li>
 <li>The mod_scripting plugin now creates a press-x-button command for every button &#8216;x&#8217;.
@@ -2126,8 +2459,8 @@ will select the presently selected node at the time the button was created.</li>
 <li>Added Debug button to scripting plugin.</li>
 </ul>
 </div>
-<div class="section" id="id25">
-<h4>New settings<a class="headerlink" href="#id25" title="Permalink to this headline">¶</a></h4>
+<div class="section" id="id29">
+<h4>New settings<a class="headerlink" href="#id29" title="Permalink to this headline">¶</a></h4>
 <div class="highlight-python"><div class="highlight"><pre>@bool autoindent_in_nocolor_mode
 @bool flash_matching_brackets
 @bool idle_redraw
@@ -2155,8 +2488,8 @@ will select the presently selected node at the time the button was created.</li>
 <li>Added warnings about the &#64;bool expanded_click_area setting.</li>
 </ul>
 </div>
-<div class="section" id="id26">
-<h4>Minor improvements<a class="headerlink" href="#id26" title="Permalink to this headline">¶</a></h4>
+<div class="section" id="id30">
+<h4>Minor improvements<a class="headerlink" href="#id30" title="Permalink to this headline">¶</a></h4>
 <ul class="simple">
 <li>The print-bindings command now properly sorts bindings.</li>
 <li>The help-for-command command now works for almost all commands.</li>
@@ -2171,7 +2504,7 @@ will select the presently selected node at the time the button was created.</li>
 </div>
 </div>
 <div class="section" id="leo-4-4">
-<h3><a class="toc-backref" href="#id50">Leo 4.4</a><a class="headerlink" href="#leo-4-4" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id56">Leo 4.4</a><a class="headerlink" href="#leo-4-4" title="Permalink to this headline">¶</a></h3>
 <p>The main features of Leo 4.4 are:</p>
 <ul class="simple">
 <li>An Emacs-like mini-buffer: you can now execute any command by typing its long
@@ -2187,8 +2520,8 @@ create new tabs. The Completion tab shows possible typing completions.</li>
 <li>Autocompletion and calltips.  Autocompletion works much like tab completion.
 To enable autocompletion, bind a key to the auto-complete command.</li>
 </ul>
-<div class="section" id="id27">
-<h4>New commands<a class="headerlink" href="#id27" title="Permalink to this headline">¶</a></h4>
+<div class="section" id="id31">
+<h4>New commands<a class="headerlink" href="#id31" title="Permalink to this headline">¶</a></h4>
 <div class="highlight-python"><div class="highlight"><pre>activate-cmds-menu
 activate-edit-menu
 activate-file-menu
@@ -2283,8 +2616,8 @@ word-search-forward
 </pre></div>
 </div>
 </div>
-<div class="section" id="id28">
-<h4>New features<a class="headerlink" href="#id28" title="Permalink to this headline">¶</a></h4>
+<div class="section" id="id32">
+<h4>New features<a class="headerlink" href="#id32" title="Permalink to this headline">¶</a></h4>
 <ul class="simple">
 <li>Added script to update new copies of leoSetttings.leo from previous copies.</li>
 <li>Made all edit command undoable.</li>
@@ -2326,8 +2659,8 @@ word-search-forward
 <li>The Find tab replaces the old Find panel; the old Find panel is deprecated.</li>
 </ul>
 </div>
-<div class="section" id="id29">
-<h4>New and improved plugins<a class="headerlink" href="#id29" title="Permalink to this headline">¶</a></h4>
+<div class="section" id="id33">
+<h4>New and improved plugins<a class="headerlink" href="#id33" title="Permalink to this headline">¶</a></h4>
 <ul>
 <li><p class="first">Changed path to stylesheet in the rst3 plugin.</p>
 </li>
@@ -2450,7 +2783,7 @@ group-operations-transfer
 <li class="toctree-l1"><a class="reference internal" href="appendices.html">Appendices</a></li>
 </ul>
 <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="apidoc/index.html">API Documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="apidoc/leo.html">leo package</a></li>
 <li class="toctree-l1"><a class="reference internal" href="FAQ.html">FAQ</a></li>
 <li class="toctree-l1"><a class="reference internal" href="glossary.html">Glossary</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="">What&#8217;s New</a></li>
@@ -2493,6 +2826,9 @@ Written by <a HREF="ekr.html">Edward K. Ream</a>
         <li class="right" style="margin-right: 10px">
           <a href="genindex.html" title="General Index"
              >index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
         <li class="right" >
           <a href="apidoc/index.html" title="API Documentation"
              >next</a> |</li>
