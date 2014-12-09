@@ -1,0 +1,21 @@
+<!--@+leo-ver=5-thin-->
+<!--@+node:davy.20141209091210.28: * @file sources/templates/layout.html-->
+<!--@+at-->
+<!--
+This Jinja2 template introduce an extrahead block so we can add extra javascript for flattr.
+-->
+<!--@@c-->
+{% extends "!layout.html" %}
+{% block extrahead %}
+    <script type="text/javascript">
+        (function() {
+            var s = document.createElement('script'), t = document.getElementsByTagName('script')[0];
+            s.type = 'text/javascript';
+            s.async = true;
+            s.src = 'http://api.flattr.com/js/0.6/load.js?mode=auto';
+            t.parentNode.insertBefore(s, t);
+        })();
+    </script>
+    {{ super() }}
+{% endblock %}
+<!--@-leo-->

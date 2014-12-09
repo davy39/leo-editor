@@ -1,0 +1,48 @@
+/*@+leo-ver=5-thin*/
+/*@+node:davy.20141208214654.8: * @file sources/static/leo.css*/
+/*@@language css*/
+/*
+ * leo.css
+ * ~~~~~~~~~~~~~
+ *
+ * Leo specific css for Sphinx stylesheet -- default theme.
+ *
+ *
+ */
+ 
+/* -- Use the default one----------------------------------------- */
+@import url("default.css");
+
+/* -- Add epigraph theming ----------------------------------------- */
+
+blockquote.epigraph {
+  font: 14px/20px italic "Free Serif", serif;
+  padding: 8px;
+  background-color: #faebbc;
+  border-top: 1px solid #e1cc89;
+  border-bottom: 1px solid #e1cc89;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 15px;
+  background-image: url(openquote1.gif);
+  background-position: top left;
+  background-repeat: no-repeat;
+  text-indent: 20px;
+  width: 80%;
+  }
+blockquote.epigraph div {
+     display: block;
+     background-image: url(closequote1.gif);
+     background-repeat: no-repeat;
+     background-position: bottom right;
+     font-style: italic;
+     font-family: "Free Serif", serif;
+}
+
+blockquote.epigraph div p.attribution {  
+  margin: 5px 0 0 30px !important;
+  text-align: right;
+  font-style: normal;
+  width: 90%;
+}
+/*@-leo*/
