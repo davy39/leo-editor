@@ -1,3 +1,10 @@
+<!--@+leo-ver=5-thin-->
+<!--@+node:davy.20141209091210.28: * @file sources/templates/layout.html-->
+<!--@+at-->
+<!--
+This Jinja2 template introduce an extrahead block so we can add extra javascript for flattr.
+-->
+<!--@@c-->
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
@@ -106,7 +113,17 @@
         <div class="sphinxsidebarwrapper">
             <p class="logo"><a href="contents.html">
               <img class="logo" src="_static/Leo4-80-border.jpg" alt="Logo"/>
-            </a></p><p>
+            </a></p><!--@+leo-ver=5-thin-->
+<!--@+node:davy.20141209091210.10: * @file sources/templates/leoHomeSidebar.html-->
+<!--@@language xml-->
+<!--@@tabwidth -4-->
+<!--@+at-->
+<!--
+This is an extra html code to be added in the Home page sidebar
+-->
+<!--@@c-->
+
+<p>
      <a class="reference external" href="contents.html">Table of contents</a>: click the lion!
 </p>
 
@@ -159,6 +176,7 @@
 
             <a class="reference external" href="leoLinks.html">
               More links...</a><br>
+<!--@-leo-->
 <div id="searchbox" style="display: none">
   <h3>Quick search</h3>
     <form class="search" action="search.html" method="get">
@@ -171,8 +189,13 @@
     Enter search terms or a module, class or function name.
     </p>
 </div>
-<script type="text/javascript">$('#searchbox').show(0);</script><p>Leo: Leonine Editor with Outlines</p>
-<p>Written by <a HREF="ekr.html">Edward K. Ream</a>
+<script type="text/javascript">$('#searchbox').show(0);</script><!--@+leo-ver=5-thin-->
+<!--@+node:davy.20141209091210.2: * @file sources/templates/flattrSidebar.html-->
+<!--@@language html-->
+<!--@@tabwidth -4-->
+<p>Leo: Leonine Editor with Outlines</p>
+<p>
+Written by <a HREF="ekr.html">Edward K. Ream</a>
 <a class="FlattrButton" style="display:none;" rev="flattr;button:compact;" href="http://leoeditor.com"></a>
 <noscript>
 <a href="http://flattr.com/thing/410073/Leo" target="_blank">
@@ -180,6 +203,7 @@
 </a>
 </noscript>
 </p>
+<!--@-leo-->
         </div>
       </div>
       <div class="clearer"></div>
