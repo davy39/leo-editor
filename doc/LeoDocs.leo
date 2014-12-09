@@ -1071,9 +1071,9 @@
 <v t="davy.20141209091210.28"><vh>@file sources/templates/layout.html</vh></v>
 </v>
 <v t="davy.20141208214654.3"><vh>Autosummary</vh>
-<v t="davy.20141209091210.32"><vh>@file sources/templates/autosummary/base.rst</vh></v>
-<v t="davy.20141209091210.33"><vh>@file sources/templates/autosummary/module.rst</vh></v>
-<v t="davy.20141209091210.34"><vh>@file sources/templates/autosummary/class.rst</vh></v>
+<v t="davy.20141209091210.32"><vh>@nosent sources/templates/autosummary/base.rst</vh></v>
+<v t="davy.20141209091210.33"><vh>@nosent sources/templates/autosummary/module.rst</vh></v>
+<v t="davy.20141209091210.34"><vh>@nosent sources/templates/autosummary/class.rst</vh></v>
 </v>
 </v>
 <v t="davy.20141208214654.9"><vh>CSS</vh>
@@ -9349,6 +9349,82 @@ Templates for layout.html</t>
 c.rstCommands.rst3()
 
 
+</t>
+<t tx="davy.20141209091210.32">{{ fullname }}
+{{ underline }}
+
+.. currentmodule:: {{ module }}
+
+.. auto{{ objtype }}:: {{ objname }}
+</t>
+<t tx="davy.20141209091210.33">{{ fullname }}
+{{ underline }}
+
+.. automodule:: {{ fullname }}
+
+   {% block functions %}
+   {% if functions %}
+   .. rubric:: Functions
+
+   .. autosummary::
+   {% for item in functions %}
+      {{ item }}
+   {%- endfor %}
+   {% endif %}
+   {% endblock %}
+
+   {% block classes %}
+   {% if classes %}
+   .. rubric:: Classes
+
+   .. autosummary::
+   {% for item in classes %}
+      {{ item }}
+   {%- endfor %}
+   {% endif %}
+   {% endblock %}
+
+   {% block exceptions %}
+   {% if exceptions %}
+   .. rubric:: Exceptions
+
+   .. autosummary::
+   {% for item in exceptions %}
+      {{ item }}
+   {%- endfor %}
+   {% endif %}
+   {% endblock %}
+</t>
+<t tx="davy.20141209091210.34">{{ fullname }}
+{{ underline }}
+
+.. currentmodule:: {{ module }}
+
+.. autoclass:: {{ objname }}
+
+   {% block methods %}
+   .. automethod:: __init__
+
+   {% if methods %}
+   .. rubric:: Methods
+
+   .. autosummary::
+   {% for item in methods %}
+      ~{{ name }}.{{ item }}
+   {%- endfor %}
+   {% endif %}
+   {% endblock %}
+
+   {% block attributes %}
+   {% if attributes %}
+   .. rubric:: Attributes
+
+   .. autosummary::
+   {% for item in attributes %}
+      ~{{ name }}.{{ item }}
+   {%- endfor %}
+   {% endif %}
+   {% endblock %}
 </t>
 <t tx="davy.20141209091210.35">@language python
 """Commit &amp; push html files on github"""

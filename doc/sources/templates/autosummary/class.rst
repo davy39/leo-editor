@@ -1,5 +1,3 @@
-#@+leo-ver=5-thin
-#@+node:davy.20141209091210.34: * @file sources/templates/autosummary/class.rst
 {{ fullname }}
 {{ underline }}
 
@@ -30,4 +28,3 @@
    {%- endfor %}
    {% endif %}
    {% endblock %}
-#@-leo
