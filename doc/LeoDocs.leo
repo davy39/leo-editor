@@ -33,6 +33,7 @@
 </v>
 <v t="davy.20141209091210.39"><vh>Exclude paterns</vh></v>
 <v t="davy.20141208130053.3"><vh>Enabled sphinx extensions</vh></v>
+<v t="davy.20141209184038.2"><vh>Autosummary</vh></v>
 </v>
 <v t="davy.20141208134720.5"><vh>@int jobs = 4</vh></v>
 <v t="davy.20141208134720.8"><vh>@int verbosity = 0</vh></v>
@@ -18082,6 +18083,8 @@ LeoQtEventFilter.qtKey now changes a toString value of 'Enter' to 'Return'
 </t>
 <t tx="davy.20141209154025.99">https://bugs.launchpad.net/leo-editor/+bug/1245616
 </t>
+<t tx="davy.20141209184038.2"># Autogenerate stub pages for every modules contained in .. autosummary ::
+autosummary_generate=True</t>
 <t tx="edream.110203163054.100">The Synchronization Principle simplifies everything and at long last puts Leo on
 a firm theoretical foundation. This principle states that the "smallest unit of
 meaning" of any Leo outline is the entire outline itself. In particular,
