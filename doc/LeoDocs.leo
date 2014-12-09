@@ -9489,20 +9489,18 @@ to execute will start the command as a process and return a JPID for the
 process that can be manipulated by the magic command set.
 
 </t>
-<t tx="davy.20141209134323.2">This file file to simplify and automatize builds of Leo Documentation.
+<t tx="davy.20141209134323.2">This file is williing to simplify and automatize builds of Leo Documentation.
 
 It aim to self contain all needed informations to build Leo's website, from sources to publication scripts, including settings, and build buttons.
+
+ * **@settings** : include most of the build  settings
+ 
+ * **@Settings/Sphinx options/@data conf.py** especially contains basic sphinx configuration. 
 
  * **Quick update** : clones of nodes most often updated
  
  * **sources** : all @rst nodes that are converted to .rst file (rst3) then to html (sphinx)
  
- * **templates** c
- 
- * **@settings** : include most of the build  settings
- 
- * **@Settings/Sphinx options/@data conf.py** especially contains basic sphinx configuration. 
-
  * **templates** : customization of sidebar, layout, and API doc
  
  * **css** : css use to modify Leo's website design (note that a lot can be done just with @data conf.py html_theme_options)
