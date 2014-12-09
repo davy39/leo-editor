@@ -242,9 +242,6 @@
 <v t="davy.20141202225703.2"><vh>Home page</vh>
 <v t="davy.20141202225703.527"><vh>@rst index</vh></v>
 </v>
-<v t="davy.20141207133842.7"><vh>Autodoc</vh>
-<v t="davy.20141207133842.8"><vh>@rst apidoc/index</vh></v>
-</v>
 <v t="ekr.20131005214621.16089"><vh>TOC</vh>
 <v t="ekr.20090428102353.1" a="O"><vh>@rst contents</vh></v>
 </v>
@@ -985,6 +982,9 @@
 </v>
 <v t="ekr.20131028213522.17138"><vh>Command-line options</vh></v>
 </v>
+</v>
+<v t="davy.20141207133842.7"><vh>Autodoc</vh>
+<v t="davy.20141207133842.8"><vh>@rst apidoc/index</vh></v>
 </v>
 <v t="ekr.20140216125129.16666"><vh>Additonal web pages</vh>
 <v t="ekr.20101025080245.5791"></v>
@@ -40601,12 +40601,7 @@ Either that, or mirror their location in (subdirectories) ~/.leo. In other
 words, this is a general problem, and it would be good to have a robust, general
 solution.
 </t>
-<t tx="ekr.20090428102353.1">.. Leo documentation documentation master file, created by
-.. sphinx-quickstart on Mon Mar 30 16:39:02 2009.
-.. You can adapt this file completely to your liking, but it should at least
-.. contain the root `toctree` directive.
-
-.. 2013/10/08: This page now *does* generate the real TOC.
+<t tx="ekr.20090428102353.1">.. 2013/10/08: This page now *does* generate the real TOC.
 
 Leo's Documentation Page
 ========================
@@ -66832,7 +66827,7 @@ Ctrl-S (save-file) saves the outline. |br|
 Ctrl-Q (exit-leo) exits Leo.  Leo will prompt you to save any unsaved outlines.
 </t>
 <t tx="ekr.20131005214621.16081"></t>
-<t tx="ekr.20131005214621.16089">Leo uses a TOC that *looks* like a Sphinx toc but is built by hand.</t>
+<t tx="ekr.20131005214621.16089"></t>
 <t tx="ekr.20131005214621.16090">- Every command has a name.
 - You may execute any command by name from the minibuffer.
 - Many commands are bound to keystrokes.
