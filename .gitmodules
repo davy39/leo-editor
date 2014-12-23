@@ -1,8 +1,0 @@
-[submodule "leo/external/ckeditor"]
-	path = leo/external/ckeditor
-	url = git://github.com/ckeditor/ckeditor-releases.git
-	branch = full/latest
-[submodule "doc/build/html"]
-	path = doc/build/html
-	url = git@github.com:davy39/leo-editor.git
-	branch = gh-pages
