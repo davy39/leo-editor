@@ -1,0 +1,51 @@
+#!/usr/bin/make -f
+# -*- makefile -*-
+# Uncomment this to turn on verbose mode.
+#export DH_VERBOSE=1
+
+clean:
+	dh_testdir
+	dh_testroot
+	find . -name "*.pyc" -exec rm {} \;
+	find . -name "Ui_*" -exec rm {} \;
+	find . -name __pycache__ -prune | xargs rm -rf
+	rm -rf debian/leo
+	rm -rf .pc
+	rm -rf build
+	dh_clean
+
+build: build-arch build-indep
+build-arch:
+build-indep:
+
+install: 
+	dh_testdir -i
+	dh_testroot -i
+	dh_prep -i 
+	python setup.py install --root=debian/leo --install-layout=deb --install-lib=usr/share/pyshared --install-data=usr/share/pyshared
+	find debian/leo/ -name '*.py[co]' -delete
+	find . -name __pycache__ -prune | xargs rm -rf
+    
+binary: binary-indep binary-arch
+binary-arch:
+
+# Build architecture-independent files here.
+binary-indep: install
+	dh_testdir -i
+	dh_testroot -i
+	dh_installchangelogs
+	dh_installdocs -i
+	#dh_installmenu -i
+	#dh_installman -i
+	dh_installmime
+	dh_install -i -X__pycache__
+	#dh_link -i
+	#dh_lintian -i
+	dh_compress -i
+	dh_fixperms -i
+	dh_installdeb -i
+	dh_gencontrol -i
+	dh_md5sums -i
+	dh_builddeb -i
+
+.PHONY: clean binary-indep binary-arch binary install

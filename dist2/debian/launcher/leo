@@ -1,0 +1,11 @@
+#!/usr/bin/env python
+""" Leo launcher script
+A minimal script to launch leo.
+"""
+import sys
+sys.path.append('/usr/share/pyshared/')
+import leo.core.runLeo
+if len(sys.argv[1:])>1:
+    leo.core.runLeo.run(sys.argv[1:])
+else:
+    leo.core.runLeo.run()

@@ -1,0 +1,10 @@
+[Desktop Entry]
+Name=Leo
+Type=Application
+Exec=/usr/bin/leo %f
+Terminal=false
+Icon=/usr/share/icons/leo.png
+Comment=Leonine Editor with Outlines
+NoDisplay=false
+Categories=Development;IDE
+Name[en]=Leo
